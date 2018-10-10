@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Mon Oct 01 10:51:27 2018
+# Process ID: 5996
+# Log file: C:/Users/TA/Desktop/SJD/Lab0_2018/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/TA/Desktop/SJD/Lab0_2018/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/TA/Desktop/SJD/Lab0_2018/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin AG8 [get_ports {counter_out[0]}]
+endgroup
+startgroup
+set_property package_pin AH8 [get_ports {counter_out[1]}]
+endgroup
+startgroup
+set_property package_pin AH9 [get_ports {counter_out[2]}]
+endgroup
+startgroup
+set_property package_pin AG10 [get_ports {counter_out[3]}]
+endgroup
+startgroup
+set_property package_pin J19 [get_ports reset]
+endgroup
+set_property package_pin "" [get_ports [list  enable]]
+startgroup
+set_property package_pin AG18 [get_ports clock]
+endgroup
+save_constraints

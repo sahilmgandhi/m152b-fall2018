@@ -1,0 +1,49 @@
+xst -intstyle ise -ifn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.xst" -ofn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx50t-ff1136-2 counter.ngc counter.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o counter_map.ncd counter.ngd counter.pcf 
+par -w -intstyle ise -ol high -mt off counter_map.ncd counter.ncd counter.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml counter.twx counter.ncd -o counter.twr counter.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc5vlx50t-ff1136-2 counter.ngc counter.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o counter_map.ncd counter.ngd counter.pcf 
+par -w -intstyle ise -ol high -mt off counter_map.ncd counter.ncd counter.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml counter.twx counter.ncd -o counter.twr counter.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f counter.ut counter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc5vlx50t-ff1136-2 counter.ngc counter.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o counter_map.ncd counter.ngd counter.pcf 
+par -w -intstyle ise -ol high -mt off counter_map.ncd counter.ncd counter.pcf 
+bitgen -intstyle ise -f counter.ut counter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc5vlx50t-ff1136-2 counter.ngc counter.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o counter_map.ncd counter.ngd counter.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc5vlx50t-ff1136-2 counter.ngc counter.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc5vlx50t-ff1136-2 counter.ngc counter.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o counter_map.ncd counter.ngd counter.pcf 
+par -w -intstyle ise -ol high -mt off counter_map.ncd counter.ncd counter.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml counter.twx counter.ncd -o counter.twr counter.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f counter.ut counter.ncd 
+xst -intstyle ise -ifn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.xst" -ofn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc5vlx50t-ff1136-2 counter.ngc counter.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o counter_map.ncd counter.ngd counter.pcf 
+par -w -intstyle ise -ol high -mt off counter_map.ncd counter.ncd counter.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml counter.twx counter.ncd -o counter.twr counter.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f counter.ut counter.ncd 
+xst -intstyle ise -ifn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.xst" -ofn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc5vlx50t-ff1136-2 counter.ngc counter.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o counter_map.ncd counter.ngd counter.pcf 
+par -w -intstyle ise -ol high -mt off counter_map.ncd counter.ncd counter.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml counter.twx counter.ncd -o counter.twr counter.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f counter.ut counter.ncd 
+xst -intstyle ise -ifn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.xst" -ofn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.syr" 
+xst -intstyle ise -ifn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.xst" -ofn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.syr" 
+xst -intstyle ise -ifn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.xst" -ofn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc5vlx50t-ff1136-2 counter.ngc counter.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o counter_map.ncd counter.ngd counter.pcf 
+par -w -intstyle ise -ol high -mt off counter_map.ncd counter.ncd counter.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml counter.twx counter.ncd -o counter.twr counter.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f counter.ut counter.ncd 
+xst -intstyle ise -ifn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.xst" -ofn "C:/Users/TA/Desktop/SJD/Lab0_2018/counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc5vlx50t-ff1136-2 counter.ngc counter.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o counter_map.ncd counter.ngd counter.pcf 
+par -w -intstyle ise -ol high -mt off counter_map.ncd counter.ncd counter.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml counter.twx counter.ncd -o counter.twr counter.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f counter.ut counter.ncd 
+xst -intstyle ise -ifn "C:/Users/sahil/Desktop/UCLAThings/2018-2019 Classes/Fall 2018/CS M152B/SJD/Lab0_2018/counter.xst" -ofn "C:/Users/sahil/Desktop/UCLAThings/2018-2019 Classes/Fall 2018/CS M152B/SJD/Lab0_2018/counter.syr" 

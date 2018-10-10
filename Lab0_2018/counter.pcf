@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.68d on Mon Oct 01 11:50:41 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "enable" LOCATE = SITE "G16" LEVEL 1;
+COMP "counter_out<0>" LOCATE = SITE "AG8" LEVEL 1;
+COMP "counter_out<1>" LOCATE = SITE "AH8" LEVEL 1;
+COMP "counter_out<2>" LOCATE = SITE "AH9" LEVEL 1;
+COMP "counter_out<3>" LOCATE = SITE "AG10" LEVEL 1;
+COMP "clock" LOCATE = SITE "AG18" LEVEL 1;
+COMP "reset" LOCATE = SITE "J19" LEVEL 1;
+SCHEMATIC END;
+

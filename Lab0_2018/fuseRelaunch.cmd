@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/sahil/Desktop/UCLAThings/2018-2019 Classes/Fall 2018/CS M152B/SJD/Lab0_2018/first_counter_tb_isim_beh.exe" -prj "C:/Users/sahil/Desktop/UCLAThings/2018-2019 Classes/Fall 2018/CS M152B/SJD/Lab0_2018/first_counter_tb_beh.prj" "work.first_counter_tb" "work.glbl" 

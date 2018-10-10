@@ -1,0 +1,10 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "counter_out[0]" LOC = AG8;
+NET "counter_out[1]" LOC = AH8;
+NET "counter_out[2]" LOC = AH9;
+NET "counter_out[3]" LOC = AG10;
+NET "reset" LOC = J19;
+NET "clock" LOC = AG18;
+NET "enable" LOC = G16;

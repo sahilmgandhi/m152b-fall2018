@@ -1,0 +1,2 @@
+verilog work "counter.v"
+verilog work "counter_tb.v"
