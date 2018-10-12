@@ -1,0 +1,8 @@
+MO alu_16bit NULL alu_16bit.v vlg17/alu__16bit.bin 1538981257
+MO inversion NULL invert.v vlg01/inversion.bin 1538981257
+MO add NULL add.v vlg51/add.bin 1538981257
+MO alu_00 NULL alu_00.v vlg49/alu__00.bin 1538981257
+MO alu_01 NULL alu_01.v vlg4A/alu__01.bin 1538981257
+MO alu_tb NULL alu_tb.v vlg4F/alu__tb.bin 1538769360
+MO alu_10 NULL alu_10.v vlg4E/alu__10.bin 1538981257
+MO alu_11 NULL alu_11.v vlg4F/alu__11.bin 1538981257

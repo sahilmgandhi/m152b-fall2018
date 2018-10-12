@@ -1,0 +1,446 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: alu_16bit.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "alu_16bit.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "alu_16bit"
+Output Format                      : NGC
+Target Device                      : xc5vlx50t-2-ff1136
+
+---- Source Options
+Top Module Name                    : alu_16bit
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "invert.v" in library work
+Compiling verilog file "add.v" in library work
+Module <inversion> compiled
+Compiling verilog file "alu_11.v" in library work
+Module <add> compiled
+Compiling verilog file "alu_10.v" in library work
+Module <alu_11> compiled
+Compiling verilog file "alu_01.v" in library work
+Module <alu_10> compiled
+Compiling verilog file "alu_00.v" in library work
+Module <alu_01> compiled
+Compiling verilog file "alu_16bit.v" in library work
+Module <alu_00> compiled
+Module <alu_16bit> compiled
+No errors in compilation
+Analysis of file <"alu_16bit.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <alu_16bit> in library <work>.
+
+Analyzing hierarchy for module <alu_00> in library <work>.
+
+Analyzing hierarchy for module <alu_01> in library <work>.
+
+Analyzing hierarchy for module <alu_10> in library <work>.
+
+Analyzing hierarchy for module <alu_11> in library <work>.
+
+Analyzing hierarchy for module <inversion> in library <work>.
+
+Analyzing hierarchy for module <add> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <alu_16bit>.
+Module <alu_16bit> is correct for synthesis.
+ 
+Analyzing module <alu_00> in library <work>.
+Module <alu_00> is correct for synthesis.
+ 
+Analyzing module <inversion> in library <work>.
+Module <inversion> is correct for synthesis.
+ 
+Analyzing module <add> in library <work>.
+Module <add> is correct for synthesis.
+ 
+Analyzing module <alu_01> in library <work>.
+Module <alu_01> is correct for synthesis.
+ 
+Analyzing module <alu_10> in library <work>.
+Module <alu_10> is correct for synthesis.
+ 
+Analyzing module <alu_11> in library <work>.
+Module <alu_11> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <alu_11>.
+    Related source file is "alu_11.v".
+WARNING:Xst:653 - Signal <s_mux<3>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+WARNING:Xst:653 - Signal <s_mux<1>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+WARNING:Xst:653 - Signal <overflow_mux<3><0>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <overflow_mux<1><0>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+    Found 16-bit shifter logical left for signal <arith_left$shift0000>.
+    Found 16-bit shifter logical right for signal <arith_right$shift0000>.
+    Found 1-bit xor2 for signal <overflow_mux<2>>.
+    Found 1-bit xor2 for signal <overflow_mux<0>>.
+    Summary:
+	inferred   2 Combinational logic shifter(s).
+Unit <alu_11> synthesized.
+
+
+Synthesizing Unit <inversion>.
+    Related source file is "invert.v".
+Unit <inversion> synthesized.
+
+
+Synthesizing Unit <add>.
+    Related source file is "add.v".
+    Found 16-bit xor2 for signal <sum>.
+    Found 1-bit xor2 for signal <add_co_1$xor0000> created at line 29.
+    Found 1-bit xor2 for signal <add_co_10$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <add_co_11$xor0000> created at line 49.
+    Found 1-bit xor2 for signal <add_co_12$xor0000> created at line 51.
+    Found 1-bit xor2 for signal <add_co_13$xor0000> created at line 53.
+    Found 1-bit xor2 for signal <add_co_14$xor0000> created at line 55.
+    Found 1-bit xor2 for signal <add_co_15$xor0000> created at line 57.
+    Found 1-bit xor2 for signal <add_co_2$xor0000> created at line 31.
+    Found 1-bit xor2 for signal <add_co_3$xor0000> created at line 33.
+    Found 1-bit xor2 for signal <add_co_4$xor0000> created at line 35.
+    Found 1-bit xor2 for signal <add_co_5$xor0000> created at line 37.
+    Found 1-bit xor2 for signal <add_co_6$xor0000> created at line 39.
+    Found 1-bit xor2 for signal <add_co_7$xor0000> created at line 41.
+    Found 1-bit xor2 for signal <add_co_8$xor0000> created at line 43.
+    Found 1-bit xor2 for signal <add_co_9$xor0000> created at line 45.
+Unit <add> synthesized.
+
+
+Synthesizing Unit <alu_00>.
+    Related source file is "alu_00.v".
+WARNING:Xst:646 - Signal <invert_b_overflow> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <alu_00> synthesized.
+
+
+Synthesizing Unit <alu_01>.
+    Related source file is "alu_01.v".
+WARNING:Xst:647 - Input <b> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <s_mux<3>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+WARNING:Xst:653 - Signal <overflow_mux<3><0>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <alu_01> synthesized.
+
+
+Synthesizing Unit <alu_10>.
+    Related source file is "alu_10.v".
+WARNING:Xst:646 - Signal <subtraction<14:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <subtract_overflow> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <s_mux<3>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+WARNING:Xst:653 - Signal <overflow_mux<3><0>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <invert_b_overflow> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 16-bit shifter logical left for signal <logic_left$shift0000>.
+    Found 16-bit shifter logical right for signal <logic_right$shift0000>.
+    Found 1-bit xor2 for signal <overflow_mux<2>>.
+    Found 1-bit xor2 for signal <overflow_mux<0>>.
+    Summary:
+	inferred   2 Combinational logic shifter(s).
+Unit <alu_10> synthesized.
+
+
+Synthesizing Unit <alu_16bit>.
+    Related source file is "alu_16bit.v".
+Unit <alu_16bit> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Logic shifters                                       : 4
+ 16-bit shifter logical left                           : 2
+ 16-bit shifter logical right                          : 2
+# Xors                                                 : 221
+ 1-bit xor2                                            : 221
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Logic shifters                                       : 4
+ 16-bit shifter logical left                           : 2
+ 16-bit shifter logical right                          : 2
+# Xors                                                 : 221
+ 1-bit xor2                                            : 221
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <alu_16bit>: instances <alu_00/Negative_B>, <alu_10/Negative_B> of unit <add> are equivalent, second instance is removed
+
+Optimizing unit <alu_16bit> ...
+
+Optimizing unit <add> ...
+
+Optimizing unit <alu_01> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block alu_16bit, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : alu_16bit.ngr
+Top Level Output File Name         : alu_16bit
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 54
+
+Cell Usage :
+# BELS                             : 230
+#      GND                         : 1
+#      LUT2                        : 2
+#      LUT3                        : 11
+#      LUT4                        : 24
+#      LUT5                        : 55
+#      LUT6                        : 114
+#      MUXF7                       : 23
+# IO Buffers                       : 54
+#      IBUF                        : 36
+#      OBUF                        : 18
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx50tff1136-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  206  out of  28800     0%  
+    Number used as Logic:               206  out of  28800     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    206
+   Number with an unused Flip Flop:     206  out of    206   100%  
+   Number with an unused LUT:             0  out of    206     0%  
+   Number of fully used LUT-FF pairs:     0  out of    206     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          54
+ Number of bonded IOBs:                  54  out of    480    11%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 11.027ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 6664 / 18
+-------------------------------------------------------------------------
+Delay:               11.027ns (Levels of Logic = 13)
+  Source:            a<2> (PAD)
+  Destination:       zero (PAD)
+
+  Data Path: a<2> to zero
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   0.694   0.970  a_2_IBUF (a_2_IBUF)
+     LUT6:I0->O            3   0.086   0.609  alu_00/Add/add_co_2_or00001 (alu_00/Add/add_co<2>)
+     LUT5:I2->O            3   0.086   0.609  alu_00/Add/add_co_4_or00001 (alu_00/Add/add_co<4>)
+     LUT5:I2->O            3   0.086   0.609  alu_00/Add/add_co_6_or00001 (alu_00/Add/add_co<6>)
+     LUT5:I2->O            2   0.086   0.604  alu_00/Add/add_co_8_or00001 (alu_00/Add/add_co<8>)
+     LUT3:I0->O            3   0.086   0.609  alu_00/Add/add_co_9_or00001 (alu_00/Add/add_co<9>)
+     LUT5:I2->O            3   0.086   0.609  alu_00/Add/add_co_11_or00001 (alu_00/Add/add_co<11>)
+     LUT5:I2->O            1   0.086   0.600  s<13>432 (s<13>432)
+     LUT5:I2->O            1   0.086   0.662  s<13>449 (s<13>449)
+     LUT6:I2->O            2   0.086   0.416  s<13>720 (s_13_OBUF)
+     LUT6:I5->O            1   0.086   0.662  zero119 (zero119)
+     LUT4:I0->O            1   0.086   0.286  zero160 (zero_OBUF)
+     OBUF:I->O                 2.144          zero_OBUF (zero)
+    ----------------------------------------
+    Total                     11.027ns (3.784ns logic, 7.243ns route)
+                                       (34.3% logic, 65.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.90 secs
+ 
+--> 
+
+Total memory usage is 4600648 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
