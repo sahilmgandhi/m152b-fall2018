@@ -8,7 +8,28 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/register_file_tb.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/add.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/alu_00.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/alu_01.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/alu_10.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/alu_11.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/alu_16bit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/invert.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/register_file.v&quot; into library work</arg>
 </msg>
 
 </messages>
