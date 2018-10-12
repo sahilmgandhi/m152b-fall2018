@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/xst"
+elaborate
+-ifn register_file.prj
+-ifmt mixed

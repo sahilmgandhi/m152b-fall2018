@@ -6,3 +6,4 @@ xst -intstyle ise -ifn "C:/Users/Jiwan/Documents/UCLA/Year 4/CS 152B/Lab1_16Bit/
 xst -intstyle ise -ifn "C:/Users/Jiwan/Documents/UCLA/Year 4/CS 152B/Lab1_16Bit/alu_16bit.xst" -ofn "C:/Users/Jiwan/Documents/UCLA/Year 4/CS 152B/Lab1_16Bit/alu_16bit.syr" 
 xst -intstyle ise -ifn "C:/Users/Jiwan/Documents/UCLA/Year 4/CS 152B/Lab1_16Bit/alu_16bit.xst" -ofn "C:/Users/Jiwan/Documents/UCLA/Year 4/CS 152B/Lab1_16Bit/alu_16bit.syr" 
 xst -intstyle ise -ifn "C:/Users/Jiwan/Documents/UCLA/Year 4/CS 152B/Lab1_16Bit/alu_16bit.xst" -ofn "C:/Users/Jiwan/Documents/UCLA/Year 4/CS 152B/Lab1_16Bit/alu_16bit.syr" 
+xst -intstyle ise -ifn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/alu_16bit.xst" -ofn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/alu_16bit.syr" 

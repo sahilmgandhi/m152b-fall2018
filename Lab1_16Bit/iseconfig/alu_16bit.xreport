@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-10-12T12:31:56</DateModified>
+  <DateModified>2018-10-12T13:02:16</DateModified>
   <ModuleName>alu_16bit</ModuleName>
   <SummaryTimeStamp>2018-10-03T22:08:25</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Jiwan/Documents/UCLA/Year 4/CS 152B/Lab1_16Bit/iseconfig/alu_16bit.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Jiwan/Documents/UCLA/Year 4/CS 152B/Lab1_16Bit\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit/iseconfig/alu_16bit.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/sahil/Documents/GitHub/m152b_fall2018/Lab1_16Bit\</ImplementationReportsDirectory>
   <DateInitialized>2018-10-03T20:50:30</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

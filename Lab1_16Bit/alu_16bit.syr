@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Reading design: alu_16bit.prj
 
@@ -182,7 +182,7 @@ WARNING:Xst:653 - Signal <s_mux<1>> is used but never assigned. This sourceless 
 WARNING:Xst:653 - Signal <overflow_mux<3><0>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 WARNING:Xst:653 - Signal <overflow_mux<1><0>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
     Found 16-bit shifter logical left for signal <arith_left$shift0000>.
-    Found 16-bit shifter logical right for signal <arith_right$shift0000>.
+    Found 16-bit shifter arithmetic right for signal <arith_right$shift0000>.
     Found 1-bit xor2 for signal <overflow_mux<2>>.
     Found 1-bit xor2 for signal <overflow_mux<0>>.
     Summary:
@@ -218,7 +218,12 @@ Unit <add> synthesized.
 
 Synthesizing Unit <alu_00>.
     Related source file is "alu_00.v".
+WARNING:Xst:646 - Signal <subtract_overflow> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <invert_b_overflow> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <add_overflow> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit xor2 for signal <overflow_mux_0$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <overflow_mux_0$xor0001> created at line 47.
+    Found 1-bit xor2 for signal <overflow_mux_1$xor0000> created at line 52.
 Unit <alu_00> synthesized.
 
 
@@ -227,6 +232,8 @@ Synthesizing Unit <alu_01>.
 WARNING:Xst:647 - Input <b> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <s_mux<3>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
 WARNING:Xst:653 - Signal <overflow_mux<3><0>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <increment_overflow> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <decrement_overflow> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <alu_01> synthesized.
 
 
@@ -236,11 +243,9 @@ WARNING:Xst:646 - Signal <subtraction<14:0>> is assigned but never used. This un
 WARNING:Xst:646 - Signal <subtract_overflow> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <s_mux<3>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
 WARNING:Xst:653 - Signal <overflow_mux<3><0>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:646 - Signal <invert_b_overflow> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <invert_a_overflow> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 16-bit shifter logical left for signal <logic_left$shift0000>.
     Found 16-bit shifter logical right for signal <logic_right$shift0000>.
-    Found 1-bit xor2 for signal <overflow_mux<2>>.
-    Found 1-bit xor2 for signal <overflow_mux<0>>.
     Summary:
 	inferred   2 Combinational logic shifter(s).
 Unit <alu_10> synthesized.
@@ -256,10 +261,11 @@ HDL Synthesis Report
 
 Macro Statistics
 # Logic shifters                                       : 4
+ 16-bit shifter arithmetic right                       : 1
  16-bit shifter logical left                           : 2
- 16-bit shifter logical right                          : 2
-# Xors                                                 : 221
- 1-bit xor2                                            : 221
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 222
+ 1-bit xor2                                            : 222
 
 =========================================================================
 
@@ -273,17 +279,18 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # Logic shifters                                       : 4
+ 16-bit shifter arithmetic right                       : 1
  16-bit shifter logical left                           : 2
- 16-bit shifter logical right                          : 2
-# Xors                                                 : 221
- 1-bit xor2                                            : 221
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 222
+ 1-bit xor2                                            : 222
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1989 - Unit <alu_16bit>: instances <alu_00/Negative_B>, <alu_10/Negative_B> of unit <add> are equivalent, second instance is removed
+WARNING:Xst:2170 - Unit alu_16bit : the following signal(s) form a combinatorial loop: alu_11/arith_right<15>.
 
 Optimizing unit <alu_16bit> ...
 
@@ -328,14 +335,15 @@ Design Statistics
 # IOs                              : 54
 
 Cell Usage :
-# BELS                             : 230
+# BELS                             : 283
 #      GND                         : 1
-#      LUT2                        : 2
-#      LUT3                        : 11
-#      LUT4                        : 24
-#      LUT5                        : 55
-#      LUT6                        : 114
-#      MUXF7                       : 23
+#      LUT2                        : 9
+#      LUT3                        : 16
+#      LUT4                        : 21
+#      LUT5                        : 74
+#      LUT6                        : 151
+#      MUXF7                       : 10
+#      MUXF8                       : 1
 # IO Buffers                       : 54
 #      IBUF                        : 36
 #      OBUF                        : 18
@@ -348,14 +356,14 @@ Selected Device : 5vlx50tff1136-2
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                  206  out of  28800     0%  
-    Number used as Logic:               206  out of  28800     0%  
+ Number of Slice LUTs:                  271  out of  28800     0%  
+    Number used as Logic:               271  out of  28800     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    206
-   Number with an unused Flip Flop:     206  out of    206   100%  
-   Number with an unused LUT:             0  out of    206     0%  
-   Number of fully used LUT-FF pairs:     0  out of    206     0%  
+ Number of LUT Flip Flop pairs used:    271
+   Number with an unused Flip Flop:     271  out of    271   100%  
+   Number with an unused LUT:             0  out of    271     0%  
+   Number of fully used LUT-FF pairs:     0  out of    271     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
@@ -395,7 +403,7 @@ Speed Grade: -2
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 11.027ns
+   Maximum combinational path delay: 11.410ns
 
 Timing Detail:
 --------------
@@ -403,44 +411,44 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 6664 / 18
+  Total number of paths / destination ports: 7358 / 18
 -------------------------------------------------------------------------
-Delay:               11.027ns (Levels of Logic = 13)
-  Source:            a<2> (PAD)
+Delay:               11.410ns (Levels of Logic = 13)
+  Source:            b<2> (PAD)
   Destination:       zero (PAD)
 
-  Data Path: a<2> to zero
+  Data Path: b<2> to zero
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            16   0.694   0.970  a_2_IBUF (a_2_IBUF)
-     LUT6:I0->O            3   0.086   0.609  alu_00/Add/add_co_2_or00001 (alu_00/Add/add_co<2>)
-     LUT5:I2->O            3   0.086   0.609  alu_00/Add/add_co_4_or00001 (alu_00/Add/add_co<4>)
-     LUT5:I2->O            3   0.086   0.609  alu_00/Add/add_co_6_or00001 (alu_00/Add/add_co<6>)
-     LUT5:I2->O            2   0.086   0.604  alu_00/Add/add_co_8_or00001 (alu_00/Add/add_co<8>)
-     LUT3:I0->O            3   0.086   0.609  alu_00/Add/add_co_9_or00001 (alu_00/Add/add_co<9>)
-     LUT5:I2->O            3   0.086   0.609  alu_00/Add/add_co_11_or00001 (alu_00/Add/add_co<11>)
-     LUT5:I2->O            1   0.086   0.600  s<13>432 (s<13>432)
-     LUT5:I2->O            1   0.086   0.662  s<13>449 (s<13>449)
-     LUT6:I2->O            2   0.086   0.416  s<13>720 (s_13_OBUF)
-     LUT6:I5->O            1   0.086   0.662  zero119 (zero119)
-     LUT4:I0->O            1   0.086   0.286  zero160 (zero_OBUF)
+     IBUF:I->O            57   0.694   1.013  b_2_IBUF (b_2_IBUF)
+     LUT6:I0->O            1   0.086   0.600  alu_10/Subtract/add_co_2_or00001 (alu_10/Subtract/add_co<2>)
+     LUT6:I3->O            1   0.086   0.819  alu_10/Subtract/add_co_4_or00001 (alu_10/Subtract/add_co<4>)
+     LUT6:I1->O            1   0.086   0.662  alu_10/Subtract/add_co_8_or00001_SW0 (N94)
+     LUT6:I2->O            1   0.086   0.901  alu_10/Subtract/add_co_8_or00001 (alu_10/Subtract/add_co<8>)
+     LUT6:I0->O            1   0.086   0.662  alu_10/Subtract/add_co_11_or00001_SW0 (N96)
+     LUT6:I2->O            1   0.086   0.819  alu_10/Subtract/add_co_11_or00001 (alu_10/Subtract/add_co<11>)
+     LUT6:I1->O            1   0.086   0.412  s<0>581_SW0 (N90)
+     LUT6:I5->O            1   0.086   0.662  s<0>581 (s<0>581)
+     LUT5:I1->O            1   0.086   0.000  s<0>637_G (N153)
+     MUXF7:I1->O           2   0.214   0.666  s<0>637 (s_0_OBUF)
+     LUT6:I2->O            1   0.086   0.286  zero181 (zero_OBUF)
      OBUF:I->O                 2.144          zero_OBUF (zero)
     ----------------------------------------
-    Total                     11.027ns (3.784ns logic, 7.243ns route)
+    Total                     11.410ns (3.912ns logic, 7.498ns route)
                                        (34.3% logic, 65.7% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.90 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.84 secs
  
 --> 
 
-Total memory usage is 4600648 kilobytes
+Total memory usage is 4588052 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   14 (   0 filtered)
+Number of warnings :   18 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
