@@ -19,175 +19,202 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module traffic_light_controller(
-	input clk,
-	input sensor,
-	input walkButton,
-	
-	output reg mainRed,
-	output reg mainYellow,
-	output reg mainGreen,
-	
-	output reg sideRed,
-	output reg sideYellow,
-	output reg sideGreen,
-	
-	output reg walkLight
+  input clk,
+  input sensor,
+  input walkButton,
+  
+  output reg mainRed,
+  output reg mainYellow,
+  output reg mainGreen,
+  
+  output reg sideRed,
+  output reg sideYellow,
+  output reg sideGreen,
+  
+  output reg walkLight
   );
-	 
-	wire one_sec_clk;
-	wire two_sec_clk;
-	wire three_sec_clk;
-	wire four_sec_clk;
+   
+  wire one_sec_clk;
 
-	clock_divider clockDivider(.clk(clk), .outClk(one_sec_clk));
+  clock_divider clockDivider(.clk(clk), .outClk(one_sec_clk));
 
-	// These separate clocks may NOT be needed, and can be internally tracked here via counters
-	multiple_clocks multipleClocks(.oneSecClock(one_sec_clk), .twoSecClock(two_sec_clk), .threeSecClock(three_sec_clk), .sixSecClock(six_sec_clk));
-
-	parameter MAIN_ST_G = 8’b0000_0001;
-	parameter MAIN_ST_SENS = 8’b0000_0010;
-	parameter MAIN_ST_Y = 8’b0000_0100;
-	parameter PED_WALK_ON = 8’b0000_1000;
-	parameter SIDE_ST_G = 8’b0001_0000;
-	parameter SIDE_ST_SENS = 8’b0010_0000;
-	parameter SIDE_ST_Y = 8’b0100_0000;
+  parameter MAIN_ST_G = 8'b0000_0001;
+  parameter MAIN_ST_SENS = 8'b0000_0010;
+  parameter MAIN_ST_Y = 8'b0000_0100;
+  parameter PED_WALK_ON = 8'b0000_1000;
+  parameter SIDE_ST_G = 8'b0001_0000;
+  parameter SIDE_ST_SENS = 8'b0010_0000;
+  parameter SIDE_ST_Y = 8'b0100_0000;
 
 
-	parameter state_bits = 8;
-	reg [state_bits - 1:0] curr_state;
-	reg [state_bits - 1:0] next_state;
-	reg [2:0] counter;
-	reg [2:0] next_counter;
+  parameter state_bits = 8;
+  reg [state_bits - 1:0] curr_state;
+  reg [state_bits - 1:0] next_state;
+  reg [2:0] counter;
+  reg [2:0] next_counter;
 
-	wire walk_light_button;
-	wire side_sensor;
-	button_debouncer walkButton(.button(walkButton), .clk(clk), .actualPressed(walk_light_button));
+  wire walk_light_button;
+  wire side_sensor;
 
-	assign side_sensor = sensor;
-	reg reset;
+  // Button debouncer should instead act more like a latch!
+  button_debouncer walkLatch(.button(walkButton), .clk(clk), .actualPressed(walk_light_button));
 
-	initial begin
-		reset <= 0;
-		curr_state <= MAIN_ST_G;
-	end
+  assign side_sensor = sensor;
+  reg reset;
 
-	always @(posedge one_sec_clk) begin
-		counter = counter - 1;
-		if (counter == 0) begin
-			curr_state <= next_state;
-			counter <= next_counter;
-		end
-	end
+  initial begin
+    reset <= 0;
+    curr_state <= MAIN_ST_G;
+  end
 
-	// When the side sensor is on during the greenlight portion, we need to wait for 3 extra seconds (but what if we notice the side sensor as high several times)
-	// The walk button should only work AFTER the main street light's yellow -> thus maybe it should be a latch?
+  always @(posedge one_sec_clk) begin
+    counter <= counter - 1;
+    if (counter == 0) begin
+      curr_state <= next_state;
+      counter <= next_counter;
+    end
+  end
 
-	always @(curr_state or side_sensor or walk_light_button) begin
-		case (curr_state)
-			MAIN_ST_G: begin
-				next_state <= MAIN_ST_SENS;
-			end
+  // When the side sensor is on during the greenlight portion, we need to wait for 3 extra seconds (but what if we notice the side sensor as high several times)
+  // The walk button should only work AFTER the main street light's yellow -> thus maybe it should be a latch?
 
-			MAIN_ST_SENS: begin
-				next_state <= MAIN_ST_Y;
-			end
+  always @(curr_state or side_sensor or walk_light_button) begin
+    case (curr_state)
+      MAIN_ST_G: begin
+        next_state <= MAIN_ST_SENS;
 
-			MAIN_ST_Y: begin
-				next_state <= SIDE_ST_G;
-			end
+        // if we noticed a sensor of high then the next counter should be 3 to remain at the green light
+        if (side_sensor && counter == 1) begin
+          next_counter <= 3;
+        end
+        else begin
+          next_state <= MAIN_ST_Y;
+          next_counter <= 2;
+        end
+      end
 
-			SIDE_ST_G: begin
-				next_state <= SIDE_ST_SENS;
-			end
+      MAIN_ST_SENS: begin
+        next_state <= MAIN_ST_Y;
+        next_counter <= 2;
+      end
 
-			SIDE_ST_SENS: begin
-				next_state <= SIDE_ST_Y;
-			end
+      MAIN_ST_Y: begin
+        next_state <= SIDE_ST_G;
+        next_counter <= 6;
+        if (walk_light_button) begin
+          next_counter <= 3;
+          next_state <= PED_WALK_ON;
+        end
+      end
 
-			SIDE_ST_Y: begin
-				next_state <= MAIN_ST_G;
-			end
+      SIDE_ST_G: begin
+        next_state <= SIDE_ST_SENS;
+        
+        // Same as the MAIN_ST_G state
+        if (side_sensor && counter == 1) begin
+          next_counter <= 3;
+        end
+        else begin
+          next_state <= SIDE_ST_Y;
+          next_counter <= 2;
+        end
+      end
 
-		 	PED_WALK_ON: begin
-				next_state <= SIDE_ST_G;	 
-			end
-			
-		endcase
-	end
+      SIDE_ST_SENS: begin
+        next_state <= SIDE_ST_Y;
+        next_counter <= 2;
+      end
 
-	// Set the output based on the new state value
-	always @(curr_state) begin
+      SIDE_ST_Y: begin
+        // Walk light does NOT affect the side street's yellow
+        next_state <= MAIN_ST_G;
+        next_counter <= 6;
+      end
 
-		// Switching the new state:
-		case (curr_state)
-			MAIN_ST_G: begin
-				mainGreen = 1;
-				mainRed = 0;
-				mainYellow = 0;
-				sideGreen = 0;
-				sideYellow = 0;
-				sideRed = 1;
-				walkLight = 0;
-			end
-			MAIN_ST_Y: begin
-				mainGreen = 0;
-				mainRed = 0;
-				mainYellow = 1;
-				sideGreen = 0;
-				sideYellow = 0;
-				sideRed = 1;
-				walkLight = 0;
-			end
-			MAIN_ST_SENS: begin
-				mainGreen = 1;
-				mainRed = 0;
-				mainYellow = 0;
-				sideGreen = 0;
-				sideYellow = 0;
-				sideRed = 1;
-				walkLight = 0;
-			end
+      PED_WALK_ON: begin
+        // reset register to reset the pedestrian walk light latch
+        reset <= 1;  
 
-			SIDE_ST_G: begin
-				mainGreen = 0;
-				mainRed = 1;
-				mainYellow = 0;
-				sideGreen = 1;
-				sideYellow = 0;
-				sideRed = 0;
-				walkLight = 0;
-			end
-			SIDE_ST_Y: begin
-				mainGreen = 0;
-				mainRed = 1;
-				mainYellow = 0;
-				sideGreen = 0;
-				sideYellow = 1;
-				sideRed = 0;
-				walkLight = 0;
-			end
-			SIDE_ST_SENS: begin
-				mainGreen = 0;
-				mainRed = 1;
-				mainYellow = 0;
-				sideGreen = 1;
-				sideYellow = 0;
-				sideRed = 0;
-				walkLight = 0;
-			end
+        next_state <= SIDE_ST_G;	 
+        next_counter <= 6;
+      end
 
-			// On pedestrian walk, set all red lights on!
-			PED_WALK_ON: begin
-				mainGreen = 0;
-				mainRed = 1;
-				mainYellow = 0;
-				sideGreen = 0;
-				sideYellow = 0;
-				sideRed = 1;
-				walkLight = 1;
-			end
-		endcase
-	end
+    endcase
+  end
+
+  // Set the output based on the new state value
+  always @(curr_state) begin
+
+    // Switching the new state:
+    case (curr_state)
+      MAIN_ST_G: begin
+        mainGreen = 1;
+        mainRed = 0;
+        mainYellow = 0;
+        sideGreen = 0;
+        sideYellow = 0;
+        sideRed = 1;
+        walkLight = 0;
+      end
+      MAIN_ST_Y: begin
+        mainGreen = 0;
+        mainRed = 0;
+        mainYellow = 1;
+        sideGreen = 0;
+        sideYellow = 0;
+        sideRed = 1;
+        walkLight = 0;
+      end
+      MAIN_ST_SENS: begin
+        mainGreen = 1;
+        mainRed = 0;
+        mainYellow = 0;
+        sideGreen = 0;
+        sideYellow = 0;
+        sideRed = 1;
+        walkLight = 0;
+      end
+
+      SIDE_ST_G: begin
+        mainGreen = 0;
+        mainRed = 1;
+        mainYellow = 0;
+        sideGreen = 1;
+        sideYellow = 0;
+        sideRed = 0;
+        walkLight = 0;
+      end
+      SIDE_ST_Y: begin
+        mainGreen = 0;
+        mainRed = 1;
+        mainYellow = 0;
+        sideGreen = 0;
+        sideYellow = 1;
+        sideRed = 0;
+        walkLight = 0;
+      end
+      SIDE_ST_SENS: begin
+        mainGreen = 0;
+        mainRed = 1;
+        mainYellow = 0;
+        sideGreen = 1;
+        sideYellow = 0;
+        sideRed = 0;
+        walkLight = 0;
+      end
+
+      // On pedestrian walk, set all red lights on!
+      PED_WALK_ON: begin
+        mainGreen = 0;
+        mainRed = 1;
+        mainYellow = 0;
+        sideGreen = 0;
+        sideYellow = 0;
+        sideRed = 1;
+        walkLight = 1;
+      end
+    endcase
+  end
 
 
 endmodule

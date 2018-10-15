@@ -21,6 +21,7 @@
 module button_debouncer(
     input button,
     input clk,
+    input reset,
     output wire actualPressed
     );
 	 
