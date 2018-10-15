@@ -1,0 +1,547 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: traffic_light_controller.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "traffic_light_controller.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "traffic_light_controller"
+Output Format                      : NGC
+Target Device                      : xc5vlx50t-2-ff1136
+
+---- Source Options
+Top Module Name                    : traffic_light_controller
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "clock_divider.v" in library work
+Compiling verilog file "button_debouncer.v" in library work
+Module <clock_divider> compiled
+Compiling verilog file "traffic_light_controller.v" in library work
+Module <button_debouncer> compiled
+Module <traffic_light_controller> compiled
+No errors in compilation
+Analysis of file <"traffic_light_controller.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <traffic_light_controller> in library <work> with parameters.
+	MAIN_ST_G = "00000001"
+	MAIN_ST_SENS = "00000010"
+	MAIN_ST_Y = "00000100"
+	PED_WALK_ON = "00001000"
+	SIDE_ST_G = "00010000"
+	SIDE_ST_SENS = "00100000"
+	SIDE_ST_Y = "01000000"
+	state_bits = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <clock_divider> in library <work>.
+
+Analyzing hierarchy for module <button_debouncer> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <traffic_light_controller>.
+	MAIN_ST_G = 8'b00000001
+	MAIN_ST_SENS = 8'b00000010
+	MAIN_ST_Y = 8'b00000100
+	PED_WALK_ON = 8'b00001000
+	SIDE_ST_G = 8'b00010000
+	SIDE_ST_SENS = 8'b00100000
+	SIDE_ST_Y = 8'b01000000
+	state_bits = 32'sb00000000000000000000000000001000
+WARNING:Xst:905 - "traffic_light_controller.v" line 81: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <counter>
+WARNING:Xst:852 - "traffic_light_controller.v" line 39: Unconnected input port 'rst' of instance 'clockDivider' is tied to GND.
+WARNING:Xst:852 - "traffic_light_controller.v" line 60: Unconnected input port 'reset' of instance 'walkLatch' is tied to GND.
+Module <traffic_light_controller> is correct for synthesis.
+ 
+Analyzing module <clock_divider> in library <work>.
+Module <clock_divider> is correct for synthesis.
+ 
+Analyzing module <button_debouncer> in library <work>.
+Module <button_debouncer> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clock_divider>.
+    Related source file is "clock_divider.v".
+    Found 1-bit register for signal <outClk>.
+    Found 32-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <clock_divider> synthesized.
+
+
+Synthesizing Unit <button_debouncer>.
+    Related source file is "button_debouncer.v".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 17-bit register for signal <clk_dv>.
+    Found 17-bit adder carry out for signal <clk_dv_inc$addsub0000>.
+    Found 1-bit register for signal <clk_en>.
+    Found 1-bit register for signal <clk_en_d>.
+    Found 1-bit register for signal <inst_vld>.
+    Found 3-bit register for signal <step_d>.
+    Summary:
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <button_debouncer> synthesized.
+
+
+Synthesizing Unit <traffic_light_controller>.
+    Related source file is "traffic_light_controller.v".
+WARNING:Xst:646 - Signal <reset> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Using one-hot encoding for signal <curr_state>.
+WARNING:Xst:737 - Found 8-bit latch for signal <next_state>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 3-bit latch for signal <next_counter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <mainGreen>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <mainRed>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <mainYellow>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <sideGreen>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <sideYellow>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <sideRed>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <walkLight>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 3-bit down counter for signal <counter>.
+    Found 8-bit register for signal <curr_state>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   8 D-type flip-flop(s).
+Unit <traffic_light_controller> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 17-bit adder carry out                                : 1
+# Counters                                             : 2
+ 3-bit down counter                                    : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 7
+ 1-bit register                                        : 4
+ 17-bit register                                       : 1
+ 3-bit register                                        : 1
+ 8-bit register                                        : 1
+# Latches                                              : 9
+ 1-bit latch                                           : 7
+ 3-bit latch                                           : 1
+ 8-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <curr_state_7> of sequential type is unconnected in block <traffic_light_controller>.
+WARNING:Xst:2677 - Node <curr_state_7> of sequential type is unconnected in block <traffic_light_controller>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 17-bit adder carry out                                : 1
+# Counters                                             : 2
+ 3-bit down counter                                    : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+# Latches                                              : 9
+ 1-bit latch                                           : 7
+ 3-bit latch                                           : 1
+ 8-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <7> (without init value) has a constant value of 0 in block <LPM_LATCH_1>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <sideYellow> in Unit <traffic_light_controller> is equivalent to the following FF/Latch, which will be removed : <next_state_0> 
+
+Optimizing unit <traffic_light_controller> ...
+
+Optimizing unit <button_debouncer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block traffic_light_controller, actual ratio is 0.
+Latch sideYellow has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+Processing Unit <traffic_light_controller> :
+	Found 2-bit shift register for signal <walkLatch/step_d_1>.
+Unit <traffic_light_controller> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : traffic_light_controller.ngr
+Top Level Output File Name         : traffic_light_controller
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 205
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 47
+#      LUT2                        : 24
+#      LUT3                        : 4
+#      LUT4                        : 5
+#      LUT5                        : 3
+#      LUT6                        : 21
+#      MUXCY                       : 48
+#      VCC                         : 1
+#      XORCY                       : 49
+# FlipFlops/Latches                : 82
+#      FD                          : 51
+#      FDE                         : 9
+#      FDR                         : 4
+#      FDRS                        : 1
+#      LD                          : 17
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 2
+#      OBUF                        : 7
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx50tff1136-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              75  out of  28800     0%  
+ Number of Slice LUTs:                  107  out of  28800     0%  
+    Number used as Logic:               106  out of  28800     0%  
+    Number used as Memory:                1  out of   7680     0%  
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    113
+   Number with an unused Flip Flop:      38  out of    113    33%  
+   Number with an unused LUT:             6  out of    113     5%  
+   Number of fully used LUT-FF pairs:    69  out of    113    61%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    480     2%  
+    IOB Flip Flops/Latches:               7
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------+------------------------+-------+
+Clock Signal                                      | Clock buffer(FF name)  | Load  |
+--------------------------------------------------+------------------------+-------+
+clockDivider/outClk                               | NONE(curr_state_0)     | 10    |
+next_counter_mux0001<1>(next_counter_mux0001<1>:O)| NONE(*)(walkLight)     | 17    |
+clk                                               | BUFGP                  | 56    |
+--------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 3.064ns (Maximum Frequency: 326.349MHz)
+   Minimum input arrival time before clock: 2.084ns
+   Maximum output required time after clock: 3.040ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockDivider/outClk'
+  Clock period: 1.618ns (frequency: 618.181MHz)
+  Total number of paths / destination ports: 30 / 12
+-------------------------------------------------------------------------
+Delay:               1.618ns (Levels of Logic = 1)
+  Source:            counter_2 (FF)
+  Destination:       curr_state_0 (FF)
+  Source Clock:      clockDivider/outClk rising
+  Destination Clock: clockDivider/outClk rising
+
+  Data Path: counter_2 to curr_state_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.396   0.637  counter_2 (counter_2)
+     LUT3:I0->O            7   0.086   0.314  Mcount_counter_xor<2>121 (counter_not0001_inv)
+     FDE:CE                    0.185          curr_state_0
+    ----------------------------------------
+    Total                      1.618ns (0.667ns logic, 0.951ns route)
+                                       (41.2% logic, 58.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.064ns (frequency: 326.349MHz)
+  Total number of paths / destination ports: 1764 / 62
+-------------------------------------------------------------------------
+Delay:               3.064ns (Levels of Logic = 2)
+  Source:            clockDivider/count_9 (FF)
+  Destination:       clockDivider/count_29 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: clockDivider/count_9 to clockDivider/count_29
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.396   0.828  clockDivider/count_9 (clockDivider/count_9)
+     LUT5:I0->O            1   0.086   0.819  clockDivider/count_cmp_eq0000182_SW1 (N12)
+     LUT6:I1->O           22   0.086   0.382  clockDivider/count_cmp_eq0000195 (clockDivider/count_cmp_eq0000)
+     FDR:R                     0.468          clockDivider/count_29
+    ----------------------------------------
+    Total                      3.064ns (1.036ns logic, 2.028ns route)
+                                       (33.8% logic, 66.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'next_counter_mux0001<1>'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              2.084ns (Levels of Logic = 3)
+  Source:            sensor (PAD)
+  Destination:       next_counter_0 (LATCH)
+  Destination Clock: next_counter_mux0001<1> falling
+
+  Data Path: sensor to next_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.694   0.618  sensor_IBUF (sensor_IBUF)
+     LUT3:I0->O            1   0.086   0.600  next_counter_mux0001<0>_SW0 (N8)
+     LUT6:I3->O            1   0.086   0.000  next_counter_mux0001<0> (next_counter_mux0001<0>)
+     LD:D                     -0.066          next_counter_0
+    ----------------------------------------
+    Total                      2.084ns (0.866ns logic, 1.218ns route)
+                                       (41.6% logic, 58.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.274ns (Levels of Logic = 1)
+  Source:            walkButton (PAD)
+  Destination:       walkLatch/Mshreg_step_d_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: walkButton to walkLatch/Mshreg_step_d_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.694   0.286  walkButton_IBUF (walkButton_IBUF)
+     SRLC16E:D                 0.294          walkLatch/Mshreg_step_d_1
+    ----------------------------------------
+    Total                      1.274ns (0.988ns logic, 0.286ns route)
+                                       (77.6% logic, 22.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'next_counter_mux0001<1>'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              3.040ns (Levels of Logic = 1)
+  Source:            sideRed (LATCH)
+  Destination:       sideRed (PAD)
+  Source Clock:      next_counter_mux0001<1> falling
+
+  Data Path: sideRed to sideRed
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.610   0.286  sideRed (sideRed_OBUF)
+     OBUF:I->O                 2.144          sideRed_OBUF (sideRed)
+    ----------------------------------------
+    Total                      3.040ns (2.754ns logic, 0.286ns route)
+                                       (90.6% logic, 9.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.29 secs
+ 
+--> 
+
+Total memory usage is 4570320 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+
