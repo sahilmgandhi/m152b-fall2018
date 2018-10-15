@@ -21,7 +21,7 @@
 module clock_divider(
 	input clk,
 	input rst,
-	output reg out_clk=0
+	output reg outClk=0
 );
 reg [31:0] count=0;
 
@@ -35,7 +35,7 @@ begin
 		if (count == 50000000) 
 		begin
 			count <= 32'b0;
-			out_clk <= !out_clk;
+			outClk <= !outClk;
 		end
 	end
 end
