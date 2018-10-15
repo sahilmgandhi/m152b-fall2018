@@ -56,14 +56,15 @@ module traffic_light_controller(
   wire walk_light_button;
   wire side_sensor;
 
+  reg walk_light;
+
   // Button debouncer should instead act more like a latch!
   button_debouncer walkLatch(.button(walkButton), .clk(clk), .actualPressed(walk_light_button));
 
   assign side_sensor = sensor;
-  reg reset;
 
   initial begin
-    reset <= 0;
+    walk_light <= 0;
     curr_state <= MAIN_ST_G;
   end
 
@@ -73,6 +74,10 @@ module traffic_light_controller(
       curr_state <= next_state;
       counter = next_counter;
     end
+  end
+
+  always @(posedge walk_light_button) begin
+    walk_light <= 1;
   end
 
   // When the side sensor is on during the greenlight portion, we need to wait for 3 extra seconds (but what if we notice the side sensor as high several times)
@@ -133,7 +138,7 @@ module traffic_light_controller(
 
       PED_WALK_ON: begin
         // reset register to reset the pedestrian walk light latch
-        reset <= 1;  
+        walk_light <= 0;  
 
         next_state <= SIDE_ST_G;	 
         next_counter <= 6;
