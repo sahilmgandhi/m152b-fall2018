@@ -68,10 +68,10 @@ module traffic_light_controller(
   end
 
   always @(posedge one_sec_clk) begin
-    counter <= counter - 1;
+    counter = counter - 1;
     if (counter == 0) begin
       curr_state <= next_state;
-      counter <= next_counter;
+      counter = next_counter;
     end
   end
 

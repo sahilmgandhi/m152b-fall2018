@@ -1,0 +1,16 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "mainGreen" LOC = AE11;
+NET "mainYellow" LOC = AF11;
+NET "mainRed" LOC = AG11;
+
+NET "sideGreen" LOC = AH10;
+NET "sideYellow" LOC = AG10;
+NET "sideRed" LOC = AH9;
+
+NET "walkLight" LOC = AG8;
+
+NET "sensor" LOC = J19;
+NET "clk" LOC = AG18;
+NET "walkButton" LOC = G7;

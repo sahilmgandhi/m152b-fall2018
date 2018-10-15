@@ -41,14 +41,20 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="button_debouncer_ngdbuild.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="button_debouncer_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="button_debouncer_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="traffic_light_controller.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="traffic_light_controller.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="traffic_light_controller.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="traffic_light_controller.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="traffic_light_controller.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="traffic_light_controller.ngr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="traffic_light_controller.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="traffic_light_controller.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="traffic_light_controller.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="traffic_light_controller.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="traffic_light_controller_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="traffic_light_controller_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="traffic_light_controller_ngdbuild.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="traffic_light_controller_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="traffic_light_controller_xst.xrpt"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -57,35 +63,35 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1539583466" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1539583466">
+    <transform xil_pn:end_ts="1539627362" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1539627362">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539625373" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-6368012131984632482" xil_pn:start_ts="1539625373">
+    <transform xil_pn:end_ts="1539627362" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-6368012131984632482" xil_pn:start_ts="1539627362">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539625373" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="7246298388349972153" xil_pn:start_ts="1539625373">
+    <transform xil_pn:end_ts="1539627362" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="7246298388349972153" xil_pn:start_ts="1539627362">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539583466" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1539583466">
+    <transform xil_pn:end_ts="1539627362" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1539627362">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539625373" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="7459495945044971184" xil_pn:start_ts="1539625373">
+    <transform xil_pn:end_ts="1539627362" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="7459495945044971184" xil_pn:start_ts="1539627362">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539583466" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-2933210331134281007" xil_pn:start_ts="1539583466">
+    <transform xil_pn:end_ts="1539627362" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-2933210331134281007" xil_pn:start_ts="1539627362">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539625373" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-185578686195114045" xil_pn:start_ts="1539625373">
+    <transform xil_pn:end_ts="1539627362" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-185578686195114045" xil_pn:start_ts="1539627362">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539625559" xil_pn:in_ck="5689349329085737673" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="5927948400604858231" xil_pn:start_ts="1539625542">
+    <transform xil_pn:end_ts="1539627384" xil_pn:in_ck="5689349329085737673" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="5927948400604858231" xil_pn:start_ts="1539627362">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -102,31 +108,26 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1539583478" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8869753240586632556" xil_pn:start_ts="1539583478">
+    <transform xil_pn:end_ts="1539627384" xil_pn:in_ck="2876298565678636199" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-863461628757194917" xil_pn:start_ts="1539627384">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1539583485" xil_pn:in_ck="-6440603595065009384" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="8963927330725366907" xil_pn:start_ts="1539583478">
+    <transform xil_pn:end_ts="1539627394" xil_pn:in_ck="-4307065807922241146" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2089360304471899426" xil_pn:start_ts="1539627384">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="traffic_light_controller.bld"/>
+      <outfile xil_pn:name="traffic_light_controller.ngd"/>
+      <outfile xil_pn:name="traffic_light_controller_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1539583489" xil_pn:in_ck="-6440603595065009383" xil_pn:name="TRANEXT_map_virtex5" xil_pn:prop_ck="-7247809554470829512" xil_pn:start_ts="1539583485">
+    <transform xil_pn:end_ts="1539627397" xil_pn:in_ck="-8407165361754190585" xil_pn:name="TRANEXT_map_virtex5" xil_pn:prop_ck="-7247809554470829512" xil_pn:start_ts="1539627394">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="traffic_light_controller_map.map"/>
+      <outfile xil_pn:name="traffic_light_controller_map.mrp"/>
     </transform>
   </transforms>
 

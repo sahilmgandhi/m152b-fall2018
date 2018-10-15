@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: traffic_light_controller.prj
 
@@ -216,9 +216,11 @@ WARNING:Xst:737 - Found 1-bit latch for signal <walkLight>. Latches may be gener
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
     Found 3-bit down counter for signal <counter>.
     Found 8-bit register for signal <curr_state>.
+    Found 3-bit subtractor for signal <old_counter_1$sub0000> created at line 71.
     Summary:
 	inferred   1 Counter(s).
 	inferred   8 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
 Unit <traffic_light_controller> synthesized.
 
 
@@ -226,8 +228,9 @@ Unit <traffic_light_controller> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
+# Adders/Subtractors                                   : 2
  17-bit adder carry out                                : 1
+ 3-bit subtractor                                      : 1
 # Counters                                             : 2
  3-bit down counter                                    : 1
  32-bit up counter                                     : 1
@@ -254,8 +257,9 @@ WARNING:Xst:2677 - Node <curr_state_7> of sequential type is unconnected in bloc
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
+# Adders/Subtractors                                   : 2
  17-bit adder carry out                                : 1
+ 3-bit subtractor                                      : 1
 # Counters                                             : 2
  3-bit down counter                                    : 1
  32-bit up counter                                     : 1
@@ -329,19 +333,18 @@ Cell Usage :
 #      GND                         : 1
 #      INV                         : 2
 #      LUT1                        : 47
-#      LUT2                        : 24
+#      LUT2                        : 23
 #      LUT3                        : 4
-#      LUT4                        : 5
+#      LUT4                        : 6
 #      LUT5                        : 3
 #      LUT6                        : 21
 #      MUXCY                       : 48
 #      VCC                         : 1
 #      XORCY                       : 49
 # FlipFlops/Latches                : 82
-#      FD                          : 51
+#      FD                          : 52
 #      FDE                         : 9
 #      FDR                         : 4
-#      FDRS                        : 1
 #      LD                          : 17
 # Shift Registers                  : 1
 #      SRLC16E                     : 1
@@ -370,7 +373,7 @@ Slice Logic Distribution:
    Number with an unused Flip Flop:      38  out of    113    33%  
    Number with an unused LUT:             6  out of    113     5%  
    Number of fully used LUT-FF pairs:    69  out of    113    61%  
-   Number of unique control sets:         8
+   Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                          10
@@ -430,20 +433,20 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clockDivider/outClk'
   Clock period: 1.618ns (frequency: 618.181MHz)
-  Total number of paths / destination ports: 30 / 12
+  Total number of paths / destination ports: 30 / 10
 -------------------------------------------------------------------------
 Delay:               1.618ns (Levels of Logic = 1)
-  Source:            counter_2 (FF)
+  Source:            counter_0 (FF)
   Destination:       curr_state_0 (FF)
   Source Clock:      clockDivider/outClk rising
   Destination Clock: clockDivider/outClk rising
 
-  Data Path: counter_2 to curr_state_0
+  Data Path: counter_0 to curr_state_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               9   0.396   0.637  counter_2 (counter_2)
-     LUT3:I0->O            7   0.086   0.314  Mcount_counter_xor<2>121 (counter_not0001_inv)
+     FD:C->Q               9   0.396   0.637  counter_0 (counter_0)
+     LUT3:I0->O            7   0.086   0.314  curr_state_not0001_inv1 (curr_state_not0001_inv)
      FDE:CE                    0.185          curr_state_0
     ----------------------------------------
     Total                      1.618ns (0.667ns logic, 0.951ns route)
@@ -465,7 +468,7 @@ Delay:               3.064ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q               3   0.396   0.828  clockDivider/count_9 (clockDivider/count_9)
-     LUT5:I0->O            1   0.086   0.819  clockDivider/count_cmp_eq0000182_SW1 (N12)
+     LUT5:I0->O            1   0.086   0.819  clockDivider/count_cmp_eq0000182_SW1 (N11)
      LUT6:I1->O           22   0.086   0.382  clockDivider/count_cmp_eq0000195 (clockDivider/count_cmp_eq0000)
      FDR:R                     0.468          clockDivider/count_29
     ----------------------------------------
@@ -486,7 +489,7 @@ Offset:              2.084ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             5   0.694   0.618  sensor_IBUF (sensor_IBUF)
-     LUT3:I0->O            1   0.086   0.600  next_counter_mux0001<0>_SW0 (N8)
+     LUT3:I0->O            1   0.086   0.600  next_counter_mux0001<0>_SW0 (N7)
      LUT6:I3->O            1   0.086   0.000  next_counter_mux0001<0> (next_counter_mux0001<0>)
      LD:D                     -0.066          next_counter_0
     ----------------------------------------
@@ -534,12 +537,12 @@ Offset:              3.040ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 12.29 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.96 secs
  
 --> 
 
-Total memory usage is 4570320 kilobytes
+Total memory usage is 4570256 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   17 (   0 filtered)
