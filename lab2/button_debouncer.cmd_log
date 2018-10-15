@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/button_debouncer.xst" -ofn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/button_debouncer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx50t-ff1136-2 button_debouncer.ngc button_debouncer.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o button_debouncer_map.ncd button_debouncer.ngd button_debouncer.pcf 

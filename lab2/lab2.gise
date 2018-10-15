@@ -21,8 +21,112 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="lab2.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="button_debouncer.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="button_debouncer.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="button_debouncer.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="button_debouncer.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="button_debouncer.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="button_debouncer.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="button_debouncer.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="button_debouncer.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="button_debouncer.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="button_debouncer.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="button_debouncer_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="button_debouncer_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="button_debouncer_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="button_debouncer_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="button_debouncer_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1539583466" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1539583466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1539583466" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-6952769382536302057" xil_pn:start_ts="1539583466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1539583466" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-7845340902336443950" xil_pn:start_ts="1539583466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1539583466" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1539583466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1539583466" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="4454516570981710185" xil_pn:start_ts="1539583466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1539583466" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-2933210331134281007" xil_pn:start_ts="1539583466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1539583466" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="1405460944327299292" xil_pn:start_ts="1539583466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1539583478" xil_pn:in_ck="-8354704913226415910" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="-6504988598756103056" xil_pn:start_ts="1539583466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="button_debouncer.lso"/>
+      <outfile xil_pn:name="button_debouncer.ngc"/>
+      <outfile xil_pn:name="button_debouncer.ngr"/>
+      <outfile xil_pn:name="button_debouncer.prj"/>
+      <outfile xil_pn:name="button_debouncer.stx"/>
+      <outfile xil_pn:name="button_debouncer.syr"/>
+      <outfile xil_pn:name="button_debouncer.xst"/>
+      <outfile xil_pn:name="button_debouncer_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1539583478" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8869753240586632556" xil_pn:start_ts="1539583478">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1539583485" xil_pn:in_ck="-6440603595065009384" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="8963927330725366907" xil_pn:start_ts="1539583478">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="button_debouncer.bld"/>
+      <outfile xil_pn:name="button_debouncer.ngd"/>
+      <outfile xil_pn:name="button_debouncer_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1539583489" xil_pn:in_ck="-6440603595065009383" xil_pn:name="TRANEXT_map_virtex5" xil_pn:prop_ck="-7247809554470829512" xil_pn:start_ts="1539583485">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="button_debouncer_map.map"/>
+      <outfile xil_pn:name="button_debouncer_map.mrp"/>
+    </transform>
+  </transforms>
 
 </generated_project>
