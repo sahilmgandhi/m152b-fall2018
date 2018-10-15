@@ -21,7 +21,6 @@
 module button_debouncer(
     input button,
     input clk,
-    input reset,
     output wire actualPressed
     );
 	 
@@ -35,23 +34,13 @@ module button_debouncer(
 	assign clk_dv_inc = clk_dv + 1;
 
     always @ (posedge clk) begin
-        if (reset) begin 
-            clk_dv <= 0;
-            clk_dv_inc <= 0;
-            clk_en <= 0;
-            clk_en_d <= 0;
-            inst_vld <= 0;
-            step_d <= 0;
+        clk_dv  <= clk_dv_inc[16:0];
+        clk_en  <= clk_dv_inc[17];
+        clk_en_d <= clk_en;
+        if (clk_en) begin
+            step_d[2:0]  <= {button, step_d[2:1]};
         end
-        else begin
-            clk_dv   <= clk_dv_inc[16:0];
-            clk_en   <= clk_dv_inc[17];
-            clk_en_d <= clk_en;
-            if (clk_en) begin
-                step_d[2:0]  <= {button, step_d[2:1]};
-            end
-            inst_vld <= ~step_d[0] & step_d[1] & clk_en_d;
-        end
+        inst_vld <= ~step_d[0] & step_d[1] & clk_en_d;
     end
 	 
     assign actualPressed = inst_vld;
