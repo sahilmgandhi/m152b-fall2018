@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.16 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: traffic_light_controller.prj
 
@@ -148,8 +148,8 @@ Analyzing top module <traffic_light_controller>.
 	SIDE_ST_SENS = 8'b00100000
 	SIDE_ST_Y = 8'b01000000
 	state_bits = 32'sb00000000000000000000000000001000
-WARNING:Xst:905 - "traffic_light_controller.v" line 86: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <counter>
+WARNING:Xst:905 - "traffic_light_controller.v" line 77: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <counter>, <walk_light>
 WARNING:Xst:852 - "traffic_light_controller.v" line 39: Unconnected input port 'rst' of instance 'clockDivider' is tied to GND.
 Module <traffic_light_controller> is correct for synthesis.
  
@@ -165,7 +165,6 @@ Module <button_debouncer> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
-INFO:Xst:2679 - Register <walk_light> in unit <traffic_light_controller> has a constant value of 0 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <clock_divider>.
     Related source file is "clock_divider.v".
@@ -193,7 +192,6 @@ Unit <button_debouncer> synthesized.
 
 Synthesizing Unit <traffic_light_controller>.
     Related source file is "traffic_light_controller.v".
-WARNING:Xst:646 - Signal <walk_light> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Using one-hot encoding for signal <curr_state>.
 WARNING:Xst:737 - Found 8-bit latch for signal <next_state>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
@@ -215,7 +213,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <walkLight>. Latches may be gener
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
     Found 3-bit down counter for signal <counter>.
     Found 8-bit register for signal <curr_state>.
-    Found 3-bit subtractor for signal <old_counter_1$sub0000> created at line 72.
+    Found 3-bit subtractor for signal <old_counter_1$sub0000> created at line 68.
     Summary:
 	inferred   1 Counter(s).
 	inferred   8 D-type flip-flop(s).
@@ -249,8 +247,8 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:2677 - Node <curr_state_7> of sequential type is unconnected in block <traffic_light_controller>.
-WARNING:Xst:2677 - Node <curr_state_7> of sequential type is unconnected in block <traffic_light_controller>.
+WARNING:Xst:2677 - Node <curr_state_0> of sequential type is unconnected in block <traffic_light_controller>.
+WARNING:Xst:2677 - Node <curr_state_0> of sequential type is unconnected in block <traffic_light_controller>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -274,8 +272,11 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <7> (without init value) has a constant value of 0 in block <LPM_LATCH_1>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <sideYellow> in Unit <traffic_light_controller> is equivalent to the following FF/Latch, which will be removed : <next_state_0> 
+WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block LPM_LATCH_1.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:2677 - Node <next_state_0> of sequential type is unconnected in block <traffic_light_controller>.
+INFO:Xst:2261 - The FF/Latch <next_state_1> in Unit <traffic_light_controller> is equivalent to the following FF/Latch, which will be removed : <sideYellow> 
+WARNING:Xst:2170 - Unit traffic_light_controller : the following signal(s) form a combinatorial loop: _old_walk_light_2.
 
 Optimizing unit <traffic_light_controller> ...
 
@@ -284,7 +285,7 @@ Optimizing unit <button_debouncer> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block traffic_light_controller, actual ratio is 0.
-Latch sideYellow has been replicated 1 time(s) to handle iob=true attribute.
+Latch next_state_1 has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -328,12 +329,12 @@ Design Statistics
 # IOs                              : 10
 
 Cell Usage :
-# BELS                             : 205
+# BELS                             : 206
 #      GND                         : 1
 #      INV                         : 2
 #      LUT1                        : 47
 #      LUT2                        : 23
-#      LUT3                        : 4
+#      LUT3                        : 5
 #      LUT4                        : 6
 #      LUT5                        : 3
 #      LUT6                        : 21
@@ -362,16 +363,16 @@ Selected Device : 5vlx50tff1136-2
 
 Slice Logic Utilization: 
  Number of Slice Registers:              75  out of  28800     0%  
- Number of Slice LUTs:                  107  out of  28800     0%  
-    Number used as Logic:               106  out of  28800     0%  
+ Number of Slice LUTs:                  108  out of  28800     0%  
+    Number used as Logic:               107  out of  28800     0%  
     Number used as Memory:                1  out of   7680     0%  
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    113
-   Number with an unused Flip Flop:      38  out of    113    33%  
-   Number with an unused LUT:             6  out of    113     5%  
-   Number of fully used LUT-FF pairs:    69  out of    113    61%  
+ Number of LUT Flip Flop pairs used:    114
+   Number with an unused Flip Flop:      39  out of    114    34%  
+   Number with an unused LUT:             6  out of    114     5%  
+   Number of fully used LUT-FF pairs:    69  out of    114    60%  
    Number of unique control sets:         7
 
 IO Utilization: 
@@ -403,7 +404,7 @@ Clock Information:
 --------------------------------------------------+------------------------+-------+
 Clock Signal                                      | Clock buffer(FF name)  | Load  |
 --------------------------------------------------+------------------------+-------+
-clockDivider/outClk                               | NONE(curr_state_0)     | 10    |
+clockDivider/outClk                               | NONE(curr_state_1)     | 10    |
 next_counter_mux0001<1>(next_counter_mux0001<1>:O)| NONE(*)(walkLight)     | 17    |
 clk                                               | BUFGP                  | 56    |
 --------------------------------------------------+------------------------+-------+
@@ -436,17 +437,17 @@ Timing constraint: Default period analysis for Clock 'clockDivider/outClk'
 -------------------------------------------------------------------------
 Delay:               1.618ns (Levels of Logic = 1)
   Source:            counter_0 (FF)
-  Destination:       curr_state_0 (FF)
+  Destination:       curr_state_1 (FF)
   Source Clock:      clockDivider/outClk rising
   Destination Clock: clockDivider/outClk rising
 
-  Data Path: counter_0 to curr_state_0
+  Data Path: counter_0 to curr_state_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q               9   0.396   0.637  counter_0 (counter_0)
      LUT3:I0->O            7   0.086   0.314  curr_state_not0001_inv1 (curr_state_not0001_inv)
-     FDE:CE                    0.185          curr_state_0
+     FDE:CE                    0.185          curr_state_1
     ----------------------------------------
     Total                      1.618ns (0.667ns logic, 0.951ns route)
                                        (41.2% logic, 58.8% route)
@@ -536,14 +537,14 @@ Offset:              3.040ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 17.01 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.06 secs
  
 --> 
 
-Total memory usage is 4570220 kilobytes
+Total memory usage is 4570244 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   15 (   0 filtered)
-Number of infos    :   12 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 

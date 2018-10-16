@@ -48,26 +48,22 @@ module traffic_light_controller(
 
 
   parameter state_bits = 8;
-  reg [state_bits - 1:0] curr_state;
-  reg [state_bits - 1:0] next_state;
-  reg [2:0] counter;
-  reg [2:0] next_counter;
+  reg [state_bits - 1:0] curr_state = MAIN_ST_G;
+  reg [state_bits - 1:0] next_state = 0;
+  reg [2:0] counter = 0;
+  reg [2:0] next_counter = 0;
 
   wire walk_light_button;
   wire side_sensor;
 
-  reg walk_light;
+  reg walk_light = 0;
 
   // Button debouncer should instead act more like a latch!
   button_debouncer walkLatch(.button(walkButton), .clk(clk), .actualPressed(walk_light_button));
 
   assign side_sensor = sensor;
 
-  initial begin
-    walk_light <= 0;
-    curr_state <= MAIN_ST_G;
-  end
-
+  // Counter to count down. Useful for the 6 second, 3 second and 2 second clocks
   always @(posedge one_sec_clk) begin
     counter = counter - 1;
     if (counter == 0) begin
@@ -76,14 +72,13 @@ module traffic_light_controller(
     end
   end
 
-  always @(posedge walk_light_button) begin
-    walk_light <= 1;
-  end
-
   // When the side sensor is on during the greenlight portion, we need to wait for 3 extra seconds (but what if we notice the side sensor as high several times)
   // The walk button should only work AFTER the main street light's yellow -> thus maybe it should be a latch?
-
   always @(curr_state or side_sensor or walk_light_button) begin
+    if (walk_light_button == 1) begin
+      walk_light = 1;
+    end
+
     case (curr_state)
       MAIN_ST_G: begin
         next_state <= MAIN_ST_SENS;
@@ -106,7 +101,7 @@ module traffic_light_controller(
       MAIN_ST_Y: begin
         next_state <= SIDE_ST_G;
         next_counter <= 6;
-        if (walk_light_button) begin
+        if (walk_light) begin
           next_counter <= 3;
           next_state <= PED_WALK_ON;
         end
@@ -138,7 +133,7 @@ module traffic_light_controller(
 
       PED_WALK_ON: begin
         // reset register to reset the pedestrian walk light latch
-        walk_light <= 0;  
+        walk_light = 0;  
 
         next_state <= SIDE_ST_G;	 
         next_counter <= 6;
@@ -149,7 +144,6 @@ module traffic_light_controller(
 
   // Set the output based on the new state value
   always @(curr_state) begin
-
     // Switching the new state:
     case (curr_state)
       MAIN_ST_G: begin
@@ -220,6 +214,5 @@ module traffic_light_controller(
       end
     endcase
   end
-
 
 endmodule

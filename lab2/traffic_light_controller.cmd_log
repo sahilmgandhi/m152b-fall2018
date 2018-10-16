@@ -10,3 +10,11 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc traffic_light_controller.ucf -
 map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o traffic_light_controller_map.ncd traffic_light_controller.ngd traffic_light_controller.pcf 
 xst -intstyle ise -ifn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.xst" -ofn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.syr" 
 xst -intstyle ise -ifn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.xst" -ofn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.xst" -ofn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.xst" -ofn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.xst" -ofn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.xst" -ofn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.xst" -ofn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.xst" -ofn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.xst" -ofn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.syr" 
+xst -intstyle ise -ifn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.xst" -ofn "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller.syr" 
