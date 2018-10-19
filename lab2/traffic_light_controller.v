@@ -38,6 +38,7 @@ module traffic_light_controller(
 
   clock_divider clockDivider(.clk(clk), .outClk(one_sec_clk));
 
+  parameter MAIN_ST_G_NONSENS = 8'b0000_0000;
   parameter MAIN_ST_G = 8'b0000_0001;
   parameter MAIN_ST_SENS = 8'b0000_0010;
   parameter MAIN_ST_Y = 8'b0000_0100;
@@ -50,8 +51,8 @@ module traffic_light_controller(
   parameter state_bits = 8;
   reg [state_bits - 1:0] curr_state = MAIN_ST_G;
   reg [state_bits - 1:0] next_state = 0;
-  reg [2:0] counter = 0;
-  reg [2:0] next_counter = 0;
+  reg [3:0] counter = 12;
+  reg [3:0] next_counter = 0;
 
   wire walk_light_button;
   wire side_sensor;
@@ -66,6 +67,14 @@ module traffic_light_controller(
   // Counter to count down. Useful for the 6 second, 3 second and 2 second clocks
   always @(posedge one_sec_clk) begin
     counter = counter - 1;
+	 if (curr_state == MAIN_ST_G && counter == 0 && side_sensor == 1) begin
+			curr_state <= MAIN_ST_SENS;
+			counter = 3;
+	 end
+	 if (curr_state == SIDE_ST_G && counter == 0 && side_sensor == 1) begin
+			curr_state <= SIDE_ST_SENS;
+			counter = 3;
+	 end
     if (counter == 0) begin
       curr_state <= next_state;
       counter = next_counter;
@@ -80,9 +89,13 @@ module traffic_light_controller(
     end
 
     case (curr_state)
+	 
+	 // TODO FIX THIs
       MAIN_ST_G: begin
-        next_state <= MAIN_ST_SENS;
-
+        next_state <= MAIN_ST_G_NONSENS;
+		  next_counter <= 6; 
+		  
+		  /*
         // if we noticed a sensor of high then the next counter should be 3 to remain at the green light
         if (side_sensor && counter == 1) begin
           next_counter <= 3;
@@ -91,7 +104,13 @@ module traffic_light_controller(
           next_state <= MAIN_ST_Y;
           next_counter <= 2;
         end
+		  */
       end
+		
+		MAIN_ST_G_NONSENS: begin
+			next_state <= MAIN_ST_Y;
+			next_counter <= 2;
+		end
 
       MAIN_ST_SENS: begin
         next_state <= MAIN_ST_Y;
@@ -101,16 +120,19 @@ module traffic_light_controller(
       MAIN_ST_Y: begin
         next_state <= SIDE_ST_G;
         next_counter <= 6;
-        if (walk_light) begin
+        if (walk_light == 1) begin
           next_counter <= 3;
           next_state <= PED_WALK_ON;
         end
       end
+		
+		// TODO FIX THIS
 
       SIDE_ST_G: begin
-        next_state <= SIDE_ST_SENS;
-        
-        // Same as the MAIN_ST_G state
+        next_state <= SIDE_ST_Y;
+        next_counter <= 2;
+		  
+        /* // Same as the MAIN_ST_G state
         if (side_sensor && counter == 1) begin
           next_counter <= 3;
         end
@@ -118,8 +140,9 @@ module traffic_light_controller(
           next_state <= SIDE_ST_Y;
           next_counter <= 2;
         end
+		  */
       end
-
+		
       SIDE_ST_SENS: begin
         next_state <= SIDE_ST_Y;
         next_counter <= 2;
@@ -165,6 +188,15 @@ module traffic_light_controller(
         walkLight = 0;
       end
       MAIN_ST_SENS: begin
+        mainGreen = 1;
+        mainRed = 0;
+        mainYellow = 0;
+        sideGreen = 0;
+        sideYellow = 0;
+        sideRed = 1;
+        walkLight = 0;
+      end
+		MAIN_ST_G_NONSENS: begin
         mainGreen = 1;
         mainRed = 0;
         mainYellow = 0;
