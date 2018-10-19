@@ -29,3 +29,21 @@ map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -registe
 par -w -intstyle ise -ol high -mt off traffic_light_controller_map.ncd traffic_light_controller.ncd traffic_light_controller.pcf 
 trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml traffic_light_controller.twx traffic_light_controller.ncd -o traffic_light_controller.twr traffic_light_controller.pcf -ucf traffic_light.ucf 
 bitgen -intstyle ise -f traffic_light_controller.ut traffic_light_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/CS152B/Documents/m152b_fall2018/lab2/traffic_light_controller.xst" -ofn "C:/Users/CS152B/Documents/m152b_fall2018/lab2/traffic_light_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc traffic_light.ucf -p xc5vlx50t-ff1136-2 traffic_light_controller.ngc traffic_light_controller.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o traffic_light_controller_map.ncd traffic_light_controller.ngd traffic_light_controller.pcf 
+par -w -intstyle ise -ol high -mt off traffic_light_controller_map.ncd traffic_light_controller.ncd traffic_light_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml traffic_light_controller.twx traffic_light_controller.ncd -o traffic_light_controller.twr traffic_light_controller.pcf -ucf traffic_light.ucf 
+bitgen -intstyle ise -f traffic_light_controller.ut traffic_light_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/CS152B/Documents/m152b_fall2018/lab2/traffic_light_controller.xst" -ofn "C:/Users/CS152B/Documents/m152b_fall2018/lab2/traffic_light_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc traffic_light.ucf -p xc5vlx50t-ff1136-2 traffic_light_controller.ngc traffic_light_controller.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o traffic_light_controller_map.ncd traffic_light_controller.ngd traffic_light_controller.pcf 
+par -w -intstyle ise -ol high -mt off traffic_light_controller_map.ncd traffic_light_controller.ncd traffic_light_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml traffic_light_controller.twx traffic_light_controller.ncd -o traffic_light_controller.twr traffic_light_controller.pcf -ucf traffic_light.ucf 
+bitgen -intstyle ise -f traffic_light_controller.ut traffic_light_controller.ncd 
+xst -intstyle ise -ifn "C:/Users/CS152B/Documents/m152b_fall2018/lab2/traffic_light_controller.xst" -ofn "C:/Users/CS152B/Documents/m152b_fall2018/lab2/traffic_light_controller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc traffic_light.ucf -p xc5vlx50t-ff1136-2 traffic_light_controller.ngc traffic_light_controller.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o traffic_light_controller_map.ncd traffic_light_controller.ngd traffic_light_controller.pcf 
+par -w -intstyle ise -ol high -mt off traffic_light_controller_map.ncd traffic_light_controller.ncd traffic_light_controller.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml traffic_light_controller.twx traffic_light_controller.ncd -o traffic_light_controller.twr traffic_light_controller.pcf -ucf traffic_light.ucf 
+bitgen -intstyle ise -f traffic_light_controller.ut traffic_light_controller.ncd 

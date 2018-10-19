@@ -67,11 +67,11 @@ module traffic_light_controller(
   // Counter to count down. Useful for the 6 second, 3 second and 2 second clocks
   always @(posedge one_sec_clk) begin
     counter = counter - 1;
-	 if (curr_state == MAIN_ST_G && counter == 7 && side_sensor) begin
+	 if (curr_state == MAIN_ST_G && counter == 0 && side_sensor == 1) begin
 			curr_state <= MAIN_ST_SENS;
 			counter = 3;
 	 end
-	 if (curr_state == SIDE_ST_G && counter == 0 && side_sensor) begin
+	 if (curr_state == SIDE_ST_G && counter == 0 && side_sensor == 1) begin
 			curr_state <= SIDE_ST_SENS;
 			counter = 3;
 	 end
@@ -107,7 +107,10 @@ module traffic_light_controller(
 		  */
       end
 		
-		// TODO ADD MAIN_ST_G_NONSENS
+		MAIN_ST_G_NONSENS: begin
+			next_state <= MAIN_ST_Y;
+			next_counter <= 2;
+		end
 
       MAIN_ST_SENS: begin
         next_state <= MAIN_ST_Y;
@@ -117,7 +120,7 @@ module traffic_light_controller(
       MAIN_ST_Y: begin
         next_state <= SIDE_ST_G;
         next_counter <= 6;
-        if (walk_light) begin
+        if (walk_light == 1) begin
           next_counter <= 3;
           next_state <= PED_WALK_ON;
         end
@@ -126,9 +129,10 @@ module traffic_light_controller(
 		// TODO FIX THIS
 
       SIDE_ST_G: begin
-        next_state <= SIDE_ST_SENS;
-        
-        // Same as the MAIN_ST_G state
+        next_state <= SIDE_ST_Y;
+        next_counter <= 2;
+		  
+        /* // Same as the MAIN_ST_G state
         if (side_sensor && counter == 1) begin
           next_counter <= 3;
         end
@@ -136,10 +140,9 @@ module traffic_light_controller(
           next_state <= SIDE_ST_Y;
           next_counter <= 2;
         end
+		  */
       end
 		
-		// TODO: fix this
-
       SIDE_ST_SENS: begin
         next_state <= SIDE_ST_Y;
         next_counter <= 2;
@@ -148,7 +151,7 @@ module traffic_light_controller(
       SIDE_ST_Y: begin
         // Walk light does NOT affect the side street's yellow
         next_state <= MAIN_ST_G;
-        next_counter <= 12;
+        next_counter <= 6;
       end
 
       PED_WALK_ON: begin
