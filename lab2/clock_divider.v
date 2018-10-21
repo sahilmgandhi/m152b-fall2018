@@ -32,7 +32,7 @@ begin
 	end
 	else begin
 		count <= count + 1;
-		if (count == 50000000) 
+		if (count == 5) 
 		begin
 			count <= 32'b0;
 			outClk <= !outClk;

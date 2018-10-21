@@ -66,9 +66,9 @@ module traffic_light_controller_tb;
 		#100
 		walkButton = 0;
 		
-		#200
+		#600
 		sensor = 1;
-		#50
+		#100
 		
 		sensor = 0;
 		
