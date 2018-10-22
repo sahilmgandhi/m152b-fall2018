@@ -18,19 +18,9 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module traffic_light_controller(
-  input clk,
-  input sensor,
-  input walkButton,
-  
-  output reg mainRed,
-  output reg mainYellow,
-  output reg mainGreen,
-  
-  output reg sideRed,
-  output reg sideYellow,
-  output reg sideGreen,
-  
+module traffic_light_controller(input clk, input sensor, input walkButton,  
+  output reg mainRed, output reg mainYellow, output reg mainGreen,  
+  output reg sideRed, output reg sideYellow, output reg sideGreen,
   output reg walkLight
   );
    
@@ -81,8 +71,7 @@ module traffic_light_controller(
     end
   end
 
-  // When the side sensor is on during the greenlight portion, we need to wait for 3 extra seconds (but what if we notice the side sensor as high several times)
-  // The walk button should only work AFTER the main street light's yellow -> thus maybe it should be a latch?
+
   always @(curr_state or side_sensor or walk_light_button) begin
     if (walk_light_button == 1) begin
       walk_light = 1;
@@ -90,27 +79,15 @@ module traffic_light_controller(
 
     case (curr_state)
 	 
-	 // TODO FIX THIs
       MAIN_ST_G: begin
         next_state <= MAIN_ST_G_NONSENS;
-		  next_counter <= 6; 
-		  
-		  /*
-        // if we noticed a sensor of high then the next counter should be 3 to remain at the green light
-        if (side_sensor && counter == 1) begin
-          next_counter <= 3;
-        end
-        else begin
-          next_state <= MAIN_ST_Y;
-          next_counter <= 2;
-        end
-		  */
+		    next_counter <= 6; 
       end
 		
-		MAIN_ST_G_NONSENS: begin
-			next_state <= MAIN_ST_Y;
-			next_counter <= 2;
-		end
+      MAIN_ST_G_NONSENS: begin
+        next_state <= MAIN_ST_Y;
+        next_counter <= 2;
+      end
 
       MAIN_ST_SENS: begin
         next_state <= MAIN_ST_Y;
@@ -126,21 +103,9 @@ module traffic_light_controller(
         end
       end
 		
-		// TODO FIX THIS
-
       SIDE_ST_G: begin
         next_state <= SIDE_ST_Y;
         next_counter <= 2;
-		  
-        /* // Same as the MAIN_ST_G state
-        if (side_sensor && counter == 1) begin
-          next_counter <= 3;
-        end
-        else begin
-          next_state <= SIDE_ST_Y;
-          next_counter <= 2;
-        end
-		  */
       end
 		
       SIDE_ST_SENS: begin

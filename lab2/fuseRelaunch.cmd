@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller_tb_isim_beh.exe" -prj "C:/Users/sahil/Documents/GitHub/m152b_fall2018/lab2/traffic_light_controller_tb_beh.prj" "work.traffic_light_controller_tb" "work.glbl" 
