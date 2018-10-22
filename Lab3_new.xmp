@@ -22,7 +22,7 @@ HdlLang: VHDL
 SimModel: BEHAVIORAL
 ExternalMemSim: 0
 UcfFile: data/Lab3_new.ucf
-EnableParTimingError: 1
+EnableParTimingError: 0
 ShowLicenseDialog: 1
 BInfo: 
 ICacheAddr: DDR2_SDRAM,

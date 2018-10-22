@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="C:\Users\CS152B\Documents\m152b_fall2018\Lab3\m152b_fall2018_hw_platform\system_bd.bmm" key="m152b_fall2018_hw_platform-bmmFile"/>
+	<item value="C:\Users\CS152B\Documents\m152b_fall2018\Lab3\m152b_fall2018_hw_platform\system.bit" key="m152b_fall2018_hw_platform-bitFile"/>
+	<item value="bootloop" key="m152b_fall2018_hw_platform-microblaze_0-initElf"/>
+</section>

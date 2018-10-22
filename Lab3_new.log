@@ -3328,3 +3328,84 @@ Done writing filter settings to:
 	C:\Users\CS152B\Documents\m152b_fall2018\etc\Lab3_new.filters
 Done writing Tab View settings to:
 	C:\Users\CS152B\Documents\m152b_fall2018\etc\Lab3_new.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of I-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of I-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+
+********************************************************************************
+At Local date and time: Mon Oct 22 10:13:25 2018
+ make -f Lab3_new.make exporttosdk started...
+xilperl C:/Xilinx/14.6/ISE_DS/EDK/data/fpga_impl/observe_par.pl -error no implementation/Lab3_new.par
+Analyzing implementation/Lab3_new.par
+********************************************************************************
+WARNING: 1 constraint not met.
+********************************************************************************
+"*********************************************"
+"Running Bitgen.."
+"*********************************************"
+cd implementation & bitgen -w -f bitgen.ut Lab3_new & cd ..
+Release 14.6 - Bitgen P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.6/ISE_DS/EDK/virtex5/data/virtex5.acd> with local file
+<C:/Xilinx/14.6/ISE_DS/ISE/virtex5/data/virtex5.acd>
+Loading device for application Rf_Device from file '5vlx50t.nph' in environment
+C:\Xilinx\14.6\ISE_DS\ISE\;C:\Xilinx\14.6\ISE_DS\EDK.
+   "Lab3_new" is an NCD, version 3.2, device xc5vlx50t, package ff1136, speed -1
+Opened constraints file Lab3_new.pcf.
+
+Mon Oct 22 10:13:48 2018
+
+Running DRC.
+WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<30>> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<31>> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   ProtoComp427.PULL is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   ProtoComp427.PULL.1 is set but the tri state is not configured. 
+DRC detected 0 errors and 4 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
+INFO:Security:54 - 'xc5vlx50t' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+
+Creating bit map...
+Saving bit stream in "lab3_new.bit".
+Bitstream generation is complete.
+Done!
+
+********************************************************************************
+At Local date and time: Mon Oct 22 10:14:26 2018
+ xsdk.exe -hwspec C:\Users\CS152B\Documents\m152b_fall2018\SDK\SDK_Export\hw\Lab3_new.xml started...
+Xilinx Software Development Kit
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Done!
