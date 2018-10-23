@@ -32,41 +32,63 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+#include "xgpio.h"
 #include "platform.h"
+#include "gpio_header.h"
 
-const int MAX = 200;
-void print(char *str);
-char* in;
-int one, two;
-int select = 0;
+XGpio gpio_output;
 
 int main()
 {
     init_platform();
     print("Please enter a string \n\r");
 
-    int count = 0;
-    char snum[100];
-    while (getchar() != '\0'){
-    	print("hi");
-    	count++;
+    int selector = 0;
+    int digit = 0;
+    char num1[2] = "";
+    char num2[2] = "";
+
+    while (1){
+        input = getc(stdin);
+        getchar(); // get rid of the nullbyte
+        if (isdigit(input)){
+            printf("%c", input);
+            if (selector == 0){
+                num1[digit] = input;
+                digit++;
+            }
+            else{
+                num2[digit] = digit;
+                digit++;
+            }
+        }
+        else if (input == '/' || input == '*' || input == ' '){
+            printf("\r\n", input);
+            digit = 0;
+            selector++;
+        }
+        if (selector >= 2 || (selector == 1 && digit > 2)){
+            break;
+        }
     }
 
-    print(count + '0');
-    return 0;
-//    fgets(in, MAX, stdin);
-//    do{
-//    	in = getchar();
-//    	if(in=='*'){
-//    		print("delimiter");
-//    	} else if (in != '.') {
-//    		if(select){
-//    			one = in - '0';
-//    		} else {
-//    			two = in - '0';
-//    		}
-//    	}
-//    }while(in != '.');
-    //scanf("%s", &in);
+    int n1 = atoi(num1);
+    int n2 = atoi(num2);
+    int res = n1*n2;
+
+    printf("%d * %d = %d\r\n", n1, n2, res);
+	if (res > 100)
+	{
+		XGpio_DiscreteWrite(&GpioOutput, 1, 1 << 0);
+	}
+	else
+	{
+		XGpio_DiscreteWrite(&GpioOutput, 1, 0 << 0);
+	}
+	print("Exiting program...\r\n");
+	return 0;
 }
 
