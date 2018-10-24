@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="16" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="225" y="225">
 <fastViewData fastViewLocation="1024"/>
@@ -51,7 +51,7 @@
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="C:/Users/CS152B/Documents/m152b_fall2018/Lab3/hello_world/src/helloworld.c" title="helloworld.c" tooltip="hello_world/src/helloworld.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/hello_world/src/helloworld.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1333" selectionTopPixel="56"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1646" selectionTopPixel="116"/>
 </editor>
 <editor id="com.xilinx.sdk.lscript.editor" name="lscript.ld" partName="lscript.ld" path="C:/Users/CS152B/Documents/m152b_fall2018/Lab3/hello_world/src/lscript.ld" title="lscript.ld" tooltip="hello_world/src/lscript.ld" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/hello_world/src/lscript.ld"/>
@@ -210,119 +210,157 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/m152b_fall2018_hw_platform/system.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/hello_world_bsp/system.mss"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/hello_world/src/helloworld.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.lscript.editor" path="/hello_world/src/lscript.ld"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/hello_world/src/platform.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/hello_world/src/platform.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/hello_world/src/platform_config.h"/>
 </editors>
-<item historyLabel="system.xml" index="0"/>
-<item historyLabel="system.mss" index="1"/>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="lscript.ld" index="3"/>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="lscript.ld" index="1"/>
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1456" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1892" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1464" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1890" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1883" y="0"/>
 </item>
-<item historyLabel="platform.c" index="4">
+<item historyLabel="platform.c" index="2">
 <position info="not_deleted" x="82" y="0"/>
 </item>
-<item historyLabel="platform.h" index="5">
+<item historyLabel="platform.h" index="3">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="platform_config.h" index="6">
+<item historyLabel="platform_config.h" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1367" y="0"/>
 </item>
-<item historyLabel="platform.h" index="5">
+<item historyLabel="platform.h" index="3">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="platform_config.h" index="6">
+<item historyLabel="platform_config.h" index="4">
 <position info="not_deleted" x="137" y="0"/>
 </item>
-<item historyLabel="lscript.ld" index="3"/>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="lscript.ld" index="1"/>
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1367" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1906" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1843" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1868" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1706" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1834" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1782" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1824" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1909" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1625" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1432" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1625" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1464" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1503" y="36"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1477" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1523" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1421" y="13"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1559" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1580" y="0"/>
 </item>
-<item active="true" historyLabel="helloworld.c" index="2">
+<item historyLabel="helloworld.c" index="0">
 <position info="not_deleted" x="1587" y="9"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1671" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1580" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1604" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1605" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1668" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1622" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1623" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1574" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1633" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1589" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position/>
+</item>
+<item active="true" historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1667" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

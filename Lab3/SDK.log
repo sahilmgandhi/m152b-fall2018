@@ -49,3 +49,22 @@
 	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
 
 11:44:05.666 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+12:00:00.562 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:17:00.931 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/Lab3/m152b_fall2018_hw_platform/download.bit" 
+10:17:44.458 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:18:30.686 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:19:40.749 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:20:16.289 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:21:07.257 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:21:09.005 INFO  - System reset is completed. 
+10:23:06.829 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:23:08.686 INFO  - System reset is completed. 
+10:27:40.657 INFO  - System reset is completed. 
+10:32:44.451 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:33:08.852 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:34:07.324 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:34:33.473 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:35:50.727 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:37:26.889 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:37:28.528 INFO  - System reset is completed. 
+10:38:50.595 INFO  - System reset is completed. 

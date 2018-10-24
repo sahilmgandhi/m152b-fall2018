@@ -1,6 +1,36 @@
-11:57:47 **** Incremental Build of configuration Debug for project hello_world ****
+11:04:34 **** Auto Build of configuration Debug for project hello_world ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:4: warning: array subscript has type 'char' [-Wchar-subscripts]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18220	   1364	   2176	  21760	   5500	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-11:57:47 Build Finished (took 135ms)
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+
+11:04:36 Build Finished (took 1s.835ms)
 
