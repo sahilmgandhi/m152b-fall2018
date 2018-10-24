@@ -41,10 +41,13 @@
 
 XGpio gpio_output;
 
+void rockPaperScissors();
+int processInputs(int playerOneVal, int playerTwoVal);
+
 int main()
 {
 	XGpio_Initialize(&gpio_output, XPAR_LEDS_8BIT_DEVICE_ID);
-	 XGpio_SetDataDirection(&gpio_output, 1, 0x00000000);
+	XGpio_SetDataDirection(&gpio_output, 1, 0x00000000);
     init_platform();
 
     char continue_loop = 'y';
@@ -102,3 +105,79 @@ int main()
 	return 0;
 }
 
+
+void rockPaperScissors(){
+    char input;
+
+    print("Starting rock paper scissors. Player one get ready");
+
+    int playerOneVal, playerTwoVal;
+    char a[3][10];
+    strcpy(a[0], "ROCK");
+    strcpy(a[1], "PAPER");
+    strcpy(a[2], "SCISSORS");
+
+    while(1){
+        print("Player 1 enter your input (0 = rock, 1 = paper, 2 = scissors");
+        input = getc(stdin);
+        getchar();
+        playerOneVal = input - '0';
+        print("Player 2 enter your input (0 = rock, 1 = paper, 2 = scissors");
+
+        inputData = XGpio_DiscreteRead(&GpioInput,1);
+        while(inputData == 0xef)
+        {
+            inputData = XGpio_DiscreteRead(&GpioInput,1);
+        }
+        if(inputData == 0xee)
+        {
+            P2 = "ROCK";
+        }
+        else if (inputData == 0xed)
+        {
+            P2 = "PAPER";
+        }
+        else
+        {
+            P2 = "SCISSORS";
+        }
+        int outcome = processInputs(playerOneVal, playerTwoVal);
+        if (outcome == 1){
+            xil_printf("The game is a tie (%s = %s)", a[playerOneVal], a[playerTwoVal]);
+        }   
+        else if (outcome == 0){
+            xil_printf("Player One won! (%s > %s)", a[playerOneVal], a[playerTwoVal]);
+        }
+        else if (outcome == 2){
+            xil_printf("Player Two won! (%s < %s)", a[playerOneVal], a[playerTwoVal]);
+        }
+    }
+    
+}
+
+/**
+ * Returns 0 if player one won, 2 if player 2 won, 1 if tie
+ */
+int processInputs(int playerOneVal, int playerTwoVal){
+    if (playerOneVal == 0){
+        if (playerTwoVal == 0)
+            return 1;
+        if (playerTwoVal == 1)
+            return 2;
+        return 0;
+    }
+    else if (playerOneVal == 1){
+        if (playerTwoVal == 1)
+            return 1;
+        if (playerTwoVal == 2)
+            return 2;
+        return 0;
+    }
+    else if (playerOneVal == 2){
+        if (playerTwoVal == 2)
+            return 1;
+        if (playerTwoVal == 0)
+            return 2;
+        return 0;
+    }
+}
