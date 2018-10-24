@@ -3430,3 +3430,108 @@ WARNING:EDK -  ****************************************************************
 WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
 WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
 WARNING:EDK -  ****************************************************************
+
+********************************************************************************
+At Local date and time: Wed Oct 24 11:44:22 2018
+ make -f Lab3_new.make netlist started...
+make: Nothing to be done for `netlist'.
+Done!
+Assigned Driver gpio 3.01.a for instance xps_gpio_0
+xps_gpio_0 has been added to the project
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of I-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+ERROR:EDK:4125 - IPNAME: xps_gpio, INSTANCE: xps_gpio_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: xps_gpio, INSTANCE: xps_gpio_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral xps_gpio_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of I-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK:2137 - Peripheral keypad_gpio is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3967 - xps_gpio (keypad_gpio) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 290 
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of I-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+Address Map for Processor microblaze_0
+  (0000000000-0x0000ffff) dlmb_cntlr	dlmb
+  (0000000000-0x0000ffff) ilmb_cntlr	ilmb
+  (0x50000000-0x5fffffff) DDR2_SDRAM	microblaze_0_DXCL
+  (0x50000000-0x5fffffff) DDR2_SDRAM	microblaze_0_IXCL
+  (0x81400000-0x8140ffff) keypad_gpio	mb_plb
+  (0x81420000-0x8142ffff) Push_Buttons_7Bit	mb_plb
+  (0x81440000-0x8144ffff) LEDs_8Bit	mb_plb
+  (0x81460000-0x8146ffff) DIP_Switches_8Bit	mb_plb
+  (0x83e00000-0x83e0ffff) RS232_Uart_1	mb_plb
+  (0x83e20000-0x83e2ffff) RS232_Uart_0	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+  (0x86000000-0x87ffffff) FLASH	mb_plb
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of I-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+Generated Addresses Successfully
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of I-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of I-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+Overriding Xilinx file <TextEditor.cfg> with local file <C:/Xilinx/14.6/ISE_DS/EDK/data/TextEditor.cfg>
+Writing filter settings....
+Done writing filter settings to:
+	C:\Users\CS152B\Documents\m152b_fall2018\etc\Lab3_new.filters
+Done writing Tab View settings to:
+	C:\Users\CS152B\Documents\m152b_fall2018\etc\Lab3_new.gui

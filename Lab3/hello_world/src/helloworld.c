@@ -40,6 +40,52 @@
 #include "xparameters.h"
 
 XGpio gpio_output;
+void multiplication(){
+	xil_printf("Please enter a string \n\r");
+	int selector = 0;
+	int digit = 0;
+	char num1[5] = "";
+	char num2[5] = "";
+	char input;
+	while (1){
+		input = getc(stdin);
+		if (input == '\r'){
+			print("\r\n");
+			break;
+		}
+		getchar(); // get rid of the nullbyte
+		if (isdigit(input)){
+			//printf("%c", input);
+			if (selector == 0){
+				num1[digit] = input;
+				digit++;
+			}
+			else{
+				num2[digit] = input;
+				digit++;
+			}
+		}
+		else if (input == '/' || input == '*' || input == ' '){
+			//printf("\r\n", input);
+			digit = 0;
+			selector++;
+		}
+	}
+
+	int n1 = atoi(num1);
+	int n2 = atoi(num2);
+	int res = n1*n2;
+
+	xil_printf("%d * %d = %d\r\n", n1, n2, res);
+	if (res > 100)
+	{
+		XGpio_DiscreteWrite(&gpio_output, 1, 1);
+	}
+	else
+	{
+		XGpio_DiscreteWrite(&gpio_output, 1, 0);
+	}
+}
 
 void rockPaperScissors();
 int processInputs(int playerOneVal, int playerTwoVal);
@@ -50,58 +96,24 @@ int main()
 	XGpio_SetDataDirection(&gpio_output, 1, 0x00000000);
     init_platform();
 
-    char continue_loop = 'y';
-	while(continue_loop == 'y' || continue_loop == 'Y'){
-		print("Please enter a string \n\r");
-		int selector = 0;
-		int digit = 0;
-		char num1[5] = "";
-		char num2[5] = "";
-		char input;
-		while (1){
-			input = getc(stdin);
-			if (input == '\r'){
-				print("\r\n");
-				break;
-			}
-			getchar(); // get rid of the nullbyte
-			if (isdigit(input)){
-				//printf("%c", input);
-				if (selector == 0){
-					num1[digit] = input;
-					digit++;
-				}
-				else{
-					num2[digit] = input;
-					digit++;
-				}
-			}
-			else if (input == '/' || input == '*' || input == ' '){
-				//printf("\r\n", input);
-				digit = 0;
-				selector++;
-			}
+    char mode;
+    xil_printf("Enter option: 'm' for multiplication, 'g' for rock-paper-scissors\n\r");
+    mode = getc(stdin);
+	getchar(); // get rid of nullbyte
+	xil_printf("\r\n");
+	while(mode == 'm' || mode == 'M' || mode == 'g' || mode == 'g'){
+		if(mode == 'm' || mode == 'M'){
+			multiplication();
+		} else if(mode == 'g' || mode == 'g'){
+			rockpaperscissors();
 		}
-
-		int n1 = atoi(num1);
-		int n2 = atoi(num2);
-		int res = n1*n2;
-
-		xil_printf("%d * %d = %d\r\n", n1, n2, res);
-		if (res > 100)
-		{
-			XGpio_DiscreteWrite(&gpio_output, 1, 1);
-		}
-		else
-		{
-			XGpio_DiscreteWrite(&gpio_output, 1, 0);
-		}
-		xil_printf("Enter 'y' to continue\r\n");
-		continue_loop = getc(stdin);
+		xil_printf("Enter option: 'm' for multiplication, 'g' for rock-paper-scissors\n\r");
+		mode = getc(stdin);
 		getchar(); // get rid of nullbyte
 		xil_printf("\r\n");
+		XGpio_DiscreteWrite(&gpio_output, 1, 0); // clear LEDs
     }
-	print("Exiting program...\r\n");
+	xil_printf("Exiting program...\r\n");
 	return 0;
 }
 
