@@ -39,86 +39,54 @@
 #include "platform.h"
 #include "xparameters.h"
 
-XGpio gpio_output;
-void multiplication(){
-	xil_printf("Please enter a string \n\r");
-	int selector = 0;
-	int digit = 0;
-	char num1[5] = "";
-	char num2[5] = "";
-	char input;
-	while (1){
-		input = getc(stdin);
-		if (input == '\r'){
-			print("\r\n");
-			break;
-		}
-		getchar(); // get rid of the nullbyte
-		if (isdigit(input)){
-			//printf("%c", input);
-			if (selector == 0){
-				num1[digit] = input;
-				digit++;
-			}
-			else{
-				num2[digit] = input;
-				digit++;
-			}
-		}
-		else if (input == '/' || input == '*' || input == ' '){
-			//printf("\r\n", input);
-			digit = 0;
-			selector++;
-		}
-	}
+XGpio led_output;
+XGpio keypad_input;
 
-	int n1 = atoi(num1);
-	int n2 = atoi(num2);
-	int res = n1*n2;
-
-	xil_printf("%d * %d = %d\r\n", n1, n2, res);
-	if (res > 100)
-	{
-		XGpio_DiscreteWrite(&gpio_output, 1, 1);
-	}
-	else
-	{
-		XGpio_DiscreteWrite(&gpio_output, 1, 0);
-	}
-}
-
+void multiplication();
 void rockPaperScissors();
 int processInputs(int playerOneVal, int playerTwoVal);
 
 int main()
 {
-	XGpio_Initialize(&gpio_output, XPAR_LEDS_8BIT_DEVICE_ID);
-	XGpio_SetDataDirection(&gpio_output, 1, 0x00000000);
+    XGpio_Initialize(&led_output, XPAR_LEDS_8BIT_DEVICE_ID);
+    XGpio_SetDataDirection(&led_output, 1, 0x00000000);
+
+    // TODO Add this initialization here
+    // XGpio_Initialize(&keypad_input, __FILL_IN_HERE);
+    XGpio_SetDataDirection(&keypad_input, 1, 0x00000001);
     init_platform();
 
     char mode;
     xil_printf("Enter option: 'm' for multiplication, 'g' for rock-paper-scissors\n\r");
     mode = getc(stdin);
-	getchar(); // get rid of nullbyte
-	xil_printf("\r\n");
-	while(mode == 'm' || mode == 'M' || mode == 'g' || mode == 'g'){
-		if(mode == 'm' || mode == 'M'){
-			multiplication();
-		} else if(mode == 'g' || mode == 'g'){
-			rockpaperscissors();
-		}
-		xil_printf("Enter option: 'm' for multiplication, 'g' for rock-paper-scissors\n\r");
-		mode = getc(stdin);
-		getchar(); // get rid of nullbyte
-		xil_printf("\r\n");
-		XGpio_DiscreteWrite(&gpio_output, 1, 0); // clear LEDs
+    getchar(); // get rid of nullbyte
+    xil_printf("\r\n");
+    while (mode == 'm' || mode == 'M' || mode == 'g' || mode == 'g')
+    {
+        if (mode == 'm' || mode == 'M')
+        {
+            multiplication();
+        }
+        else if (mode == 'g' || mode == 'g')
+        {
+            rockpaperscissors();
+        }
+        xil_printf("Enter option: 'm' for multiplication, 'g' for rock-paper-scissors\n\r");
+        mode = getc(stdin);
+        getchar(); // get rid of nullbyte
+        xil_printf("\r\n");
+        XGpio_DiscreteWrite(&led_output, 1, 0); // clear LED
     }
-	xil_printf("Exiting program...\r\n");
-	return 0;
+    xil_printf("Exiting program...\r\n");
+    return 0;
 }
 
-
-void rockPaperScissors(){
+/**
+ * This function plays the rock paper scissors game between a serial player and 
+ * a player inputting from a Digilent keypad.
+ */
+void rockPaperScissors()
+{
     char input;
 
     print("Starting rock paper scissors. Player one get ready");
@@ -129,67 +97,127 @@ void rockPaperScissors(){
     strcpy(a[1], "PAPER");
     strcpy(a[2], "SCISSORS");
 
-    while(1){
+    while (1)
+    {
         print("Player 1 enter your input (0 = rock, 1 = paper, 2 = scissors");
         input = getc(stdin);
         getchar();
         playerOneVal = input - '0';
         print("Player 2 enter your input (0 = rock, 1 = paper, 2 = scissors");
 
-        inputData = XGpio_DiscreteRead(&GpioInput,1);
-        while(inputData == 0xef)
+        int inputData = XGpio_DiscreteRead(&keypad_input, 1);
+        while (inputData == 0xef)
         {
-            inputData = XGpio_DiscreteRead(&GpioInput,1);
+            inputData = XGpio_DiscreteRead(&keypad_input, 1);
         }
-        if(inputData == 0xee)
-        {
-            P2 = "ROCK";
-        }
+
+        // TODO Change these addresses when we figure it out
+        if (inputData == 0xee)
+            playerTwoVal = 0;
         else if (inputData == 0xed)
-        {
-            P2 = "PAPER";
-        }
+            playerTwoVal = 1;
         else
-        {
-            P2 = "SCISSORS";
-        }
+            playerTwoVal = 2;
+
         int outcome = processInputs(playerOneVal, playerTwoVal);
-        if (outcome == 1){
+        if (outcome == 1)
+        {
             xil_printf("The game is a tie (%s = %s)", a[playerOneVal], a[playerTwoVal]);
-        }   
-        else if (outcome == 0){
+        }
+        else if (outcome == 0)
+        {
             xil_printf("Player One won! (%s > %s)", a[playerOneVal], a[playerTwoVal]);
         }
-        else if (outcome == 2){
+        else if (outcome == 2)
+        {
             xil_printf("Player Two won! (%s < %s)", a[playerOneVal], a[playerTwoVal]);
         }
     }
-    
 }
 
 /**
- * Returns 0 if player one won, 2 if player 2 won, 1 if tie
+ * This function compares the hands and returns 0 if player 1 wins, 2 if player 
+ * 2 wins and 1 if it is a tie
+ * 
+ * @param playerOneVal  int     The value of player 1
+ * @param playerTwoVal  int     The value of player 2
+ * @return int                  Which side won (or tied)
  */
-int processInputs(int playerOneVal, int playerTwoVal){
-    if (playerOneVal == 0){
+int processInputs(int playerOneVal, int playerTwoVal)
+{
+    if (playerOneVal == 0)
+    {
         if (playerTwoVal == 0)
             return 1;
         if (playerTwoVal == 1)
             return 2;
         return 0;
     }
-    else if (playerOneVal == 1){
+    else if (playerOneVal == 1)
+    {
         if (playerTwoVal == 1)
             return 1;
         if (playerTwoVal == 2)
             return 2;
         return 0;
     }
-    else if (playerOneVal == 2){
+    else if (playerOneVal == 2)
+    {
         if (playerTwoVal == 2)
             return 1;
         if (playerTwoVal == 0)
             return 2;
         return 0;
+    }
+}
+
+/**
+ * This function loops continuously and asks the user for 2 integers to multiply
+ */
+void multiplication()
+{
+    xil_printf("Enter the multiplication string: \n\r");
+    int selector = 0;
+    int digit = 0;
+    char num1[5] = "";
+    char num2[5] = "";
+    char input;
+    while (1)
+    {
+        input = getc(stdin);
+        if (input == '\r')
+        {
+            print("\r\n");
+            break;
+        }
+        getchar(); // get rid of the nullbyte
+        if (isdigit(input))
+        {
+            if (selector == 0)
+                num1[digit] = input;
+            else
+                num2[digit] = input;
+            digit++;
+        }
+        // Delimeters
+        else if (input == '/' || input == '*' || input == ' ')
+        {
+            digit = 0;
+            selector++;
+        }
+    }
+
+    int n1 = atoi(num1);
+    int n2 = atoi(num2);
+    int res = n1 * n2;
+
+    xil_printf("%d * %d = %d\r\n", n1, n2, res);
+    if (res > 100)
+    {
+        XGpio_DiscreteWrite(&led_output, 1, 1);
+    }
+    else
+    {
+        XGpio_DiscreteWrite(&led_output, 1, 0);
     }
 }
