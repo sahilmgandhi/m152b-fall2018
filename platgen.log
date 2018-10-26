@@ -132,9 +132,10 @@ Address Map for Processor microblaze_0
   (0000000000-0x0000ffff) ilmb_cntlr	ilmb
   (0x50000000-0x5fffffff) DDR2_SDRAM	microblaze_0_DXCL
   (0x50000000-0x5fffffff) DDR2_SDRAM	microblaze_0_IXCL
-  (0x81400000-0x8140ffff) Push_Buttons_7Bit	mb_plb
-  (0x81420000-0x8142ffff) LEDs_8Bit	mb_plb
-  (0x81440000-0x8144ffff) DIP_Switches_8Bit	mb_plb
+  (0x81400000-0x8140ffff) keypad_gpio	mb_plb
+  (0x81420000-0x8142ffff) Push_Buttons_7Bit	mb_plb
+  (0x81440000-0x8144ffff) LEDs_8Bit	mb_plb
+  (0x81460000-0x8146ffff) DIP_Switches_8Bit	mb_plb
   (0x83e00000-0x83e0ffff) RS232_Uart_1	mb_plb
   (0x83e20000-0x83e2ffff) RS232_Uart_0	mb_plb
   (0x84400000-0x8440ffff) mdm_0	mb_plb
@@ -143,10 +144,6 @@ INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
    C_PLBV46_NUM_MASTERS value to 2 -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
    \plb_v46_v2_1_0.mpd line 79 
-INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
-   C_PLBV46_NUM_SLAVES value to 7 -
-   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
-   \plb_v46_v2_1_0.mpd line 80 
 INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
    C_PLBV46_MID_WIDTH value to 1 -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
@@ -199,11 +196,15 @@ INFO:EDK:4130 - IPNAME: mdm, INSTANCE:mdm_0 - tool is overriding PARAMETER
    C_SPLB_NUM_MASTERS value to 2 -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_10_a\data\mdm
    _v2_1_0.mpd line 119 
+INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:keypad_gpio - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 82 
 
 Checking platform address map ...
 
 Checking platform configuration ...
-IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 7 slave(s) 
+IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 8 slave(s) 
 IPNAME: lmb_v10, INSTANCE: ilmb - 1 master(s) : 1 slave(s) 
 IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s) 
 
@@ -763,12 +764,48 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
+IPNAME:microblaze INSTANCE:microblaze_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 50 - Copying cache
+implementation netlist
+IPNAME:lmb_v10 INSTANCE:ilmb -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 82 - Copying cache
+implementation netlist
+IPNAME:lmb_v10 INSTANCE:dlmb -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 89 - Copying cache
+implementation netlist
+IPNAME:lmb_bram_if_cntlr INSTANCE:dlmb_cntlr -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 96 - Copying cache
+implementation netlist
+IPNAME:lmb_bram_if_cntlr INSTANCE:ilmb_cntlr -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 105 - Copying cache
+implementation netlist
+IPNAME:bram_block INSTANCE:lmb_bram -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 114 - Copying cache
+implementation netlist
+IPNAME:xps_mch_emc INSTANCE:flash -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 160 - Copying cache
+implementation netlist
+IPNAME:mpmc INSTANCE:ddr2_sdram -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 187 - Copying cache
+implementation netlist
+IPNAME:xps_uart16550 INSTANCE:rs232_uart_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 227 - Copying cache
+implementation netlist
+IPNAME:xps_uart16550 INSTANCE:rs232_uart_1 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 238 - Copying cache
+implementation netlist
+IPNAME:mdm INSTANCE:mdm_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 279 - Copying cache
+implementation netlist
+IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 291 - Copying cache
+implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:lmb_bram -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 113 - elaborating IP
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 114 - elaborating IP
 IPNAME:clock_generator INSTANCE:clock_generator_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 248 - elaborating IP
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 249 - elaborating IP
 ClkGen elaborate status: PASSED
 ----------------------------------------
 ----------------------------------------
@@ -776,10 +813,10 @@ ClkGen elaborate status: PASSED
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 1.00 seconds
+Completion time: 2.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -792,57 +829,25 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:microblaze_0 - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs
-line 49 - Running XST synthesis
-INSTANCE:mb_plb - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 74
+INSTANCE:mb_plb - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 75
 - Running XST synthesis
-INSTANCE:ilmb - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 81 -
-Running XST synthesis
-INSTANCE:dlmb - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 88 -
-Running XST synthesis
-INSTANCE:dlmb_cntlr - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line
-95 - Running XST synthesis
-INSTANCE:ilmb_cntlr - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line
-104 - Running XST synthesis
-INSTANCE:lmb_bram - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line
-113 - Running XST synthesis
 INSTANCE:leds_8bit - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line
-120 - Running XST synthesis
+121 - Running XST synthesis
 INSTANCE:push_buttons_7bit -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 133 - Running XST
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 134 - Running XST
 synthesis
 INSTANCE:dip_switches_8bit -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 146 - Running XST
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 147 - Running XST
 synthesis
-INSTANCE:flash - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 159
-- Running XST synthesis
-INSTANCE:ddr2_sdram - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line
-186 - Running XST synthesis
-INSTANCE:rs232_uart_0 - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs
-line 226 - Running XST synthesis
-INSTANCE:rs232_uart_1 - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs
-line 237 - Running XST synthesis
 INSTANCE:clock_generator_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 248 - Running XST
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 249 - Running XST
 synthesis
-INSTANCE:mdm_0 - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 278
-- Running XST synthesis
-INSTANCE:proc_sys_reset_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 290 - Running XST
-synthesis
+INSTANCE:keypad_gpio - C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs
+line 304 - Running XST synthesis
 
 Running NGCBUILD ...
-IPNAME:Lab3_new_microblaze_0_wrapper INSTANCE:microblaze_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 49 - Running NGCBUILD
-IPNAME:Lab3_new_ilmb_wrapper INSTANCE:ilmb -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 81 - Running NGCBUILD
-IPNAME:Lab3_new_dlmb_wrapper INSTANCE:dlmb -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 88 - Running NGCBUILD
-IPNAME:Lab3_new_ddr2_sdram_wrapper INSTANCE:ddr2_sdram -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 186 - Running
-NGCBUILD
 IPNAME:Lab3_new_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 248 - Running
+C:\Users\CS152B\Documents\m152b_fall2018\Lab3_new.mhs line 249 - Running
 NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
@@ -850,4 +855,4 @@ INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
 
 Rebuilding cache ...
 
-Total run time: 544.00 seconds
+Total run time: 110.00 seconds

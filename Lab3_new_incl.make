@@ -78,7 +78,8 @@ implementation/Lab3_new_rs232_uart_0_wrapper.ngc \
 implementation/Lab3_new_rs232_uart_1_wrapper.ngc \
 implementation/Lab3_new_clock_generator_0_wrapper.ngc \
 implementation/Lab3_new_mdm_0_wrapper.ngc \
-implementation/Lab3_new_proc_sys_reset_0_wrapper.ngc
+implementation/Lab3_new_proc_sys_reset_0_wrapper.ngc \
+implementation/Lab3_new_keypad_gpio_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

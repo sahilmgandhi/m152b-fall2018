@@ -52,7 +52,7 @@ int main()
     XGpio_SetDataDirection(&led_output, 1, 0x00000000);
 
     // TODO Add this initialization here
-    // XGpio_Initialize(&keypad_input, __FILL_IN_HERE);
+    XGpio_Initialize(&keypad_input, XPAR_KEYPAD_GPIO_DEVICE_ID);
     XGpio_SetDataDirection(&keypad_input, 1, 0x00000001);
     init_platform();
 
@@ -63,13 +63,15 @@ int main()
     xil_printf("\r\n");
     while (mode == 'm' || mode == 'M' || mode == 'g' || mode == 'g')
     {
+    	getchar();
+
         if (mode == 'm' || mode == 'M')
         {
             multiplication();
         }
         else if (mode == 'g' || mode == 'g')
         {
-            rockpaperscissors();
+            rockPaperScissors();
         }
         xil_printf("Enter option: 'm' for multiplication, 'g' for rock-paper-scissors\n\r");
         mode = getc(stdin);
@@ -89,7 +91,7 @@ void rockPaperScissors()
 {
     char input;
 
-    print("Starting rock paper scissors. Player one get ready");
+    print("Starting rock paper scissors. Player one get ready ... \r\n");
 
     int playerOneVal, playerTwoVal;
     char a[3][10];
@@ -99,16 +101,18 @@ void rockPaperScissors()
 
     while (1)
     {
-        print("Player 1 enter your input (0 = rock, 1 = paper, 2 = scissors");
+        print("Player 1 enter your input (0 = rock, 1 = paper, 2 = scissors): ");
         input = getc(stdin);
         getchar();
         playerOneVal = input - '0';
-        print("Player 2 enter your input (0 = rock, 1 = paper, 2 = scissors");
+        print("Player 2 enter your input (0 = rock, 1 = paper, 2 = scissors): ");
 
-        int inputData = XGpio_DiscreteRead(&keypad_input, 1);
-        while (inputData == 0xef)
+        int inputData = 0;
+
+        inputData = XGpio_DiscreteRead(&keypad_input, 1);
+        while (1)
         {
-            inputData = XGpio_DiscreteRead(&keypad_input, 1);
+        	xil_printf("%d \r\n", XGpio_DiscreteRead(&keypad_input, 1));
         }
 
         // TODO Change these addresses when we figure it out
@@ -176,7 +180,7 @@ int processInputs(int playerOneVal, int playerTwoVal)
  */
 void multiplication()
 {
-    xil_printf("Enter the multiplication string: \n\r");
+    xil_printf("Enter the multiplication string: \r\n");
     int selector = 0;
     int digit = 0;
     char num1[5] = "";

@@ -69,3 +69,49 @@
 10:37:28.528 INFO  - System reset is completed. 
 10:38:50.595 INFO  - System reset is completed. 
 10:53:13.226 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:18:02.700 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:02:13.006 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+12:41:58.201 INFO  - Project m152b_fall2018_hw_platform's source hardware specification located at C:\Users\CS152B\Documents\m152b_fall2018\SDK\SDK_Export\hw\Lab3_new.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+12:42:05.901 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\SDK\SDK_Export\hw\Lab3_new.xml into \m152b_fall2018_hw_platform\system.xml. 
+12:42:06.393 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\SDK\SDK_Export\hw\Lab3_new.bit into \m152b_fall2018_hw_platform\system.bit. 
+12:42:06.925 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\SDK\SDK_Export\hw\Lab3_new_bd.bmm into \m152b_fall2018_hw_platform\system_bd.bmm. 
+12:42:07.837 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+12:42:08.615 INFO  - Updating MSS for Board Support Package Project: hello_world_bsp.
+		 The following new driver assignments were made:
+			Peripheral Instance: keypad_gpio, driver: gpio_v3_01_a.
+ 
+12:42:09.371 INFO  - Updating MSS for Board Support Package Project: peripheral_tutorial_bsp.
+		 The following new driver assignments were made:
+			Peripheral Instance: keypad_gpio, driver: gpio_v3_01_a.
+ 
+12:42:10.212 INFO  - Updating hardware inferred compiler options for hello_world. 
+12:42:10.988 INFO  - Updating hardware inferred compiler options for peripheral_tutorial. 
+12:42:11.008 INFO  - Clearing existing target manager status. 
+12:42:11.015 INFO  - Closing and re-opening the MSS file of ther project hello_world_bsp 
+12:42:11.185 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+12:51:58.555 INFO  - Updating .bit and .bmm files from XPS's export folder. 
+12:52:13.899 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\SDK\SDK_Export\hw\Lab3_new.bit into \m152b_fall2018_hw_platform\system.bit. 
+12:52:13.908 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\SDK\SDK_Export\hw\Lab3_new_bd.bmm into \m152b_fall2018_hw_platform\system_bd.bmm. 
+13:16:16.605 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/Lab3/m152b_fall2018_hw_platform/download.bit" 
+13:20:18.360 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:20:23.049 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:21:36.097 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:25:14.402 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:26:25.217 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:26:28.157 INFO  - System reset is completed. 
+13:29:22.680 INFO  - System reset is completed. 
+13:30:19.694 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:30:21.319 INFO  - System reset is completed. 
+13:31:30.673 INFO  - System reset is completed. 
+13:31:54.850 INFO  - System reset is completed. 
+13:34:49.250 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/Lab3/m152b_fall2018_hw_platform/download.bit" 
+13:37:33.596 INFO  - System reset is completed. 
+13:44:58.455 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:44:59.659 INFO  - System reset is completed. 
+13:50:17.018 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:53:13.907 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+13:53:13.907 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

@@ -3,7 +3,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:\Users\CS152B\Documents\m152b_fall2018\synthesis\xst_temp_dir\
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> 
@@ -430,7 +430,7 @@ Delay:               0.238ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.39 secs
+Total CPU time to Xst completion: 6.01 secs
  
 --> 
 

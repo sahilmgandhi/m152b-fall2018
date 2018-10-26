@@ -1,51 +1,6 @@
-11:32:14 **** Build of configuration Debug for project peripheral_tutorial ****
+13:50:16 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
 make all 
-Building file: ../src/testperiph.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../peripheral_tutorial_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
-Finished building: ../src/testperiph.c
- 
-Building file: ../src/xgpio_tapp_example.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../peripheral_tutorial_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.d" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-../src/xgpio_tapp_example.c: In function 'GpioOutputExample':
-../src/xgpio_tapp_example.c:182:6: warning: unused variable 'Data' [-Wunused-variable]
-Finished building: ../src/xgpio_tapp_example.c
- 
-Building file: ../src/xuartlite_selftest_example.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../peripheral_tutorial_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_selftest_example.d" -MT"src/xuartlite_selftest_example.d" -o "src/xuartlite_selftest_example.o" "../src/xuartlite_selftest_example.c"
-Finished building: ../src/xuartlite_selftest_example.c
- 
-Building file: ../src/xuartns550_selftest_example.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../peripheral_tutorial_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartns550_selftest_example.d" -MT"src/xuartns550_selftest_example.d" -o "src/xuartns550_selftest_example.o" "../src/xuartns550_selftest_example.c"
-Finished building: ../src/xuartns550_selftest_example.c
- 
-Building target: peripheral_tutorial.elf
-Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../peripheral_tutorial_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "peripheral_tutorial.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xuartlite_selftest_example.o ./src/xuartns550_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: peripheral_tutorial.elf
- 
-Invoking: MicroBlaze Print Size
-mb-size peripheral_tutorial.elf  |tee "peripheral_tutorial.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12150	    408	   2304	  14862	   3a0e	peripheral_tutorial.elf
-Finished building: peripheral_tutorial.elf.size
- 
-Invoking: Xilinx ELF Check
-elfcheck peripheral_tutorial.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "peripheral_tutorial.elf.elfcheck"
-elfcheck
-Xilinx EDK 2013.2 Build EDK_P.68d
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+make: Nothing to be done for `all'.
 
-Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
-microblaze_0 peripheral_tutorial.elf 
-
-ELF file	: peripheral_tutorial.elf
-elfcheck passed.
-Finished building: peripheral_tutorial.elf.elfcheck
- 
-
-11:32:16 Build Finished (took 2s.300ms)
+13:50:16 Build Finished (took 135ms)
 

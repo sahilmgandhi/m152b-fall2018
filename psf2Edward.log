@@ -12,7 +12,7 @@ WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
 WARNING:EDK -  ****************************************************************
 
 Checking platform configuration ...
-IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 7 slave(s) 
+IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 8 slave(s) 
 IPNAME: lmb_v10, INSTANCE: ilmb - 1 master(s) : 1 slave(s) 
 IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s) 
 
