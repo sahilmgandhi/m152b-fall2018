@@ -53,7 +53,7 @@ int main()
 
     // TODO Add this initialization here
     XGpio_Initialize(&keypad_input, XPAR_KEYPAD_GPIO_DEVICE_ID);
-    XGpio_SetDataDirection(&keypad_input, 1, 0x00000001);
+    XGpio_SetDataDirection(&keypad_input, 1, 0xFF);
     init_platform();
 
     char mode;
@@ -63,7 +63,7 @@ int main()
     xil_printf("\r\n");
     while (mode == 'm' || mode == 'M' || mode == 'g' || mode == 'g')
     {
-    	getchar();
+        getchar();
 
         if (mode == 'm' || mode == 'M')
         {
@@ -112,7 +112,7 @@ void rockPaperScissors()
         inputData = XGpio_DiscreteRead(&keypad_input, 1);
         while (1)
         {
-        	xil_printf("%d \r\n", XGpio_DiscreteRead(&keypad_input, 1));
+            xil_printf("%d \r\n", XGpio_DiscreteRead(&keypad_input, 1));
         }
 
         // TODO Change these addresses when we figure it out
