@@ -4276,3 +4276,1309 @@ make: Nothing to be done for `all'.
 11:04:37 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
 make all 
 make: Nothing to be done for `all'.
+11:07:37 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:113:13: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c:104:13: warning: unused variable 'exit_loop' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:217:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20724	   1380	   2192	  24296	   5ee8	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:07:40 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:07:40 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:08:26 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:113:13: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c:104:13: warning: unused variable 'exit_loop' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:217:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20724	   1380	   2192	  24296	   5ee8	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:08:30 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:08:31 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:10:14 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:111:13: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:215:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20692	   1380	   2192	  24264	   5ec8	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:11:04 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:11:05 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:11:21 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:11:22 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:12:35 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:109:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:213:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:191:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20704	   1380	   2188	  24272	   5ed0	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:12:38 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:12:38 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:14:16 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:109:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:213:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:191:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20696	   1380	   2188	  24264	   5ec8	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:14:24 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:14:25 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:14:47 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:14:48 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:16:53 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:16:54 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:19:13 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:109:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:213:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:191:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20628	   1380	   2192	  24200	   5e88	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:19:17 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:19:18 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:20:29 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:109:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:214:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:192:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20648	   1380	   2188	  24216	   5e98	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:21:35 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:109:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:214:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:192:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20648	   1380	   2188	  24216	   5e98	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:21:41 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:109:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:214:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:192:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20648	   1380	   2188	  24216	   5e98	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:22:14 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:110:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:215:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20684	   1380	   2192	  24256	   5ec0	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:22:16 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:22:17 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:22:45 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:110:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:215:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20688	   1380	   2188	  24256	   5ec0	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:23:20 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:23:20 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:26:48 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:110:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:216:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20684	   1380	   2192	  24256	   5ec0	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:26:50 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:26:50 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:27:10 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:110:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:215:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20588	   1380	   2192	  24160	   5e60	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:27:13 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:27:13 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:27:46 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:110:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:215:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20688	   1380	   2188	  24256	   5ec0	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:28:09 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:110:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:215:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19688	   1380	   2188	  23256	   5ad8	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:28:11 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:28:12 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:28:41 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:110:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:215:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20688	   1380	   2188	  24256	   5ec0	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:28:47 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:110:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:215:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20588	   1380	   2192	  24160	   5e60	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:28:49 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:28:50 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:30:02 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:110:6: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:215:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20688	   1380	   2188	  24256	   5ec0	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:30:32 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:111:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:216:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20676	   1380	   2192	  24248	   5eb8	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:30:35 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:30:36 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:31:21 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:111:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:216:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20676	   1380	   2192	  24248	   5eb8	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:31:23 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:111:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:216:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:194:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20676	   1380	   2192	  24248	   5eb8	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:31:26 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:31:26 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:31:38 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:31:39 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:34:18 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:112:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:217:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20776	   1380	   2188	  24344	   5f18	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:34:20 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:34:20 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:35:24 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:139:4: error: expected ';' before 'playerTwoVal'
+../src/helloworld.c:112:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:218:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:196:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:36:24 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:112:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:224:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20876	   1380	   2192	  24448	   5f80	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:36:26 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:36:27 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:38:11 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:112:3: error: expected ';' before 'playerOneVal'
+../src/helloworld.c:116:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:228:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:206:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:38:14 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:116:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:228:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:206:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20924	   1380	   2192	  24496	   5fb0	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:38:30 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:38:30 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:38:57 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:116:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:228:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:206:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20924	   1380	   2192	  24496	   5fb0	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+11:39:02 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:39:03 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:40:31 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:40:31 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:40:41 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:40:42 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+11:43:31 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:43:31 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+12:01:21 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:104:3: error: too few arguments to function 'fflush'
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:174:5: note: declared here
+../src/helloworld.c:117:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:229:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:207:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+12:01:23 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:104:3: error: too few arguments to function 'fflush'
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:174:5: note: declared here
+../src/helloworld.c:117:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:229:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:207:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+12:01:24 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+12:02:19 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:117:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:229:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:207:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21064	   1380	   2188	  24632	   6038	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+12:02:22 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+12:02:23 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+12:03:00 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:117:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:229:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:207:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21064	   1380	   2188	  24632	   6038	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+12:03:02 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+12:03:02 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+12:03:25 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:116:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:229:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:207:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21056	   1380	   2188	  24624	   6030	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+12:03:27 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+12:03:28 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+12:04:45 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'rockPaperScissors':
+../src/helloworld.c:114:7: warning: unused variable 'column_index' [-Wunused-variable]
+../src/helloworld.c: In function 'multiplication':
+../src/helloworld.c:227:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/helloworld.c: In function 'processInputs':
+../src/helloworld.c:205:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/helloworld.c
+ 
+Building target: hello_world.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_world.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20856	   1380	   2188	  24424	   5f68	hello_world.elf
+Finished building: hello_world.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck hello_world.elf -hw ../../m152b_fall2018_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../m152b_fall2018_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+Finished building: hello_world.elf.elfcheck
+ 
+12:04:48 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+12:04:48 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.

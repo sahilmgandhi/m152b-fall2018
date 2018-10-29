@@ -8441,3 +8441,69 @@ Done writing filter settings to:
 	C:\Users\CS152B\Documents\m152b_fall2018\etc\Lab3_new.filters
 Done writing Tab View settings to:
 	C:\Users\CS152B\Documents\m152b_fall2018\etc\Lab3_new.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of I-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+Assigned Driver intc 2.06.a for instance xps_intc_0
+xps_intc_0 has been added to the project
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of I-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+ERROR:EDK:4125 - IPNAME: xps_intc, INSTANCE: xps_intc_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: xps_intc, INSTANCE: xps_intc_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral xps_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of I-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+ERROR:EDK:4125 - IPNAME: xps_intc, INSTANCE: xps_intc_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: xps_intc, INSTANCE: xps_intc_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral xps_intc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+xps_intc_0 has been deleted from the project
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of I-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  **             MicroBlaze - microblaze_0
+WARNING:EDK -  ****************************************************************
+WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
+WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
+WARNING:EDK -  ****************************************************************
+Writing filter settings....
+Done writing filter settings to:
+	C:\Users\CS152B\Documents\m152b_fall2018\etc\Lab3_new.filters
+Done writing Tab View settings to:
+	C:\Users\CS152B\Documents\m152b_fall2018\etc\Lab3_new.gui
