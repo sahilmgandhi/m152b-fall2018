@@ -73,7 +73,7 @@ int main()
         {
             rockPaperScissors();
         }
-        xil_printf("Enter option: 'm' for multiplication, 'g' for rock-paper-scissors\n\r");
+        xil_printf("Enter option: 'm' for multiplication, 'g' for rock-paper-scissors\r\n");
         mode = getc(stdin);
         getchar(); // get rid of nullbyte
         xil_printf("\r\n");
@@ -101,8 +101,8 @@ void rockPaperScissors()
 
     while (1)
     {
-    	int exit_loop = 0;
-    	XGpio_DiscreteWrite(&keypad_input, 1, 0xF0);
+        int exit_loop = 0;
+        XGpio_DiscreteWrite(&keypad_input, 1, 0xF0);
         print("Player 1 enter your input (1 = rock, 2 = paper, 3 = scissors): ");
         input = getc(stdin);
         getchar();
@@ -114,29 +114,27 @@ void rockPaperScissors()
         while (1)
         {
 
-        	XGpio_DiscreteWrite(&keypad_input, 1, 0xE0);
-        	inputData = XGpio_DiscreteRead(&keypad_input, 1);
-        	xil_printf("%d \r\n", inputData);
-        	if (inputData == 238)
-        		break;
-        	XGpio_DiscreteWrite(&keypad_input, 1, 0xD0);
-        	inputData = XGpio_DiscreteRead(&keypad_input, 1);
-        	xil_printf("%d \r\n", inputData);
-        	if (inputData == 222)
-        		break;
-        	XGpio_DiscreteWrite(&keypad_input, 1, 0xB0);
-        	inputData = XGpio_DiscreteRead(&keypad_input, 1);
-        	xil_printf("%d \r\n", inputData);
-        	if (inputData == 190)
-        	   break;
+            XGpio_DiscreteWrite(&keypad_input, 1, 0xE0);
+            inputData = XGpio_DiscreteRead(&keypad_input, 1);
+            // xil_printf("%d \r\n", inputData);
+            if (inputData == 238)
+                break;
+            XGpio_DiscreteWrite(&keypad_input, 1, 0xD0);
+            inputData = XGpio_DiscreteRead(&keypad_input, 1);
+            // xil_printf("%d \r\n", inputData);
+            if (inputData == 222)
+                break;
+            XGpio_DiscreteWrite(&keypad_input, 1, 0xB0);
+            inputData = XGpio_DiscreteRead(&keypad_input, 1);
+            // xil_printf("%d \r\n", inputData);
+            if (inputData == 190)
+                break;
 
-        	XGpio_DiscreteWrite(&keypad_input, 1, 0x70);
-        	inputData = XGpio_DiscreteRead(&keypad_input, 1);
-            xil_printf("%d \r\n", inputData);
-
+            XGpio_DiscreteWrite(&keypad_input, 1, 0x70);
+            inputData = XGpio_DiscreteRead(&keypad_input, 1);
+            // xil_printf("%d \r\n", inputData);
         }
 
-        // TODO Change these addresses when we figure it out
         if (inputData == 238)
             playerTwoVal = 0;
         else if (inputData == 222)
@@ -147,15 +145,15 @@ void rockPaperScissors()
         int outcome = processInputs(playerOneVal, playerTwoVal);
         if (outcome == 1)
         {
-            xil_printf("The game is a tie (%s = %s)", a[playerOneVal], a[playerTwoVal]);
+            xil_printf("The game is a tie (%s = %s) \r\n", a[playerOneVal], a[playerTwoVal]);
         }
         else if (outcome == 0)
         {
-            xil_printf("Player One won! (%s > %s)", a[playerOneVal], a[playerTwoVal]);
+            xil_printf("Player One won! (%s > %s) \r\n", a[playerOneVal], a[playerTwoVal]);
         }
         else if (outcome == 2)
         {
-            xil_printf("Player Two won! (%s < %s)", a[playerOneVal], a[playerTwoVal]);
+            xil_printf("Player Two won! (%s < %s) \r\n", a[playerOneVal], a[playerTwoVal]);
         }
     }
 }
