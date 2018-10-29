@@ -1,6 +1,6 @@
-13:50:16 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+11:04:37 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
 make all 
 make: Nothing to be done for `all'.
 
-13:50:16 Build Finished (took 135ms)
+11:04:37 Build Finished (took 172ms)
 

@@ -103,11 +103,11 @@ void rockPaperScissors()
     {
     	int exit_loop = 0;
     	XGpio_DiscreteWrite(&keypad_input, 1, 0xF0);
-        print("Player 1 enter your input (1 = rock, 2 = paper, 3 = scissors): ");
+        print("Player 1 enter your input (0 = rock, 1 = paper, 2 = scissors): ");
         input = getc(stdin);
         getchar();
         playerOneVal = input - '0';
-        print("Player 2 enter your input (1 = rock, 2 = paper, 3 = scissors): ");
+        print("Player 2 enter your input (0 = rock, 1 = paper, 2 = scissors): ");
 
         int inputData = 0;
         int column_index = 0;

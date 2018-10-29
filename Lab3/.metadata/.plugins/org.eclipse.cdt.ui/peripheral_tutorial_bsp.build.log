@@ -1,6 +1,6 @@
-13:34:50 **** Auto Build of project peripheral_tutorial_bsp ****
+10:12:24 **** Auto Build of project peripheral_tutorial_bsp ****
 make -k all 
 Finished building libraries
 
-13:34:50 Build Finished (took 109ms)
+10:12:24 Build Finished (took 94ms)
 
