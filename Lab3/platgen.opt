@@ -1,0 +1,11 @@
+-p
+xc5vlx50tff1136-1
+-lang
+vhdl
+-intstyle
+default
+-lp
+C:/Digilent_Genesys_BSB_Support/lib/
+-msg
+__xps/ise/xmsgprops.lst
+Lab3_new.mhs

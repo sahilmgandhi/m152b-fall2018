@@ -1,0 +1,2 @@
+ERROR: 1 constraint not met.
+make: *** [implementation/Lab3_new.bit] Error 1
