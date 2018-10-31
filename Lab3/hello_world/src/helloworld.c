@@ -91,6 +91,8 @@ int main()
 void rockPaperScissors()
 {
     char input;
+    char inputp;
+    int counter = 0;
 
     xil_printf("Starting rock paper scissors. Player one get ready ... \r\n");
 
@@ -102,10 +104,17 @@ void rockPaperScissors()
 		strcpy(a[2], "SCISSORS");
 
 		do{
+			counter = 0;
 			xil_printf("Player 1 enter your input (1 = rock, 2 = paper, 3 = scissors): ");
 			input = getc(stdin);
+			counter++;
+			do{
+				inputp = getc(stdin);
+				counter++;
+			}
+			while(inputp != '\r');
 		}
-		while(input != '1' && input != '2' && input != '3');
+		while(input != '1' && input != '2' && input != '3' || counter >= 5);
 
 		playerOneVal = input - '1';
 		xil_printf("Player 2 enter your input (1 = rock, 2 = paper, 3 = scissors): ");

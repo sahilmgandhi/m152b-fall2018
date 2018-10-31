@@ -174,3 +174,16 @@
 12:01:24.712 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 12:02:24.049 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 12:03:03.272 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:04:49.180 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:06:22.820 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+12:06:22.836 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:16:23.273 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/Lab3/m152b_fall2018_hw_platform/download.bit" 
+10:21:09.085 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:26:21.852 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:27:09.605 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:27:32.024 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:28:56.797 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:32:37.430 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
