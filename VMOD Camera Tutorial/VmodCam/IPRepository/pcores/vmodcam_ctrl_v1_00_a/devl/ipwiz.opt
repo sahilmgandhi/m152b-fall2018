@@ -1,0 +1,9 @@
+-batch 
+-create vmodcam_ctrl 
+-ver 1.00.a 
+-dir "/home/wth/VmodCAM/VmodCAM_Bringup_v1_0_110224/proj" 
+-lang vhdl 
+-bus plbv46 s 
+-reg 16 
+-xps 
+-driver 

@@ -1,0 +1,10 @@
+-batch 
+-create hdmi 
+-ver 1.00.a 
+-dir "/home/wth/Board/Genesys/Demo/XSVI_out" 
+-lang verilog 
+-bus plbv46 s 
+-reg 16 
+-xps 
+-ise 
+-driver 

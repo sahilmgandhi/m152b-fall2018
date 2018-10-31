@@ -1,0 +1,159 @@
+
+Checking platform configuration ...
+IPNAME:plb_v46 INSTANCE:mb_plb -
+/media/freedisk2/steve/VmodCAM/VmodCAM_Genesys/DualCam_Genesys_10May2011/proj/sy
+stem.mhs line 78 - 2 master(s) : 9 slave(s)
+IPNAME:lmb_v10 INSTANCE:ilmb -
+/media/freedisk2/steve/VmodCAM/VmodCAM_Genesys/DualCam_Genesys_10May2011/proj/sy
+stem.mhs line 85 - 1 master(s) : 1 slave(s)
+IPNAME:lmb_v10 INSTANCE:dlmb -
+/media/freedisk2/steve/VmodCAM/VmodCAM_Genesys/DualCam_Genesys_10May2011/proj/sy
+stem.mhs line 92 - 1 master(s) : 1 slave(s)
+
+Checking port drivers...
+WARNING:EDK:2098 - PORT:IWAIT CONNECTOR:ilmb_LMB_Wait -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_00_b
+   /data/microblaze_v2_1_0.mpd line 386 - No driver found. Port will be driven
+   to GND!
+WARNING:EDK:2098 - PORT:ICE CONNECTOR:ilmb_LMB_CE -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_00_b
+   /data/microblaze_v2_1_0.mpd line 387 - No driver found. Port will be driven
+   to GND!
+WARNING:EDK:2098 - PORT:IUE CONNECTOR:ilmb_LMB_UE -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_00_b
+   /data/microblaze_v2_1_0.mpd line 388 - No driver found. Port will be driven
+   to GND!
+WARNING:EDK:2098 - PORT:DWAIT CONNECTOR:dlmb_LMB_Wait -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_00_b
+   /data/microblaze_v2_1_0.mpd line 424 - No driver found. Port will be driven
+   to GND!
+WARNING:EDK:2098 - PORT:DCE CONNECTOR:dlmb_LMB_CE -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_00_b
+   /data/microblaze_v2_1_0.mpd line 425 - No driver found. Port will be driven
+   to GND!
+WARNING:EDK:2098 - PORT:DUE CONNECTOR:dlmb_LMB_UE -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_00_b
+   /data/microblaze_v2_1_0.mpd line 426 - No driver found. Port will be driven
+   to GND!
+WARNING:EDK:2098 - PORT:VFBC1_Wd_Clk CONNECTOR:dvma_0_VFBC_IN_wd_clk -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1318 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC1_Wd_Reset CONNECTOR:dvma_0_VFBC_IN_wd_reset -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1319 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC1_Wd_Write CONNECTOR:dvma_0_VFBC_IN_wd_write -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1320 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC1_Wd_End_Burst CONNECTOR:dvma_0_VFBC_IN_wd_end_burst
+   -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1321 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC1_Wd_Flush CONNECTOR:dvma_0_VFBC_IN_wd_flush -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1322 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC1_Wd_Data CONNECTOR:dvma_0_VFBC_IN_wd_data -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1323 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC1_Wd_Data_BE CONNECTOR:dvma_0_VFBC_IN_wd_data_be -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1324 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC2_Rd_Clk CONNECTOR:Cam_Ctrl_0_VFBC_OUT_rd_clk -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1531 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC2_Rd_Reset CONNECTOR:Cam_Ctrl_0_VFBC_OUT_rd_reset -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1532 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC2_Rd_Read CONNECTOR:Cam_Ctrl_0_VFBC_OUT_rd_read -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1533 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC2_Rd_End_Burst
+   CONNECTOR:Cam_Ctrl_0_VFBC_OUT_rd_end_burst -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1534 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC2_Rd_Flush CONNECTOR:Cam_Ctrl_0_VFBC_OUT_rd_flush -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1535 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC3_Rd_Clk CONNECTOR:Cam_Ctrl_1_VFBC_OUT_rd_clk -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1735 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC3_Rd_Reset CONNECTOR:Cam_Ctrl_1_VFBC_OUT_rd_reset -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1736 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC3_Rd_Read CONNECTOR:Cam_Ctrl_1_VFBC_OUT_rd_read -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1737 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC3_Rd_End_Burst
+   CONNECTOR:Cam_Ctrl_1_VFBC_OUT_rd_end_burst -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1738 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:VFBC3_Rd_Flush CONNECTOR:Cam_Ctrl_1_VFBC_OUT_rd_flush -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1739 - No driver found. Port will be driven to GND!
+WARNING:EDK:2098 - PORT:bscan_tdo1 CONNECTOR:bscan_tdo1 -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_a/data/m
+   dm_v2_1_0.mpd line 230 - No driver found. Port will be driven to GND!
+WARNING:EDK:2099 - PORT:VFBC1_Wd_Full CONNECTOR:dvma_0_VFBC_IN_wd_full -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1325 - floating connection!
+WARNING:EDK:2099 - PORT:VFBC1_Wd_Almost_Full
+   CONNECTOR:dvma_0_VFBC_IN_wd_almost_full -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1326 - floating connection!
+WARNING:EDK:2099 - PORT:VFBC2_Rd_Data CONNECTOR:Cam_Ctrl_0_VFBC_OUT_rd_data -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1536 - floating connection!
+WARNING:EDK:2099 - PORT:VFBC2_Rd_Empty CONNECTOR:Cam_Ctrl_0_VFBC_OUT_rd_empty -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1537 - floating connection!
+WARNING:EDK:2099 - PORT:VFBC2_Rd_Almost_Empty
+   CONNECTOR:Cam_Ctrl_0_VFBC_OUT_rd_almost_empty -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1538 - floating connection!
+WARNING:EDK:2099 - PORT:VFBC3_Rd_Data CONNECTOR:Cam_Ctrl_1_VFBC_OUT_rd_data -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1740 - floating connection!
+WARNING:EDK:2099 - PORT:VFBC3_Rd_Empty CONNECTOR:Cam_Ctrl_1_VFBC_OUT_rd_empty -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1741 - floating connection!
+WARNING:EDK:2099 - PORT:VFBC3_Rd_Almost_Empty
+   CONNECTOR:Cam_Ctrl_1_VFBC_OUT_rd_almost_empty -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_02_a/data/
+   mpmc_v2_1_0.mpd line 1742 - floating connection!
+WARNING:EDK:2099 - PORT:bscan_tdi CONNECTOR:bscan_tdi -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_a/data/m
+   dm_v2_1_0.mpd line 223 - floating connection!
+WARNING:EDK:2099 - PORT:bscan_reset CONNECTOR:bscan_reset -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_a/data/m
+   dm_v2_1_0.mpd line 224 - floating connection!
+WARNING:EDK:2099 - PORT:bscan_shift CONNECTOR:bscan_shift -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_a/data/m
+   dm_v2_1_0.mpd line 225 - floating connection!
+WARNING:EDK:2099 - PORT:bscan_update CONNECTOR:bscan_update -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_a/data/m
+   dm_v2_1_0.mpd line 226 - floating connection!
+WARNING:EDK:2099 - PORT:bscan_capture CONNECTOR:bscan_capture -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_a/data/m
+   dm_v2_1_0.mpd line 227 - floating connection!
+WARNING:EDK:2099 - PORT:bscan_sel1 CONNECTOR:bscan_sel1 -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_a/data/m
+   dm_v2_1_0.mpd line 228 - floating connection!
+WARNING:EDK:2099 - PORT:bscan_drck1 CONNECTOR:bscan_drck1 -
+   /EDA/Xilinx/12.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_a/data/m
+   dm_v2_1_0.mpd line 229 - floating connection!
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Conversion to XML complete.
