@@ -187,3 +187,11 @@
 10:27:32.024 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 10:28:56.797 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 10:32:37.430 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:54:32.735 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+12:12:18.755 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/Lab3/m152b_fall2018_hw_platform/download.bit" 
+12:13:20.473 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:21:39.317 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+12:21:39.333 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

@@ -5824,3 +5824,21 @@ make: Nothing to be done for `all'.
 10:32:36 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
 make all 
 make: Nothing to be done for `all'.
+12:12:19 **** Auto Build of project hello_world_bsp ****
+make -k all 
+Finished building libraries
+12:12:23 **** Auto Build of project peripheral_tutorial_bsp ****
+make -k all 
+Finished building libraries
+12:12:30 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+12:12:33 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
+12:13:19 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+12:13:19 **** Incremental Build of configuration Debug for project peripheral_tutorial ****
+make all 
+make: Nothing to be done for `all'.
