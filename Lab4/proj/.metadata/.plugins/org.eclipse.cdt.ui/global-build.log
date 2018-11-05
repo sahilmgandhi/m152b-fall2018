@@ -1,0 +1,800 @@
+11:11:51 **** Build of project mariokart_bsp ****
+make -k all 
+libgen -hw ../proj_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../proj_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling lldma
+Compiling standalone
+Compiling iic
+Compiling mpmc
+Compiling bram
+Compiling uartlite
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+11:12:10 **** Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/dhry_1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/dhry_1.d" -MT"src/dhry_1.d" -o "src/dhry_1.o" "../src/dhry_1.c"
+../src/dhry_1.c:74:1: warning: return type defaults to 'int' [-Wreturn-type]
+../src/dhry_1.c: In function 'main':
+../src/dhry_1.c:153:5: warning: implicit declaration of function 'Proc_5' [-Wimplicit-function-declaration]
+../src/dhry_1.c:154:5: warning: implicit declaration of function 'Proc_4' [-Wimplicit-function-declaration]
+../src/dhry_1.c:160:5: warning: implicit declaration of function 'Func_2' [-Wimplicit-function-declaration]
+../src/dhry_1.c:166:7: warning: implicit declaration of function 'Proc_7' [-Wimplicit-function-declaration]
+../src/dhry_1.c:171:5: warning: implicit declaration of function 'Proc_8' [-Wimplicit-function-declaration]
+../src/dhry_1.c:173:5: warning: implicit declaration of function 'Proc_1' [-Wimplicit-function-declaration]
+../src/dhry_1.c:180:9: warning: implicit declaration of function 'Proc_6' [-Wimplicit-function-declaration]
+../src/dhry_1.c:191:5: warning: implicit declaration of function 'Proc_2' [-Wimplicit-function-declaration]
+../src/dhry_1.c: At top level:
+../src/dhry_1.c:327:1: warning: return type defaults to 'int' [-Wreturn-type]
+../src/dhry_1.c: In function 'Proc_1':
+../src/dhry_1.c:343:3: warning: implicit declaration of function 'Proc_3' [-Wimplicit-function-declaration]
+../src/dhry_1.c: At top level:
+../src/dhry_1.c:361:1: warning: return type defaults to 'int' [-Wreturn-type]
+../src/dhry_1.c:384:1: warning: return type defaults to 'int' [-Wreturn-type]
+../src/dhry_1.c:399:1: warning: return type defaults to 'int' [-Wreturn-type]
+../src/dhry_1.c:411:1: warning: return type defaults to 'int' [-Wreturn-type]
+../src/dhry_1.c: In function 'Proc_5':
+../src/dhry_1.c:417:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/dhry_1.c: In function 'Proc_4':
+../src/dhry_1.c:408:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/dhry_1.c: In function 'Proc_3':
+../src/dhry_1.c:396:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/dhry_1.c: In function 'Proc_2':
+../src/dhry_1.c:381:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/dhry_1.c: In function 'Proc_1':
+../src/dhry_1.c:358:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/dhry_1.c: In function 'main':
+../src/dhry_1.c:324:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/dhry_1.c
+ 
+Building file: ../src/dhry_2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/dhry_2.d" -MT"src/dhry_2.d" -o "src/dhry_2.o" "../src/dhry_2.c"
+../src/dhry_2.c:30:1: warning: return type defaults to 'int' [-Wreturn-type]
+../src/dhry_2.c: In function 'Proc_6':
+../src/dhry_2.c:39:3: warning: implicit declaration of function 'Func_3' [-Wimplicit-function-declaration]
+../src/dhry_2.c: At top level:
+../src/dhry_2.c:64:1: warning: return type defaults to 'int' [-Wreturn-type]
+../src/dhry_2.c:84:1: warning: return type defaults to 'int' [-Wreturn-type]
+../src/dhry_2.c: In function 'Func_2':
+../src/dhry_2.c:164:5: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+../src/dhry_2.c: In function 'Proc_8':
+../src/dhry_2.c:106:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/dhry_2.c: In function 'Proc_7':
+../src/dhry_2.c:81:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/dhry_2.c: In function 'Proc_6':
+../src/dhry_2.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/dhry_2.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/dhry_1.o ./src/dhry_2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12852	    272	  15500	  28624	   6fd0	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+11:13:58 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:23:18 **** Auto Build of project mariokart_bsp ****
+make -k all 
+Finished building libraries
+11:24:16 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:27:07 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/cam_ctrl.d" -MT"src/src/cam_ctrl.d" -o "src/src/cam_ctrl.o" "../src/src/cam_ctrl.c"
+../src/src/cam_ctrl.c: In function 'CamStatus':
+../src/src/cam_ctrl.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/cam_ctrl.c
+ 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:26:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building file: ../src/src/vmodcam_cfg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/vmodcam_cfg.d" -MT"src/src/vmodcam_cfg.d" -o "src/src/vmodcam_cfg.o" "../src/src/vmodcam_cfg.c"
+../src/src/vmodcam_cfg.c: In function 'CamIicCfg':
+../src/src/vmodcam_cfg.c:102:2: warning: implicit declaration of function 'CamIicSetupPLL' [-Wimplicit-function-declaration]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleRead':
+../src/src/vmodcam_cfg.c:334:6: warning: unused variable 'lCamIicReadHeader' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleWrite':
+../src/src/vmodcam_cfg.c:392:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+../src/src/vmodcam_cfg.c:388:6: warning: unused variable 'cWriteBytes' [-Wunused-variable]
+../src/src/vmodcam_cfg.c:387:6: warning: unused variable 'lCamIicRegData' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'ClearScreen':
+../src/src/vmodcam_cfg.c:475:2: warning: 'return' with a value, in function returning void [enabled by default]
+../src/src/vmodcam_cfg.c: In function 'CamIicInit':
+../src/src/vmodcam_cfg.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicPowerUp':
+../src/src/vmodcam_cfg.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicSetupPLL':
+../src/src/vmodcam_cfg.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/vmodcam_cfg.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/dhry_1.o ./src/dhry_2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/dhry_1.o: In function `main':
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\mariokart\Debug/../src/dhry_1.c:79: multiple definition of `main'
+./src/src/main.o:C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\mariokart\Debug/../src/src/main.c:23: first defined here
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+11:27:09 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/dhry_1.o ./src/dhry_2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/dhry_1.o: In function `main':
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\mariokart\Debug/../src/dhry_1.c:79: multiple definition of `main'
+./src/src/main.o:C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\mariokart\Debug/../src/src/main.c:23: first defined here
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+11:28:04 **** Auto Build of project mariokart_bsp ****
+make -k all 
+Finished building libraries
+11:28:08 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/dhry_1.o ./src/dhry_2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/dhry_1.o: In function `main':
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\mariokart\Debug/../src/dhry_1.c:79: multiple definition of `main'
+./src/src/main.o:C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\mariokart\Debug/../src/src/main.c:23: first defined here
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+11:28:14 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/dhry_1.o ./src/dhry_2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/dhry_1.o: In function `main':
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\mariokart\Debug/../src/dhry_1.c:79: multiple definition of `main'
+./src/src/main.o:C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\mariokart\Debug/../src/src/main.c:23: first defined here
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+11:29:08 **** Clean-only build of configuration Debug for project mariokart ****
+make clean 
+rm -rf  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/dhry_1.o ./src/dhry_2.o ./src/platform.o  ./src/src/cam_ctrl.d ./src/src/main.d ./src/src/vmodcam_cfg.d  ./src/dhry_1.d ./src/dhry_2.d ./src/platform.d  mariokart.elf.size  mariokart.elf.elfcheck  mariokart.elf
+ 
+11:29:08 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/cam_ctrl.d" -MT"src/src/cam_ctrl.d" -o "src/src/cam_ctrl.o" "../src/src/cam_ctrl.c"
+../src/src/cam_ctrl.c: In function 'CamStatus':
+../src/src/cam_ctrl.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/cam_ctrl.c
+ 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:26:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building file: ../src/src/vmodcam_cfg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/vmodcam_cfg.d" -MT"src/src/vmodcam_cfg.d" -o "src/src/vmodcam_cfg.o" "../src/src/vmodcam_cfg.c"
+../src/src/vmodcam_cfg.c: In function 'CamIicCfg':
+../src/src/vmodcam_cfg.c:102:2: warning: implicit declaration of function 'CamIicSetupPLL' [-Wimplicit-function-declaration]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleRead':
+../src/src/vmodcam_cfg.c:334:6: warning: unused variable 'lCamIicReadHeader' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleWrite':
+../src/src/vmodcam_cfg.c:392:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+../src/src/vmodcam_cfg.c:388:6: warning: unused variable 'cWriteBytes' [-Wunused-variable]
+../src/src/vmodcam_cfg.c:387:6: warning: unused variable 'lCamIicRegData' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'ClearScreen':
+../src/src/vmodcam_cfg.c:475:2: warning: 'return' with a value, in function returning void [enabled by default]
+../src/src/vmodcam_cfg.c: In function 'CamIicInit':
+../src/src/vmodcam_cfg.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicPowerUp':
+../src/src/vmodcam_cfg.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicSetupPLL':
+../src/src/vmodcam_cfg.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/vmodcam_cfg.c
+ 
+Building file: ../src/dhry_2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/dhry_2.d" -MT"src/dhry_2.d" -o "src/dhry_2.o" "../src/dhry_2.c"
+../src/dhry_2.c:30:1: warning: return type defaults to 'int' [-Wreturn-type]
+../src/dhry_2.c: In function 'Proc_6':
+../src/dhry_2.c:39:3: warning: implicit declaration of function 'Func_3' [-Wimplicit-function-declaration]
+../src/dhry_2.c: At top level:
+../src/dhry_2.c:64:1: warning: return type defaults to 'int' [-Wreturn-type]
+../src/dhry_2.c:84:1: warning: return type defaults to 'int' [-Wreturn-type]
+../src/dhry_2.c: In function 'Func_2':
+../src/dhry_2.c:164:5: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+../src/dhry_2.c: In function 'Proc_8':
+../src/dhry_2.c:106:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/dhry_2.c: In function 'Proc_7':
+../src/dhry_2.c:81:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/dhry_2.c: In function 'Proc_6':
+../src/dhry_2.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/dhry_2.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/dhry_2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8770	    276	   5162	  14208	   3780	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+11:29:12 **** Clean-only build of configuration Debug for project mariokart ****
+make clean 
+rm -rf  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/dhry_2.o ./src/platform.o  ./src/src/cam_ctrl.d ./src/src/main.d ./src/src/vmodcam_cfg.d  ./src/dhry_2.d ./src/platform.d  mariokart.elf.size  mariokart.elf.elfcheck  mariokart.elf
+ 
+11:29:12 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/cam_ctrl.d" -MT"src/src/cam_ctrl.d" -o "src/src/cam_ctrl.o" "../src/src/cam_ctrl.c"
+../src/src/cam_ctrl.c: In function 'CamStatus':
+../src/src/cam_ctrl.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/cam_ctrl.c
+ 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:26:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building file: ../src/src/vmodcam_cfg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/vmodcam_cfg.d" -MT"src/src/vmodcam_cfg.d" -o "src/src/vmodcam_cfg.o" "../src/src/vmodcam_cfg.c"
+../src/src/vmodcam_cfg.c: In function 'CamIicCfg':
+../src/src/vmodcam_cfg.c:102:2: warning: implicit declaration of function 'CamIicSetupPLL' [-Wimplicit-function-declaration]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleRead':
+../src/src/vmodcam_cfg.c:334:6: warning: unused variable 'lCamIicReadHeader' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleWrite':
+../src/src/vmodcam_cfg.c:392:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+../src/src/vmodcam_cfg.c:388:6: warning: unused variable 'cWriteBytes' [-Wunused-variable]
+../src/src/vmodcam_cfg.c:387:6: warning: unused variable 'lCamIicRegData' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'ClearScreen':
+../src/src/vmodcam_cfg.c:475:2: warning: 'return' with a value, in function returning void [enabled by default]
+../src/src/vmodcam_cfg.c: In function 'CamIicInit':
+../src/src/vmodcam_cfg.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicPowerUp':
+../src/src/vmodcam_cfg.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicSetupPLL':
+../src/src/vmodcam_cfg.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/vmodcam_cfg.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8770	    276	   5162	  14208	   3780	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+11:29:17 **** Clean-only build of configuration Debug for project mariokart ****
+make clean 
+rm -rf  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o  ./src/src/cam_ctrl.d ./src/src/main.d ./src/src/vmodcam_cfg.d  ./src/platform.d  mariokart.elf.size  mariokart.elf.elfcheck  mariokart.elf
+ 
+11:29:17 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/cam_ctrl.d" -MT"src/src/cam_ctrl.d" -o "src/src/cam_ctrl.o" "../src/src/cam_ctrl.c"
+../src/src/cam_ctrl.c: In function 'CamStatus':
+../src/src/cam_ctrl.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/cam_ctrl.c
+ 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:26:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building file: ../src/src/vmodcam_cfg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/vmodcam_cfg.d" -MT"src/src/vmodcam_cfg.d" -o "src/src/vmodcam_cfg.o" "../src/src/vmodcam_cfg.c"
+../src/src/vmodcam_cfg.c: In function 'CamIicCfg':
+../src/src/vmodcam_cfg.c:102:2: warning: implicit declaration of function 'CamIicSetupPLL' [-Wimplicit-function-declaration]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleRead':
+../src/src/vmodcam_cfg.c:334:6: warning: unused variable 'lCamIicReadHeader' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleWrite':
+../src/src/vmodcam_cfg.c:392:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+../src/src/vmodcam_cfg.c:388:6: warning: unused variable 'cWriteBytes' [-Wunused-variable]
+../src/src/vmodcam_cfg.c:387:6: warning: unused variable 'lCamIicRegData' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'ClearScreen':
+../src/src/vmodcam_cfg.c:475:2: warning: 'return' with a value, in function returning void [enabled by default]
+../src/src/vmodcam_cfg.c: In function 'CamIicInit':
+../src/src/vmodcam_cfg.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicPowerUp':
+../src/src/vmodcam_cfg.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicSetupPLL':
+../src/src/vmodcam_cfg.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/vmodcam_cfg.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8770	    276	   5162	  14208	   3780	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+11:29:39 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:31:15 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:26:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8770	    276	   5162	  14208	   3780	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+11:31:21 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:31:41 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:26:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2402	    268	   5162	   7832	   1e98	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+11:31:44 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:33:26 **** Auto Build of project mariokart_bsp ****
+make -k all 
+Finished building libraries
+11:33:29 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:35:36 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:26:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2402	    268	   5162	   7832	   1e98	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+11:36:02 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:26:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2402	    268	   5162	   7832	   1e98	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+11:36:05 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:36:40 **** Auto Build of project mariokart_bsp ****
+make -k all 
+Finished building libraries
+11:36:59 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:37:16 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:37:20 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:37:42 **** Clean-only build of configuration Debug for project mariokart ****
+make clean 
+rm -rf  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o  ./src/src/cam_ctrl.d ./src/src/main.d ./src/src/vmodcam_cfg.d  ./src/platform.d  mariokart.elf.size  mariokart.elf.elfcheck  mariokart.elf
+ 
+11:37:42 **** Clean-only build of project mariokart_bsp ****
+make -k clean 
+rm -rf microblaze_0
+11:37:43 **** Build of project mariokart_bsp ****
+make -k all 
+libgen -hw ../proj_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../proj_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling lldma
+Compiling standalone
+Compiling iic
+Compiling mpmc
+Compiling bram
+Compiling uartlite
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+11:37:54 **** Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/cam_ctrl.d" -MT"src/src/cam_ctrl.d" -o "src/src/cam_ctrl.o" "../src/src/cam_ctrl.c"
+../src/src/cam_ctrl.c: In function 'CamStatus':
+../src/src/cam_ctrl.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/cam_ctrl.c
+ 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:26:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building file: ../src/src/vmodcam_cfg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/vmodcam_cfg.d" -MT"src/src/vmodcam_cfg.d" -o "src/src/vmodcam_cfg.o" "../src/src/vmodcam_cfg.c"
+../src/src/vmodcam_cfg.c: In function 'CamIicCfg':
+../src/src/vmodcam_cfg.c:102:2: warning: implicit declaration of function 'CamIicSetupPLL' [-Wimplicit-function-declaration]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleRead':
+../src/src/vmodcam_cfg.c:334:6: warning: unused variable 'lCamIicReadHeader' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleWrite':
+../src/src/vmodcam_cfg.c:392:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+../src/src/vmodcam_cfg.c:388:6: warning: unused variable 'cWriteBytes' [-Wunused-variable]
+../src/src/vmodcam_cfg.c:387:6: warning: unused variable 'lCamIicRegData' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'ClearScreen':
+../src/src/vmodcam_cfg.c:475:2: warning: 'return' with a value, in function returning void [enabled by default]
+../src/src/vmodcam_cfg.c: In function 'CamIicInit':
+../src/src/vmodcam_cfg.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicPowerUp':
+../src/src/vmodcam_cfg.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicSetupPLL':
+../src/src/vmodcam_cfg.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/vmodcam_cfg.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2402	    268	   5162	   7832	   1e98	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+11:37:57 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:38:41 **** Auto Build of project mariokart_bsp ****
+make -k all 
+Finished building libraries
+11:38:53 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:40:04 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:41:46 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2402	    268	   5162	   7832	   1e98	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+11:41:50 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+11:42:17 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:26:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2402	    268	   5162	   7832	   1e98	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+11:42:21 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.

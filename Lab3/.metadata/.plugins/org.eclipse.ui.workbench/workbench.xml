@@ -43,7 +43,7 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="C:/Users/CS152B/Documents/m152b_fall2018/Lab3/hello_world/src/helloworld.c" title="helloworld.c" tooltip="hello_world/src/helloworld.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/hello_world/src/helloworld.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6467" selectionTopPixel="2595"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6467" selectionTopPixel="2355"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" partName="xparameters.h" path="C:/Users/CS152B/Documents/m152b_fall2018/Lab3/hello_world_bsp/microblaze_0/include/xparameters.h" title="xparameters.h" tooltip="hello_world_bsp/microblaze_0/include/xparameters.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/hello_world_bsp/microblaze_0/include/xparameters.h"/>

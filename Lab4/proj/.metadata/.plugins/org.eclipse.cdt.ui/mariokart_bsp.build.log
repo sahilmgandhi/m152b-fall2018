@@ -1,0 +1,6 @@
+11:38:41 **** Auto Build of project mariokart_bsp ****
+make -k all 
+Finished building libraries
+
+11:38:41 Build Finished (took 125ms)
+

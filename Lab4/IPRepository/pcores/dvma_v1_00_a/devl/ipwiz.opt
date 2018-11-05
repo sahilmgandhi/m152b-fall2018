@@ -1,0 +1,9 @@
+-batch 
+-create dvma 
+-ver 1.00.a 
+-dir "/home/wth/VmodCAM/Atlys_VFBC_HDMI_v1_0_110215/proj" 
+-lang vhdl 
+-bus plbv46 s 
+-reg 32 
+-xps 
+-driver 

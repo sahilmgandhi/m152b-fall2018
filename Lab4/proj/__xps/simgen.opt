@@ -1,0 +1,1 @@
+ -p virtex5 -lang vhdl$(PROJECT_SEARCHPATHOPT) $(GLOBAL_SEARCHPATHOPT) -msg __xps/ise/xmsgprops.lst -s isim -X C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/

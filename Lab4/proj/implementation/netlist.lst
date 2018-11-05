@@ -1,0 +1,20 @@
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\implementation\system.ngc 1541444358
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_microblaze_0_wrapper.ngc 1541444147
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_mb_plb_wrapper.ngc 1541443728
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_ilmb_wrapper.ngc 1541444151
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_dlmb_wrapper.ngc 1541444155
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_dlmb_cntlr_wrapper.ngc 1541443747
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_ilmb_cntlr_wrapper.ngc 1541443753
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_lmb_bram_wrapper.ngc 1541443766
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_rs232_uart_0_wrapper.ngc 1541443785
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_ddr2_sdram_wrapper.ngc 1541444160
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_clock_generator_0_wrapper.ngc 1541444164
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_mdm_0_wrapper.ngc 1541443949
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_proc_sys_reset_0_wrapper.ngc 1541443955
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_dvma_0_wrapper.ngc 1541444004
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_hdmi_0_wrapper.ngc 1541444033
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_cam_ctrl_0_wrapper.ngc 1541444059
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_cam_ctrl_1_wrapper.ngc 1541444085
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_cam_iic_0_wrapper.ngc 1541444113
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system_cam_iic_1_wrapper.ngc 1541444140
+OK
