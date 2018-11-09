@@ -1,27 +1,27 @@
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for
    architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 85 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 85 
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for
    architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 92 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 92 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 99 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 99 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 108 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 108 
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for
    architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 85 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 85 
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for
    architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 92 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 92 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 99 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 99 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 108 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 108 
 
 Checking platform configuration ...
 IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 9 slave(s) 

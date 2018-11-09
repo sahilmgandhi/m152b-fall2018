@@ -798,3 +798,1377 @@ Finished building: mariokart.elf.elfcheck
 11:42:21 **** Incremental Build of configuration Debug for project mariokart ****
 make all 
 make: Nothing to be done for `all'.
+12:24:15 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:4:19: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:25:21 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:21:20: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:42:7: error: 'Game' has no member named 'initialized'
+../src/src/game_controller.h:43:7: error: 'Game' has no member named 'level'
+../src/src/game_controller.h:44:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h:45:7: error: 'Game' has no member named 'playerXPos'
+../src/src/game_controller.h:46:7: error: 'Game' has no member named 'playerYPos'
+../src/src/game_controller.h:47:7: error: 'Game' has no member named 'playerXLastPos'
+../src/src/game_controller.h:48:7: error: 'Game' has no member named 'playerYLastPos'
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:7: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:64:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:64:32: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:9: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'finishGame':
+../src/src/game_controller.h:88:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: In function 'playerDead':
+../src/src/game_controller.h:99:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:116:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h:136:7: error: 'Game' has no member named 'screen'
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:4:19: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:26:02 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:21:20: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:42:7: error: 'Game' has no member named 'initialized'
+../src/src/game_controller.h:43:7: error: 'Game' has no member named 'level'
+../src/src/game_controller.h:44:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h:45:7: error: 'Game' has no member named 'playerXPos'
+../src/src/game_controller.h:46:7: error: 'Game' has no member named 'playerYPos'
+../src/src/game_controller.h:47:7: error: 'Game' has no member named 'playerXLastPos'
+../src/src/game_controller.h:48:7: error: 'Game' has no member named 'playerYLastPos'
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:7: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:64:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:64:32: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:9: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'finishGame':
+../src/src/game_controller.h:88:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: In function 'playerDead':
+../src/src/game_controller.h:99:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:116:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h:136:7: error: 'Game' has no member named 'screen'
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:4:19: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:26:09 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:21:20: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:42:7: error: 'Game' has no member named 'initialized'
+../src/src/game_controller.h:43:7: error: 'Game' has no member named 'level'
+../src/src/game_controller.h:44:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h:45:7: error: 'Game' has no member named 'playerXPos'
+../src/src/game_controller.h:46:7: error: 'Game' has no member named 'playerYPos'
+../src/src/game_controller.h:47:7: error: 'Game' has no member named 'playerXLastPos'
+../src/src/game_controller.h:48:7: error: 'Game' has no member named 'playerYLastPos'
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:7: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:64:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:64:32: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:9: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'finishGame':
+../src/src/game_controller.h:88:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: In function 'playerDead':
+../src/src/game_controller.h:99:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:116:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h:136:7: error: 'Game' has no member named 'screen'
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:26:29 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:21:19: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:42:7: error: 'Game' has no member named 'initialized'
+../src/src/game_controller.h:43:7: error: 'Game' has no member named 'level'
+../src/src/game_controller.h:44:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h:45:7: error: 'Game' has no member named 'playerXPos'
+../src/src/game_controller.h:46:7: error: 'Game' has no member named 'playerYPos'
+../src/src/game_controller.h:47:7: error: 'Game' has no member named 'playerXLastPos'
+../src/src/game_controller.h:48:7: error: 'Game' has no member named 'playerYLastPos'
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:7: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:64:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:64:32: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:9: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'finishGame':
+../src/src/game_controller.h:88:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: In function 'playerDead':
+../src/src/game_controller.h:99:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:116:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h:136:7: error: 'Game' has no member named 'screen'
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:26:42 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:21:19: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:42:7: error: 'Game' has no member named 'initialized'
+../src/src/game_controller.h:43:7: error: 'Game' has no member named 'level'
+../src/src/game_controller.h:44:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h:45:7: error: 'Game' has no member named 'playerXPos'
+../src/src/game_controller.h:46:7: error: 'Game' has no member named 'playerYPos'
+../src/src/game_controller.h:47:7: error: 'Game' has no member named 'playerXLastPos'
+../src/src/game_controller.h:48:7: error: 'Game' has no member named 'playerYLastPos'
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:7: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:64:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:64:32: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:9: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'finishGame':
+../src/src/game_controller.h:88:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: In function 'playerDead':
+../src/src/game_controller.h:99:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:116:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h:136:7: error: 'Game' has no member named 'screen'
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:26:53 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:21:19: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:42:7: error: 'Game' has no member named 'initialized'
+../src/src/game_controller.h:43:7: error: 'Game' has no member named 'level'
+../src/src/game_controller.h:44:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h:45:7: error: 'Game' has no member named 'playerXPos'
+../src/src/game_controller.h:46:7: error: 'Game' has no member named 'playerYPos'
+../src/src/game_controller.h:47:7: error: 'Game' has no member named 'playerXLastPos'
+../src/src/game_controller.h:48:7: error: 'Game' has no member named 'playerYLastPos'
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:7: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:64:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:64:32: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:9: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'finishGame':
+../src/src/game_controller.h:88:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: In function 'playerDead':
+../src/src/game_controller.h:99:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:116:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h:136:7: error: 'Game' has no member named 'screen'
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:26:56 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:21:19: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:42:7: error: 'Game' has no member named 'initialized'
+../src/src/game_controller.h:43:7: error: 'Game' has no member named 'level'
+../src/src/game_controller.h:44:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h:45:7: error: 'Game' has no member named 'playerXPos'
+../src/src/game_controller.h:46:7: error: 'Game' has no member named 'playerYPos'
+../src/src/game_controller.h:47:7: error: 'Game' has no member named 'playerXLastPos'
+../src/src/game_controller.h:48:7: error: 'Game' has no member named 'playerYLastPos'
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:7: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:64:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:64:32: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:9: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'finishGame':
+../src/src/game_controller.h:88:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: In function 'playerDead':
+../src/src/game_controller.h:99:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:116:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h:136:7: error: 'Game' has no member named 'screen'
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:27:04 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:21:19: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:42:7: error: 'Game' has no member named 'initialized'
+../src/src/game_controller.h:43:7: error: 'Game' has no member named 'level'
+../src/src/game_controller.h:44:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h:45:7: error: 'Game' has no member named 'playerXPos'
+../src/src/game_controller.h:46:7: error: 'Game' has no member named 'playerYPos'
+../src/src/game_controller.h:47:7: error: 'Game' has no member named 'playerXLastPos'
+../src/src/game_controller.h:48:7: error: 'Game' has no member named 'playerYLastPos'
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:7: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:64:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:64:32: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:9: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'finishGame':
+../src/src/game_controller.h:88:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: In function 'playerDead':
+../src/src/game_controller.h:99:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:116:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h:136:7: error: 'Game' has no member named 'screen'
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:27:42 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:21:19: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:42:7: error: 'Game' has no member named 'initialized'
+../src/src/game_controller.h:43:7: error: 'Game' has no member named 'level'
+../src/src/game_controller.h:44:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h:45:7: error: 'Game' has no member named 'playerXPos'
+../src/src/game_controller.h:46:7: error: 'Game' has no member named 'playerYPos'
+../src/src/game_controller.h:47:7: error: 'Game' has no member named 'playerXLastPos'
+../src/src/game_controller.h:48:7: error: 'Game' has no member named 'playerYLastPos'
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:7: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:64:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:64:32: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:9: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'finishGame':
+../src/src/game_controller.h:88:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: In function 'playerDead':
+../src/src/game_controller.h:99:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:116:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h:136:7: error: 'Game' has no member named 'screen'
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:28:07 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:21:23: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:42:7: error: 'Game' has no member named 'initialized'
+../src/src/game_controller.h:43:7: error: 'Game' has no member named 'level'
+../src/src/game_controller.h:44:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h:45:7: error: 'Game' has no member named 'playerXPos'
+../src/src/game_controller.h:46:7: error: 'Game' has no member named 'playerYPos'
+../src/src/game_controller.h:47:7: error: 'Game' has no member named 'playerXLastPos'
+../src/src/game_controller.h:48:7: error: 'Game' has no member named 'playerYLastPos'
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:7: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:64:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:64:32: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:9: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'finishGame':
+../src/src/game_controller.h:88:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: In function 'playerDead':
+../src/src/game_controller.h:99:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:116:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h:136:7: error: 'Game' has no member named 'screen'
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:28:11 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:21:19: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:42:7: error: 'Game' has no member named 'initialized'
+../src/src/game_controller.h:43:7: error: 'Game' has no member named 'level'
+../src/src/game_controller.h:44:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h:45:7: error: 'Game' has no member named 'playerXPos'
+../src/src/game_controller.h:46:7: error: 'Game' has no member named 'playerYPos'
+../src/src/game_controller.h:47:7: error: 'Game' has no member named 'playerXLastPos'
+../src/src/game_controller.h:48:7: error: 'Game' has no member named 'playerYLastPos'
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:7: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:64:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:64:32: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:9: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'finishGame':
+../src/src/game_controller.h:88:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: In function 'playerDead':
+../src/src/game_controller.h:99:7: error: 'Game' has no member named 'gameOver'
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:116:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h:136:7: error: 'Game' has no member named 'screen'
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:28:51 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:25:17: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:43:7: error: 'Game' has no member named 'level'
+../src/src/game_controller.h:45:7: error: 'Game' has no member named 'playerXPos'
+../src/src/game_controller.h:46:7: error: 'Game' has no member named 'playerYPos'
+../src/src/game_controller.h:47:7: error: 'Game' has no member named 'playerXLastPos'
+../src/src/game_controller.h:48:7: error: 'Game' has no member named 'playerYLastPos'
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:7: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:64:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:64:32: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:9: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:116:11: error: 'Game' has no member named 'screen'
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h:136:7: error: 'Game' has no member named 'screen'
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:28:56 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:28:58 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h:52:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:52:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:52:28: error: 'playerYPos' undeclared (first use in this function)
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:29:26 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:130:3: error: 'playerXLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:130:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:130:20: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:3: error: 'playerYLastPos' undeclared (first use in this function)
+../src/src/game_controller.h:131:20: error: 'playerYPos' undeclared (first use in this function)
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:29:55 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: In function 'movePlayer':
+../src/src/game_controller.h:136:16: error: 'playerXPos' undeclared (first use in this function)
+../src/src/game_controller.h:136:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h:136:28: error: 'playerYPos' undeclared (first use in this function)
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:29:59 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:30:20 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:18:17: error: unknown type name 'Game'
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:50:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:60:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:60:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:62:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:71:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:109:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:50:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:111:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:113:5: error: 'for' loop initial declarations are only allowed in C99 mode
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:30:23 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h:18:17: error: unknown type name 'Game'
+../src/src/game_controller.h: In function 'initGame':
+../src/src/game_controller.h:51:3: warning: implicit declaration of function 'fillScreen' [-Wimplicit-function-declaration]
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:61:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:61:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:63:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:72:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: At top level:
+../src/src/game_controller.h:110:6: warning: conflicting types for 'fillScreen' [enabled by default]
+../src/src/game_controller.h:51:3: note: previous implicit declaration of 'fillScreen' was here
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:112:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:114:5: error: 'for' loop initial declarations are only allowed in C99 mode
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:30:44 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:62:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:62:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:64:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:113:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:115:5: error: 'for' loop initial declarations are only allowed in C99 mode
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:11:19: fatal error: xgpio.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+12:31:08 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:62:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:62:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:64:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:113:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:115:5: error: 'for' loop initial declarations are only allowed in C99 mode
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:69:20: error: unknown type name 'GAME'
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:39:2: warning: implicit declaration of function 'drawGameState' [-Wimplicit-function-declaration]
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+12:31:15 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:62:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:62:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:64:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:113:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:115:5: error: 'for' loop initial declarations are only allowed in C99 mode
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:69:19: error: unknown type name 'GAME'
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:39:2: warning: implicit declaration of function 'drawGameState' [-Wimplicit-function-declaration]
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+12:31:20 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:62:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:62:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:64:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:73:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:113:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:115:5: error: 'for' loop initial declarations are only allowed in C99 mode
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:69:19: error: unknown type name 'GAME'
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:39:2: warning: implicit declaration of function 'drawGameState' [-Wimplicit-function-declaration]
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+12:32:24 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:64:3: error: expected ',' or ';' before 'for'
+../src/src/game_controller.h:64:28: warning: statement with no effect [-Wunused-value]
+../src/src/game_controller.h:64:38: error: expected ';' before ')' token
+../src/src/game_controller.h:64:38: error: expected statement before ')' token
+../src/src/game_controller.h:66:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:66:5: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:75:12: error: redefinition of 'j'
+../src/src/game_controller.h:63:6: note: previous definition of 'j' was here
+../src/src/game_controller.h:75:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:115:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:117:5: error: 'for' loop initial declarations are only allowed in C99 mode
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:69:19: error: unknown type name 'GAME'
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:39:2: warning: implicit declaration of function 'drawGameState' [-Wimplicit-function-declaration]
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+12:32:34 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:64:3: error: expected ',' or ';' before 'for'
+../src/src/game_controller.h:64:11: warning: statement with no effect [-Wunused-value]
+../src/src/game_controller.h:64:21: error: expected ';' before ')' token
+../src/src/game_controller.h:64:21: error: expected statement before ')' token
+../src/src/game_controller.h:66:5: warning: statement with no effect [-Wunused-value]
+../src/src/game_controller.h:75:12: error: redefinition of 'j'
+../src/src/game_controller.h:63:6: note: previous definition of 'j' was here
+../src/src/game_controller.h:75:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:75:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:115:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:117:5: error: 'for' loop initial declarations are only allowed in C99 mode
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:69:19: error: unknown type name 'GAME'
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:39:2: warning: implicit declaration of function 'drawGameState' [-Wimplicit-function-declaration]
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+12:32:43 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:64:3: warning: statement with no effect [-Wunused-value]
+../src/src/game_controller.h:66:5: warning: statement with no effect [-Wunused-value]
+../src/src/game_controller.h:75:12: error: redefinition of 'j'
+../src/src/game_controller.h:63:6: note: previous definition of 'j' was here
+../src/src/game_controller.h:75:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:75:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:115:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:117:5: error: 'for' loop initial declarations are only allowed in C99 mode
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:69:19: error: unknown type name 'GAME'
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:39:2: warning: implicit declaration of function 'drawGameState' [-Wimplicit-function-declaration]
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+12:32:56 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'propagateGame':
+../src/src/game_controller.h:64:3: warning: statement with no effect [-Wunused-value]
+../src/src/game_controller.h:66:5: warning: statement with no effect [-Wunused-value]
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:115:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:115:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:117:5: error: 'for' loop initial declarations are only allowed in C99 mode
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:69:19: error: unknown type name 'GAME'
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:39:2: warning: implicit declaration of function 'drawGameState' [-Wimplicit-function-declaration]
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+12:33:07 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:115:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:115:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:117:5: error: 'for' loop initial declarations are only allowed in C99 mode
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:69:19: error: unknown type name 'GAME'
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:39:2: warning: implicit declaration of function 'drawGameState' [-Wimplicit-function-declaration]
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+12:33:13 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:11:0:
+../src/src/game_controller.h: In function 'fillScreen':
+../src/src/game_controller.h:115:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/game_controller.h:115:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/game_controller.h:117:5: error: 'for' loop initial declarations are only allowed in C99 mode
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: At top level:
+../src/src/display.h:69:19: error: unknown type name 'GAME'
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:39:2: warning: implicit declaration of function 'drawGameState' [-Wimplicit-function-declaration]
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+12:33:33 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h:69:19: error: unknown type name 'GAME'
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:39:2: warning: implicit declaration of function 'drawGameState' [-Wimplicit-function-declaration]
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+12:34:11 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: In function 'drawGameState':
+../src/src/display.h:83:7: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/display.h:83:7: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/display.h:85:9: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/main.c: At top level:
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:39:2: error: too few arguments to function 'drawGameState'
+../src/src/display.h:69:5: note: declared here
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+12:34:26 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:13:0:
+../src/src/display.h: In function 'drawGameState':
+../src/src/display.h:83:7: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/display.h:83:7: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/display.h:85:9: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/display.h:78:21: warning: unused variable 'newPosY' [-Wunused-variable]
+../src/src/display.h:78:12: warning: unused variable 'newPosX' [-Wunused-variable]
+../src/src/main.c: At top level:
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:39:2: error: too few arguments to function 'drawGameState'
+../src/src/display.h:69:5: note: declared here
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+12:34:33 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:39:2: error: too few arguments to function 'drawGameState'
+../src/src/display.h:69:5: note: declared here
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+12:34:58 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building file: ../src/src/car2.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/car2.d" -MT"src/src/car2.d" -o "src/src/car2.o" "../src/src/car2.c"
+../src/src/car2.c:7:7: error: unknown type name 'time'
+../src/src/car2.c: In function 'init':
+../src/src/car2.c:17:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/car2.c:17:2: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/src/car2.c:19:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/car2.c:25:11: error: redefinition of 'i'
+../src/src/car2.c:17:11: note: previous definition of 'i' was here
+../src/src/car2.c:25:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/car2.c:27:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/car2.c: In function 'shiftScreenDown':
+../src/src/car2.c:37:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/car2.c:39:17: error: incompatible types when assigning to type 'int[720]' from type 'int *'
+../src/src/car2.c:42:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/car2.c: In function 'addObstacle':
+../src/src/car2.c:50:2: warning: implicit declaration of function 'rand' [-Wimplicit-function-declaration]
+../src/src/car2.c:51:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/src/car2.c:53:3: error: 'for' loop initial declarations are only allowed in C99 mode
+make: *** [src/src/car2.o] Error 1
+12:35:15 **** Clean-only build of configuration Debug for project mariokart ****
+make clean 
+rm -rf  ./src/src/cam_ctrl.o ./src/src/car2.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o  ./src/src/cam_ctrl.d ./src/src/car2.d ./src/src/main.d ./src/src/vmodcam_cfg.d  ./src/platform.d  mariokart.elf.size  mariokart.elf.elfcheck  mariokart.elf
+ 
+12:35:15 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/cam_ctrl.d" -MT"src/src/cam_ctrl.d" -o "src/src/cam_ctrl.o" "../src/src/cam_ctrl.c"
+../src/src/cam_ctrl.c: In function 'CamStatus':
+../src/src/cam_ctrl.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/cam_ctrl.c
+ 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building file: ../src/src/vmodcam_cfg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/vmodcam_cfg.d" -MT"src/src/vmodcam_cfg.d" -o "src/src/vmodcam_cfg.o" "../src/src/vmodcam_cfg.c"
+../src/src/vmodcam_cfg.c: In function 'CamIicCfg':
+../src/src/vmodcam_cfg.c:102:2: warning: implicit declaration of function 'CamIicSetupPLL' [-Wimplicit-function-declaration]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleRead':
+../src/src/vmodcam_cfg.c:334:6: warning: unused variable 'lCamIicReadHeader' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleWrite':
+../src/src/vmodcam_cfg.c:392:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+../src/src/vmodcam_cfg.c:388:6: warning: unused variable 'cWriteBytes' [-Wunused-variable]
+../src/src/vmodcam_cfg.c:387:6: warning: unused variable 'lCamIicRegData' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'ClearScreen':
+../src/src/vmodcam_cfg.c:475:2: warning: 'return' with a value, in function returning void [enabled by default]
+../src/src/vmodcam_cfg.c: In function 'CamIicInit':
+../src/src/vmodcam_cfg.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicPowerUp':
+../src/src/vmodcam_cfg.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicSetupPLL':
+../src/src/vmodcam_cfg.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/vmodcam_cfg.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+12:40:18 **** Clean-only build of configuration Debug for project mariokart ****
+make clean 
+rm -rf  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o  ./src/src/cam_ctrl.d ./src/src/main.d ./src/src/vmodcam_cfg.d  ./src/platform.d  mariokart.elf.size  mariokart.elf.elfcheck  mariokart.elf
+ 
+12:40:19 **** Clean-only build of project mariokart_bsp ****
+make -k clean 
+rm -rf microblaze_0
+12:40:21 **** Build of project mariokart_bsp ****
+make -k all 
+libgen -hw ../proj_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../proj_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling lldma
+Compiling standalone
+Compiling iic
+Compiling mpmc
+Compiling bram
+Compiling uartlite
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+12:40:37 **** Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/cam_ctrl.d" -MT"src/src/cam_ctrl.d" -o "src/src/cam_ctrl.o" "../src/src/cam_ctrl.c"
+../src/src/cam_ctrl.c: In function 'CamStatus':
+../src/src/cam_ctrl.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/cam_ctrl.c
+ 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building file: ../src/src/vmodcam_cfg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/vmodcam_cfg.d" -MT"src/src/vmodcam_cfg.d" -o "src/src/vmodcam_cfg.o" "../src/src/vmodcam_cfg.c"
+../src/src/vmodcam_cfg.c: In function 'CamIicCfg':
+../src/src/vmodcam_cfg.c:102:2: warning: implicit declaration of function 'CamIicSetupPLL' [-Wimplicit-function-declaration]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleRead':
+../src/src/vmodcam_cfg.c:334:6: warning: unused variable 'lCamIicReadHeader' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'CamIicSingleWrite':
+../src/src/vmodcam_cfg.c:392:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+../src/src/vmodcam_cfg.c:388:6: warning: unused variable 'cWriteBytes' [-Wunused-variable]
+../src/src/vmodcam_cfg.c:387:6: warning: unused variable 'lCamIicRegData' [-Wunused-variable]
+../src/src/vmodcam_cfg.c: In function 'ClearScreen':
+../src/src/vmodcam_cfg.c:475:2: warning: 'return' with a value, in function returning void [enabled by default]
+../src/src/vmodcam_cfg.c: In function 'CamIicInit':
+../src/src/vmodcam_cfg.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicPowerUp':
+../src/src/vmodcam_cfg.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/src/vmodcam_cfg.c: In function 'CamIicSetupPLL':
+../src/src/vmodcam_cfg.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/src/vmodcam_cfg.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+12:44:24 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3706	    268	  78914	  82888	  143c8	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+ERROR:EDK - elfcheck failed!
+The following sections did not fit into Processor  memory:
+	Section .stack (0x133F8 - 0x143F7)
+	Section .heap (0x12FF4 - 0x133F7)
+	Section .bss (0xFC0 - 0x12FF3)
+
+Try using the linker script generation tools to generate an ELF that maps
+correctly to your hardware design.
+Finished building: mariokart.elf.elfcheck
+ 
+12:45:05 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3706	    268	  78914	  82888	  143c8	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+ERROR:EDK - elfcheck failed!
+The following sections did not fit into Processor  memory:
+	Section .stack (0x133F8 - 0x143F7)
+	Section .heap (0x12FF4 - 0x133F7)
+	Section .bss (0xFC0 - 0x12FF3)
+
+Try using the linker script generation tools to generate an ELF that maps
+correctly to your hardware design.
+Finished building: mariokart.elf.elfcheck
+ 
+12:45:36 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3706	    268	  78914	  82888	  143c8	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+ERROR:EDK - elfcheck failed!
+The following sections did not fit into Processor  memory:
+	Section .stack (0x133F8 - 0x143F7)
+	Section .heap (0x12FF4 - 0x133F7)
+	Section .bss (0xFC0 - 0x12FF3)
+
+Try using the linker script generation tools to generate an ELF that maps
+correctly to your hardware design.
+Finished building: mariokart.elf.elfcheck
+ 
+12:46:02 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+12:47:14 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1

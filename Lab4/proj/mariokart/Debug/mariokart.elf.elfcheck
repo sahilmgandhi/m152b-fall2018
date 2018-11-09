@@ -1,9 +1,16 @@
 elfcheck
-Xilinx EDK 14.6 Build EDK_P.68d
+Xilinx EDK 2013.2 Build EDK_P.68d
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
 mariokart.elf 
 
 ELF file	: mariokart.elf
-elfcheck passed.
+ERROR:EDK - elfcheck failed!
+The following sections did not fit into Processor  memory:
+	Section .stack (0x133F8 - 0x143F7)
+	Section .heap (0x12FF4 - 0x133F7)
+	Section .bss (0xFC0 - 0x12FF3)
+
+Try using the linker script generation tools to generate an ELF that maps
+correctly to your hardware design.

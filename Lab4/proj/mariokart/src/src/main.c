@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <xil_exception.h>
-#include <xintc.h>
+//#include <xintc.h>
 #include <xio.h>
 
 #include "xparameters.h"
@@ -36,7 +36,7 @@ void main()
 	initGame(&game, 1);
 
 	// NOTE: This function may NOT be working (test it out a bit!)
-	drawGameState();
+	drawGameState(&game);
 
 	u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;
 	uint32_t posX, posY;

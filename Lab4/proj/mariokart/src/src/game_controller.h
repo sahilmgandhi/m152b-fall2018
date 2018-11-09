@@ -18,11 +18,11 @@
 
 typedef struct game
 {
-  bool initialized = false;
+  int initialized;
 
-  bool gameOver = false;
+  int gameOver;
 
-  uint8_t level = -1;
+  int8_t level;
 
   // TODO: Keep track of the player y pos as well, but make it static for now
   int16_t playerXPos;
@@ -37,11 +37,13 @@ typedef struct game
 
 } Game;
 
-bool initGame(Game *game, uint8_t level)
+void fillScreen(Game *game, uint32_t color);
+
+int initGame(Game *game, uint8_t level)
 {
-  game->initialized = true;
+  game->initialized = 1;
   game->level = level;
-  game->gameOver = false;
+  game->gameOver = 0;
   game->playerXPos = 0;
   game->playerYPos = 0;
   game->playerXLastPos = -1;
@@ -49,17 +51,19 @@ bool initGame(Game *game, uint8_t level)
 
   fillScreen(game, BLACK);
 
-  game->screen[playerXPos][playerYPos] = CAR_COLOR;
+  game->screen[game->playerXPos][game->playerYPos] = CAR_COLOR;
 
-  return true;
+  return 1;
 }
 
 // Shift the entire game down EXCEPT for the bottom most row
-bool propagateGame(Game *game)
+int propagateGame(Game *game)
 {
-  for (int i = GAME_X - 1; i > 0; i--)
+	int i;
+	int j;
+  for (i = GAME_X-1; i > 0; i--)
   {
-    for (int j = 0; j < GAME_Y; j++)
+    for (j =0; j < GAME_Y; j++)
     {
       game->screen[i][j] = game->screen[i - 1][j];
     }
@@ -68,14 +72,14 @@ bool propagateGame(Game *game)
   // At this point, we need add the top most row to be filled with EITHER:
   // spaces, or some kind of blocks????????
   // black for now
-  for (int j = 0; j < GAME_Y; j++)
+  for (j = 0; j < GAME_Y; j++)
   {
     game->screen[0][j] = BLACK;
   }
 
   // TODO: In this function, after moving everything down, you should check if the player has died
 
-  return true;
+  return 1;
 }
 
 /**
@@ -108,9 +112,11 @@ void playerDead(Game *game)
  */
 void fillScreen(Game *game, uint32_t color)
 {
-  for (int i = 0; i < GAME_X; i++)
+	int i;
+	int j;
+  for (i = 0; i < GAME_X; i++)
   {
-    for (int j = 0; j < GAME_Y; j++)
+    for (j = 0; j < GAME_Y; j++)
     {
       // Basically filling out column at a time
       game->screen[i][j] = color;
@@ -127,13 +133,13 @@ void fillScreen(Game *game, uint32_t color)
  */
 void movePlayer(Game *game, int16_t newX, int16_t newY)
 {
-  playerXLastPos = playerXPos;
-  playerYLastPos = playerYPos;
+  game->playerXLastPos = game->playerXPos;
+  game->playerYLastPos = game->playerYPos;
 
-  playerXPos = newX;
-  playerYPos = newY;
+  game->playerXPos = newX;
+  game->playerYPos = newY;
 
-  game->screen[playerXPos][playerYPos] = CAR_COLOR;
+  game->screen[game->playerXPos][game->playerYPos] = CAR_COLOR;
 }
 
 #endif

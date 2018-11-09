@@ -1,14 +1,13 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <xil_exception.h>
-#include <xintc.h>
+//#include <xintc.h>
 #include <xio.h>
 
 #include "game_controller.h"
 #include "globals.h"
 #include "mb_interface.h"
-#include "vmodcam_header.h"
-#include "xgpio.h"
+//#include "xgpio.h"
 #include "xparameters.h"
 
 #ifndef DISPLAY_H
@@ -66,7 +65,7 @@ void clearDisplay()
  *
  * @return true if successfully drawn, false otherwise.
  */
-bool drawGameState(GAME *game)
+int drawGameState(Game *game)
 {
   /*
 	 * For each column we will only draw the pixels that actually have to be
@@ -75,14 +74,14 @@ bool drawGameState(GAME *game)
 
   // TODO: We need to fix this to work with the game: It needs to loop through the game's array and show the screen
   uint32_t posX, posY;
-
+  uint32_t newPosX, newPosY;
   for (posX = 0; posX < GAME_X; posX++)
   {
     for (posY = 0; posY < GAME_Y; posY++)
     {
-      for (uint32_t newPosX = posX * 10; newPosX < (posX + 1) * 10; newPosX++)
+      for (newPosX = posX * 10; newPosX < (posX + 1) * 10; newPosX++)
       {
-        for (uint32_t newPosY = posY * 10; newPosY < (posY + 1) * 10; newPosY++)
+        for (newPosY = posY * 10; newPosY < (posY + 1) * 10; newPosY++)
         {
           XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (newPosY * 2560 + newPosX), game->screen[posX][posY]);
         }
@@ -108,7 +107,7 @@ bool drawGameState(GAME *game)
   XIo_Out32(lDvmaBaseAddress + blDvmaFLSR, 0x00000A00);                    // frame line stride
   XIo_Out32(lDvmaBaseAddress + blDvmaCR, 0x00000003);                      // dvma enable, dfl enable
 
-  return true;
+  return 1;
 }
 
 #endif
