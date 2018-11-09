@@ -60,6 +60,13 @@
  PORT Cam_Iic_0_Scl_pin = Cam_Iic_0_Scl, DIR = IO
  PORT Cam_Iic_1_Sda_pin = Cam_Iic_1_Sda, DIR = IO
  PORT Cam_Iic_1_Scl_pin = Cam_Iic_1_Scl, DIR = IO
+ PORT xps_spi_0_IP2INTC_Irpt_pin = xps_spi_0_IP2INTC_Irpt, DIR = O, SIGIS = INTERRUPT, SENSITIVITY = LEVEL_HIGH
+ PORT xps_spi_0_SPISEL_pin = xps_spi_0_SPISEL, DIR = I
+ PORT xps_spi_0_SCK_pin = xps_spi_0_SCK, DIR = IO
+ PORT xps_spi_0_MISO_pin = xps_spi_0_MISO, DIR = IO
+ PORT xps_spi_0_MOSI_pin = xps_spi_0_MOSI, DIR = IO
+ PORT xps_spi_0_SS_pin = xps_spi_0_SS, DIR = IO
+ PORT xps_intc_0_Irq_pin = xps_intc_0_Irq, DIR = O, SIGIS = INTERRUPT, SENSITIVITY = EDGE_RISING
 
 
 BEGIN microblaze
@@ -100,7 +107,7 @@ BEGIN lmb_bram_if_cntlr
  PARAMETER INSTANCE = dlmb_cntlr
  PARAMETER HW_VER = 2.10.b
  PARAMETER C_BASEADDR = 0x00000000
- PARAMETER C_HIGHADDR = 0x0001ffff
+ PARAMETER C_HIGHADDR = 0x0000FFFF
  BUS_INTERFACE SLMB = dlmb
  BUS_INTERFACE BRAM_PORT = dlmb_port
 END
@@ -109,7 +116,7 @@ BEGIN lmb_bram_if_cntlr
  PARAMETER INSTANCE = ilmb_cntlr
  PARAMETER HW_VER = 2.10.b
  PARAMETER C_BASEADDR = 0x00000000
- PARAMETER C_HIGHADDR = 0x0001ffff
+ PARAMETER C_HIGHADDR = 0x0000FFFF
  BUS_INTERFACE SLMB = ilmb
  BUS_INTERFACE BRAM_PORT = ilmb_port
 END
@@ -329,5 +336,36 @@ BEGIN xps_iic
  BUS_INTERFACE SPLB = mb_plb
  PORT Sda = Cam_Iic_1_Sda
  PORT Scl = Cam_Iic_1_Scl
+END
+
+BEGIN xps_spi
+ PARAMETER INSTANCE = xps_spi_0
+ PARAMETER HW_VER = 2.02.a
+ PARAMETER C_BASEADDR = 0x83400000
+ PARAMETER C_HIGHADDR = 0x8340ffff
+ BUS_INTERFACE SPLB = mb_plb
+ PORT IP2INTC_Irpt = xps_spi_0_IP2INTC_Irpt
+ PORT SPISEL = net_gnd
+ PORT SCK = xps_spi_0_SCK
+ PORT MISO = xps_spi_0_MISO
+ PORT MOSI = xps_spi_0_MOSI
+ PORT SS = xps_spi_0_SS
+END
+
+BEGIN xps_intc
+ PARAMETER INSTANCE = xps_intc_0
+ PARAMETER HW_VER = 2.01.a
+ PARAMETER C_BASEADDR = 0x81800000
+ PARAMETER C_HIGHADDR = 0x8180ffff
+ BUS_INTERFACE SPLB = mb_plb
+ PORT Irq = xps_intc_0_Irq
+END
+
+BEGIN xps_timer
+ PARAMETER INSTANCE = xps_timer_0
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_BASEADDR = 0x83c00000
+ PARAMETER C_HIGHADDR = 0x83c0ffff
+ BUS_INTERFACE SPLB = mb_plb
 END
 

@@ -79,7 +79,10 @@ implementation/system_hdmi_0_wrapper.ngc \
 implementation/system_cam_ctrl_0_wrapper.ngc \
 implementation/system_cam_ctrl_1_wrapper.ngc \
 implementation/system_cam_iic_0_wrapper.ngc \
-implementation/system_cam_iic_1_wrapper.ngc
+implementation/system_cam_iic_1_wrapper.ngc \
+implementation/system_xps_spi_0_wrapper.ngc \
+implementation/system_xps_intc_0_wrapper.ngc \
+implementation/system_xps_timer_0_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

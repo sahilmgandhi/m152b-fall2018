@@ -6,7 +6,7 @@
 @REM #
 @REM # Command line for ngdbuild
 @REM #
-ngdbuild -p xc5vlx50tff1136-1 -nt timestamp -bm system.bmm "C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/implementation/system.ngc" -uc system.ucf system.ngd 
+ngdbuild -p xc5vlx50tff1136-1 -nt timestamp -bm system.bmm "C:/Users/CS152B/Documents/m152b_fall2018/Lab4/proj/implementation/system.ngc" -uc system.ucf system.ngd 
 
 @REM #
 @REM # Command line for map

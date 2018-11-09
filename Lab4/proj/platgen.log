@@ -3,7 +3,7 @@ Release 14.6 - platgen Xilinx EDK 14.6 Build EDK_P.68d
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: platgen -p xc5vlx50tff1136-1 -lang vhdl -intstyle default -lp
-C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/ -msg __xps/ise/xmsgprops.lst
+C:/Users/CS152B/Documents/m152b_fall2018/Lab4/ -msg __xps/ise/xmsgprops.lst
 system.mhs 
 
 WARNING:EDK - INFO:Security:71 - If a license for part 'xc5vlx50t' is available,
@@ -13,33 +13,33 @@ WARNING:EDK - INFO:Security:71 - If a license for part 'xc5vlx50t' is available,
    qualify for Xilinx software updates or new releases.
 
 
-Parse C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/system.mhs ...
+Parse C:/Users/CS152B/Documents/m152b_fall2018/Lab4/proj/system.mhs ...
 
 Read MPD definitions ...
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for
    architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 85 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 92 
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for
    architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 92 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 99 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 99 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 106 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 108 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 115 
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for
    architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 85 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 92 
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for
    architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 92 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 99 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 99 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 106 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 108 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 115 
 
 Overriding IP level properties ...
 INFO:EDK:4130 - IPNAME: mpmc, INSTANCE:DDR2_SDRAM - tcl is overriding PARAMETER
@@ -137,6 +137,9 @@ Address Map for Processor microblaze_0
   (0000000000-0x0000ffff) ilmb_cntlr	ilmb
   (0x81600000-0x8160ffff) Cam_Iic_1	mb_plb
   (0x81620000-0x8162ffff) Cam_Iic_0	mb_plb
+  (0x81800000-0x8180ffff) xps_intc_0	mb_plb
+  (0x83400000-0x8340ffff) xps_spi_0	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
   (0x84000000-0x8400ffff) RS232_Uart_0	mb_plb
   (0x84400000-0x8440ffff) mdm_0	mb_plb
   (0x90000000-0x9fffffff) DDR2_SDRAM	mb_plb
@@ -161,7 +164,7 @@ INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
    \plb_v46_v2_1_0.mpd line 79 
 INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
-   C_PLBV46_NUM_SLAVES value to 9 -
+   C_PLBV46_NUM_SLAVES value to 12 -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
    \plb_v46_v2_1_0.mpd line 80 
 INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
@@ -206,52 +209,52 @@ INFO:EDK:4130 - IPNAME: mdm, INSTANCE:mdm_0 - tool is overriding PARAMETER
    _v2_1_0.mpd line 119 
 INFO:EDK:4130 - IPNAME: dvma, INSTANCE:dvma_0 - tool is overriding PARAMETER
    C_SPLB_DWIDTH value to 64 -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\IPRepository\pcores\dvma_v1
-   _00_a\data\dvma_v2_1_0.mpd line 28 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\IPRepository\pcores\dvma_v1_00_
+   a\data\dvma_v2_1_0.mpd line 28 
 INFO:EDK:4130 - IPNAME: dvma, INSTANCE:dvma_0 - tool is overriding PARAMETER
    C_SPLB_NUM_MASTERS value to 2 -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\IPRepository\pcores\dvma_v1
-   _00_a\data\dvma_v2_1_0.mpd line 29 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\IPRepository\pcores\dvma_v1_00_
+   a\data\dvma_v2_1_0.mpd line 29 
 INFO:EDK:4130 - IPNAME: dvma, INSTANCE:dvma_0 - tool is overriding PARAMETER
    C_SPLB_MID_WIDTH value to 1 -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\IPRepository\pcores\dvma_v1
-   _00_a\data\dvma_v2_1_0.mpd line 30 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\IPRepository\pcores\dvma_v1_00_
+   a\data\dvma_v2_1_0.mpd line 30 
 INFO:EDK:4130 - IPNAME: hdmi, INSTANCE:hdmi_0 - tool is overriding PARAMETER
    C_SPLB_DWIDTH value to 64 -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\IPRepository\pcores\hdmi_v1
-   _00_a\data\hdmi_v2_1_0.mpd line 29 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\IPRepository\pcores\hdmi_v1_00_
+   a\data\hdmi_v2_1_0.mpd line 29 
 INFO:EDK:4130 - IPNAME: hdmi, INSTANCE:hdmi_0 - tool is overriding PARAMETER
    C_SPLB_NUM_MASTERS value to 2 -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\IPRepository\pcores\hdmi_v1
-   _00_a\data\hdmi_v2_1_0.mpd line 30 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\IPRepository\pcores\hdmi_v1_00_
+   a\data\hdmi_v2_1_0.mpd line 30 
 INFO:EDK:4130 - IPNAME: hdmi, INSTANCE:hdmi_0 - tool is overriding PARAMETER
    C_SPLB_MID_WIDTH value to 1 -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\IPRepository\pcores\hdmi_v1
-   _00_a\data\hdmi_v2_1_0.mpd line 31 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\IPRepository\pcores\hdmi_v1_00_
+   a\data\hdmi_v2_1_0.mpd line 31 
 INFO:EDK:4130 - IPNAME: vmodcam_ctrl, INSTANCE:Cam_Ctrl_0 - tool is overriding
    PARAMETER C_SPLB_DWIDTH value to 64 -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\IPRepository\pcores\vmodcam
-   _ctrl_v1_00_a\data\vmodcam_ctrl_v2_1_0.mpd line 29 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\IPRepository\pcores\vmodcam_ctr
+   l_v1_00_a\data\vmodcam_ctrl_v2_1_0.mpd line 29 
 INFO:EDK:4130 - IPNAME: vmodcam_ctrl, INSTANCE:Cam_Ctrl_0 - tool is overriding
    PARAMETER C_SPLB_NUM_MASTERS value to 2 -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\IPRepository\pcores\vmodcam
-   _ctrl_v1_00_a\data\vmodcam_ctrl_v2_1_0.mpd line 30 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\IPRepository\pcores\vmodcam_ctr
+   l_v1_00_a\data\vmodcam_ctrl_v2_1_0.mpd line 30 
 INFO:EDK:4130 - IPNAME: vmodcam_ctrl, INSTANCE:Cam_Ctrl_0 - tool is overriding
    PARAMETER C_SPLB_MID_WIDTH value to 1 -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\IPRepository\pcores\vmodcam
-   _ctrl_v1_00_a\data\vmodcam_ctrl_v2_1_0.mpd line 31 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\IPRepository\pcores\vmodcam_ctr
+   l_v1_00_a\data\vmodcam_ctrl_v2_1_0.mpd line 31 
 INFO:EDK:4130 - IPNAME: vmodcam_ctrl, INSTANCE:Cam_Ctrl_1 - tool is overriding
    PARAMETER C_SPLB_DWIDTH value to 64 -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\IPRepository\pcores\vmodcam
-   _ctrl_v1_00_a\data\vmodcam_ctrl_v2_1_0.mpd line 29 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\IPRepository\pcores\vmodcam_ctr
+   l_v1_00_a\data\vmodcam_ctrl_v2_1_0.mpd line 29 
 INFO:EDK:4130 - IPNAME: vmodcam_ctrl, INSTANCE:Cam_Ctrl_1 - tool is overriding
    PARAMETER C_SPLB_NUM_MASTERS value to 2 -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\IPRepository\pcores\vmodcam
-   _ctrl_v1_00_a\data\vmodcam_ctrl_v2_1_0.mpd line 30 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\IPRepository\pcores\vmodcam_ctr
+   l_v1_00_a\data\vmodcam_ctrl_v2_1_0.mpd line 30 
 INFO:EDK:4130 - IPNAME: vmodcam_ctrl, INSTANCE:Cam_Ctrl_1 - tool is overriding
    PARAMETER C_SPLB_MID_WIDTH value to 1 -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\IPRepository\pcores\vmodcam
-   _ctrl_v1_00_a\data\vmodcam_ctrl_v2_1_0.mpd line 31 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\IPRepository\pcores\vmodcam_ctr
+   l_v1_00_a\data\vmodcam_ctrl_v2_1_0.mpd line 31 
 INFO:EDK:4130 - IPNAME: xps_iic, INSTANCE:Cam_Iic_0 - tool is overriding
    PARAMETER C_SPLB_NUM_MASTERS value to 2 -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_iic_v2_03_a\data
@@ -268,11 +271,39 @@ INFO:EDK:4130 - IPNAME: xps_iic, INSTANCE:Cam_Iic_1 - tool is overriding
    PARAMETER C_SPLB_DWIDTH value to 64 -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_iic_v2_03_a\data
    \xps_iic_v2_1_0.mpd line 87 
+INFO:EDK:4130 - IPNAME: xps_spi, INSTANCE:xps_spi_0 - tool is overriding
+   PARAMETER C_SPLB_DWIDTH value to 64 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_spi_v2_02_a\data
+   \xps_spi_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: xps_spi, INSTANCE:xps_spi_0 - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_spi_v2_02_a\data
+   \xps_spi_v2_1_0.mpd line 84 
+INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tool is overriding
+   PARAMETER C_SPLB_DWIDTH value to 64 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 83 
+INFO:EDK:4130 - IPNAME: xps_timer, INSTANCE:xps_timer_0 - tool is overriding
+   PARAMETER C_SPLB_DWIDTH value to 64 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_timer_v1_02_a\da
+   ta\xps_timer_v2_1_0.mpd line 85 
+INFO:EDK:4130 - IPNAME: xps_timer, INSTANCE:xps_timer_0 - tool is overriding
+   PARAMETER C_SPLB_MID_WIDTH value to 1 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_timer_v1_02_a\da
+   ta\xps_timer_v2_1_0.mpd line 87 
+INFO:EDK:4130 - IPNAME: xps_timer, INSTANCE:xps_timer_0 - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_timer_v1_02_a\da
+   ta\xps_timer_v2_1_0.mpd line 88 
 
 Checking platform address map ...
 
 Checking platform configuration ...
-IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 9 slave(s) 
+IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 12 slave(s) 
 IPNAME: lmb_v10, INSTANCE: ilmb - 1 master(s) : 1 slave(s) 
 IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s) 
 
@@ -371,6 +402,9 @@ WARNING:EDK:4180 - PORT: VFBC3_Rd_Flush, CONNECTOR: Cam_Ctrl_1_VFBC_OUT_rd_flush
    - No driver found. Port will be driven to GND -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mpmc_v6_06_a\data\mp
    mc_v2_1_0.mpd line 1751 
+WARNING:EDK:4181 - PORT: xps_spi_0_SPISEL_pin, CONNECTOR: xps_spi_0_SPISEL -
+   floating connection -
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 64 
 WARNING:EDK:4181 - PORT: VFBC1_Wd_Full, CONNECTOR: dvma_0_VFBC_IN_wd_full -
    floating connection -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mpmc_v6_06_a\data\mp
@@ -927,6 +961,22 @@ INFO:EDK:4130 - IPNAME: mpmc, INSTANCE:DDR2_SDRAM - tcl is overriding PARAMETER
    0x0000000000000000000000000000000000000000000000000000000000000000 -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mpmc_v6_06_a\data\mp
    mc_v2_1_0.mpd line 960 
+INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding
+   PARAMETER C_NUM_INTR_INPUTS value to 1 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 87 
+INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding
+   PARAMETER C_KIND_OF_INTR value to 0b11111111111111111111111111111111 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 88 
+INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding
+   PARAMETER C_KIND_OF_EDGE value to 0b11111111111111111111111111111111 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 89 
+INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding
+   PARAMETER C_KIND_OF_LVL value to 0b11111111111111111111111111111111 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 90 
 
 Running system level update procedures...
 
@@ -968,13 +1018,64 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
+IPNAME:microblaze INSTANCE:microblaze_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 72 - Copying
+cache implementation netlist
+IPNAME:plb_v46 INSTANCE:mb_plb -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 85 - Copying
+cache implementation netlist
+IPNAME:lmb_v10 INSTANCE:ilmb -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 92 - Copying
+cache implementation netlist
+IPNAME:lmb_v10 INSTANCE:dlmb -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 99 - Copying
+cache implementation netlist
+IPNAME:xps_uartlite INSTANCE:rs232_uart_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 131 - Copying
+cache implementation netlist
+IPNAME:mpmc INSTANCE:ddr2_sdram -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 145 - Copying
+cache implementation netlist
+IPNAME:mdm INSTANCE:mdm_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 230 - Copying
+cache implementation netlist
+IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 242 - Copying
+cache implementation netlist
+IPNAME:dvma INSTANCE:dvma_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 255 - Copying
+cache implementation netlist
+IPNAME:hdmi INSTANCE:hdmi_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 267 - Copying
+cache implementation netlist
+IPNAME:vmodcam_ctrl INSTANCE:cam_ctrl_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 285 - Copying
+cache implementation netlist
+IPNAME:vmodcam_ctrl INSTANCE:cam_ctrl_1 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 303 - Copying
+cache implementation netlist
+IPNAME:xps_iic INSTANCE:cam_iic_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 321 - Copying
+cache implementation netlist
+IPNAME:xps_iic INSTANCE:cam_iic_1 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 331 - Copying
+cache implementation netlist
+IPNAME:xps_spi INSTANCE:xps_spi_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 341 - Copying
+cache implementation netlist
+IPNAME:xps_intc INSTANCE:xps_intc_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 355 - Copying
+cache implementation netlist
+IPNAME:xps_timer INSTANCE:xps_timer_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 364 - Copying
+cache implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:lmb_bram -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 117 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 124 -
 elaborating IP
 IPNAME:clock_generator INSTANCE:clock_generator_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 186 -
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 193 -
 elaborating IP
 ClkGen elaborate status: PASSED
 ----------------------------------------
@@ -986,7 +1087,7 @@ Inserting wrapper level ...
 Completion time: 1.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -999,81 +1100,27 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:microblaze_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 65 -
-Running XST synthesis
-INSTANCE:mb_plb -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 78 -
-Running XST synthesis
-INSTANCE:ilmb -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 85 -
-Running XST synthesis
-INSTANCE:dlmb -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 92 -
-Running XST synthesis
 INSTANCE:dlmb_cntlr -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 99 -
-Running XST synthesis
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 106 - Running
+XST synthesis
 INSTANCE:ilmb_cntlr -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 108 -
-Running XST synthesis
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 115 - Running
+XST synthesis
 INSTANCE:lmb_bram -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 117 -
-Running XST synthesis
-INSTANCE:rs232_uart_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 124 -
-Running XST synthesis
-INSTANCE:ddr2_sdram -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 138 -
-Running XST synthesis
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 124 - Running
+XST synthesis
 INSTANCE:clock_generator_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 186 -
-Running XST synthesis
-INSTANCE:mdm_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 223 -
-Running XST synthesis
-INSTANCE:proc_sys_reset_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 235 -
-Running XST synthesis
-INSTANCE:dvma_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 248 -
-Running XST synthesis
-INSTANCE:hdmi_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 260 -
-Running XST synthesis
-INSTANCE:cam_ctrl_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 278 -
-Running XST synthesis
-INSTANCE:cam_ctrl_1 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 296 -
-Running XST synthesis
-INSTANCE:cam_iic_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 314 -
-Running XST synthesis
-INSTANCE:cam_iic_1 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 324 -
-Running XST synthesis
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 193 - Running
+XST synthesis
 
 Running NGCBUILD ...
-IPNAME:system_microblaze_0_wrapper INSTANCE:microblaze_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 65 -
-Running NGCBUILD
-IPNAME:system_ilmb_wrapper INSTANCE:ilmb -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 85 -
-Running NGCBUILD
-IPNAME:system_dlmb_wrapper INSTANCE:dlmb -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 92 -
-Running NGCBUILD
-IPNAME:system_ddr2_sdram_wrapper INSTANCE:ddr2_sdram -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 138 -
-Running NGCBUILD
 IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\system.mhs line 186 -
-Running NGCBUILD
+C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 193 - Running
+NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 702.00 seconds
+Total run time: 44.00 seconds

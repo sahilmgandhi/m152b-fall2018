@@ -1,4 +1,4 @@
-12:47:14 **** Auto Build of configuration Debug for project mariokart ****
+14:52:00 **** Incremental Build of configuration Debug for project mariokart ****
 make all 
 Building target: mariokart.elf
 Invoking: MicroBlaze gcc linker
@@ -8,5 +8,5 @@ c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.
 collect2: ld returned 1 exit status
 make: *** [mariokart.elf] Error 1
 
-12:47:15 Build Finished (took 281ms)
+14:52:01 Build Finished (took 390ms)
 

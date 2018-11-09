@@ -3568,7 +3568,7 @@ module system_ddr2_sdram_wrapper
       .C_PORT_CONFIG ( 1 ),
       .C_ALL_PIMS_SHARE_ADDRESSES ( 1 ),
       .C_MPMC_BASEADDR ( 32'h90000000 ),
-      .C_MPMC_HIGHADDR ( 32'h9FFFFFFF ),
+      .C_MPMC_HIGHADDR ( 32'h9fffffff ),
       .C_SDMA_CTRL_BASEADDR ( 32'hFFFFFFFF ),
       .C_SDMA_CTRL_HIGHADDR ( 32'h00000000 ),
       .C_MPMC_CTRL_BASEADDR ( 32'hFFFFFFFF ),

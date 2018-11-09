@@ -53,7 +53,14 @@ entity system_stub is
     Cam_Iic_0_Sda_pin : inout std_logic;
     Cam_Iic_0_Scl_pin : inout std_logic;
     Cam_Iic_1_Sda_pin : inout std_logic;
-    Cam_Iic_1_Scl_pin : inout std_logic
+    Cam_Iic_1_Scl_pin : inout std_logic;
+    xps_spi_0_IP2INTC_Irpt_pin : out std_logic;
+    xps_spi_0_SPISEL_pin : in std_logic;
+    xps_spi_0_SCK_pin : inout std_logic;
+    xps_spi_0_MISO_pin : inout std_logic;
+    xps_spi_0_MOSI_pin : inout std_logic;
+    xps_spi_0_SS_pin : inout std_logic;
+    xps_intc_0_Irq_pin : out std_logic
   );
 end system_stub;
 
@@ -105,7 +112,14 @@ architecture STRUCTURE of system_stub is
       Cam_Iic_0_Sda_pin : inout std_logic;
       Cam_Iic_0_Scl_pin : inout std_logic;
       Cam_Iic_1_Sda_pin : inout std_logic;
-      Cam_Iic_1_Scl_pin : inout std_logic
+      Cam_Iic_1_Scl_pin : inout std_logic;
+      xps_spi_0_IP2INTC_Irpt_pin : out std_logic;
+      xps_spi_0_SPISEL_pin : in std_logic;
+      xps_spi_0_SCK_pin : inout std_logic;
+      xps_spi_0_MISO_pin : inout std_logic;
+      xps_spi_0_MOSI_pin : inout std_logic;
+      xps_spi_0_SS_pin : inout std_logic;
+      xps_intc_0_Irq_pin : out std_logic
     );
   end component;
 
@@ -160,7 +174,14 @@ begin
       Cam_Iic_0_Sda_pin => Cam_Iic_0_Sda_pin,
       Cam_Iic_0_Scl_pin => Cam_Iic_0_Scl_pin,
       Cam_Iic_1_Sda_pin => Cam_Iic_1_Sda_pin,
-      Cam_Iic_1_Scl_pin => Cam_Iic_1_Scl_pin
+      Cam_Iic_1_Scl_pin => Cam_Iic_1_Scl_pin,
+      xps_spi_0_IP2INTC_Irpt_pin => xps_spi_0_IP2INTC_Irpt_pin,
+      xps_spi_0_SPISEL_pin => xps_spi_0_SPISEL_pin,
+      xps_spi_0_SCK_pin => xps_spi_0_SCK_pin,
+      xps_spi_0_MISO_pin => xps_spi_0_MISO_pin,
+      xps_spi_0_MOSI_pin => xps_spi_0_MOSI_pin,
+      xps_spi_0_SS_pin => xps_spi_0_SS_pin,
+      xps_intc_0_Irq_pin => xps_intc_0_Irq_pin
     );
 
 end architecture STRUCTURE;

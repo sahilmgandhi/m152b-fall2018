@@ -72,7 +72,7 @@ begin
   dlmb_cntlr : lmb_bram_if_cntlr
     generic map (
       C_BASEADDR => X"00000000",
-      C_HIGHADDR => X"0000ffff",
+      C_HIGHADDR => X"0000FFFF",
       C_MASK => X"80000000",
       C_LMB_AWIDTH => 32,
       C_LMB_DWIDTH => 32

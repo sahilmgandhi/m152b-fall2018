@@ -1,30 +1,30 @@
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for
    architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 85 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 92 
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for
    architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 92 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 99 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 99 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 106 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 108 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 115 
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for
    architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 85 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 92 
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for
    architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 92 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 99 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 99 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 106 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
-   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 108 
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 115 
 
 Checking platform configuration ...
-IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 9 slave(s) 
+IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 12 slave(s) 
 IPNAME: lmb_v10, INSTANCE: ilmb - 1 master(s) : 1 slave(s) 
 IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s) 
 
@@ -123,6 +123,9 @@ WARNING:EDK:4180 - PORT: VFBC3_Rd_Flush, CONNECTOR: Cam_Ctrl_1_VFBC_OUT_rd_flush
    - No driver found. Port will be driven to GND -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mpmc_v6_06_a\data\mp
    mc_v2_1_0.mpd line 1751 
+WARNING:EDK:4181 - PORT: xps_spi_0_SPISEL_pin, CONNECTOR: xps_spi_0_SPISEL -
+   floating connection -
+   C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\system.mhs line 64 
 WARNING:EDK:4181 - PORT: VFBC1_Wd_Full, CONNECTOR: dvma_0_VFBC_IN_wd_full -
    floating connection -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mpmc_v6_06_a\data\mp
@@ -679,6 +682,22 @@ INFO:EDK:4130 - IPNAME: mpmc, INSTANCE:DDR2_SDRAM - tcl is overriding PARAMETER
    0x0000000000000000000000000000000000000000000000000000000000000000 -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mpmc_v6_06_a\data\mp
    mc_v2_1_0.mpd line 960 
+INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding
+   PARAMETER C_NUM_INTR_INPUTS value to 1 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 87 
+INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding
+   PARAMETER C_KIND_OF_INTR value to 0b11111111111111111111111111111111 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 88 
+INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding
+   PARAMETER C_KIND_OF_EDGE value to 0b11111111111111111111111111111111 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 89 
+INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding
+   PARAMETER C_KIND_OF_LVL value to 0b11111111111111111111111111111111 -
+   C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 90 
 
 Running system level update procedures...
 

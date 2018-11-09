@@ -1,6 +1,6 @@
 Release 14.6 - xst P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\synthesis\xst_temp_dir\
+--> Parameter TMPDIR set to C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\synthesis\xst_temp_dir\
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -30,7 +30,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_clock_generator_0_wrapper_xst.prj"
-Verilog Include Directory          : {"C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\proj\pcores\" "C:\Users\CS152B\Documents\m152b_fall2018\Lab4_New\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"C:\Users\CS152B\Documents\m152b_fall2018\Lab4\proj\pcores\" "C:\Users\CS152B\Documents\m152b_fall2018\Lab4\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc5vlx50tff1136-1
@@ -69,10 +69,10 @@ Entity <mmcm_module> (Architecture <STRUCT>) compiled.
 Compiling vhdl file "C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/plle2_module.vhd" in Library clock_generator_v4_03_a.
 Entity <plle2_module> compiled.
 Entity <plle2_module> (Architecture <STRUCT>) compiled.
-Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" in Library clock_generator_0_v4_03_a.
+Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/Lab4/proj/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" in Library clock_generator_0_v4_03_a.
 Entity <clock_generator> compiled.
 Entity <clock_generator> (Architecture <STRUCTURE>) compiled.
-Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/hdl/system_clock_generator_0_wrapper.vhd" in Library work.
+Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/Lab4/proj/hdl/system_clock_generator_0_wrapper.vhd" in Library work.
 Entity <system_clock_generator_0_wrapper> compiled.
 Entity <system_clock_generator_0_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -387,7 +387,7 @@ Unit <pll_module_2> synthesized.
 
 
 Synthesizing Unit <clock_generator>.
-    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd".
+    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/Lab4/proj/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd".
 WARNING:Xst:1305 - Output <CLKFBOUT> is never assigned. Tied to value 0.
 WARNING:Xst:647 - Input <PSEN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1305 - Output <PSDONE> is never assigned. Tied to value 0.
@@ -424,7 +424,7 @@ Unit <clock_generator> synthesized.
 
 
 Synthesizing Unit <system_clock_generator_0_wrapper>.
-    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/Lab4_New/proj/hdl/system_clock_generator_0_wrapper.vhd".
+    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/Lab4/proj/hdl/system_clock_generator_0_wrapper.vhd".
 Unit <system_clock_generator_0_wrapper> synthesized.
 
 
@@ -583,11 +583,11 @@ Delay:               0.670ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.85 secs
+Total CPU time to Xst completion: 5.43 secs
  
 --> 
 
-Total memory usage is 365636 kilobytes
+Total memory usage is 364612 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   34 (   0 filtered)
