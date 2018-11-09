@@ -9,6 +9,9 @@
 #define GRAPHIC_WIDTH 640
 #define GRAPHIC_HEIGHT 360
 
+#define GAME_X 256
+#define GAME_Y 72
+
 #define SCREEN_TOP_EDGE 180
 #define SCREEN_BOT_EDGE 540
 #define SCREEN_LEFT_EDGE 320
@@ -32,5 +35,7 @@
 #define BLUE 0xF
 #define WHITE 0xFFF
 #define BLACK 0x0
+
+#define CAR_COLOR 0xF
 
 #endif

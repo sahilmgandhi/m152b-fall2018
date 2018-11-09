@@ -1,10 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <xil_exception.h>
+#include <xintc.h>
 #include <xio.h>
 
 #include "xparameters.h"
 #include "cam_ctrl_header.h"
 #include "vmodcam_header.h"
 #include "globals.h"
+#include "game_controller.h"
+#include "game_board.h"
 
 #define blDvmaCR 0x00000000		// Control Reg Offset
 #define blDvmaFWR 0x00000004	// Frame Width Reg Offset
@@ -20,14 +25,17 @@
 #define blDvmaVFPR 0x0000002c // V Front Porch Reg Offset
 #define blDvmaVTR 0x00000030	// V Total Reg Offset
 
-int interruptHandler();
+uint32_t interruptHandler();
+
+static Game game;
 
 void main()
 {
 	u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;
-	int posX, posY;
-	int color;
+	uint32_t posX, posY;
+	uint32_t color;
 
+	// so starting at top left and going down
 	for (posX = 0; posX < 2560; posX++)
 		for (posY = 0; posY < 720; posY++)
 			XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (posY * 2560 + posX), (posX / 40) << 4);
@@ -57,16 +65,16 @@ void main()
 			XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (posY * 2560 + posX), 0xF);
 }
 
-// TODO: We need to work with the ISR module to get the interrupts from the Gyroscope
+// TODO: We need to work with the ISR module to get the uint32_terrupts from the Gyroscope
 
 // NOTE: This function will handle the gyro ISR when we read over a particular value?
-int gyroscopeISR()
+uint32_t gyroscopeISR()
 {
 	return -1;
 }
 
-// NOTE: This function handles reading interrupts and what to do with them
-int interruptHandler()
+// NOTE: This function handles reading uint32_terrupts and what to do with them
+uint32_t interruptHandler()
 {
 	return -1;
 }

@@ -73,7 +73,7 @@ bool draw_game_state(GAME *game)
 	 * drawn. (leave the other pixels as being blank) 
 	 */
 
-  // TODO: We need to fix this to work with the game:
+  // TODO: We need to fix this to work with the game: It needs to loop through the game's array and show the screen
   uint16_t posX;
   uint16_t maze_index = game->maze_front;
   for (posX = SCREEN_LEFT_EDGE; posX < SCREEN_RIGHT_EDGE; posX++)

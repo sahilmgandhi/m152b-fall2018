@@ -15,4 +15,14 @@
  * Perhaps we want to give it a 2.5d view or something when we are turning
  */
 
+typedef enum
+{
+  LEFT,
+  RIGHT,
+  STRAIGHT
+
+} playerDir;
+
+// THIS FILE MAY NOT BE NEEDED AT ALL???
+
 #endif
