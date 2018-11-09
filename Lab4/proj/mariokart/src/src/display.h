@@ -32,7 +32,7 @@
  * Clear the screen with an all white screen.
  *
  */
-void clear_display()
+void clearDisplay()
 {
   uint32_t posX, posY;
 
@@ -64,9 +64,9 @@ void clear_display()
  *
  * @param game The game object to draw onto the monitor.
  *
- * @return True if successfully drawn, false otherwise.
+ * @return true if successfully drawn, false otherwise.
  */
-bool draw_game_state(GAME *game)
+bool drawGameState(GAME *game)
 {
   /*
 	 * For each column we will only draw the pixels that actually have to be
@@ -74,18 +74,20 @@ bool draw_game_state(GAME *game)
 	 */
 
   // TODO: We need to fix this to work with the game: It needs to loop through the game's array and show the screen
-  uint16_t posX;
-  uint16_t maze_index = game->maze_front;
-  for (posX = SCREEN_LEFT_EDGE; posX < SCREEN_RIGHT_EDGE; posX++)
-  {
-    XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR +
-                  (((uint32_t)(game->maze[maze_index].upper_bound + SCREEN_TOP_EDGE) * 2560 + posX) << 1),
-              0x0);
-    XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR +
-                  (((uint32_t)(game->maze[maze_index].lower_bound + SCREEN_TOP_EDGE) * 2560 + posX) << 1),
-              0x0);
+  uint32_t posX, posY;
 
-    maze_index++;
+  for (posX = 0; posX < GAME_X; posX++)
+  {
+    for (posY = 0; posY < GAME_Y; posY++)
+    {
+      for (uint32_t newPosX = posX * 10; newPosX < (posX + 1) * 10; newPosX++)
+      {
+        for (uint32_t newPosY = posY * 10; newPosY < (posY + 1) * 10; newPosY++)
+        {
+          XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (newPosY * 2560 + newPosX), game->screen[posX][posY]);
+        }
+      }
+    }
   }
 
   u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;

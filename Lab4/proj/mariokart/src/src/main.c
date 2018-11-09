@@ -10,6 +10,7 @@
 #include "globals.h"
 #include "game_controller.h"
 #include "game_board.h"
+#include "display.h"
 
 #define blDvmaCR 0x00000000		// Control Reg Offset
 #define blDvmaFWR 0x00000004	// Frame Width Reg Offset
@@ -31,6 +32,12 @@ static Game game;
 
 void main()
 {
+	clearDisplay();
+	initGame(&game, 1);
+
+	// NOTE: This function may NOT be working (test it out a bit!)
+	drawGameState();
+
 	u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;
 	uint32_t posX, posY;
 	uint32_t color;

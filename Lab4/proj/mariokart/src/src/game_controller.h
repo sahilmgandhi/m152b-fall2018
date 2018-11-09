@@ -32,6 +32,7 @@ typedef struct game
   int16_t playerXLastPos;
   int16_t playerYLastPos;
 
+  // holds the color at each screen block
   uint32_t screen[GAME_X][GAME_Y];
 
 } Game;
@@ -72,6 +73,8 @@ bool propagateGame(Game *game)
     game->screen[0][j] = BLACK;
   }
 
+  // TODO: In this function, after moving everything down, you should check if the player has died
+
   return true;
 }
 
@@ -103,7 +106,7 @@ void playerDead(Game *game)
  * @param game    Game    The game struct
  * @param color   int     The color for the screen
  */
-void fillScreen(Game *game, int color)
+void fillScreen(Game *game, uint32_t color)
 {
   for (int i = 0; i < GAME_X; i++)
   {
