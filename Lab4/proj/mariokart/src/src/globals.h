@@ -1,4 +1,4 @@
-#include "xparameters.h"
+//#include "xparameters.h"
 
 #ifndef GLOBALS_H
 #define GLOBALS_H
@@ -9,8 +9,8 @@
 #define GRAPHIC_WIDTH 640
 #define GRAPHIC_HEIGHT 360
 
-#define GAME_X 256
-#define GAME_Y 72
+#define GAME_X 50
+#define GAME_Y 50
 
 #define SCREEN_TOP_EDGE 180
 #define SCREEN_BOT_EDGE 540

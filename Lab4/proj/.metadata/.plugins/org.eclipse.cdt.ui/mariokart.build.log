@@ -1,12 +1,6 @@
-14:52:00 **** Incremental Build of configuration Debug for project mariokart ****
+14:18:21 **** Incremental Build of configuration Debug for project mariokart ****
 make all 
-Building target: mariokart.elf
-Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
-c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
-collect2: ld returned 1 exit status
-make: *** [mariokart.elf] Error 1
+make: Nothing to be done for `all'.
 
-14:52:01 Build Finished (took 390ms)
+14:18:21 Build Finished (took 171ms)
 

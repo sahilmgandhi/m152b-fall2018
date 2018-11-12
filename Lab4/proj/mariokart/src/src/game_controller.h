@@ -1,4 +1,3 @@
-#include <stdbool.h>
 #include <stdint.h>
 
 #include "globals.h"
@@ -16,11 +15,11 @@
  * 
  */
 
-typedef struct game
+struct game
 {
-  int initialized;
+  int8_t initialized;
 
-  int gameOver;
+  int8_t gameOver;
 
   int8_t level;
 
@@ -35,29 +34,29 @@ typedef struct game
   // holds the color at each screen block
   uint32_t screen[GAME_X][GAME_Y];
 
-} Game;
+};
 
-void fillScreen(Game *game, uint32_t color);
+void fillScreen(struct game *game, uint32_t color);
 
-int initGame(Game *game, uint8_t level)
+int initGame(struct game *g, uint8_t level)
 {
-  game->initialized = 1;
-  game->level = level;
-  game->gameOver = 0;
-  game->playerXPos = 0;
-  game->playerYPos = 0;
-  game->playerXLastPos = -1;
-  game->playerYLastPos = -1;
+  g->initialized = 1;
+  g->level = level;
+  g->gameOver = 0;
+  g->playerXPos = 0;
+  g->playerYPos = 0;
+  g->playerXLastPos = -1;
+  g->playerYLastPos = -1;
 
-  fillScreen(game, BLACK);
+  fillScreen(g, BLACK);
 
-  game->screen[game->playerXPos][game->playerYPos] = CAR_COLOR;
+  g->screen[g->playerXPos][g->playerYPos] = CAR_COLOR;
 
   return 1;
 }
 
 // Shift the entire game down EXCEPT for the bottom most row
-int propagateGame(Game *game)
+int propagateGame(struct game *game)
 {
 	int i;
 	int j;
@@ -87,9 +86,9 @@ int propagateGame(Game *game)
  * 
  * @param game    Game      The game struct
  */
-void finishGame(Game *game)
+void finishGame(struct game *game)
 {
-  game->gameOver = true;
+  game->gameOver = 1;
   fillScreen(game, GREEN);
 }
 
@@ -98,9 +97,9 @@ void finishGame(Game *game)
  * 
  * @param game    Game      The game struct
  */
-void playerDead(Game *game)
+void playerDead(struct game *game)
 {
-  game->gameOver = true;
+  game->gameOver = 1;
   fillScreen(game, RED);
 }
 
@@ -110,7 +109,7 @@ void playerDead(Game *game)
  * @param game    Game    The game struct
  * @param color   int     The color for the screen
  */
-void fillScreen(Game *game, uint32_t color)
+void fillScreen(struct game *game, uint32_t color)
 {
 	int i;
 	int j;
@@ -131,7 +130,7 @@ void fillScreen(Game *game, uint32_t color)
  * @param newX    int16_t   New X position 
  * @param newY    int16_t   New Y position 
  */
-void movePlayer(Game *game, int16_t newX, int16_t newY)
+void movePlayer(struct game *game, int16_t newX, int16_t newY)
 {
   game->playerXLastPos = game->playerXPos;
   game->playerYLastPos = game->playerYPos;

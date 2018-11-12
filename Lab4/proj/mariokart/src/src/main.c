@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <xil_exception.h>
 //#include <xintc.h>
 #include <xio.h>
@@ -28,24 +29,19 @@
 
 uint32_t interruptHandler();
 
-static Game game;
+struct game g;
 
 void main()
 {
 	clearDisplay();
-	initGame(&game, 1);
-
-	// NOTE: This function may NOT be working (test it out a bit!)
-	drawGameState(&game);
+	initGame(&g, 1);
+////
+////	// NOTE: This function may NOT be working (test it out a bit!)
+	drawGameState(&g);
 
 	u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;
 	uint32_t posX, posY;
 	uint32_t color;
-
-	// so starting at top left and going down
-	for (posX = 0; posX < 2560; posX++)
-		for (posY = 0; posY < 720; posY++)
-			XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (posY * 2560 + posX), (posX / 40) << 4);
 
 	XIo_Out32(lDvmaBaseAddress + blDvmaHSR, 40);		// hsync
 	XIo_Out32(lDvmaBaseAddress + blDvmaHBPR, 260);	// hbpr
@@ -62,14 +58,34 @@ void main()
 	XIo_Out32(lDvmaBaseAddress + blDvmaFLSR, 0x00000A00);										 // frame line stride
 	XIo_Out32(lDvmaBaseAddress + blDvmaCR, 0x00000003);											 // dvma enable, dfl enable
 
+	// so starting at top left and going down
+	for (posX = 0; posX < 2560; posX++)
+		for (posY = 0; posY < 720; posY++)
+			XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (posY * 2560 + posX), RED);
+	drawGameState(&g);
+//	XIo_Out32(lDvmaBaseAddress + blDvmaHSR, 40);		// hsync
+//	XIo_Out32(lDvmaBaseAddress + blDvmaHBPR, 260);	// hbpr
+//	XIo_Out32(lDvmaBaseAddress + blDvmaHFPR, 1540); // hfpr
+//	XIo_Out32(lDvmaBaseAddress + blDvmaHTR, 1650);	// htr
+//	XIo_Out32(lDvmaBaseAddress + blDvmaVSR, 5);			// vsync
+//	XIo_Out32(lDvmaBaseAddress + blDvmaVBPR, 25);		// vbpr
+//	XIo_Out32(lDvmaBaseAddress + blDvmaVFPR, 745);	// vfpr
+//	XIo_Out32(lDvmaBaseAddress + blDvmaVTR, 750);		// vtr
+//
+//	XIo_Out32(lDvmaBaseAddress + blDvmaFWR, 0x00000500);										 // frame width
+//	XIo_Out32(lDvmaBaseAddress + blDvmaFHR, 0x000002D0);										 // frame height
+//	XIo_Out32(lDvmaBaseAddress + blDvmaFBAR, XPAR_DDR2_SDRAM_MPMC_BASEADDR); // frame base addr
+//	XIo_Out32(lDvmaBaseAddress + blDvmaFLSR, 0x00000A00);										 // frame line stride
+//	XIo_Out32(lDvmaBaseAddress + blDvmaCR, 0x00000003);											 // dvma enable, dfl enable
+
 	//	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
 	//	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
 	//	CamCtrlInit(XPAR_CAM_CTRL_0_BASEADDR, CAM_CFG_640x480P, 640*2);
 	//	CamCtrlInit(XPAR_CAM_CTRL_1_BASEADDR, CAM_CFG_640x480P, 0);
 
-	for (posX = 0; posX < 2560; posX++)
-		for (posY = 0; posY < 720; posY++)
-			XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (posY * 2560 + posX), 0xF);
+//	for (posX = 0; posX < 2560; posX++)
+//		for (posY = 0; posY < 720; posY++)
+//			XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (posY * 2560 + posX), BLUE);
 }
 
 // TODO: We need to work with the ISR module to get the uint32_terrupts from the Gyroscope

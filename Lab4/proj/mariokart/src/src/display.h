@@ -1,14 +1,14 @@
-#include <stdint.h>
-#include <stdio.h>
-#include <xil_exception.h>
+//#include <stdint.h>
+//#include <stdio.h>
+//#include <xil_exception.h>
 //#include <xintc.h>
 #include <xio.h>
 
-#include "game_controller.h"
+//#include "game_controller.h"
 #include "globals.h"
-#include "mb_interface.h"
+//#include "mb_interface.h"
 //#include "xgpio.h"
-#include "xparameters.h"
+//#include "xparameters.h"
 
 #ifndef DISPLAY_H
 #define DISPLAY_H
@@ -65,7 +65,7 @@ void clearDisplay()
  *
  * @return true if successfully drawn, false otherwise.
  */
-int drawGameState(Game *game)
+int drawGameState(struct game *g)
 {
   /*
 	 * For each column we will only draw the pixels that actually have to be
@@ -83,7 +83,7 @@ int drawGameState(Game *game)
       {
         for (newPosY = posY * 10; newPosY < (posY + 1) * 10; newPosY++)
         {
-          XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (newPosY * 2560 + newPosX), game->screen[posX][posY]);
+          XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (newPosY * 2560 + newPosX), g->screen[posX][posY]);
         }
       }
     }

@@ -2190,3 +2190,1841 @@ c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.
 c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
 collect2: ld returned 1 exit status
 make: *** [mariokart.elf] Error 1
+13:24:57 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:29:1: error: unknown type name 'uint32_t'
+../src/src/main.c:31:1: error: unknown type name 'Game'
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:35:2: warning: implicit declaration of function 'clearDisplay' [-Wimplicit-function-declaration]
+../src/src/main.c:36:2: warning: implicit declaration of function 'initGame' [-Wimplicit-function-declaration]
+../src/src/main.c:39:2: warning: implicit declaration of function 'drawGameState' [-Wimplicit-function-declaration]
+../src/src/main.c:42:2: error: unknown type name 'uint32_t'
+../src/src/main.c:43:2: error: unknown type name 'uint32_t'
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+../src/src/main.c: At top level:
+../src/src/main.c:78:1: error: unknown type name 'uint32_t'
+../src/src/main.c:84:1: error: unknown type name 'uint32_t'
+make: *** [src/src/main.o] Error 1
+13:25:03 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:29:1: error: unknown type name 'uint32_t'
+../src/src/main.c:31:1: error: unknown type name 'Game'
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:42:2: error: unknown type name 'uint32_t'
+../src/src/main.c:43:2: error: unknown type name 'uint32_t'
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+../src/src/main.c: At top level:
+../src/src/main.c:78:1: error: unknown type name 'uint32_t'
+../src/src/main.c:84:1: error: unknown type name 'uint32_t'
+../src/src/main.c:31:13: warning: 'game' defined but not used [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+13:25:18 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:4:19: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [src/src/main.o] Error 1
+13:25:21 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:29:1: error: unknown type name 'uint32_t'
+../src/src/main.c:31:1: error: unknown type name 'Game'
+../src/src/main.c:33:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:42:2: error: unknown type name 'uint32_t'
+../src/src/main.c:43:2: error: unknown type name 'uint32_t'
+../src/src/main.c:43:11: warning: unused variable 'color' [-Wunused-variable]
+../src/src/main.c: At top level:
+../src/src/main.c:78:1: error: unknown type name 'uint32_t'
+../src/src/main.c:84:1: error: unknown type name 'uint32_t'
+../src/src/main.c:31:13: warning: 'game' defined but not used [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+13:25:51 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:32:1: error: unknown type name 'Game'
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+../src/src/main.c: At top level:
+../src/src/main.c:32:13: warning: 'game' defined but not used [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+13:25:57 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2414	    268	   5152	   7834	   1e9a	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:26:06 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+13:26:37 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2414	    268	   5152	   7834	   1e9a	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:26:46 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2414	    268	   5152	   7834	   1e9a	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:26:52 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2414	    268	   5152	   7834	   1e9a	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:27:01 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2414	    268	   5152	   7834	   1e9a	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:27:07 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+13:27:16 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+../src/src/main.c: At top level:
+../src/src/main.c:32:13: warning: 'game' defined but not used [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2414	    268	   5152	   7834	   1e9a	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:27:23 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+../src/src/main.c: At top level:
+../src/src/main.c:32:13: warning: 'game' defined but not used [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2786	    268	   5162	   8216	   2018	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:27:28 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 16864 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:27:38 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:28:04 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17008 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:28:19 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:32:14 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:32:26 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:32:53 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:33:05 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:33:10 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:33:18 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:33:26 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:33:34 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:33:43 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:34:15 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:34:27 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17400 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:35:09 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:12:0:
+../src/src/game_controller.h: In function 'finishGame':
+../src/src/game_controller.h:91:20: error: 'true' undeclared (first use in this function)
+../src/src/game_controller.h:91:20: note: each undeclared identifier is reported only once for each function it appears in
+../src/src/game_controller.h: In function 'playerDead':
+../src/src/game_controller.h:102:20: error: 'true' undeclared (first use in this function)
+../src/src/main.c: At top level:
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+../src/src/main.c: At top level:
+../src/src/main.c:32:13: warning: 'game' defined but not used [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+13:35:32 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+../src/src/main.c: At top level:
+../src/src/main.c:32:13: warning: 'game' defined but not used [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2786	    268	   5162	   8216	   2018	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:35:44 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 16864 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:35:54 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17008 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:36:00 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 16640 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:36:05 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+../src/src/main.c: At top level:
+../src/src/main.c:32:13: warning: 'game' defined but not used [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2414	    268	   5152	   7834	   1e9a	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:36:15 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+../src/src/main.c: At top level:
+../src/src/main.c:32:13: warning: 'game' defined but not used [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2786	    268	   5162	   8216	   2018	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:36:41 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+13:36:49 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 16792 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:37:05 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 16792 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:37:13 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 16792 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:38:28 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 16792 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:38:39 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 16688 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:41:04 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 16688 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:41:09 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 16688 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:41:15 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 16688 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:41:26 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 16968 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:41:36 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+../src/src/main.c: At top level:
+../src/src/main.c:32:13: warning: 'game' defined but not used [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3266	    268	   5162	   8696	   21f8	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:43:22 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17168 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:43:26 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3266	    268	   5162	   8696	   21f8	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:43:32 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+../src/src/main.c: At top level:
+../src/src/main.c:32:13: warning: 'game' defined but not used [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3266	    268	   5162	   8696	   21f8	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:45:49 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+13:45:55 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+13:46:03 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+13:46:20 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:12:0:
+../src/src/game_controller.h:37:1: warning: useless storage class specifier in empty declaration [enabled by default]
+../src/src/game_controller.h:39:17: error: unknown type name 'game'
+../src/src/game_controller.h:41:14: error: unknown type name 'game'
+../src/src/game_controller.h:59:19: error: unknown type name 'Game'
+../src/src/game_controller.h:89:17: error: unknown type name 'Game'
+../src/src/game_controller.h:100:17: error: unknown type name 'Game'
+../src/src/game_controller.h:112:17: error: unknown type name 'Game'
+../src/src/game_controller.h:133:17: error: unknown type name 'Game'
+../src/src/main.c:32:1: error: unknown type name 'game'
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+13:46:40 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:12:0:
+../src/src/game_controller.h:37:1: warning: useless storage class specifier in empty declaration [enabled by default]
+../src/src/game_controller.h:39:17: error: unknown type name 'game'
+../src/src/game_controller.h:41:14: error: unknown type name 'game'
+../src/src/game_controller.h:59:19: error: unknown type name 'game'
+../src/src/game_controller.h:89:17: error: unknown type name 'Game'
+../src/src/game_controller.h:100:17: error: unknown type name 'Game'
+../src/src/game_controller.h:112:17: error: unknown type name 'Game'
+../src/src/game_controller.h:133:17: error: unknown type name 'Game'
+../src/src/main.c:32:1: error: unknown type name 'game'
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+13:46:54 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:12:0:
+../src/src/game_controller.h:37:1: warning: useless storage class specifier in empty declaration [enabled by default]
+../src/src/game_controller.h:41:14: error: unknown type name 'game'
+../src/src/game_controller.h:59:19: error: unknown type name 'game'
+../src/src/game_controller.h:89:17: error: unknown type name 'Game'
+../src/src/game_controller.h:100:17: error: unknown type name 'Game'
+../src/src/game_controller.h:112:17: error: unknown type name 'Game'
+../src/src/game_controller.h:133:17: error: unknown type name 'Game'
+../src/src/main.c:32:1: error: unknown type name 'game'
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+13:46:59 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:12:0:
+../src/src/game_controller.h:37:1: warning: useless storage class specifier in empty declaration [enabled by default]
+../src/src/game_controller.h:59:19: error: unknown type name 'game'
+../src/src/game_controller.h:89:17: error: unknown type name 'Game'
+../src/src/game_controller.h:100:17: error: unknown type name 'Game'
+../src/src/game_controller.h:112:17: error: unknown type name 'Game'
+../src/src/game_controller.h:133:17: error: unknown type name 'Game'
+../src/src/main.c:32:1: error: unknown type name 'game'
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+13:47:27 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:12:0:
+../src/src/game_controller.h:37:1: warning: useless storage class specifier in empty declaration [enabled by default]
+../src/src/game_controller.h:89:17: error: unknown type name 'Game'
+../src/src/game_controller.h:100:17: error: unknown type name 'Game'
+../src/src/game_controller.h:112:17: error: unknown type name 'Game'
+../src/src/game_controller.h:133:17: error: unknown type name 'Game'
+../src/src/main.c:32:1: error: unknown type name 'game'
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+13:47:31 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:12:0:
+../src/src/game_controller.h:37:1: warning: useless storage class specifier in empty declaration [enabled by default]
+../src/src/game_controller.h:100:17: error: unknown type name 'Game'
+../src/src/game_controller.h:112:17: error: unknown type name 'Game'
+../src/src/game_controller.h:133:17: error: unknown type name 'Game'
+../src/src/main.c:32:1: error: unknown type name 'game'
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+13:47:35 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:12:0:
+../src/src/game_controller.h:37:1: warning: useless storage class specifier in empty declaration [enabled by default]
+../src/src/game_controller.h:112:17: error: unknown type name 'Game'
+../src/src/game_controller.h:133:17: error: unknown type name 'Game'
+../src/src/main.c:32:1: error: unknown type name 'game'
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+13:47:38 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:12:0:
+../src/src/game_controller.h:37:1: warning: useless storage class specifier in empty declaration [enabled by default]
+../src/src/game_controller.h:133:17: error: unknown type name 'Game'
+../src/src/main.c:32:1: error: unknown type name 'game'
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+13:47:43 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:12:0:
+../src/src/game_controller.h:37:1: warning: useless storage class specifier in empty declaration [enabled by default]
+../src/src/main.c:32:1: error: unknown type name 'game'
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+13:47:54 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:12:0:
+../src/src/game_controller.h:37:1: warning: useless storage class specifier in empty declaration [enabled by default]
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3266	    268	   5162	   8696	   21f8	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:48:04 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:12:0:
+../src/src/game_controller.h:37:1: warning: useless storage class specifier in empty declaration [enabled by default]
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17168 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:48:29 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17168 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:48:42 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17168 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:49:20 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17168 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:50:24 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17168 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:50:29 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17168 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:51:08 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17168 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:51:21 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17168 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:51:24 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mariokart.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 17168 bytes
+collect2: ld returned 1 exit status
+make: *** [mariokart.elf] Error 1
+13:57:15 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3474	    268	  78914	  82656	  142e0	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:58:24 **** Auto Build of project mariokart_bsp ****
+make -k all 
+Finished building libraries
+13:58:48 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2566	    268	   5152	   7986	   1f32	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+13:58:59 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:00:10 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2566	    268	   5152	   7986	   1f32	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:00:13 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:00:49 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2566	    268	   5152	   7986	   1f32	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:02:15 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:03:04 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2566	    268	   5152	   7986	   1f32	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:03:07 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:03:29 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2954	    268	  15178	  18400	   47e0	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:03:31 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:04:34 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:04:58 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3434	    268	  15178	  18880	   49c0	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:05:09 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:05:54 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:66:6: error: redefinition of 'lDvmaBaseAddress'
+../src/src/main.c:42:6: note: previous definition of 'lDvmaBaseAddress' was here
+../src/src/main.c:67:11: error: redeclaration of 'posX' with no linkage
+../src/src/main.c:43:11: note: previous declaration of 'posX' was here
+../src/src/main.c:67:17: error: redeclaration of 'posY' with no linkage
+../src/src/main.c:43:17: note: previous declaration of 'posY' was here
+../src/src/main.c:68:11: error: redeclaration of 'color' with no linkage
+../src/src/main.c:44:11: note: previous declaration of 'color' was here
+../src/src/main.c:68:11: warning: unused variable 'color' [-Wunused-variable]
+make: *** [src/src/main.o] Error 1
+14:06:00 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3642	    268	  15178	  19088	   4a90	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:06:10 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:07:01 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3434	    268	  15178	  18880	   49c0	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:07:04 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:07:48 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3434	    268	  15178	  18880	   49c0	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:07:51 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:08:12 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:11:36 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2566	    268	   5152	   7986	   1f32	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:12:05 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2566	    268	   5152	   7986	   1f32	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:12:09 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:12:25 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:13:06 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2954	    268	  15178	  18400	   47e0	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:13:17 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:13:21 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:13:25 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:13:39 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:15:09 **** Auto Build of project mariokart_bsp ****
+make -k all 
+Finished building libraries
+14:15:12 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:15:25 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3434	    268	  15178	  18880	   49c0	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:15:30 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:16:26 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:16:55 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:17:06 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:17:13 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3486	    268	  15168	  18922	   49ea	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:17:24 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:17:28 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:17:50 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3378	    268	  15178	  18824	   4988	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:17:53 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
+14:18:18 **** Auto Build of configuration Debug for project mariokart ****
+make all 
+Building file: ../src/src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mariokart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/src/main.d" -MT"src/src/main.d" -o "src/src/main.o" "../src/src/main.c"
+../src/src/main.c:34:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/src/main.c: In function 'main':
+../src/src/main.c:44:11: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/src/main.c
+ 
+Building target: mariokart.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mariokart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mariokart.elf"  ./src/src/cam_ctrl.o ./src/src/main.o ./src/src/vmodcam_cfg.o  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mariokart.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mariokart.elf  |tee "mariokart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3398	    268	  15168	  18834	   4992	mariokart.elf
+Finished building: mariokart.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mariokart.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mariokart.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mariokart.elf 
+
+ELF file	: mariokart.elf
+elfcheck passed.
+Finished building: mariokart.elf.elfcheck
+ 
+14:18:21 **** Incremental Build of configuration Debug for project mariokart ****
+make all 
+make: Nothing to be done for `all'.
