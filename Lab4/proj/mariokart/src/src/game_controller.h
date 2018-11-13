@@ -33,12 +33,17 @@ struct game
 
   // holds the color at each screen block
   uint32_t screen[GAME_X][GAME_Y];
-
 };
 
 void fillScreen(struct game *game, uint32_t color);
 
-int initGame(struct game *g, uint8_t level)
+/**
+ * Iniitalizes the entire game
+ * 
+ * @param game    struct game     The game object
+ * @param level   uint8_t         The starting level
+ */
+void initGame(struct game *g, uint8_t level)
 {
   g->initialized = 1;
   g->level = level;
@@ -48,21 +53,25 @@ int initGame(struct game *g, uint8_t level)
   g->playerXLastPos = -1;
   g->playerYLastPos = -1;
 
-  fillScreen(g, BLACK);
+  fillScreen(g, ROAD);
 
   g->screen[g->playerXPos][g->playerYPos] = CAR_COLOR;
-
-  return 1;
 }
 
-// Shift the entire game down EXCEPT for the bottom most row
+/**
+ * Shift the entire game down INCLUDING the bottom most row
+ * 
+ * @param game   struct game    The game object
+ * 
+ * @return int    0 if the player is dead, 1 else
+ */
 int propagateGame(struct game *game)
 {
-	int i;
-	int j;
-  for (i = GAME_X-1; i > 0; i--)
+  int i;
+  int j;
+  for (i = GAME_X - 1; i > 0; i--)
   {
-    for (j =0; j < GAME_Y; j++)
+    for (j = 0; j < GAME_Y; j++)
     {
       game->screen[i][j] = game->screen[i - 1][j];
     }
@@ -71,12 +80,19 @@ int propagateGame(struct game *game)
   // At this point, we need add the top most row to be filled with EITHER:
   // spaces, or some kind of blocks????????
   // black for now
+  // TODO: Generate some random top most row here:
   for (j = 0; j < GAME_Y; j++)
   {
-    game->screen[0][j] = BLACK;
+    game->screen[0][j] = ROAD;
   }
 
   // TODO: In this function, after moving everything down, you should check if the player has died
+
+  if (game->screen[game->playerXPos][game->playerYPos] != ROAD)
+  {
+    playerDead(game);
+    return 0;
+  }
 
   return 1;
 }
@@ -111,8 +127,8 @@ void playerDead(struct game *game)
  */
 void fillScreen(struct game *game, uint32_t color)
 {
-	int i;
-	int j;
+  int i;
+  int j;
   for (i = 0; i < GAME_X; i++)
   {
     for (j = 0; j < GAME_Y; j++)

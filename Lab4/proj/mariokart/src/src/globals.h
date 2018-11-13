@@ -30,12 +30,32 @@
 #define MAX_SPEED 10
 
 // Color definitions
-#define RED 0xF << 8
-#define GREEN 0xF << 4
-#define BLUE 0xF
-#define WHITE 0xFFF
-#define BLACK 0x0
+// Think of it as RGB but with only 16 different options for R, G and B
 
-#define CAR_COLOR 0xF
+// red shell
+#define RED 0xF00
+
+// green shell
+#define GREEN 0x0F0
+
+// blue shell
+#define BLUE 0x00F
+
+// the car
+#define WHITE 0xFFF
+
+// bananas
+#define YELLOW 0xFF0
+#define PURPLE 0xF0F
+#define CYAN 0x0FF
+
+// the side area
+#define BLACK 0x000
+
+// the road
+#define GRAY 0xAAA
+
+#define CAR_COLOR 0xFFF
+#define ROAD 0xAAA
 
 #endif
