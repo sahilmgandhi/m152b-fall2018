@@ -1,0 +1,22 @@
+microblaze_0
+TESTAPP_VMODCAM_SOURCES = TestApp_VmodCAM/src/cam_ctrl.c TestApp_VmodCAM/src/main.c TestApp_VmodCAM/src/vmodcam_cfg.c 
+TESTAPP_VMODCAM_HEADERS = TestApp_VmodCAM/src/cam_ctrl_header.h TestApp_VmodCAM/src/vmodcam_header.h 
+TESTAPP_VMODCAM_CC = mb-gcc
+TESTAPP_VMODCAM_CC_SIZE = mb-size
+TESTAPP_VMODCAM_CC_OPT = -O2
+TESTAPP_VMODCAM_CFLAGS = 
+TESTAPP_VMODCAM_CC_SEARCH = # -B
+TESTAPP_VMODCAM_LIBPATH = -L./microblaze_0/lib/ # -L
+TESTAPP_VMODCAM_INCLUDES = -I./microblaze_0/include/  -ITestApp_VmodCAM/src/ # -I
+TESTAPP_VMODCAM_LFLAGS = # -l
+TESTAPP_VMODCAM_LINKER_SCRIPT = 
+TESTAPP_VMODCAM_CC_DEBUG_FLAG =  -g 
+TESTAPP_VMODCAM_CC_PROFILE_FLAG = # -pg
+TESTAPP_VMODCAM_CC_GLOBPTR_FLAG= # -mxl-gp-opt
+TESTAPP_VMODCAM_MODE = executable
+TESTAPP_VMODCAM_LIBG_OPT = -$(TESTAPP_VMODCAM_MODE) microblaze_0
+TESTAPP_VMODCAM_CC_INFERRED_FLAGS= -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.00.b 
+TESTAPP_VMODCAM_CC_START_ADDR_FLAG=  # -Wl,-defsym -Wl,_TEXT_START_ADDR=
+TESTAPP_VMODCAM_CC_STACK_SIZE_FLAG=  # -Wl,-defsym -Wl,_STACK_SIZE=
+TESTAPP_VMODCAM_CC_HEAP_SIZE_FLAG=  # -Wl,-defsym -Wl,_HEAP_SIZE=
+                  $(TESTAPP_VMODCAM_CC_INFERRED_FLAGS)  \

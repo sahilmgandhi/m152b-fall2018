@@ -1,0 +1,130 @@
+17:37:28.782 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+17:37:54.511 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+17:38:58.270 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+17:39:08.681 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+17:40:20.458 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+17:41:26.798 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+17:42:05.455 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+17:42:34.819 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/gyro_bluetooth_proj/gyro_bluetooth_proj/camera_hw_platform/download.bit" 
+18:13:55.775 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml into \camera_hw_platform\system.xml. 
+18:13:55.791 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.bit into \camera_hw_platform\system.bit. 
+18:13:55.807 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system_bd.bmm into \camera_hw_platform\system_bd.bmm. 
+18:13:57.008 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+18:13:59.660 INFO  - Updating MSS for Board Support Package Project: HelloCamera_bsp.
+		 The following new driver assignments were made:
+			Peripheral Instance: xps_intc_0, driver: intc_v2_06_a.
+			Peripheral Instance: xps_timer_0, driver: tmrctr_v2_05_a.
+ 
+18:14:00.502 INFO  - Updating hardware inferred compiler options for HelloCamera. 
+18:14:00.533 INFO  - Clearing existing target manager status. 
+18:14:02.750 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+18:14:27.527 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/Mariokart/camera_hw_platform/download.bit" 
+18:18:55.037 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:28:13.292 INFO  - Project 'mario_hw_platform' created. You can now create BSPs and application projects targeting this hardware platform. 
+18:06:18.449 INFO  - Project camera_hw_platform's source hardware specification located at C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+18:06:27.032 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml into \camera_hw_platform\system.xml. 
+18:06:27.218 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.bit into \camera_hw_platform\system.bit. 
+18:06:32.802 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system_bd.bmm into \camera_hw_platform\system_bd.bmm. 
+18:06:33.912 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+18:06:41.154 INFO  - Updating hardware inferred compiler options for HelloCamera. 
+18:06:41.177 INFO  - Clearing existing target manager status. 
+18:06:45.189 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+18:06:47.068 INFO  - Project mario_hw_platform's source hardware specification located at C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+18:06:51.399 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml into \mario_hw_platform\system.xml. 
+18:06:51.418 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.bit into \mario_hw_platform\system.bit. 
+18:06:51.421 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system_bd.bmm into \mario_hw_platform\system_bd.bmm. 
+18:06:52.829 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+18:06:58.948 INFO  - Updating hardware inferred compiler options for mario. 
+18:06:58.967 INFO  - Clearing existing target manager status. 
+18:11:44.272 INFO  - Project camera_hw_platform's source hardware specification located at C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+18:11:48.335 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml into \camera_hw_platform\system.xml. 
+18:11:48.361 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.bit into \camera_hw_platform\system.bit. 
+18:11:48.374 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system_bd.bmm into \camera_hw_platform\system_bd.bmm. 
+18:11:49.260 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+18:11:55.137 INFO  - Updating hardware inferred compiler options for HelloCamera. 
+18:11:55.156 INFO  - Clearing existing target manager status. 
+18:11:56.162 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+18:11:57.354 INFO  - Project mario_hw_platform's source hardware specification located at C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+18:12:01.643 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml into \mario_hw_platform\system.xml. 
+18:12:01.654 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.bit into \mario_hw_platform\system.bit. 
+18:12:01.661 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system_bd.bmm into \mario_hw_platform\system_bd.bmm. 
+18:12:03.173 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+18:12:09.199 INFO  - Updating hardware inferred compiler options for mario. 
+18:12:09.199 INFO  - Clearing existing target manager status. 
+03:29:55.967 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+03:29:55.967 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+10:50:35.057 INFO  - Processing command line option -hwspec C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml. 
+10:50:38.245 INFO  - The hardware specification for project 'camera_hw_platform' is different from C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml. 
+10:50:40.815 INFO  - Project camera_hw_platform's source hardware specification located at C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+10:50:44.314 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml into \camera_hw_platform\system.xml. 
+10:50:44.330 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.bit into \camera_hw_platform\system.bit. 
+10:50:44.345 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system_bd.bmm into \camera_hw_platform\system_bd.bmm. 
+10:50:45.597 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+10:50:46.944 INFO  - Updating MSS for Board Support Package Project: HelloCamera_bsp.
+		 The following driver assignments were removed:
+			Peripheral Instance: xps_intc_0, driver: intc_v2_06_a.
+ 
+10:50:48.034 INFO  - Updating hardware inferred compiler options for HelloCamera. 
+10:50:48.049 INFO  - Clearing existing target manager status. 
+10:50:51.893 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+10:50:53.608 INFO  - Project mario_hw_platform's source hardware specification located at C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+10:51:06.727 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml into \mario_hw_platform\system.xml. 
+10:51:06.743 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.bit into \mario_hw_platform\system.bit. 
+10:51:06.743 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system_bd.bmm into \mario_hw_platform\system_bd.bmm. 
+10:51:07.762 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+10:51:11.585 INFO  - Updating MSS for Board Support Package Project: mario_bsp.
+		 The following driver assignments were removed:
+			Peripheral Instance: xps_intc_0, driver: intc_v2_06_a.
+ 
+10:51:12.408 INFO  - Updating hardware inferred compiler options for mario. 
+10:51:12.423 INFO  - Clearing existing target manager status. 
+10:51:12.487 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml into \camera_hw_platform\system.xml. 
+10:51:12.647 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.bit into \camera_hw_platform\system.bit. 
+10:51:12.647 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system_bd.bmm into \camera_hw_platform\system_bd.bmm. 
+10:51:13.564 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+10:51:27.616 INFO  - Updating hardware inferred compiler options for HelloCamera. 
+10:51:27.632 INFO  - Clearing existing target manager status. 

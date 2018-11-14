@@ -1,0 +1,868 @@
+17:23:43 **** Incremental Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+In file included from ../src/cam_ctrl.c:21:0:
+../src/cam_ctrl_header.h:21:17: fatal error: xio.h: No such file or directory
+compilation terminated.
+make: *** [src/cam_ctrl.o] Error 1
+17:24:27 **** Clean-only build of configuration Debug for project HelloCamera ****
+make clean 
+rm -rf  ./src/cam_ctrl.o ./src/main.o ./src/vmodcam_cfg.o  ./src/cam_ctrl.d ./src/main.d ./src/vmodcam_cfg.d  HelloCamera.elf.size  HelloCamera.elf.elfcheck  HelloCamera.elf
+ 
+17:24:27 **** Clean-only build of project HelloCamera_bsp ****
+make -k clean 
+rm -rf microblaze_0
+17:24:34 **** Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 1 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+17:24:56 **** Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+In file included from ../src/cam_ctrl.c:21:0:
+../src/cam_ctrl_header.h:21:17: fatal error: xio.h: No such file or directory
+compilation terminated.
+make: *** [src/cam_ctrl.o] Error 1
+17:25:52 **** Auto Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 1 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+17:25:56 **** Auto Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+In file included from ../src/cam_ctrl.c:21:0:
+../src/cam_ctrl_header.h:21:17: fatal error: xio.h: No such file or directory
+compilation terminated.
+make: *** [src/cam_ctrl.o] Error 1
+17:26:16 **** Clean-only build of configuration Debug for project HelloCamera ****
+make clean 
+rm -rf  ./src/cam_ctrl.o ./src/main.o ./src/vmodcam_cfg.o  ./src/cam_ctrl.d ./src/main.d ./src/vmodcam_cfg.d  HelloCamera.elf.size  HelloCamera.elf.elfcheck  HelloCamera.elf
+ 
+17:26:16 **** Clean-only build of project HelloCamera_bsp ****
+make -k clean 
+rm -rf microblaze_0
+17:26:16 **** Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 1 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+17:26:20 **** Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+In file included from ../src/cam_ctrl.c:21:0:
+../src/cam_ctrl_header.h:21:17: fatal error: xio.h: No such file or directory
+compilation terminated.
+make: *** [src/cam_ctrl.o] Error 1
+17:26:39 **** Clean-only build of configuration Debug for project HelloCamera ****
+make clean 
+rm -rf  ./src/cam_ctrl.o ./src/main.o ./src/vmodcam_cfg.o  ./src/cam_ctrl.d ./src/main.d ./src/vmodcam_cfg.d  HelloCamera.elf.size  HelloCamera.elf.elfcheck  HelloCamera.elf
+ 
+17:26:39 **** Clean-only build of project HelloCamera_bsp ****
+make -k clean 
+rm -rf microblaze_0
+17:26:40 **** Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 1 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+17:26:44 **** Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+In file included from ../src/cam_ctrl.c:21:0:
+../src/cam_ctrl_header.h:21:17: fatal error: xio.h: No such file or directory
+compilation terminated.
+make: *** [src/cam_ctrl.o] Error 1
+17:28:26 **** Build of project mario_bsp ****
+make -k all 
+libgen -hw ../mario_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../mario_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 1 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+
+**** Build of configuration Debug for project mario ****
+
+Nothing to build for project mario
+17:36:51 **** Incremental Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+In file included from ../src/cam_ctrl.c:21:0:
+../src/cam_ctrl_header.h:21:17: fatal error: xio.h: No such file or directory
+compilation terminated.
+make: *** [src/cam_ctrl.o] Error 1
+
+**** Build of configuration Debug for project mario ****
+
+Nothing to build for project mario
+18:06:27 **** Auto Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 2 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+18:06:33 **** Auto Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 2 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+18:06:38 **** Auto Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+In file included from ../src/cam_ctrl.c:21:0:
+../src/cam_ctrl_header.h:21:17: fatal error: xio.h: No such file or directory
+compilation terminated.
+make: *** [src/cam_ctrl.o] Error 1
+18:06:45 **** Clean-only build of project HelloCamera_bsp ****
+make -k clean 
+rm -rf microblaze_0
+18:06:46 **** Clean-only build of configuration Debug for project HelloCamera ****
+make clean 
+rm -rf  ./src/cam_ctrl.o ./src/main.o ./src/vmodcam_cfg.o  ./src/cam_ctrl.d ./src/main.d ./src/vmodcam_cfg.d  HelloCamera.elf.size  HelloCamera.elf.elfcheck  HelloCamera.elf
+ 
+18:06:46 **** Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 2 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+18:06:51 **** Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+In file included from ../src/cam_ctrl.c:21:0:
+../src/cam_ctrl_header.h:21:17: fatal error: xio.h: No such file or directory
+compilation terminated.
+make: *** [src/cam_ctrl.o] Error 1
+18:06:52 **** Auto Build of project mario_bsp ****
+make -k all 
+libgen -hw ../mario_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../mario_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 2 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+
+****  of configuration Debug for project mario ****
+
+Nothing to build for project mario
+18:11:48 **** Auto Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 1 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+18:11:54 **** Auto Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+In file included from ../src/cam_ctrl.c:21:0:
+../src/cam_ctrl_header.h:21:17: fatal error: xio.h: No such file or directory
+compilation terminated.
+make: *** [src/cam_ctrl.o] Error 1
+18:11:56 **** Clean-only build of project HelloCamera_bsp ****
+make -k clean 
+rm -rf microblaze_0
+18:11:56 **** Clean-only build of configuration Debug for project HelloCamera ****
+make clean 
+rm -rf  ./src/cam_ctrl.o ./src/main.o ./src/vmodcam_cfg.o  ./src/cam_ctrl.d ./src/main.d ./src/vmodcam_cfg.d  HelloCamera.elf.size  HelloCamera.elf.elfcheck  HelloCamera.elf
+ 
+18:11:57 **** Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 1 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+18:12:01 **** Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+In file included from ../src/cam_ctrl.c:21:0:
+../src/cam_ctrl_header.h:21:17: fatal error: xio.h: No such file or directory
+compilation terminated.
+make: *** [src/cam_ctrl.o] Error 1
+18:12:02 **** Auto Build of project mario_bsp ****
+make -k all 
+libgen -hw ../mario_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../mario_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 1 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+
+****  of configuration Debug for project mario ****
+
+Nothing to build for project mario
+18:19:08 **** Auto Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+In file included from ../src/cam_ctrl.c:21:0:
+../src/cam_ctrl_header.h:21:17: fatal error: xio.h: No such file or directory
+compilation terminated.
+make: *** [src/cam_ctrl.o] Error 1
+10:50:22 **** Auto Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 1 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK:3416 - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+10:50:37 **** Auto Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+In file included from ../src/cam_ctrl.c:21:0:
+../src/cam_ctrl_header.h:21:17: fatal error: xio.h: No such file or directory
+compilation terminated.
+make: *** [src/cam_ctrl.o] Error 1
+10:50:39 **** Auto Build of project mario_bsp ****
+make -k all 
+libgen -hw ../mario_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../mario_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+ERROR:EDK - intc () - Internal error: Num intr inputs 1 not the same as length
+   of xget_interrupt_sources 0 
+ERROR:EDK:3416 - Error(s) while running TCL procedure generate().
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+10:50:44 **** Auto Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+ERROR:EDK:410 - intc -
+   C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\HelloCamera_bsp\system.mss
+   line 105 - No IP instance named xps_intc_0 is present in the hardware!
+ERROR:EDK:1206 - Errors occured while parsing MSS file.
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.
+10:50:47 **** Auto Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+In file included from ../src/cam_ctrl.c:21:0:
+../src/cam_ctrl_header.h:21:17: fatal error: xio.h: No such file or directory
+compilation terminated.
+make: *** [src/cam_ctrl.o] Error 1
+
+****  of configuration Debug for project mario ****
+
+Nothing to build for project mario
+10:50:51 **** Clean-only build of project HelloCamera_bsp ****
+make -k clean 
+rm -rf microblaze_0
+10:50:52 **** Clean-only build of configuration Debug for project HelloCamera ****
+make clean 
+rm -rf  ./src/cam_ctrl.o ./src/main.o ./src/vmodcam_cfg.o  ./src/cam_ctrl.d ./src/main.d ./src/vmodcam_cfg.d  HelloCamera.elf.size  HelloCamera.elf.elfcheck  HelloCamera.elf
+ 
+10:50:52 **** Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling lldma
+Compiling standalone
+Compiling iic
+Compiling mpmc
+Compiling bram
+Compiling uartlite
+Compiling gpio
+Compiling spi
+Compiling tmrctr
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+10:51:07 **** Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+Finished building: ../src/cam_ctrl.c
+ 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/cam_ctrl.c: In function 'CamStatus':
+../src/cam_ctrl.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:24:2: warning: implicit declaration of function 'microblaze_enable_interrupts' [-Wimplicit-function-declaration]
+../src/main.c:27:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building file: ../src/vmodcam_cfg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/vmodcam_cfg.d" -MT"src/vmodcam_cfg.d" -o "src/vmodcam_cfg.o" "../src/vmodcam_cfg.c"
+../src/vmodcam_cfg.c: In function 'CamIicCfg':
+../src/vmodcam_cfg.c:102:2: warning: implicit declaration of function 'CamIicSetupPLL' [-Wimplicit-function-declaration]
+../src/vmodcam_cfg.c: In function 'CamIicSingleRead':
+../src/vmodcam_cfg.c:334:6: warning: unused variable 'lCamIicReadHeader' [-Wunused-variable]
+../src/vmodcam_cfg.c: In function 'CamIicSingleWrite':
+../src/vmodcam_cfg.c:392:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+../src/vmodcam_cfg.c:388:6: warning: unused variable 'cWriteBytes' [-Wunused-variable]
+../src/vmodcam_cfg.c:387:6: warning: unused variable 'lCamIicRegData' [-Wunused-variable]
+../src/vmodcam_cfg.c: In function 'ClearScreen':
+../src/vmodcam_cfg.c:475:2: warning: 'return' with a value, in function returning void [enabled by default]
+../src/vmodcam_cfg.c: In function 'CamIicInit':
+../src/vmodcam_cfg.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/vmodcam_cfg.c: In function 'CamIicPowerUp':
+../src/vmodcam_cfg.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/vmodcam_cfg.c: In function 'CamIicSetupPLL':
+../src/vmodcam_cfg.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/vmodcam_cfg.c
+ 
+Building target: HelloCamera.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloCamera_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloCamera.elf"  ./src/cam_ctrl.o ./src/main.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloCamera.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloCamera.elf  |tee "HelloCamera.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8810	    276	   2090	  11176	   2ba8	HelloCamera.elf
+Finished building: HelloCamera.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck HelloCamera.elf -hw ../../camera_hw_platform/system.xml -pe microblaze_0  |tee "HelloCamera.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../camera_hw_platform/system.xml -pe microblaze_0
+HelloCamera.elf 
+
+ELF file	: HelloCamera.elf
+elfcheck passed.
+Finished building: HelloCamera.elf.elfcheck
+ 
+10:51:12 **** Auto Build of project HelloCamera_bsp ****
+make -k all 
+Finished building libraries
+10:51:12 **** Auto Build of project HelloCamera_bsp ****
+make -k all 
+Finished building libraries
+10:51:13 **** Auto Build of project mario_bsp ****
+make -k all 
+libgen -hw ../mario_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../mario_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling lldma
+Compiling standalone
+Compiling iic
+Compiling mpmc
+Compiling bram
+Compiling uartlite
+Compiling gpio
+Compiling spi
+Compiling tmrctr
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+
+****  of configuration Debug for project mario ****
+
+Nothing to build for project mario
+10:51:28 **** Clean-only build of project HelloCamera_bsp ****
+make -k clean 
+rm -rf microblaze_0
+10:51:29 **** Clean-only build of configuration Debug for project HelloCamera ****
+make clean 
+rm -rf  ./src/cam_ctrl.o ./src/main.o ./src/vmodcam_cfg.o  ./src/cam_ctrl.d ./src/main.d ./src/vmodcam_cfg.d  HelloCamera.elf.size  HelloCamera.elf.elfcheck  HelloCamera.elf
+ 
+10:51:29 **** Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling lldma
+Compiling standalone
+Compiling iic
+Compiling mpmc
+Compiling bram
+Compiling uartlite
+Compiling gpio
+Compiling spi
+Compiling tmrctr
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+10:51:41 **** Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+../src/cam_ctrl.c: In function 'CamStatus':
+../src/cam_ctrl.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/cam_ctrl.c
+ 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:24:2: warning: implicit declaration of function 'microblaze_enable_interrupts' [-Wimplicit-function-declaration]
+../src/main.c:27:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building file: ../src/vmodcam_cfg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/vmodcam_cfg.d" -MT"src/vmodcam_cfg.d" -o "src/vmodcam_cfg.o" "../src/vmodcam_cfg.c"
+../src/vmodcam_cfg.c: In function 'CamIicCfg':
+../src/vmodcam_cfg.c:102:2: warning: implicit declaration of function 'CamIicSetupPLL' [-Wimplicit-function-declaration]
+../src/vmodcam_cfg.c: In function 'CamIicSingleRead':
+../src/vmodcam_cfg.c:334:6: warning: unused variable 'lCamIicReadHeader' [-Wunused-variable]
+../src/vmodcam_cfg.c: In function 'CamIicSingleWrite':
+../src/vmodcam_cfg.c:392:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+../src/vmodcam_cfg.c:388:6: warning: unused variable 'cWriteBytes' [-Wunused-variable]
+../src/vmodcam_cfg.c:387:6: warning: unused variable 'lCamIicRegData' [-Wunused-variable]
+../src/vmodcam_cfg.c: In function 'ClearScreen':
+../src/vmodcam_cfg.c:475:2: warning: 'return' with a value, in function returning void [enabled by default]
+../src/vmodcam_cfg.c: In function 'CamIicInit':
+../src/vmodcam_cfg.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/vmodcam_cfg.c: In function 'CamIicPowerUp':
+../src/vmodcam_cfg.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/vmodcam_cfg.c: In function 'CamIicSetupPLL':
+../src/vmodcam_cfg.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/vmodcam_cfg.c
+ 
+Building target: HelloCamera.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloCamera_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloCamera.elf"  ./src/cam_ctrl.o ./src/main.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloCamera.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloCamera.elf  |tee "HelloCamera.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8810	    276	   2090	  11176	   2ba8	HelloCamera.elf
+Finished building: HelloCamera.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck HelloCamera.elf -hw ../../camera_hw_platform/system.xml -pe microblaze_0  |tee "HelloCamera.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../camera_hw_platform/system.xml -pe microblaze_0
+HelloCamera.elf 
+
+ELF file	: HelloCamera.elf
+elfcheck passed.
+Finished building: HelloCamera.elf.elfcheck
+ 
+10:52:40 **** Auto Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:27:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: HelloCamera.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloCamera_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloCamera.elf"  ./src/cam_ctrl.o ./src/main.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloCamera.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloCamera.elf  |tee "HelloCamera.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8766	    276	   2080	  11122	   2b72	HelloCamera.elf
+Finished building: HelloCamera.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck HelloCamera.elf -hw ../../camera_hw_platform/system.xml -pe microblaze_0  |tee "HelloCamera.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../camera_hw_platform/system.xml -pe microblaze_0
+HelloCamera.elf 
+
+ELF file	: HelloCamera.elf
+elfcheck passed.
+Finished building: HelloCamera.elf.elfcheck
+ 
+10:53:28 **** Auto Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:27:6: warning: unused variable 'color' [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: HelloCamera.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloCamera_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloCamera.elf"  ./src/cam_ctrl.o ./src/main.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloCamera.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size HelloCamera.elf  |tee "HelloCamera.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2398	    268	   2080	   4746	   128a	HelloCamera.elf
+Finished building: HelloCamera.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck HelloCamera.elf -hw ../../camera_hw_platform/system.xml -pe microblaze_0  |tee "HelloCamera.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../camera_hw_platform/system.xml -pe microblaze_0
+HelloCamera.elf 
+
+ELF file	: HelloCamera.elf
+elfcheck passed.
+Finished building: HelloCamera.elf.elfcheck
+ 
