@@ -9,8 +9,6 @@ use UNISIM.VCOMPONENTS.ALL;
 
 entity system_stub is
   port (
-    fpga_0_RS232_Uart_0_RX_pin : in std_logic;
-    fpga_0_RS232_Uart_0_TX_pin : out std_logic;
     fpga_0_DDR2_SDRAM_DDR2_Clk_pin : out std_logic_vector(1 downto 0);
     fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin : out std_logic_vector(1 downto 0);
     fpga_0_DDR2_SDRAM_DDR2_CE_pin : out std_logic_vector(1 downto 0);
@@ -60,7 +58,11 @@ entity system_stub is
     spi_gyro_SCK_pin : inout std_logic;
     spi_gyro_MISO_pin : inout std_logic;
     spi_gyro_MOSI_pin : inout std_logic;
-    spi_gyro_SS_pin : inout std_logic
+    spi_gyro_SS_pin : inout std_logic;
+    xps_uart16550_0_sin_pin : in std_logic;
+    xps_uart16550_0_sout_pin : out std_logic;
+    xps_uart16550_1_sin_pin : in std_logic;
+    xps_uart16550_1_sout_pin : out std_logic
   );
 end system_stub;
 
@@ -68,8 +70,6 @@ architecture STRUCTURE of system_stub is
 
   component system is
     port (
-      fpga_0_RS232_Uart_0_RX_pin : in std_logic;
-      fpga_0_RS232_Uart_0_TX_pin : out std_logic;
       fpga_0_DDR2_SDRAM_DDR2_Clk_pin : out std_logic_vector(1 downto 0);
       fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin : out std_logic_vector(1 downto 0);
       fpga_0_DDR2_SDRAM_DDR2_CE_pin : out std_logic_vector(1 downto 0);
@@ -119,7 +119,11 @@ architecture STRUCTURE of system_stub is
       spi_gyro_SCK_pin : inout std_logic;
       spi_gyro_MISO_pin : inout std_logic;
       spi_gyro_MOSI_pin : inout std_logic;
-      spi_gyro_SS_pin : inout std_logic
+      spi_gyro_SS_pin : inout std_logic;
+      xps_uart16550_0_sin_pin : in std_logic;
+      xps_uart16550_0_sout_pin : out std_logic;
+      xps_uart16550_1_sin_pin : in std_logic;
+      xps_uart16550_1_sout_pin : out std_logic
     );
   end component;
 
@@ -130,8 +134,6 @@ begin
 
   system_i : system
     port map (
-      fpga_0_RS232_Uart_0_RX_pin => fpga_0_RS232_Uart_0_RX_pin,
-      fpga_0_RS232_Uart_0_TX_pin => fpga_0_RS232_Uart_0_TX_pin,
       fpga_0_DDR2_SDRAM_DDR2_Clk_pin => fpga_0_DDR2_SDRAM_DDR2_Clk_pin,
       fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin => fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin,
       fpga_0_DDR2_SDRAM_DDR2_CE_pin => fpga_0_DDR2_SDRAM_DDR2_CE_pin,
@@ -181,7 +183,11 @@ begin
       spi_gyro_SCK_pin => spi_gyro_SCK_pin,
       spi_gyro_MISO_pin => spi_gyro_MISO_pin,
       spi_gyro_MOSI_pin => spi_gyro_MOSI_pin,
-      spi_gyro_SS_pin => spi_gyro_SS_pin
+      spi_gyro_SS_pin => spi_gyro_SS_pin,
+      xps_uart16550_0_sin_pin => xps_uart16550_0_sin_pin,
+      xps_uart16550_0_sout_pin => xps_uart16550_0_sout_pin,
+      xps_uart16550_1_sin_pin => xps_uart16550_1_sin_pin,
+      xps_uart16550_1_sout_pin => xps_uart16550_1_sout_pin
     );
 
 end architecture STRUCTURE;

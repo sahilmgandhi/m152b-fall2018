@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "/home/wth/Board/Genesys/Demo/XSVI_out/pcores/hdmi_v1_00_a/devl/synthesis/hdmi_xst.prj"
+-top hdmi
+-p virtex5
+-ofn "/home/wth/Board/Genesys/Demo/XSVI_out/pcores/hdmi_v1_00_a/devl/synthesis/hdmi_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib hdmi_v1_00_a

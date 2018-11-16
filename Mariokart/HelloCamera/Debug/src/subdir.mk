@@ -6,6 +6,7 @@
 C_SRCS += \
 ../src/cam_ctrl.c \
 ../src/main.c \
+../src/platform.c \
 ../src/vmodcam_cfg.c 
 
 LD_SRCS += \
@@ -14,11 +15,13 @@ LD_SRCS += \
 OBJS += \
 ./src/cam_ctrl.o \
 ./src/main.o \
+./src/platform.o \
 ./src/vmodcam_cfg.o 
 
 C_DEPS += \
 ./src/cam_ctrl.d \
 ./src/main.d \
+./src/platform.d \
 ./src/vmodcam_cfg.d 
 
 

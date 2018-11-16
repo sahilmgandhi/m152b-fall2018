@@ -12,8 +12,6 @@
 *
 *******************************************************************/
 
-#define STDIN_BASEADDRESS 0x84000000
-#define STDOUT_BASEADDRESS 0x84000000
 
 /******************************************************************/
 
@@ -236,7 +234,7 @@
 /******************************************************************/
 
 /* Definitions for driver UARTLITE */
-#define XPAR_XUARTLITE_NUM_INSTANCES 2
+#define XPAR_XUARTLITE_NUM_INSTANCES 1
 
 /* Definitions for peripheral MDM_0 */
 #define XPAR_MDM_0_BASEADDR 0x84400000
@@ -246,16 +244,6 @@
 #define XPAR_MDM_0_USE_PARITY 0
 #define XPAR_MDM_0_ODD_PARITY 0
 #define XPAR_MDM_0_DATA_BITS 0
-
-
-/* Definitions for peripheral RS232_UART_0 */
-#define XPAR_RS232_UART_0_BASEADDR 0x84000000
-#define XPAR_RS232_UART_0_HIGHADDR 0x8400FFFF
-#define XPAR_RS232_UART_0_DEVICE_ID 1
-#define XPAR_RS232_UART_0_BAUDRATE 115200
-#define XPAR_RS232_UART_0_USE_PARITY 0
-#define XPAR_RS232_UART_0_ODD_PARITY 0
-#define XPAR_RS232_UART_0_DATA_BITS 8
 
 
 /******************************************************************/
@@ -269,16 +257,6 @@
 #define XPAR_UARTLITE_0_ODD_PARITY 0
 #define XPAR_UARTLITE_0_DATA_BITS 0
 #define XPAR_UARTLITE_0_SIO_CHAN -1
-
-/* Canonical definitions for peripheral RS232_UART_0 */
-#define XPAR_UARTLITE_1_DEVICE_ID XPAR_RS232_UART_0_DEVICE_ID
-#define XPAR_UARTLITE_1_BASEADDR 0x84000000
-#define XPAR_UARTLITE_1_HIGHADDR 0x8400FFFF
-#define XPAR_UARTLITE_1_BAUDRATE 115200
-#define XPAR_UARTLITE_1_USE_PARITY 0
-#define XPAR_UARTLITE_1_ODD_PARITY 0
-#define XPAR_UARTLITE_1_DATA_BITS 8
-#define XPAR_UARTLITE_1_SIO_CHAN -1
 
 
 /******************************************************************/
@@ -373,6 +351,43 @@
 #define XPAR_TMRCTR_0_BASEADDR 0x83C00000
 #define XPAR_TMRCTR_0_HIGHADDR 0x83C0FFFF
 #define XPAR_TMRCTR_0_CLOCK_FREQ_HZ XPAR_XPS_TIMER_0_CLOCK_FREQ_HZ
+
+/******************************************************************/
+
+/* Definitions for driver UARTNS550 */
+#define XPAR_XUARTNS550_NUM_INSTANCES 2
+#define XPAR_XUARTNS550_CLOCK_HZ 125000000
+
+/* Definitions for peripheral XPS_UART16550_0 */
+#define XPAR_XPS_UART16550_0_DEVICE_ID 0
+#define XPAR_XPS_UART16550_0_BASEADDR 0x83E20000
+#define XPAR_XPS_UART16550_0_HIGHADDR 0x83E2FFFF
+#define XPAR_XPS_UART16550_0_CLOCK_FREQ_HZ 125000000
+
+
+/* Definitions for peripheral XPS_UART16550_1 */
+#define XPAR_XPS_UART16550_1_DEVICE_ID 1
+#define XPAR_XPS_UART16550_1_BASEADDR 0x83E00000
+#define XPAR_XPS_UART16550_1_HIGHADDR 0x83E0FFFF
+#define XPAR_XPS_UART16550_1_CLOCK_FREQ_HZ 125000000
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral XPS_UART16550_0 */
+#define XPAR_UARTNS550_0_DEVICE_ID XPAR_XPS_UART16550_0_DEVICE_ID
+#define XPAR_UARTNS550_0_BASEADDR 0x83E20000
+#define XPAR_UARTNS550_0_HIGHADDR 0x83E2FFFF
+#define XPAR_UARTNS550_0_CLOCK_FREQ_HZ XPAR_XPS_UART16550_0_CLOCK_FREQ_HZ
+#define XPAR_UARTNS550_0_SIO_CHAN -1
+
+/* Canonical definitions for peripheral XPS_UART16550_1 */
+#define XPAR_UARTNS550_1_DEVICE_ID XPAR_XPS_UART16550_1_DEVICE_ID
+#define XPAR_UARTNS550_1_BASEADDR 0x83E00000
+#define XPAR_UARTNS550_1_HIGHADDR 0x83E0FFFF
+#define XPAR_UARTNS550_1_CLOCK_FREQ_HZ XPAR_XPS_UART16550_1_CLOCK_FREQ_HZ
+#define XPAR_UARTNS550_1_SIO_CHAN 0
+
 
 /******************************************************************/
 

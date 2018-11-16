@@ -1,37 +1,28 @@
-10:53:28 **** Auto Build of configuration Debug for project HelloCamera ****
+11:34:14 **** Build of configuration Debug for project HelloCamera ****
 make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+../src/cam_ctrl.c: In function 'CamStatus':
+../src/cam_ctrl.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/cam_ctrl.c
+ 
 Building file: ../src/main.c
 Invoking: MicroBlaze gcc compiler
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c:23:6: warning: return type of 'main' is not 'int' [-Wmain]
-../src/main.c: In function 'main':
-../src/main.c:27:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: In function 'SpiPoll':
+../src/main.c:33:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:57:6: warning: return type of 'main' is not 'int' [-Wmain]
 Finished building: ../src/main.c
  
-Building target: HelloCamera.elf
-Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloCamera_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "HelloCamera.elf"  ./src/cam_ctrl.o ./src/main.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: HelloCamera.elf
- 
-Invoking: MicroBlaze Print Size
-mb-size HelloCamera.elf  |tee "HelloCamera.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   2398	    268	   2080	   4746	   128a	HelloCamera.elf
-Finished building: HelloCamera.elf.size
- 
-Invoking: Xilinx ELF Check
-elfcheck HelloCamera.elf -hw ../../camera_hw_platform/system.xml -pe microblaze_0  |tee "HelloCamera.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.6 Build EDK_P.68d
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+../src/platform.c: In function 'init_uart':
+../src/platform.c:86:24: error: 'XPAR_RS232_UART_0_BASEADDR' undeclared (first use in this function)
+../src/platform.c:86:24: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/platform.o] Error 1
 
-Command Line: elfcheck -hw ../../camera_hw_platform/system.xml -pe microblaze_0
-HelloCamera.elf 
-
-ELF file	: HelloCamera.elf
-elfcheck passed.
-Finished building: HelloCamera.elf.elfcheck
- 
-
-10:53:29 Build Finished (took 1s.688ms)
+11:34:15 Build Finished (took 652ms)
 

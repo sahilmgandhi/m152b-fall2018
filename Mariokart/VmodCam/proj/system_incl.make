@@ -69,7 +69,6 @@ implementation/system_dlmb_wrapper.ngc \
 implementation/system_dlmb_cntlr_wrapper.ngc \
 implementation/system_ilmb_cntlr_wrapper.ngc \
 implementation/system_lmb_bram_wrapper.ngc \
-implementation/system_rs232_uart_0_wrapper.ngc \
 implementation/system_ddr2_sdram_wrapper.ngc \
 implementation/system_clock_generator_0_wrapper.ngc \
 implementation/system_mdm_0_wrapper.ngc \
@@ -83,7 +82,10 @@ implementation/system_cam_iic_1_wrapper.ngc \
 implementation/system_pmod_bt2_ja_wrapper.ngc \
 implementation/system_pmod_bt2_jb_wrapper.ngc \
 implementation/system_spi_gyro_wrapper.ngc \
-implementation/system_xps_timer_0_wrapper.ngc
+implementation/system_xps_timer_0_wrapper.ngc \
+implementation/system_xps_uart16550_0_wrapper.ngc \
+implementation/system_xps_uart16550_1_wrapper.ngc \
+implementation/system_rs232_uart_0_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

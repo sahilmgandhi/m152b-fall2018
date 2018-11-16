@@ -15,7 +15,7 @@ entity system_mb_plb_wrapper is
     PLB_Clk : in std_logic;
     SYS_Rst : in std_logic;
     PLB_Rst : out std_logic;
-    SPLB_Rst : out std_logic_vector(0 to 12);
+    SPLB_Rst : out std_logic_vector(0 to 13);
     MPLB_Rst : out std_logic_vector(0 to 1);
     PLB_dcrAck : out std_logic;
     PLB_dcrDBus : out std_logic_vector(0 to 31);
@@ -39,22 +39,22 @@ entity system_mb_plb_wrapper is
     M_type : in std_logic_vector(0 to 5);
     M_wrBurst : in std_logic_vector(0 to 1);
     M_wrDBus : in std_logic_vector(0 to 127);
-    Sl_addrAck : in std_logic_vector(0 to 12);
-    Sl_MRdErr : in std_logic_vector(0 to 25);
-    Sl_MWrErr : in std_logic_vector(0 to 25);
-    Sl_MBusy : in std_logic_vector(0 to 25);
-    Sl_rdBTerm : in std_logic_vector(0 to 12);
-    Sl_rdComp : in std_logic_vector(0 to 12);
-    Sl_rdDAck : in std_logic_vector(0 to 12);
-    Sl_rdDBus : in std_logic_vector(0 to 831);
-    Sl_rdWdAddr : in std_logic_vector(0 to 51);
-    Sl_rearbitrate : in std_logic_vector(0 to 12);
-    Sl_SSize : in std_logic_vector(0 to 25);
-    Sl_wait : in std_logic_vector(0 to 12);
-    Sl_wrBTerm : in std_logic_vector(0 to 12);
-    Sl_wrComp : in std_logic_vector(0 to 12);
-    Sl_wrDAck : in std_logic_vector(0 to 12);
-    Sl_MIRQ : in std_logic_vector(0 to 25);
+    Sl_addrAck : in std_logic_vector(0 to 13);
+    Sl_MRdErr : in std_logic_vector(0 to 27);
+    Sl_MWrErr : in std_logic_vector(0 to 27);
+    Sl_MBusy : in std_logic_vector(0 to 27);
+    Sl_rdBTerm : in std_logic_vector(0 to 13);
+    Sl_rdComp : in std_logic_vector(0 to 13);
+    Sl_rdDAck : in std_logic_vector(0 to 13);
+    Sl_rdDBus : in std_logic_vector(0 to 895);
+    Sl_rdWdAddr : in std_logic_vector(0 to 55);
+    Sl_rearbitrate : in std_logic_vector(0 to 13);
+    Sl_SSize : in std_logic_vector(0 to 27);
+    Sl_wait : in std_logic_vector(0 to 13);
+    Sl_wrBTerm : in std_logic_vector(0 to 13);
+    Sl_wrComp : in std_logic_vector(0 to 13);
+    Sl_wrDAck : in std_logic_vector(0 to 13);
+    Sl_MIRQ : in std_logic_vector(0 to 27);
     PLB_MIRQ : out std_logic_vector(0 to 1);
     PLB_ABus : out std_logic_vector(0 to 31);
     PLB_UABus : out std_logic_vector(0 to 31);
@@ -86,13 +86,13 @@ entity system_mb_plb_wrapper is
     PLB_rdPendReq : out std_logic;
     PLB_wrPendReq : out std_logic;
     PLB_rdBurst : out std_logic;
-    PLB_rdPrim : out std_logic_vector(0 to 12);
+    PLB_rdPrim : out std_logic_vector(0 to 13);
     PLB_reqPri : out std_logic_vector(0 to 1);
     PLB_size : out std_logic_vector(0 to 3);
     PLB_type : out std_logic_vector(0 to 2);
     PLB_wrBurst : out std_logic;
     PLB_wrDBus : out std_logic_vector(0 to 63);
-    PLB_wrPrim : out std_logic_vector(0 to 12);
+    PLB_wrPrim : out std_logic_vector(0 to 13);
     PLB_SaddrAck : out std_logic;
     PLB_SMRdErr : out std_logic_vector(0 to 1);
     PLB_SMWrErr : out std_logic_vector(0 to 1);
@@ -243,7 +243,7 @@ begin
   mb_plb : plb_v46
     generic map (
       C_PLBV46_NUM_MASTERS => 2,
-      C_PLBV46_NUM_SLAVES => 13,
+      C_PLBV46_NUM_SLAVES => 14,
       C_PLBV46_MID_WIDTH => 1,
       C_PLBV46_AWIDTH => 32,
       C_PLBV46_DWIDTH => 64,

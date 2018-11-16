@@ -1,4 +1,4 @@
-10:51:29 **** Build of project HelloCamera_bsp ****
+11:33:58 **** Build of project HelloCamera_bsp ****
 make -k all 
 libgen -hw ../camera_hw_platform/system.xml\
 	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
@@ -37,9 +37,10 @@ Compiling uartlite
 Compiling gpio
 Compiling spi
 Compiling tmrctr
+Compiling uartns550
 Compiling cpu
 Running execs_generate.
 Finished building libraries
 
-10:51:41 Build Finished (took 12s.87ms)
+11:34:14 Build Finished (took 15s.754ms)
 

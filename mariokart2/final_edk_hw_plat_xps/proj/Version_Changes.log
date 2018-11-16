@@ -1,0 +1,13 @@
+ The following files will be modified:
+  system.mhs
+--------------------------------------
+ The following changes will be made:
+ Core microblaze 8.00.b will be replaced by 8.50.b
+ Core mpmc 6.02.a will be replaced by 6.06.a
+ Core mdm 2.00.a will be replaced by 2.10.a
+ Core xps_uartlite 1.01.a will be replaced by 1.02.a
+ Core clock_generator 4.01.a will be replaced by 4.03.a
+--------------------------------------
+ You must manually make the following changes:
+ Core lmb_v10 1.00.a needs to be replaced by 2.00.b
+ Core lmb_bram_if_cntlr 2.10.b needs to be replaced by 3.10.c

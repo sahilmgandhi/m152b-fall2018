@@ -18,10 +18,10 @@ entity system_rs232_uart_0_wrapper is
     PLB_PAValid : in std_logic;
     PLB_masterID : in std_logic_vector(0 to 0);
     PLB_RNW : in std_logic;
-    PLB_BE : in std_logic_vector(0 to 7);
+    PLB_BE : in std_logic_vector(0 to 3);
     PLB_size : in std_logic_vector(0 to 3);
     PLB_type : in std_logic_vector(0 to 2);
-    PLB_wrDBus : in std_logic_vector(0 to 63);
+    PLB_wrDBus : in std_logic_vector(0 to 31);
     PLB_UABus : in std_logic_vector(0 to 31);
     PLB_SAValid : in std_logic;
     PLB_rdPrim : in std_logic;
@@ -44,16 +44,16 @@ entity system_rs232_uart_0_wrapper is
     Sl_rearbitrate : out std_logic;
     Sl_wrDAck : out std_logic;
     Sl_wrComp : out std_logic;
-    Sl_rdDBus : out std_logic_vector(0 to 63);
+    Sl_rdDBus : out std_logic_vector(0 to 31);
     Sl_rdDAck : out std_logic;
     Sl_rdComp : out std_logic;
-    Sl_MBusy : out std_logic_vector(0 to 1);
-    Sl_MWrErr : out std_logic_vector(0 to 1);
-    Sl_MRdErr : out std_logic_vector(0 to 1);
+    Sl_MBusy : out std_logic_vector(0 to 0);
+    Sl_MWrErr : out std_logic_vector(0 to 0);
+    Sl_MRdErr : out std_logic_vector(0 to 0);
     Sl_wrBTerm : out std_logic;
     Sl_rdWdAddr : out std_logic_vector(0 to 3);
     Sl_rdBTerm : out std_logic;
-    Sl_MIRQ : out std_logic_vector(0 to 1);
+    Sl_MIRQ : out std_logic_vector(0 to 0);
     RX : in std_logic;
     TX : out std_logic;
     Interrupt : out std_logic
@@ -135,23 +135,23 @@ architecture STRUCTURE of system_rs232_uart_0_wrapper is
 
 begin
 
-  RS232_Uart_0 : xps_uartlite
+  RS232_UART_0 : xps_uartlite
     generic map (
       C_FAMILY => "virtex5",
-      C_SPLB_CLK_FREQ_HZ => 125000000,
-      C_BASEADDR => X"84000000",
-      C_HIGHADDR => X"8400ffff",
+      C_SPLB_CLK_FREQ_HZ => 100000000,
+      C_BASEADDR => X"ffffffff",
+      C_HIGHADDR => X"00000000",
       C_SPLB_AWIDTH => 32,
-      C_SPLB_DWIDTH => 64,
+      C_SPLB_DWIDTH => 32,
       C_SPLB_P2P => 0,
       C_SPLB_MID_WIDTH => 1,
-      C_SPLB_NUM_MASTERS => 2,
+      C_SPLB_NUM_MASTERS => 1,
       C_SPLB_SUPPORT_BURSTS => 0,
       C_SPLB_NATIVE_DWIDTH => 32,
-      C_BAUDRATE => 115200,
+      C_BAUDRATE => 9600,
       C_DATA_BITS => 8,
-      C_USE_PARITY => 0,
-      C_ODD_PARITY => 0
+      C_USE_PARITY => 1,
+      C_ODD_PARITY => 1
     )
     port map (
       SPLB_Clk => SPLB_Clk,

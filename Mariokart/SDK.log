@@ -128,3 +128,27 @@
 10:51:13.564 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
 10:51:27.616 INFO  - Updating hardware inferred compiler options for HelloCamera. 
 10:51:27.632 INFO  - Clearing existing target manager status. 
+10:51:28.647 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+11:12:00.067 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/Mariokart/camera_hw_platform/download.bit" 
+11:33:53.685 INFO  - Project camera_hw_platform's source hardware specification located at C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+11:33:53.722 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml into \camera_hw_platform\system.xml. 
+11:33:53.736 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.bit into \camera_hw_platform\system.bit. 
+11:33:53.747 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system_bd.bmm into \camera_hw_platform\system_bd.bmm. 
+11:33:54.732 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+11:33:55.593 INFO  - Updating MSS for Board Support Package Project: HelloCamera_bsp.
+		 The following driver assignments were removed:
+			Peripheral Instance: rs232_uart_0, driver: uartlite_v2_01_a.
+		 The following parameters were removed:
+			Component: standalone_v3_10_a, parameter: stdin.
+			Component: standalone_v3_10_a, parameter: stdout.
+		 The following new driver assignments were made:
+			Peripheral Instance: xps_uart16550_0, driver: uartns550_v2_01_a.
+			Peripheral Instance: xps_uart16550_1, driver: uartns550_v2_01_a.
+ 
+11:33:56.384 INFO  - Updating hardware inferred compiler options for HelloCamera. 
+11:33:56.399 INFO  - Clearing existing target manager status. 
+11:33:56.399 INFO  - Closing and re-opening the MSS file of ther project HelloCamera_bsp 
+11:33:56.686 INFO  - Closing and re-opening the MSS file of ther project HelloCamera_bsp 
+11:33:57.823 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+11:42:03.129 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

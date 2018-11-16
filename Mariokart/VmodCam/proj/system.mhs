@@ -15,8 +15,6 @@
  PARAMETER VERSION = 2.1.0
 
 
- PORT fpga_0_RS232_Uart_0_RX_pin = fpga_0_RS232_Uart_0_RX_pin, DIR = I
- PORT fpga_0_RS232_Uart_0_TX_pin = fpga_0_RS232_Uart_0_TX_pin, DIR = O
  PORT fpga_0_DDR2_SDRAM_DDR2_Clk_pin = fpga_0_DDR2_SDRAM_DDR2_Clk_pin, DIR = O, VEC = [1:0]
  PORT fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin = fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin, DIR = O, VEC = [1:0]
  PORT fpga_0_DDR2_SDRAM_DDR2_CE_pin = fpga_0_DDR2_SDRAM_DDR2_CE_pin, DIR = O, VEC = [1:0]
@@ -67,6 +65,10 @@
  PORT spi_gyro_MISO_pin = spi_gyro_MISO, DIR = IO
  PORT spi_gyro_MOSI_pin = spi_gyro_MOSI, DIR = IO
  PORT spi_gyro_SS_pin = spi_gyro_SS, DIR = IO
+ PORT xps_uart16550_0_sin_pin = xps_uart16550_0_sin, DIR = I
+ PORT xps_uart16550_0_sout_pin = xps_uart16550_0_sout, DIR = O
+ PORT xps_uart16550_1_sin_pin = xps_uart16550_1_sin, DIR = I
+ PORT xps_uart16550_1_sout_pin = xps_uart16550_1_sout, DIR = O
 
 
 BEGIN microblaze
@@ -126,20 +128,6 @@ BEGIN bram_block
  PARAMETER HW_VER = 1.00.a
  BUS_INTERFACE PORTA = ilmb_port
  BUS_INTERFACE PORTB = dlmb_port
-END
-
-BEGIN xps_uartlite
- PARAMETER INSTANCE = RS232_Uart_0
- PARAMETER C_BAUDRATE = 115200
- PARAMETER C_DATA_BITS = 8
- PARAMETER C_USE_PARITY = 0
- PARAMETER C_ODD_PARITY = 0
- PARAMETER HW_VER = 1.02.a
- PARAMETER C_BASEADDR = 0x84000000
- PARAMETER C_HIGHADDR = 0x8400ffff
- BUS_INTERFACE SPLB = mb_plb
- PORT RX = fpga_0_RS232_Uart_0_RX_pin
- PORT TX = fpga_0_RS232_Uart_0_TX_pin
 END
 
 BEGIN mpmc
@@ -376,5 +364,32 @@ BEGIN xps_timer
  PARAMETER C_BASEADDR = 0x83c00000
  PARAMETER C_HIGHADDR = 0x83c0ffff
  BUS_INTERFACE SPLB = mb_plb
+END
+
+BEGIN xps_uart16550
+ PARAMETER INSTANCE = xps_uart16550_0
+ PARAMETER HW_VER = 3.00.a
+ PARAMETER C_BASEADDR = 0x83e20000
+ PARAMETER C_HIGHADDR = 0x83e2ffff
+ BUS_INTERFACE SPLB = mb_plb
+ PORT sin = xps_uart16550_0_sin
+ PORT sout = xps_uart16550_0_sout
+END
+
+BEGIN xps_uart16550
+ PARAMETER INSTANCE = xps_uart16550_1
+ PARAMETER HW_VER = 3.00.a
+ PARAMETER C_BASEADDR = 0x83e00000
+ PARAMETER C_HIGHADDR = 0x83e0ffff
+ BUS_INTERFACE SPLB = mb_plb
+ PORT sin = xps_uart16550_1_sin
+ PORT sout = xps_uart16550_1_sout
+END
+
+BEGIN xps_uartlite
+ PARAMETER INSTANCE = RS232_UART_0
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_BASEADDR = 0xffffffff
+ PARAMETER C_HIGHADDR = 0x00000000
 END
 

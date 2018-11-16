@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="20" version="2.0">
+<workbench progressCount="17" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="125" y="125">
 <fastViewData fastViewLocation="1024"/>
@@ -35,11 +35,14 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="cam_ctrl_header.h" partName="cam_ctrl_header.h" path="C:/Users/CS152B/Documents/m152b_fall2018/Mariokart/HelloCamera/src/cam_ctrl_header.h" title="cam_ctrl_header.h" tooltip="HelloCamera/src/cam_ctrl_header.h" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="cam_ctrl_header.h" partName="cam_ctrl_header.h" path="C:/Users/CS152B/Documents/m152b_fall2018/Mariokart/HelloCamera/src/cam_ctrl_header.h" title="cam_ctrl_header.h" tooltip="HelloCamera/src/cam_ctrl_header.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HelloCamera/src/cam_ctrl_header.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="973" selectionTopPixel="0"/>
 </editor>
@@ -48,6 +51,18 @@
 </editor>
 <editor id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" partName="system.mss" path="C:/Users/CS152B/Documents/m152b_fall2018/Mariokart/mario_bsp/system.mss" title="system.mss" tooltip="mario_bsp/system.mss" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mario_bsp/system.mss"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/CS152B/Documents/m152b_fall2018/Mariokart/HelloCamera/src/main.c" title="main.c" tooltip="HelloCamera/src/main.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HelloCamera/src/main.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2357" selectionTopPixel="765"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" partName="platform.c" path="C:/Users/CS152B/Documents/m152b_fall2018/Mariokart/HelloCamera/src/platform.c" title="platform.c" tooltip="HelloCamera/src/platform.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HelloCamera/src/platform.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3187" selectionTopPixel="331"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="platform.h" partName="platform.h" path="C:/Users/CS152B/Documents/m152b_fall2018/Mariokart/HelloCamera/src/platform.h" title="platform.h" tooltip="HelloCamera/src/platform.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HelloCamera/src/platform.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -64,6 +79,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
+<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="387"/>
@@ -93,7 +109,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.views.ProblemView" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -172,7 +188,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.2629649" ratioLeft="502" ratioRight="1407" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.64377683" ratioLeft="600" ratioRight="332" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -209,6 +225,12 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/mario_hw_platform/system.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/mario_bsp/system.mss"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/HelloCamera/src/cam_ctrl_header.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/HelloCamera/src/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/HelloCamera_bsp/microblaze_0/include/xspi.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/HelloCamera_bsp/microblaze_0/include/xparameters.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/HelloCamera/src/platform.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/HelloCamera/src/platform.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/HelloCamera_bsp/microblaze_0/include/xspi.h"/>
 </editors>
 <item historyLabel="xparameters.h" index="0">
 <position info="not_deleted" x="11432" y="3"/>
@@ -218,8 +240,65 @@
 </item>
 <item historyLabel="system.xml" index="2"/>
 <item historyLabel="system.mss" index="3"/>
-<item active="true" historyLabel="cam_ctrl_header.h" index="4">
+<item historyLabel="cam_ctrl_header.h" index="4">
 <position info="not_deleted" x="973" y="16"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="3321" y="0"/>
+</item>
+<item historyLabel="xspi.h" index="6">
+<position info="not_deleted" x="3841" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="822" y="0"/>
+</item>
+<item historyLabel="xparameters.h" index="7">
+<position info="not_deleted" x="11430" y="3"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="822" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="1716" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="1250" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="1264" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="1696" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="1780" y="23"/>
+</item>
+<item historyLabel="xparameters.h" index="7">
+<position info="not_deleted" x="11526" y="23"/>
+</item>
+<item historyLabel="xspi.h" index="6">
+<position info="not_deleted" x="3841" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="1580" y="0"/>
+</item>
+<item historyLabel="platform.c" index="8">
+<position info="not_deleted" x="3015" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="2357" y="0"/>
+</item>
+<item historyLabel="platform.h" index="9">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="platform.c" index="8">
+<position info="not_deleted" x="3187" y="0"/>
+</item>
+<item historyLabel="xspi.h" index="10">
+<position info="not_deleted" x="82" y="0"/>
+</item>
+<item active="true" historyLabel="platform.c" index="8">
+<position info="not_deleted" x="3187" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -238,6 +317,21 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" tooltip="HelloCamera_bsp/microblaze_0/include/xparameters.h">
+<persistable path="/HelloCamera_bsp/microblaze_0/include/xparameters.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xspi.h" tooltip="HelloCamera_bsp/microblaze_0/include/xspi.h">
+<persistable path="/HelloCamera_bsp/microblaze_0/include/xspi.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.h" tooltip="HelloCamera/src/platform.h">
+<persistable path="/HelloCamera/src/platform.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" tooltip="HelloCamera/src/platform.c">
+<persistable path="/HelloCamera/src/platform.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="HelloCamera/src/main.c">
+<persistable path="/HelloCamera/src/main.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="mario_bsp/system.mss">
 <persistable path="/mario_bsp/system.mss"/>
 </file>
@@ -246,9 +340,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="cam_ctrl_header.h" tooltip="HelloCamera/src/cam_ctrl_header.h">
 <persistable path="/HelloCamera/src/cam_ctrl_header.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" tooltip="HelloCamera_bsp/microblaze_0/include/xparameters.h">
-<persistable path="/HelloCamera_bsp/microblaze_0/include/xparameters.h"/>
 </file>
 </mruList>
 </workbench>
