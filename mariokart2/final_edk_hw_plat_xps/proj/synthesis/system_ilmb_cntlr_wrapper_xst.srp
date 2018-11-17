@@ -1,6 +1,6 @@
 Release 14.6 - xst P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\proj\synthesis\xst_temp_dir\
+--> Parameter TMPDIR set to C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\synthesis\xst_temp_dir\
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -30,7 +30,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_ilmb_cntlr_wrapper_xst.prj"
-Verilog Include Directory          : {"C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\proj\pcores\" "C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\pcores\" "C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc5vlx50tff1136-1
@@ -63,7 +63,7 @@ Entity <pselect_mask> (Architecture <imp>) compiled.
 Compiling vhdl file "C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v2_10_b/hdl/vhdl/lmb_bram_if_cntlr.vhd" in Library lmb_bram_if_cntlr_v2_10_b.
 Entity <lmb_bram_if_cntlr> compiled.
 Entity <lmb_bram_if_cntlr> (Architecture <imp>) compiled.
-Compiling vhdl file "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/system_ilmb_cntlr_wrapper.vhd" in Library work.
+Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/system_ilmb_cntlr_wrapper.vhd" in Library work.
 Entity <system_ilmb_cntlr_wrapper> compiled.
 Entity <system_ilmb_cntlr_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -130,7 +130,7 @@ Unit <lmb_bram_if_cntlr> synthesized.
 
 
 Synthesizing Unit <system_ilmb_cntlr_wrapper>.
-    Related source file is "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/system_ilmb_cntlr_wrapper.vhd".
+    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/system_ilmb_cntlr_wrapper.vhd".
 Unit <system_ilmb_cntlr_wrapper> synthesized.
 
 
@@ -337,11 +337,11 @@ Delay:               0.468ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.17 secs
+Total CPU time to Xst completion: 4.95 secs
  
 --> 
 
-Total memory usage is 296288 kilobytes
+Total memory usage is 296856 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)

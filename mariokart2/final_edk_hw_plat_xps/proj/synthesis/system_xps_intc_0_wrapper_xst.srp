@@ -1,10 +1,10 @@
 Release 14.6 - xst P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\proj\synthesis\xst_temp_dir\
+--> Parameter TMPDIR set to C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\synthesis\xst_temp_dir\
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> 
 TABLE OF CONTENTS
@@ -30,7 +30,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_xps_intc_0_wrapper_xst.prj"
-Verilog Include Directory          : {"C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\proj\pcores\" "C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\pcores\" "C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc5vlx50tff1136-1
@@ -250,7 +250,7 @@ Entity <intc_core> (Architecture <imp>) compiled.
 Compiling vhdl file "C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_intc_v2_01_a/hdl/vhdl/xps_intc.vhd" in Library xps_intc_v2_01_a.
 Entity <xps_intc> compiled.
 Entity <xps_intc> (Architecture <imp>) compiled.
-Compiling vhdl file "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/system_xps_intc_0_wrapper.vhd" in Library work.
+Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/system_xps_intc_0_wrapper.vhd" in Library work.
 Entity <system_xps_intc_0_wrapper> compiled.
 Entity <system_xps_intc_0_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -783,7 +783,7 @@ Unit <xps_intc> synthesized.
 
 
 Synthesizing Unit <system_xps_intc_0_wrapper>.
-    Related source file is "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/system_xps_intc_0_wrapper.vhd".
+    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/system_xps_intc_0_wrapper.vhd".
 Unit <system_xps_intc_0_wrapper> synthesized.
 
 
@@ -1091,12 +1091,12 @@ Offset:              0.471ns (Levels of Logic = 0)
 =========================================================================
 
 
-Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 16.33 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.13 secs
  
 --> 
 
-Total memory usage is 639584 kilobytes
+Total memory usage is 638488 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  133 (   0 filtered)

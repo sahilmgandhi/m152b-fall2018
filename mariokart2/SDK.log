@@ -1,2 +1,61 @@
 16:47:47.596 INFO  - Processing command line option -hwspec C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml. 
 16:49:18.002 INFO  - Processing command line option -hwspec C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml. 
+12:17:44.803 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+12:20:49.269 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:41:03.137 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:41:36.294 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:42:02.132 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:57:34.016 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:57:50.036 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:11:15.259 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+13:11:15.291 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+13:11:15.291 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+13:25:14.255 INFO  - Processing command line option -hwspec C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml. 
+13:25:16.002 INFO  - The hardware specification for project 'proj_hw_platform' is different from C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml. 
+13:25:16.049 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml into \proj_hw_platform\system.xml. 
+13:25:16.065 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.bit into \proj_hw_platform\system.bit. 
+13:25:16.065 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system_bd.bmm into \proj_hw_platform\system_bd.bmm. 
+13:25:18.609 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+13:25:20.561 INFO  - Updating hardware inferred compiler options for mario. 
+13:25:20.592 INFO  - Clearing existing target manager status. 
+13:26:22.618 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+13:27:31.020 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+13:29:18.262 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:29:50.615 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:45:40.796 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+13:54:03.517 INFO  - Processing command line option -hwspec C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml. 
+13:54:08.581 INFO  - Updating .bit and .bmm files from XPS's export folder. 
+13:54:19.659 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.bit into \proj_hw_platform\system.bit. 
+13:54:19.675 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system_bd.bmm into \proj_hw_platform\system_bd.bmm. 
+14:06:20.376 INFO  - Project proj_hw_platform's source hardware specification located at C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+14:15:01.946 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml into \proj_hw_platform\system.xml. 
+14:15:01.962 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.bit into \proj_hw_platform\system.bit. 
+14:15:01.962 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system_bd.bmm into \proj_hw_platform\system_bd.bmm. 
+14:15:03.457 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+14:15:05.155 INFO  - Updating hardware inferred compiler options for mario. 
+14:15:05.188 INFO  - Clearing existing target manager status. 
+14:15:08.882 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:20:02.343 INFO  - Processing command line option -hwspec C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml. 
+17:20:04.141 INFO  - The hardware specification for project 'proj_hw_platform' is different from C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml. 
+17:20:04.187 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml into \proj_hw_platform\system.xml. 
+17:20:04.203 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.bit into \proj_hw_platform\system.bit. 
+17:20:04.203 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system_bd.bmm into \proj_hw_platform\system_bd.bmm. 
+17:20:21.755 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+17:20:23.442 INFO  - Updating hardware inferred compiler options for mario. 
+17:20:23.458 INFO  - Clearing existing target manager status. 
+17:21:52.384 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+

@@ -1,5 +1,5 @@
 
-<EDKSYSTEM EDKVERSION="14.6" EDWVERSION="1.2" TIMESTAMP="Thu Nov 15 16:31:19 2018">
+<EDKSYSTEM EDKVERSION="14.6" EDWVERSION="1.2" TIMESTAMP="Fri Nov 16 16:26:58 2018">
 
   <SYSTEMINFO ARCH="virtex5" DEVICE="xc5vlx50t" PACKAGE="ff1136" PART="xc5vlx50tff1136-1" SOURCE="C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/system.xmp" SPEEDGRADE="-1"/>
 
@@ -15893,11 +15893,46 @@
         <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="8" NAME="C_SPLB_SUPPORT_BURSTS" TYPE="INTEGER" VALUE="0"/>
         <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="9" NAME="C_SPLB_NATIVE_DWIDTH" TYPE="INTEGER" VALUE="32"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="10" NAME="C_FIFO_EXIST" TYPE="INTEGER" VALUE="1"/>
-        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="11" NAME="C_SCK_RATIO" TYPE="INTEGER" VALUE="32"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="4" MPD_INDEX="11" NAME="C_SCK_RATIO" TYPE="INTEGER" VALUE="1024"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="12" NAME="C_NUM_SS_BITS" TYPE="INTEGER" VALUE="1"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="13" NAME="C_NUM_TRANSFER_BITS" TYPE="INTEGER" VALUE="8"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="55" NAME="IP2INTC_Irpt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="xps_spi_0_IP2INTC_Irpt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External Ports" PORT="xps_spi_0_IP2INTC_Irpt_pin"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MHS_INDEX="1" MPD_INDEX="58" NAME="MOSI" SIGNAME="xps_spi_0_MOSI" TRI_I="MOSI_I" TRI_O="MOSI_O" TRI_T="MOSI_T">
+          <DESCRIPTION>Master Out Slave In</DESCRIPTION>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External Ports" PORT="xps_spi_0_MOSI_pin"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MHS_INDEX="2" MPD_INDEX="59" NAME="SS" SIGNAME="xps_spi_0_SS" TRI_I="SS_I" TRI_O="SS_O" TRI_T="SS_T" VECFORMULA="[0:(C_NUM_SS_BITS-1)]">
+          <DESCRIPTION>Slave Select Vector</DESCRIPTION>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External Ports" PORT="xps_spi_0_SS_pin"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MHS_INDEX="3" MPD_INDEX="57" NAME="MISO" SIGNAME="xps_spi_0_MISO" TRI_I="MISO_I" TRI_O="MISO_O" TRI_T="MISO_T">
+          <DESCRIPTION>Master In Slave Out</DESCRIPTION>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External Ports" PORT="xps_spi_0_MISO_pin"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MHS_INDEX="4" MPD_INDEX="56" NAME="SCK" SIGNAME="xps_spi_0_SCK" TRI_I="SCK_I" TRI_O="SCK_O" TRI_T="SCK_T">
+          <DESCRIPTION>SPI Bus Clock</DESCRIPTION>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External Ports" PORT="xps_spi_0_SCK_pin"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" IOS="spi_0" IS_INSTANTIATED="TRUE" MHS_INDEX="5" MPD_INDEX="9" NAME="SPISEL" SIGNAME="net_vcc">
+          <DESCRIPTION>Local SPI Slave Select Active LOW Input</DESCRIPTION>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="net_vcc"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" IOS="spi_0" MPD_INDEX="0" NAME="SCK_I" SIGNAME="__NOC__">
           <CONNECTIONS/>
         </PORT>
@@ -15924,12 +15959,6 @@
         </PORT>
         <PORT DIR="O" IOS="spi_0" MPD_INDEX="8" NAME="MOSI_T" SIGNAME="__NOC__">
           <CONNECTIONS/>
-        </PORT>
-        <PORT DIR="I" IOS="spi_0" IS_INSTANTIATED="TRUE" MPD_INDEX="9" NAME="SPISEL" SIGNAME="net_gnd">
-          <DESCRIPTION>Local SPI Slave Select Active LOW Input</DESCRIPTION>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="net_gnd"/>
-          </CONNECTIONS>
         </PORT>
         <PORT DIR="I" IOS="spi_0" MPD_INDEX="10" NAME="SS_I" SIGNAME="__NOC__" VECFORMULA="[0:(C_NUM_SS_BITS-1)]">
           <CONNECTIONS/>
@@ -16150,35 +16179,6 @@
             <CONNECTION INSTANCE="mb_plb" PORT="Sl_MIRQ"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" IS_INSTANTIATED="TRUE" MPD_INDEX="55" NAME="IP2INTC_Irpt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="xps_spi_0_IP2INTC_Irpt">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External Ports" PORT="xps_spi_0_IP2INTC_Irpt_pin"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MPD_INDEX="56" NAME="SCK" SIGNAME="xps_spi_0_SCK" TRI_I="SCK_I" TRI_O="SCK_O" TRI_T="SCK_T">
-          <DESCRIPTION>SPI Bus Clock</DESCRIPTION>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External Ports" PORT="xps_spi_0_SCK"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MPD_INDEX="57" NAME="MISO" SIGNAME="xps_spi_0_MISO" TRI_I="MISO_I" TRI_O="MISO_O" TRI_T="MISO_T">
-          <DESCRIPTION>Master In Slave Out</DESCRIPTION>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External Ports" PORT="xps_spi_0_MISO"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MPD_INDEX="58" NAME="MOSI" SIGNAME="xps_spi_0_MOSI" TRI_I="MOSI_I" TRI_O="MOSI_O" TRI_T="MOSI_T">
-          <DESCRIPTION>Master Out Slave In</DESCRIPTION>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External Ports" PORT="xps_spi_0_MOSI"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="IO" IOS="spi_0" IS_INSTANTIATED="TRUE" IS_THREE_STATE="TRUE" MPD_INDEX="59" NAME="SS" SIGNAME="xps_spi_0_SS" TRI_I="SS_I" TRI_O="SS_O" TRI_T="SS_T" VECFORMULA="[0:(C_NUM_SS_BITS-1)]">
-          <DESCRIPTION>Slave Select Vector</DESCRIPTION>
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External Ports" PORT="xps_spi_0_SS"/>
-          </CONNECTIONS>
-        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="mb_plb" BUSSTD="PLBV46" BUSSTD_PSF="PLBV46" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="0" NAME="SPLB" TYPE="SLAVE">
@@ -16231,6 +16231,11 @@
       <IOINTERFACES>
         <IOINTERFACE MPD_INDEX="0" NAME="spi_0" TYPE="XIL_SPI_V1">
           <PORTMAPS>
+            <PORTMAP DIR="IO" PHYSICAL="MOSI"/>
+            <PORTMAP DIR="IO" PHYSICAL="SS"/>
+            <PORTMAP DIR="IO" PHYSICAL="MISO"/>
+            <PORTMAP DIR="IO" PHYSICAL="SCK"/>
+            <PORTMAP DIR="I" PHYSICAL="SPISEL"/>
             <PORTMAP DIR="I" PHYSICAL="SCK_I"/>
             <PORTMAP DIR="O" PHYSICAL="SCK_O"/>
             <PORTMAP DIR="O" PHYSICAL="SCK_T"/>
@@ -16240,14 +16245,9 @@
             <PORTMAP DIR="I" PHYSICAL="MOSI_I"/>
             <PORTMAP DIR="O" PHYSICAL="MOSI_O"/>
             <PORTMAP DIR="O" PHYSICAL="MOSI_T"/>
-            <PORTMAP DIR="I" PHYSICAL="SPISEL"/>
             <PORTMAP DIR="I" PHYSICAL="SS_I"/>
             <PORTMAP DIR="O" PHYSICAL="SS_O"/>
             <PORTMAP DIR="O" PHYSICAL="SS_T"/>
-            <PORTMAP DIR="IO" PHYSICAL="SCK"/>
-            <PORTMAP DIR="IO" PHYSICAL="MISO"/>
-            <PORTMAP DIR="IO" PHYSICAL="MOSI"/>
-            <PORTMAP DIR="IO" PHYSICAL="SS"/>
           </PORTMAPS>
         </IOINTERFACE>
       </IOINTERFACES>
@@ -16509,25 +16509,28 @@
         <CONNECTION INSTANCE="xps_spi_0" PORT="IP2INTC_Irpt"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" MHS_INDEX="49" NAME="xps_spi_0_MOSI" SIGNAME="xps_spi_0_MOSI">
+    <PORT DIR="IO" MHS_INDEX="49" NAME="xps_spi_0_MOSI_pin" SIGNAME="xps_spi_0_MOSI">
       <CONNECTIONS>
         <CONNECTION BUSINTERFACE="[spi_0]" INSTANCE="xps_spi_0" PORT="MOSI"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" ENDIAN="BIG" LEFT="0" LSB="0" MHS_INDEX="50" MSB="0" NAME="xps_spi_0_SS" RIGHT="0" SIGNAME="xps_spi_0_SS">
+    <PORT DIR="IO" MHS_INDEX="50" NAME="xps_spi_0_SS_pin" SIGNAME="xps_spi_0_SS">
       <CONNECTIONS>
         <CONNECTION BUSINTERFACE="[spi_0]" INSTANCE="xps_spi_0" PORT="SS"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" MHS_INDEX="51" NAME="xps_spi_0_MISO" SIGNAME="xps_spi_0_MISO">
+    <PORT DIR="IO" MHS_INDEX="51" NAME="xps_spi_0_MISO_pin" SIGNAME="xps_spi_0_MISO">
       <CONNECTIONS>
         <CONNECTION BUSINTERFACE="[spi_0]" INSTANCE="xps_spi_0" PORT="MISO"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" MHS_INDEX="52" NAME="xps_spi_0_SCK" SIGNAME="xps_spi_0_SCK">
+    <PORT DIR="IO" MHS_INDEX="52" NAME="xps_spi_0_SCK_pin" SIGNAME="xps_spi_0_SCK">
       <CONNECTIONS>
         <CONNECTION BUSINTERFACE="[spi_0]" INSTANCE="xps_spi_0" PORT="SCK"/>
       </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" MHS_INDEX="53" NAME="xps_spi_0_SPISEL_pin" SIGNAME="xps_spi_0_SPISEL">
+      <CONNECTIONS/>
     </PORT>
   </EXTERNALPORTS>
 

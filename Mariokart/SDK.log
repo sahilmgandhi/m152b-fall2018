@@ -152,3 +152,13 @@
 11:33:56.686 INFO  - Closing and re-opening the MSS file of ther project HelloCamera_bsp 
 11:33:57.823 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
 11:42:03.129 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+12:09:36.722 INFO  - Project camera_hw_platform's source hardware specification located at C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+12:09:36.847 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.xml into \camera_hw_platform\system.xml. 
+12:09:38.219 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system.bit into \camera_hw_platform\system.bit. 
+12:09:38.890 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\Mariokart\VmodCam\proj\SDK\SDK_Export\hw\system_bd.bmm into \camera_hw_platform\system_bd.bmm. 
+12:09:39.811 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+12:09:44.007 INFO  - Updating hardware inferred compiler options for HelloCamera. 
+12:09:44.038 INFO  - Clearing existing target manager status. 
+12:09:48.984 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+12:11:44.657 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

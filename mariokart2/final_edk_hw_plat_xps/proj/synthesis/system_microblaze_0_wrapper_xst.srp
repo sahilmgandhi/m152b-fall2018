@@ -1,10 +1,10 @@
 Release 14.6 - xst P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\proj\synthesis\xst_temp_dir\
+--> Parameter TMPDIR set to C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\synthesis\xst_temp_dir\
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> 
 TABLE OF CONTENTS
@@ -30,7 +30,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_microblaze_0_wrapper_xst.prj"
-Verilog Include Directory          : {"C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\proj\pcores\" "C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\pcores\" "C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc5vlx50tff1136-1
@@ -354,7 +354,7 @@ Compiling vhdl file "C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mi
 Entity <MicroBlaze> compiled.
 WARNING:HDLParsers:3293 - "C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_b/hdl/vhdl/microblaze.vhd" Line 1155. Constant 'C_CORE_GENERATION_INFO' C_CORE_GENERATION_INFO is not locally static.
 Entity <MicroBlaze> (Architecture <IMP>) compiled.
-Compiling vhdl file "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/system_microblaze_0_wrapper.vhd" in Library work.
+Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/system_microblaze_0_wrapper.vhd" in Library work.
 Entity <system_microblaze_0_wrapper> compiled.
 Entity <system_microblaze_0_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -1251,7 +1251,7 @@ WARNING:Xst:795 - "C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/micr
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <system_microblaze_0_wrapper> in library <work> (Architecture <STRUCTURE>).
-WARNING:Xst:752 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/system_microblaze_0_wrapper.vhd" line 1472: Unconnected input port 'Config_Reset' of component 'microblaze' is tied to default value.
+WARNING:Xst:752 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/system_microblaze_0_wrapper.vhd" line 1472: Unconnected input port 'Config_Reset' of component 'microblaze' is tied to default value.
 Entity <system_microblaze_0_wrapper> analyzed. Unit <system_microblaze_0_wrapper> generated.
 
 Analyzing generic Entity <microblaze> in library <microblaze_v8_50_b> (Architecture <IMP>).
@@ -4546,7 +4546,7 @@ Unit <microblaze> synthesized.
 
 
 Synthesizing Unit <system_microblaze_0_wrapper>.
-    Related source file is "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/system_microblaze_0_wrapper.vhd".
+    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/system_microblaze_0_wrapper.vhd".
 Unit <system_microblaze_0_wrapper> synthesized.
 
 
@@ -9019,11 +9019,11 @@ Delay:               1.895ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 231.00 secs
-Total CPU time to Xst completion: 230.81 secs
+Total CPU time to Xst completion: 231.03 secs
  
 --> 
 
-Total memory usage is 600032 kilobytes
+Total memory usage is 628888 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings : 4751 (   0 filtered)

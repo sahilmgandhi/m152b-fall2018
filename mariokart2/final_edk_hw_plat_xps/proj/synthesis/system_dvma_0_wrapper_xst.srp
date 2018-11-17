@@ -1,6 +1,6 @@
 Release 14.6 - xst P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\proj\synthesis\xst_temp_dir\
+--> Parameter TMPDIR set to C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\synthesis\xst_temp_dir\
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -30,7 +30,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_dvma_0_wrapper_xst.prj"
-Verilog Include Directory          : {"C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\proj\pcores\" "C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\pcores\" "C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc5vlx50tff1136-1
@@ -87,13 +87,13 @@ Entity <plb_slave_attachment> (Architecture <implementation>) compiled.
 Compiling vhdl file "C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plbv46_slave_single.vhd" in Library plbv46_slave_single_v1_01_a.
 Entity <plbv46_slave_single> compiled.
 Entity <plbv46_slave_single> (Architecture <implementation>) compiled.
-Compiling vhdl file "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/IPRepository/pcores/dvma_v1_00_a/hdl/vhdl/user_logic.vhd" in Library dvma_v1_00_a.
+Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/IPRepository/pcores/dvma_v1_00_a/hdl/vhdl/user_logic.vhd" in Library dvma_v1_00_a.
 Entity <user_logic> compiled.
 Entity <user_logic> (Architecture <IMP>) compiled.
-Compiling vhdl file "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/IPRepository/pcores/dvma_v1_00_a/hdl/vhdl/dvma.vhd" in Library dvma_v1_00_a.
+Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/IPRepository/pcores/dvma_v1_00_a/hdl/vhdl/dvma.vhd" in Library dvma_v1_00_a.
 Entity <dvma> compiled.
 Entity <dvma> (Architecture <IMP>) compiled.
-Compiling vhdl file "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/system_dvma_0_wrapper.vhd" in Library work.
+Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/system_dvma_0_wrapper.vhd" in Library work.
 Entity <system_dvma_0_wrapper> compiled.
 Entity <system_dvma_0_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -703,7 +703,7 @@ Entity <user_logic> analyzed. Unit <user_logic> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <user_logic>.
-    Related source file is "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/IPRepository/pcores/dvma_v1_00_a/hdl/vhdl/user_logic.vhd".
+    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/IPRepository/pcores/dvma_v1_00_a/hdl/vhdl/user_logic.vhd".
 WARNING:Xst:647 - Input <VFBC_RD_DATA<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <XSVI_HSYNC>.
     Found 1-bit register for signal <XSVI_ACTIVE_VIDEO>.
@@ -1036,7 +1036,7 @@ Unit <plbv46_slave_single> synthesized.
 
 
 Synthesizing Unit <dvma>.
-    Related source file is "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/IPRepository/pcores/dvma_v1_00_a/hdl/vhdl/dvma.vhd".
+    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/IPRepository/pcores/dvma_v1_00_a/hdl/vhdl/dvma.vhd".
 WARNING:Xst:646 - Signal <ipif_Bus2IP_RNW> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <ipif_Bus2IP_CS<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <ipif_Bus2IP_Addr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -1044,7 +1044,7 @@ Unit <dvma> synthesized.
 
 
 Synthesizing Unit <system_dvma_0_wrapper>.
-    Related source file is "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/system_dvma_0_wrapper.vhd".
+    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/system_dvma_0_wrapper.vhd".
 Unit <system_dvma_0_wrapper> synthesized.
 
 
@@ -1474,12 +1474,12 @@ Delay:               0.334ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 47.00 secs
-Total CPU time to Xst completion: 46.73 secs
+Total REAL time to Xst completion: 48.00 secs
+Total CPU time to Xst completion: 48.03 secs
  
 --> 
 
-Total memory usage is 1290720 kilobytes
+Total memory usage is 1290456 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  118 (   0 filtered)

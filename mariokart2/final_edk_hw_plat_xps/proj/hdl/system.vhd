@@ -58,10 +58,11 @@ entity system is
     Cam_Iic_1_Sda_pin : inout std_logic;
     Cam_Iic_1_Scl_pin : inout std_logic;
     xps_spi_0_IP2INTC_Irpt_pin : out std_logic;
-    xps_spi_0_MOSI : inout std_logic;
-    xps_spi_0_SS : inout std_logic_vector(0 to 0);
-    xps_spi_0_MISO : inout std_logic;
-    xps_spi_0_SCK : inout std_logic
+    xps_spi_0_MOSI_pin : inout std_logic;
+    xps_spi_0_SS_pin : inout std_logic;
+    xps_spi_0_MISO_pin : inout std_logic;
+    xps_spi_0_SCK_pin : inout std_logic;
+    xps_spi_0_SPISEL_pin : in std_logic
   );
 end system;
 
@@ -7976,7 +7977,7 @@ begin
       MOSI_I => xps_spi_0_MOSI_I,
       MOSI_O => xps_spi_0_MOSI_O,
       MOSI_T => xps_spi_0_MOSI_T,
-      SPISEL => net_gnd0,
+      SPISEL => net_vcc0,
       SS_I => xps_spi_0_SS_I(0 to 0),
       SS_O => xps_spi_0_SS_O(0 to 0),
       SS_T => xps_spi_0_SS_T,
@@ -8084,7 +8085,7 @@ begin
   iobuf_7 : IOBUF
     port map (
       I => xps_spi_0_MOSI_O,
-      IO => xps_spi_0_MOSI,
+      IO => xps_spi_0_MOSI_pin,
       O => xps_spi_0_MOSI_I,
       T => xps_spi_0_MOSI_T
     );
@@ -8092,7 +8093,7 @@ begin
   iobuf_8 : IOBUF
     port map (
       I => xps_spi_0_SS_O(0),
-      IO => xps_spi_0_SS(0),
+      IO => xps_spi_0_SS_pin,
       O => xps_spi_0_SS_I(0),
       T => xps_spi_0_SS_T
     );
@@ -8100,7 +8101,7 @@ begin
   iobuf_9 : IOBUF
     port map (
       I => xps_spi_0_MISO_O,
-      IO => xps_spi_0_MISO,
+      IO => xps_spi_0_MISO_pin,
       O => xps_spi_0_MISO_I,
       T => xps_spi_0_MISO_T
     );
@@ -8108,7 +8109,7 @@ begin
   iobuf_10 : IOBUF
     port map (
       I => xps_spi_0_SCK_O,
-      IO => xps_spi_0_SCK,
+      IO => xps_spi_0_SCK_pin,
       O => xps_spi_0_SCK_I,
       T => xps_spi_0_SCK_T
     );

@@ -1,36 +1,6 @@
-16:53:35 **** Auto Build of configuration Debug for project mario ****
+17:20:35 **** Incremental Build of configuration Debug for project mario ****
 make all 
-Building file: ../src/main.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main1':
-../src/main.c:26:6: warning: unused variable 'color' [-Wunused-variable]
-Finished building: ../src/main.c
- 
-Building target: mario.elf
-Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/helloworld.o ./src/main.o ./src/platform.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: mario.elf
- 
-Invoking: MicroBlaze Print Size
-mb-size mario.elf  |tee "mario.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   2430	    308	   2080	   4818	   12d2	mario.elf
-Finished building: mario.elf.size
- 
-Invoking: Xilinx ELF Check
-elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.6 Build EDK_P.68d
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+make: Nothing to be done for `all'.
 
-Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
-mario.elf 
-
-ELF file	: mario.elf
-elfcheck passed.
-Finished building: mario.elf.elfcheck
- 
-
-16:53:37 Build Finished (took 1s.778ms)
+17:20:35 Build Finished (took 156ms)
 

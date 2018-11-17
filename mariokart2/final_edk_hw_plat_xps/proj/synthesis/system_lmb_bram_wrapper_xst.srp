@@ -1,10 +1,10 @@
 Release 14.6 - xst P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\proj\synthesis\xst_temp_dir\
+--> Parameter TMPDIR set to C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\synthesis\xst_temp_dir\
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> 
 TABLE OF CONTENTS
@@ -30,7 +30,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_lmb_bram_wrapper_xst.prj"
-Verilog Include Directory          : {"C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\proj\pcores\" "C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\pcores\" "C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc5vlx50tff1136-1
@@ -57,10 +57,10 @@ Cores Search Directories           : {../implementation}
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" in Library lmb_bram_elaborate_v1_00_a.
+Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" in Library lmb_bram_elaborate_v1_00_a.
 Entity <lmb_bram_elaborate> compiled.
 Entity <lmb_bram_elaborate> (Architecture <STRUCTURE>) compiled.
-Compiling vhdl file "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/system_lmb_bram_wrapper.vhd" in Library work.
+Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/system_lmb_bram_wrapper.vhd" in Library work.
 Entity <system_lmb_bram_wrapper> compiled.
 Entity <system_lmb_bram_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -91,13 +91,13 @@ Analyzing generic Entity <lmb_bram_elaborate> in library <lmb_bram_elaborate_v1_
 	C_NUM_WE = 4
 	C_PORT_AWIDTH = 32
 	C_PORT_DWIDTH = 32
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 570: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_0> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_0.mem" for instance <ramb36_0> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_0> in unit <lmb_bram_elaborate>.
@@ -108,13 +108,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_0> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_0> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_0> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 613: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_1> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_1.mem" for instance <ramb36_1> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_1> in unit <lmb_bram_elaborate>.
@@ -125,13 +125,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_1> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_1> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_1> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 656: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_2> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_2.mem" for instance <ramb36_2> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_2> in unit <lmb_bram_elaborate>.
@@ -142,13 +142,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_2> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_2> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_2> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 699: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_3> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_3.mem" for instance <ramb36_3> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_3> in unit <lmb_bram_elaborate>.
@@ -159,13 +159,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_3> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_3> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_3> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 742: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_4> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_4.mem" for instance <ramb36_4> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_4> in unit <lmb_bram_elaborate>.
@@ -176,13 +176,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_4> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_4> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_4> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 785: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_5> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_5.mem" for instance <ramb36_5> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_5> in unit <lmb_bram_elaborate>.
@@ -193,13 +193,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_5> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_5> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_5> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 828: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_6> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_6.mem" for instance <ramb36_6> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_6> in unit <lmb_bram_elaborate>.
@@ -210,13 +210,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_6> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_6> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_6> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 871: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_7> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_7.mem" for instance <ramb36_7> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_7> in unit <lmb_bram_elaborate>.
@@ -227,13 +227,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_7> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_7> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_7> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 914: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_8> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_8.mem" for instance <ramb36_8> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_8> in unit <lmb_bram_elaborate>.
@@ -244,13 +244,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_8> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_8> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_8> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 957: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_9> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_9.mem" for instance <ramb36_9> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_9> in unit <lmb_bram_elaborate>.
@@ -261,13 +261,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_9> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_9> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_9> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1000: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_10> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_10.mem" for instance <ramb36_10> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_10> in unit <lmb_bram_elaborate>.
@@ -278,13 +278,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_10> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_10> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_10> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1043: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_11> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_11.mem" for instance <ramb36_11> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_11> in unit <lmb_bram_elaborate>.
@@ -295,13 +295,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_11> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_11> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_11> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1086: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_12> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_12.mem" for instance <ramb36_12> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_12> in unit <lmb_bram_elaborate>.
@@ -312,13 +312,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_12> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_12> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_12> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1129: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_13> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_13.mem" for instance <ramb36_13> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_13> in unit <lmb_bram_elaborate>.
@@ -329,13 +329,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_13> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_13> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_13> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1172: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_14> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_14.mem" for instance <ramb36_14> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_14> in unit <lmb_bram_elaborate>.
@@ -346,13 +346,13 @@ WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platf
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_14> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  2" for instance <ramb36_14> in unit <lmb_bram_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  2" for instance <ramb36_14> in unit <lmb_bram_elaborate>.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd" line 1215: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_15> in unit <lmb_bram_elaborate>.
     Set user-defined property "INIT_FILE =  lmb_bram_combined_15.mem" for instance <ramb36_15> in unit <lmb_bram_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_15> in unit <lmb_bram_elaborate>.
@@ -373,7 +373,7 @@ Entity <lmb_bram_elaborate> analyzed. Unit <lmb_bram_elaborate> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <lmb_bram_elaborate>.
-    Related source file is "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd".
+    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/elaborate/lmb_bram_elaborate_v1_00_a/hdl/vhdl/lmb_bram_elaborate.vhd".
 WARNING:Xst:647 - Input <BRAM_Addr_A<0:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <BRAM_Addr_A<30:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <BRAM_Addr_B<0:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -417,7 +417,7 @@ Unit <lmb_bram_elaborate> synthesized.
 
 
 Synthesizing Unit <system_lmb_bram_wrapper>.
-    Related source file is "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/system_lmb_bram_wrapper.vhd".
+    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/system_lmb_bram_wrapper.vhd".
 Unit <system_lmb_bram_wrapper> synthesized.
 
 
@@ -654,11 +654,11 @@ Offset:              2.180ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.06 secs
  
 --> 
 
-Total memory usage is 375904 kilobytes
+Total memory usage is 376152 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  151 (   0 filtered)

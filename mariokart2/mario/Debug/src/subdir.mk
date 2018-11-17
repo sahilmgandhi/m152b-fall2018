@@ -5,7 +5,6 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../src/cam_ctrl.c \
-../src/helloworld.c \
 ../src/main.c \
 ../src/platform.c \
 ../src/vmodcam_cfg.c 
@@ -15,14 +14,12 @@ LD_SRCS += \
 
 OBJS += \
 ./src/cam_ctrl.o \
-./src/helloworld.o \
 ./src/main.o \
 ./src/platform.o \
 ./src/vmodcam_cfg.o 
 
 C_DEPS += \
 ./src/cam_ctrl.d \
-./src/helloworld.d \
 ./src/main.d \
 ./src/platform.d \
 ./src/vmodcam_cfg.d 

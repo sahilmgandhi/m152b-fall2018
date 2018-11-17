@@ -284,7 +284,7 @@ Analyzing hierarchy for entity <xps_spi> in library <xps_spi_v2_02_a> (architect
 	C_HIGHADDR = "10000011010000001111111111111111"
 	C_NUM_SS_BITS = 1
 	C_NUM_TRANSFER_BITS = 8
-	C_SCK_RATIO = 32
+	C_SCK_RATIO = 1024
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 1
@@ -347,7 +347,7 @@ Analyzing hierarchy for entity <spi_module> in library <xps_spi_v2_02_a> (archit
 	C_NUM_BITS_REG = 10
 	C_NUM_SS_BITS = 1
 	C_NUM_TRANSFER_BITS = 8
-	C_SCK_RATIO = 32
+	C_SCK_RATIO = 1024
 
 Analyzing hierarchy for entity <plb_slave_attachment> in library <plbv46_slave_single_v1_01_a> (architecture <implementation>) with generics.
 	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000011010000000000000000000000",
@@ -577,7 +577,7 @@ Analyzing generic Entity <xps_spi> in library <xps_spi_v2_02_a> (Architecture <i
 	C_HIGHADDR = "10000011010000001111111111111111"
 	C_NUM_SS_BITS = 1
 	C_NUM_TRANSFER_BITS = 8
-	C_SCK_RATIO = 32
+	C_SCK_RATIO = 1024
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 1
@@ -919,7 +919,7 @@ Analyzing generic Entity <spi_module> in library <xps_spi_v2_02_a> (Architecture
 	C_NUM_BITS_REG = 10
 	C_NUM_SS_BITS = 1
 	C_NUM_TRANSFER_BITS = 8
-	C_SCK_RATIO = 32
+	C_SCK_RATIO = 1024
     Set user-defined property "INIT =  1" for instance <SPI_TRISTATE_CONTROL_II> in unit <spi_module>.
     Set user-defined property "IOB =  true" for instance <SPI_TRISTATE_CONTROL_II> in unit <spi_module>.
     Set user-defined property "INIT =  1" for instance <SPI_TRISTATE_CONTROL_III> in unit <spi_module>.
@@ -1211,7 +1211,7 @@ WARNING:Xst:1780 - Signal <SCK_O_1> is never used or assigned. This unconnected 
     Found 5-bit adder for signal <Count$addsub0000> created at line 868.
     Found 1-bit register for signal <Count_trigger>.
     Found 1-bit register for signal <Count_trigger_d1>.
-    Found 4-bit down counter for signal <Ratio_Count>.
+    Found 9-bit down counter for signal <Ratio_Count>.
     Found 8-bit register for signal <rx_shft_reg_mode_0011>.
     Found 8-bit register for signal <rx_shft_reg_mode_0110>.
     Found 8-bit register for signal <rx_shft_reg_s>.
@@ -1381,7 +1381,7 @@ Macro Statistics
  5-bit adder                                           : 1
  9-bit subtractor                                      : 1
 # Counters                                             : 1
- 4-bit down counter                                    : 1
+ 9-bit down counter                                    : 1
 # Registers                                            : 170
  1-bit register                                        : 155
  3-bit register                                        : 1
@@ -1411,7 +1411,7 @@ Macro Statistics
  5-bit adder                                           : 1
  9-bit subtractor                                      : 1
 # Counters                                             : 1
- 4-bit down counter                                    : 1
+ 9-bit down counter                                    : 1
 # Registers                                            : 376
  Flip-Flops                                            : 376
 # Xors                                                 : 19
@@ -1569,8 +1569,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 267
- Flip-Flops                                            : 267
+# Registers                                            : 272
+ Flip-Flops                                            : 272
 
 =========================================================================
 
@@ -1598,25 +1598,27 @@ Design Statistics
 # IOs                              : 283
 
 Cell Usage :
-# BELS                             : 262
+# BELS                             : 294
 #      GND                         : 1
-#      INV                         : 3
-#      LUT2                        : 35
-#      LUT3                        : 35
+#      INV                         : 10
+#      LUT1                        : 1
+#      LUT2                        : 42
+#      LUT3                        : 34
 #      LUT4                        : 47
 #      LUT5                        : 31
-#      LUT6                        : 93
+#      LUT6                        : 94
+#      MUXCY                       : 8
 #      MUXCY_L                     : 8
 #      VCC                         : 1
-#      XORCY                       : 8
-# FlipFlops/Latches                : 267
-#      FD                          : 13
+#      XORCY                       : 17
+# FlipFlops/Latches                : 272
+#      FD                          : 22
 #      FDE                         : 16
 #      FDR                         : 96
 #      FDRE                        : 91
 #      FDRS                        : 21
 #      FDRSE                       : 10
-#      FDS                         : 13
+#      FDS                         : 9
 #      FDSE                        : 7
 # Shift Registers                  : 16
 #      SRL16E                      : 16
@@ -1629,18 +1631,18 @@ Selected Device : 5vlx50tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             261  out of  28800     0%  
- Number of Slice LUTs:                  260  out of  28800     0%  
-    Number used as Logic:               244  out of  28800     0%  
+ Number of Slice Registers:             266  out of  28800     0%  
+ Number of Slice LUTs:                  275  out of  28800     0%  
+    Number used as Logic:               259  out of  28800     0%  
     Number used as Memory:               16  out of   7680     0%  
        Number used as SRL:               16
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    376
-   Number with an unused Flip Flop:     115  out of    376    30%  
-   Number with an unused LUT:           116  out of    376    30%  
-   Number of fully used LUT-FF pairs:   145  out of    376    38%  
-   Number of unique control sets:        71
+ Number of LUT Flip Flop pairs used:    392
+   Number with an unused Flip Flop:     126  out of    392    32%  
+   Number with an unused LUT:           117  out of    392    29%  
+   Number of fully used LUT-FF pairs:   149  out of    392    38%  
+   Number of unique control sets:        70
 
 IO Utilization: 
  Number of IOs:                         283
@@ -1670,7 +1672,7 @@ Clock Information:
 -----------------------------------+-------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                             | Load  |
 -----------------------------------+-------------------------------------------------------------------+-------+
-SPLB_Clk                           | NONE(xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_31)| 283   |
+SPLB_Clk                           | NONE(xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_31)| 288   |
 -----------------------------------+-------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -1694,7 +1696,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SPLB_Clk'
   Clock period: 3.168ns (frequency: 315.657MHz)
-  Total number of paths / destination ports: 3364 / 609
+  Total number of paths / destination ports: 3479 / 610
 -------------------------------------------------------------------------
 Delay:               3.168ns (Levels of Logic = 3)
   Source:            xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/plb_abus_reg_18 (FF)
@@ -1707,7 +1709,7 @@ Delay:               3.168ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q              1   0.471   1.069  xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/plb_abus_reg_18 (xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/plb_abus_reg_18)
-     LUT6:I0->O            1   0.094   0.789  xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].GEN_PLB_SHARED.MEM_SELECT_I/CS1180_SW0 (N34)
+     LUT6:I0->O            1   0.094   0.789  xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].GEN_PLB_SHARED.MEM_SELECT_I/CS1180_SW0 (N36)
      LUT6:I2->O           15   0.094   0.557  xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].GEN_PLB_SHARED.MEM_SELECT_I/CS1180 (xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/N01)
      LUT6:I5->O            2   0.094   0.000  xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].GEN_PLB_SHARED.MEM_SELECT_I/CS2 (xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/pselect_hit_i<1>)
      FDRE:D                   -0.018          xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_16
@@ -1717,7 +1719,7 @@ Delay:               3.168ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 330 / 316
+  Total number of paths / destination ports: 335 / 321
 -------------------------------------------------------------------------
 Offset:              2.365ns (Levels of Logic = 2)
   Source:            SPLB_Rst (PAD)
@@ -1728,7 +1730,7 @@ Offset:              2.365ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT6:I0->O            1   0.094   0.480  xps_spi_0/ip2Bus_WrAck_int_SW4 (N66)
+     LUT6:I0->O            1   0.094   0.480  xps_spi_0/ip2Bus_WrAck_int_SW4 (N70)
      LUT6:I5->O           11   0.094   0.391  xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/wrce_clr1 (xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/wrce_clr)
      FDRE:R                    0.573          xps_spi_0/I_PLBv46_IPIF/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_16
     ----------------------------------------
@@ -1759,11 +1761,11 @@ Offset:              2.309ns (Levels of Logic = 2)
 
 
 Total REAL time to Xst completion: 30.00 secs
-Total CPU time to Xst completion: 29.73 secs
+Total CPU time to Xst completion: 29.82 secs
  
 --> 
 
-Total memory usage is 1153240 kilobytes
+Total memory usage is 1154072 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  245 (   0 filtered)

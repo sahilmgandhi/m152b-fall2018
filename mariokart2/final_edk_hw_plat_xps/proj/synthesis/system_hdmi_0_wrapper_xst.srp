@@ -1,6 +1,6 @@
 Release 14.6 - xst P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\proj\synthesis\xst_temp_dir\
+--> Parameter TMPDIR set to C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\synthesis\xst_temp_dir\
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -30,7 +30,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_hdmi_0_wrapper_xst.prj"
-Verilog Include Directory          : {"C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\proj\pcores\" "C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\pcores\" "C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\IPRepository\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc5vlx50tff1136-1
@@ -87,16 +87,16 @@ Entity <plb_slave_attachment> (Architecture <implementation>) compiled.
 Compiling vhdl file "C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plbv46_slave_single.vhd" in Library plbv46_slave_single_v1_01_a.
 Entity <plbv46_slave_single> compiled.
 Entity <plbv46_slave_single> (Architecture <implementation>) compiled.
-Compiling vhdl file "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/IPRepository/pcores/hdmi_v1_00_a/hdl/vhdl/hdmi.vhd" in Library hdmi_v1_00_a.
+Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/IPRepository/pcores/hdmi_v1_00_a/hdl/vhdl/hdmi.vhd" in Library hdmi_v1_00_a.
 Entity <hdmi> compiled.
 Entity <hdmi> (Architecture <IMP>) compiled.
-Compiling vhdl file "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/system_hdmi_0_wrapper.vhd" in Library work.
+Compiling vhdl file "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/system_hdmi_0_wrapper.vhd" in Library work.
 Entity <system_hdmi_0_wrapper> compiled.
 Entity <system_hdmi_0_wrapper> (Architecture <STRUCTURE>) compiled.
-Compiling verilog file "C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/iic_init_7301.v" in library hdmi_v1_00_a
-Compiling verilog file "C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/oddr_12.v" in library hdmi_v1_00_a
+Compiling verilog file "C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/iic_init_7301.v" in library hdmi_v1_00_a
+Compiling verilog file "C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/oddr_12.v" in library hdmi_v1_00_a
 Module <iic_init_7301> compiled
-Compiling verilog file "C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/user_logic.v" in library hdmi_v1_00_a
+Compiling verilog file "C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/user_logic.v" in library hdmi_v1_00_a
 Module <oddr_12> compiled
 Module <user_logic> compiled
 No errors in compilation
@@ -507,7 +507,7 @@ Entity <or_muxcy> analyzed. Unit <or_muxcy> generated.
 Analyzing module <user_logic> in library <hdmi_v1_00_a>.
 	C_NUM_REG = 32'sb00000000000000000000000000010000
 	C_SLV_DWIDTH = 32'sb00000000000000000000000000100000
-WARNING:Xst:905 - "C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/user_logic.v" line 380: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:905 - "C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/user_logic.v" line 380: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <debug_reg0>
 Module <user_logic> is correct for synthesis.
  
@@ -685,7 +685,7 @@ Unit <or_muxcy> synthesized.
 
 
 Synthesizing Unit <iic_init_7301>.
-    Related source file is "C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/iic_init_7301.v".
+    Related source file is "C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/iic_init_7301.v".
     Found finite state machine <FSM_0> for signal <c_state>.
     -----------------------------------------------------------------------
     | States             | 7                                              |
@@ -720,12 +720,12 @@ Unit <or_gate128> synthesized.
 
 
 Synthesizing Unit <oddr_12>.
-    Related source file is "C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/oddr_12.v".
+    Related source file is "C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/oddr_12.v".
 Unit <oddr_12> synthesized.
 
 
 Synthesizing Unit <user_logic>.
-    Related source file is "C:\Users\CS152B\Desktop\RMJ\final_project\final_edk_hw_platform\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/user_logic.v".
+    Related source file is "C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\IPRepository\pcores\hdmi_v1_00_a/hdl/verilog/user_logic.v".
 WARNING:Xst:646 - Signal <slv_reg0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 32-bit register for signal <debug_reg0>.
     Found 32-bit register for signal <slv_reg1>.
@@ -842,7 +842,7 @@ Unit <plbv46_slave_single> synthesized.
 
 
 Synthesizing Unit <hdmi>.
-    Related source file is "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/IPRepository/pcores/hdmi_v1_00_a/hdl/vhdl/hdmi.vhd".
+    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/IPRepository/pcores/hdmi_v1_00_a/hdl/vhdl/hdmi.vhd".
 WARNING:Xst:646 - Signal <ipif_Bus2IP_RNW> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <ipif_Bus2IP_CS<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <ipif_Bus2IP_Addr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -850,7 +850,7 @@ Unit <hdmi> synthesized.
 
 
 Synthesizing Unit <system_hdmi_0_wrapper>.
-    Related source file is "C:/Users/CS152B/Desktop/RMJ/final_project/final_edk_hw_platform/proj/hdl/system_hdmi_0_wrapper.vhd".
+    Related source file is "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/hdl/system_hdmi_0_wrapper.vhd".
 Unit <system_hdmi_0_wrapper> synthesized.
 
 
@@ -1226,12 +1226,12 @@ Delay:               0.238ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 27.00 secs
-Total CPU time to Xst completion: 27.65 secs
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 28.85 secs
  
 --> 
 
-Total memory usage is 860448 kilobytes
+Total memory usage is 860184 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  105 (   0 filtered)

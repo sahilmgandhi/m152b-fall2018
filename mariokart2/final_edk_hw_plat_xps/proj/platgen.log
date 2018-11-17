@@ -21,35 +21,35 @@ Read MPD definitions ...
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for
    architecture 'virtex5lx' -
    C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\pro
-   j\system.mhs line 94 
+   j\system.mhs line 95 
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for
    architecture 'virtex5lx' -
    C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\pro
-   j\system.mhs line 101 
+   j\system.mhs line 102 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
    C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\pro
-   j\system.mhs line 108 
+   j\system.mhs line 109 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
    C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\pro
-   j\system.mhs line 117 
+   j\system.mhs line 118 
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for
    architecture 'virtex5lx' -
    C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\pro
-   j\system.mhs line 94 
+   j\system.mhs line 95 
 WARNING:EDK:4088 - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for
    architecture 'virtex5lx' -
    C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\pro
-   j\system.mhs line 101 
+   j\system.mhs line 102 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
    C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\pro
-   j\system.mhs line 108 
+   j\system.mhs line 109 
 WARNING:EDK:4088 - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded
    core for architecture 'virtex5lx' -
    C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\pro
-   j\system.mhs line 117 
+   j\system.mhs line 118 
 
 Overriding IP level properties ...
 INFO:EDK:4130 - IPNAME: mpmc, INSTANCE:DDR2_SDRAM - tcl is overriding PARAMETER
@@ -439,6 +439,10 @@ WARNING:EDK:4180 - PORT: VFBC3_Rd_Flush, CONNECTOR: Cam_Ctrl_1_VFBC_OUT_rd_flush
    - No driver found. Port will be driven to GND -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mpmc_v6_06_a\data\mp
    mc_v2_1_0.mpd line 1751 
+WARNING:EDK:4181 - PORT: xps_spi_0_SPISEL_pin, CONNECTOR: xps_spi_0_SPISEL -
+   floating connection -
+   C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\pro
+   j\system.mhs line 71 
 WARNING:EDK:4181 - PORT: VFBC1_Wd_Full, CONNECTOR: dvma_0_VFBC_IN_wd_full -
    floating connection -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mpmc_v6_06_a\data\mp
@@ -474,11 +478,11 @@ WARNING:EDK:4181 - PORT: VFBC3_Rd_Almost_Empty, CONNECTOR:
 WARNING:EDK:4181 - PORT: IP2INTC_Irpt, CONNECTOR: Button_IP2INTC_Irpt - floating
    connection -
    C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\pro
-   j\system.mhs line 361 
+   j\system.mhs line 362 
 WARNING:EDK:4181 - PORT: IP2INTC_Irpt, CONNECTOR: enc_sig_b_IP2INTC_Irpt -
    floating connection -
    C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\pro
-   j\system.mhs line 385 
+   j\system.mhs line 386 
 
 Performing Clock DRCs...
 
@@ -1066,75 +1070,81 @@ Managing hardware (BBD-specified) netlist files ...
 Managing cache ...
 IPNAME:microblaze INSTANCE:microblaze_0 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 73 - Copying cache implementation netlist
+ystem.mhs line 74 - Copying cache implementation netlist
+IPNAME:plb_v46 INSTANCE:mb_plb -
+C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
+ystem.mhs line 88 - Copying cache implementation netlist
 IPNAME:lmb_v10 INSTANCE:ilmb -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 94 - Copying cache implementation netlist
+ystem.mhs line 95 - Copying cache implementation netlist
 IPNAME:lmb_v10 INSTANCE:dlmb -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 101 - Copying cache implementation netlist
+ystem.mhs line 102 - Copying cache implementation netlist
 IPNAME:lmb_bram_if_cntlr INSTANCE:dlmb_cntlr -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 108 - Copying cache implementation netlist
+ystem.mhs line 109 - Copying cache implementation netlist
 IPNAME:lmb_bram_if_cntlr INSTANCE:ilmb_cntlr -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 117 - Copying cache implementation netlist
+ystem.mhs line 118 - Copying cache implementation netlist
 IPNAME:bram_block INSTANCE:lmb_bram -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 126 - Copying cache implementation netlist
+ystem.mhs line 127 - Copying cache implementation netlist
 IPNAME:xps_uartlite INSTANCE:rs232_uart_0 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 133 - Copying cache implementation netlist
+ystem.mhs line 134 - Copying cache implementation netlist
 IPNAME:mpmc INSTANCE:ddr2_sdram -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 147 - Copying cache implementation netlist
+ystem.mhs line 148 - Copying cache implementation netlist
 IPNAME:mdm INSTANCE:mdm_0 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 232 - Copying cache implementation netlist
+ystem.mhs line 233 - Copying cache implementation netlist
 IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 244 - Copying cache implementation netlist
+ystem.mhs line 245 - Copying cache implementation netlist
 IPNAME:dvma INSTANCE:dvma_0 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 257 - Copying cache implementation netlist
+ystem.mhs line 258 - Copying cache implementation netlist
 IPNAME:hdmi INSTANCE:hdmi_0 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 269 - Copying cache implementation netlist
+ystem.mhs line 270 - Copying cache implementation netlist
 IPNAME:vmodcam_ctrl INSTANCE:cam_ctrl_0 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 287 - Copying cache implementation netlist
+ystem.mhs line 288 - Copying cache implementation netlist
 IPNAME:vmodcam_ctrl INSTANCE:cam_ctrl_1 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 305 - Copying cache implementation netlist
+ystem.mhs line 306 - Copying cache implementation netlist
 IPNAME:xps_iic INSTANCE:cam_iic_0 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 323 - Copying cache implementation netlist
+ystem.mhs line 324 - Copying cache implementation netlist
 IPNAME:xps_iic INSTANCE:cam_iic_1 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 333 - Copying cache implementation netlist
+ystem.mhs line 334 - Copying cache implementation netlist
 IPNAME:xps_intc INSTANCE:xps_intc_0 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 343 - Copying cache implementation netlist
+ystem.mhs line 344 - Copying cache implementation netlist
 IPNAME:xps_gpio INSTANCE:button -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 353 - Copying cache implementation netlist
+ystem.mhs line 354 - Copying cache implementation netlist
 IPNAME:xps_gpio INSTANCE:enc_sig_a -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 365 - Copying cache implementation netlist
+ystem.mhs line 366 - Copying cache implementation netlist
 IPNAME:xps_gpio INSTANCE:enc_sig_b -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 377 - Copying cache implementation netlist
+ystem.mhs line 378 - Copying cache implementation netlist
 IPNAME:xps_timer INSTANCE:xps_timer_0 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 389 - Copying cache implementation netlist
+ystem.mhs line 390 - Copying cache implementation netlist
+IPNAME:xps_spi INSTANCE:xps_spi_0 -
+C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
+ystem.mhs line 398 - Copying cache implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:lmb_bram -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 126 - elaborating IP
+ystem.mhs line 127 - elaborating IP
 IPNAME:clock_generator INSTANCE:clock_generator_0 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 195 - elaborating IP
+ystem.mhs line 196 - elaborating IP
 ClkGen elaborate status: PASSED
 ----------------------------------------
 ----------------------------------------
@@ -1158,24 +1168,18 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:mb_plb -
-C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 87 - Running XST synthesis
 INSTANCE:clock_generator_0 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 195 - Running XST synthesis
-INSTANCE:xps_spi_0 -
-C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 397 - Running XST synthesis
+ystem.mhs line 196 - Running XST synthesis
 
 Running NGCBUILD ...
 IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
 C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\s
-ystem.mhs line 195 - Running NGCBUILD
+ystem.mhs line 196 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 74.00 seconds
+Total run time: 22.00 seconds

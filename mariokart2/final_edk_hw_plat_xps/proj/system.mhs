@@ -64,10 +64,11 @@
  PORT Cam_Iic_1_Sda_pin = Cam_Iic_1_Sda, DIR = IO
  PORT Cam_Iic_1_Scl_pin = Cam_Iic_1_Scl, DIR = IO
  PORT xps_spi_0_IP2INTC_Irpt_pin = xps_spi_0_IP2INTC_Irpt, DIR = O, SIGIS = INTERRUPT, SENSITIVITY = LEVEL_HIGH
- PORT xps_spi_0_MOSI = xps_spi_0_MOSI, DIR = IO
- PORT xps_spi_0_SS = xps_spi_0_SS, DIR = IO, VEC = [0:0]
- PORT xps_spi_0_MISO = xps_spi_0_MISO, DIR = IO
- PORT xps_spi_0_SCK = xps_spi_0_SCK, DIR = IO
+ PORT xps_spi_0_MOSI_pin = xps_spi_0_MOSI, DIR = IO
+ PORT xps_spi_0_SS_pin = xps_spi_0_SS, DIR = IO
+ PORT xps_spi_0_MISO_pin = xps_spi_0_MISO, DIR = IO
+ PORT xps_spi_0_SCK_pin = xps_spi_0_SCK, DIR = IO
+ PORT xps_spi_0_SPISEL_pin = xps_spi_0_SPISEL, DIR = I
 
 
 BEGIN microblaze
@@ -399,12 +400,13 @@ BEGIN xps_spi
  PARAMETER HW_VER = 2.02.a
  PARAMETER C_BASEADDR = 0x83400000
  PARAMETER C_HIGHADDR = 0x8340ffff
+ PARAMETER C_SCK_RATIO = 1024
  BUS_INTERFACE SPLB = mb_plb
  PORT IP2INTC_Irpt = xps_spi_0_IP2INTC_Irpt
  PORT MOSI = xps_spi_0_MOSI
  PORT SS = xps_spi_0_SS
  PORT MISO = xps_spi_0_MISO
  PORT SCK = xps_spi_0_SCK
- PORT SPISEL = net_gnd
+ PORT SPISEL = net_vcc
 END
 

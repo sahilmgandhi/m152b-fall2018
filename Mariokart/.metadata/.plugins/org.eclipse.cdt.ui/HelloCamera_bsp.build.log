@@ -1,4 +1,4 @@
-11:33:58 **** Build of project HelloCamera_bsp ****
+12:09:57 **** Build of project HelloCamera_bsp ****
 make -k all 
 libgen -hw ../camera_hw_platform/system.xml\
 	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
@@ -6,7 +6,7 @@ libgen -hw ../camera_hw_platform/system.xml\
 	       -log libgen.log \
 	       system.mss
 libgen
-Xilinx EDK 14.6 Build EDK_P.68d
+Xilinx EDK 2013.2 Build EDK_P.68d
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
@@ -42,5 +42,5 @@ Compiling cpu
 Running execs_generate.
 Finished building libraries
 
-11:34:14 Build Finished (took 15s.754ms)
+12:10:32 Build Finished (took 34s.616ms)
 

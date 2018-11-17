@@ -169,7 +169,7 @@ begin
       C_SPLB_SUPPORT_BURSTS => 0,
       C_SPLB_NATIVE_DWIDTH => 32,
       C_FIFO_EXIST => 1,
-      C_SCK_RATIO => 32,
+      C_SCK_RATIO => 1024,
       C_NUM_SS_BITS => 1,
       C_NUM_TRANSFER_BITS => 8
     )

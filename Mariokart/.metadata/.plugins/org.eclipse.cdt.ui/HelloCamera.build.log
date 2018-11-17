@@ -1,5 +1,51 @@
-11:34:14 **** Build of configuration Debug for project HelloCamera ****
+12:10:32 **** Build of configuration Debug for project HelloCamera ****
 make all 
+Building file: ../src/bmp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bmp.d" -MT"src/bmp.d" -o "src/bmp.o" "../src/bmp.c"
+../src/bmp.c: In function 'bm_save':
+../src/bmp.c:647:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'bm_from_Xpm':
+../src/bmp.c:3059:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'bm_atoi':
+../src/bmp.c:3996:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:3999:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:3999:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:3999:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4012:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4038:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4050:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4050:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4050:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4064:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4084:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4097:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4111:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4111:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4116:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4116:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4132:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4144:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4148:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4148:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4149:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4149:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4149:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4150:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4160:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4161:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4171:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4172:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'bm_load_palette':
+../src/bmp.c:5052:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:5063:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'bm_text_width':
+../src/bmp.c:5117:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'sf_puts':
+../src/bmp.c:5299:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:5300:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+Finished building: ../src/bmp.c
+ 
 Building file: ../src/cam_ctrl.c
 Invoking: MicroBlaze gcc compiler
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
@@ -24,5 +70,5 @@ mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/
 ../src/platform.c:86:24: note: each undeclared identifier is reported only once for each function it appears in
 make: *** [src/platform.o] Error 1
 
-11:34:15 Build Finished (took 652ms)
+12:10:34 Build Finished (took 2s.309ms)
 

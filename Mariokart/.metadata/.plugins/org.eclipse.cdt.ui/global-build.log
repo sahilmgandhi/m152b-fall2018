@@ -1855,3 +1855,133 @@ mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/
 ../src/platform.c:86:24: error: 'XPAR_RS232_UART_0_BASEADDR' undeclared (first use in this function)
 ../src/platform.c:86:24: note: each undeclared identifier is reported only once for each function it appears in
 make: *** [src/platform.o] Error 1
+12:09:37 **** Auto Build of project HelloCamera_bsp ****
+make -k all 
+Finished building libraries
+12:09:38 **** Auto Build of project HelloCamera_bsp ****
+make -k all 
+Finished building libraries
+12:09:39 **** Auto Build of project HelloCamera_bsp ****
+make -k all 
+Finished building libraries
+12:09:49 **** Clean-only build of project HelloCamera_bsp ****
+make -k clean 
+rm -rf microblaze_0
+12:09:57 **** Clean-only build of configuration Debug for project HelloCamera ****
+make clean 
+rm -rf  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/vmodcam_cfg.o  ./src/cam_ctrl.d ./src/main.d ./src/platform.d ./src/vmodcam_cfg.d  HelloCamera.elf.size  HelloCamera.elf.elfcheck  HelloCamera.elf
+ 
+12:09:57 **** Build of project HelloCamera_bsp ****
+make -k all 
+libgen -hw ../camera_hw_platform/system.xml\
+	       -lp C:/sw_repository/drivers -lp C:/sw_repository\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../camera_hw_platform/system.xml -lp
+C:/sw_repository/drivers -lp C:/sw_repository -pe microblaze_0 -log libgen.log
+system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling lldma
+Compiling standalone
+Compiling iic
+Compiling mpmc
+Compiling bram
+Compiling uartlite
+Compiling gpio
+Compiling spi
+Compiling tmrctr
+Compiling uartns550
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+12:10:32 **** Build of configuration Debug for project HelloCamera ****
+make all 
+Building file: ../src/bmp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bmp.d" -MT"src/bmp.d" -o "src/bmp.o" "../src/bmp.c"
+../src/bmp.c: In function 'bm_save':
+../src/bmp.c:647:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'bm_from_Xpm':
+../src/bmp.c:3059:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'bm_atoi':
+../src/bmp.c:3996:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:3999:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:3999:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:3999:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4012:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4038:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4050:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4050:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4050:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4064:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4084:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4097:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4111:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4111:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4116:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4116:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4132:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4144:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4148:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4148:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4149:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4149:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4149:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4150:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4160:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4161:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4171:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4172:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'bm_load_palette':
+../src/bmp.c:5052:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:5063:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'bm_text_width':
+../src/bmp.c:5117:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'sf_puts':
+../src/bmp.c:5299:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:5300:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+Finished building: ../src/bmp.c
+ 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+../src/cam_ctrl.c: In function 'CamStatus':
+../src/cam_ctrl.c:124:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/cam_ctrl.c
+ 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'SpiPoll':
+../src/main.c:33:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:57:6: warning: return type of 'main' is not 'int' [-Wmain]
+Finished building: ../src/main.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../HelloCamera_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+../src/platform.c: In function 'init_uart':
+../src/platform.c:86:24: error: 'XPAR_RS232_UART_0_BASEADDR' undeclared (first use in this function)
+../src/platform.c:86:24: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/platform.o] Error 1
