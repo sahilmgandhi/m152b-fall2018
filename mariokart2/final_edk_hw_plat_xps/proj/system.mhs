@@ -407,6 +407,6 @@ BEGIN xps_spi
  PORT SS = xps_spi_0_SS
  PORT MISO = xps_spi_0_MISO
  PORT SCK = xps_spi_0_SCK
- PORT SPISEL = net_vcc
+ PORT SPISEL = xps_spi_0_SPISEL
 END
 

@@ -59,3 +59,118 @@
 	at java.net.SocketInputStream.read(Unknown Source)
 	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
 
+17:21:52.384 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+14:34:10.789 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+14:38:19.523 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:38:31.428 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:41:37.303 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:41:41.844 WARN  - Terminating existing sessions on processor microblaze_0 
+14:41:46.541 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+14:44:12.763 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:44:20.845 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:45:29.544 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+14:45:29.544 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:00:03.871 INFO  - Processing command line option -hwspec C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml. 
+15:00:05.981 INFO  - The hardware specification for project 'proj_hw_platform' is different from C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml. 
+15:00:06.043 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml into \proj_hw_platform\system.xml. 
+15:00:06.059 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.bit into \proj_hw_platform\system.bit. 
+15:00:06.075 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system_bd.bmm into \proj_hw_platform\system_bd.bmm. 
+15:00:07.996 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+15:00:09.948 INFO  - Updating hardware inferred compiler options for mario. 
+15:00:09.979 INFO  - Clearing existing target manager status. 
+15:00:54.211 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+15:07:21.882 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:07:45.254 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+15:09:36.973 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+15:09:49.269 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+15:10:17.075 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+15:10:39.849 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+15:11:44.201 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+15:12:38.916 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+15:13:24.381 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+15:19:54.830 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+15:19:54.830 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+15:24:51.807 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+15:26:05.677 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:26:31.310 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+15:26:31.310 ERROR - Timeout occured while waiting to get reply for command "set_cur_system" 
+15:26:31.528 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Debug Operation Not Supported on the Target
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+15:26:39.796 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:26:41.107 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+15:26:50.592 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:26:51.793 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+15:26:59.016 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:27:19.804 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+15:28:19.102 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:43:17.893 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+15:49:20.059 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:58:20.986 INFO  - Processing command line option -hwspec C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml. 
+15:58:27.461 INFO  - Updating .bit and .bmm files from XPS's export folder. 
+15:58:34.234 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.bit into \proj_hw_platform\system.bit. 
+15:58:34.249 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system_bd.bmm into \proj_hw_platform\system_bd.bmm. 
+15:58:37.043 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+15:58:49.868 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:04:35.183 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:13:15.598 INFO  - Processing command line option -hwspec C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.xml. 
+16:13:20.668 INFO  - Updating .bit and .bmm files from XPS's export folder. 
+16:14:08.108 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.bit into \proj_hw_platform\system.bit. 
+16:14:08.108 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system_bd.bmm into \proj_hw_platform\system_bd.bmm. 

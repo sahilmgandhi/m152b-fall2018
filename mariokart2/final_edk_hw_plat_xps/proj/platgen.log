@@ -439,10 +439,6 @@ WARNING:EDK:4180 - PORT: VFBC3_Rd_Flush, CONNECTOR: Cam_Ctrl_1_VFBC_OUT_rd_flush
    - No driver found. Port will be driven to GND -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mpmc_v6_06_a\data\mp
    mc_v2_1_0.mpd line 1751 
-WARNING:EDK:4181 - PORT: xps_spi_0_SPISEL_pin, CONNECTOR: xps_spi_0_SPISEL -
-   floating connection -
-   C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\pro
-   j\system.mhs line 71 
 WARNING:EDK:4181 - PORT: VFBC1_Wd_Full, CONNECTOR: dvma_0_VFBC_IN_wd_full -
    floating connection -
    C:\Xilinx\14.6\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mpmc_v6_06_a\data\mp
@@ -1152,10 +1148,10 @@ ClkGen elaborate status: PASSED
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 2.00 seconds
+Completion time: 1.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 0.00 seconds
+Completion time: 1.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -1182,4 +1178,4 @@ INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
 
 Rebuilding cache ...
 
-Total run time: 22.00 seconds
+Total run time: 28.00 seconds

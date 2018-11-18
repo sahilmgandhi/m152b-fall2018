@@ -1,5 +1,5 @@
 
-<EDKSYSTEM EDKVERSION="14.6" EDWVERSION="1.2" TIMESTAMP="Fri Nov 16 17:07:03 2018">
+<EDKSYSTEM EDKVERSION="14.6" EDWVERSION="1.2" TIMESTAMP="Sat Nov 17 14:46:37 2018">
 
   <SYSTEMINFO ARCH="virtex5" DEVICE="xc5vlx50t" PACKAGE="ff1136" PART="xc5vlx50tff1136-1" SOURCE="C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/final_edk_hw_plat_xps/proj/system.xmp" SPEEDGRADE="-1"/>
 
@@ -271,7 +271,9 @@
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" MHS_INDEX="53" NAME="xps_spi_0_SPISEL_pin" SIGNAME="xps_spi_0_SPISEL">
-      <CONNECTIONS/>
+      <CONNECTIONS>
+        <CONNECTION BUSINTERFACE="[spi_0]" INSTANCE="xps_spi_0" PORT="SPISEL"/>
+      </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
 
@@ -17217,10 +17219,10 @@
             <CONNECTION INSTANCE="External Ports" PORT="xps_spi_0_SCK_pin"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" IOS="spi_0" IS_INSTANTIATED="TRUE" MHS_INDEX="5" MPD_INDEX="9" NAME="SPISEL" SIGNAME="net_vcc">
+        <PORT DIR="I" IOS="spi_0" IS_INSTANTIATED="TRUE" MHS_INDEX="5" MPD_INDEX="9" NAME="SPISEL" SIGNAME="xps_spi_0_SPISEL">
           <DESCRIPTION>Local SPI Slave Select Active LOW Input</DESCRIPTION>
           <CONNECTIONS>
-            <CONNECTION INSTANCE="net_vcc"/>
+            <CONNECTION INSTANCE="External Ports" PORT="xps_spi_0_SPISEL_pin"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" IOS="spi_0" MPD_INDEX="0" NAME="SCK_I" SIGNAME="__NOC__"/>

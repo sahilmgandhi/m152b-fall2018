@@ -24,39 +24,45 @@
 #define blDvmaVTR		0x00000030 // V Total Reg Offset
 
 #define BUFFER_SIZE		5
-static XSpi  SpiInstance;
-u8 ReadBuffer[BUFFER_SIZE];
-u8 WriteBuffer[BUFFER_SIZE];
+static XSpi SPIINST;
+Xuint8 readBuffer[BUFFER_SIZE] = {0,0,0,0,0};
+Xuint8 writeBuffer[BUFFER_SIZE] = {0,0,0,0,0};
 
 void print(char *str);
 
-int SpiPoll(XSpi *SpiInstance, u16 SpiID){
-	WriteBuffer[4] = 0b10000010;
-	int Status;
+int SpiPoll(XSpi *spiInst, u16 spiID){
+//	writeBuffer[4] = 0b10000000;
+	int status;
 	u32 Count;
 	u8 Test;
 	XSpi_Config *ConfigPtr;	/* Pointer to Configuration data */
 
-	ConfigPtr = XSpi_LookupConfig(SpiID);
+	ConfigPtr = XSpi_LookupConfig(spiID);
 	if (ConfigPtr == NULL) {
 		xil_printf("Device not found");
 		return 1;
 	}
-	Status = XSpi_CfgInitialize(SpiInstance, ConfigPtr, ConfigPtr->BaseAddress);
-	if (Status != XST_SUCCESS) {
+//	status = XSpi_CfgInitialize(spiInst, ConfigPtr, ConfigPtr->BaseAddress);
+
+	status = XSpi_Initialize(spiInst, spiID);
+	xil_printf("Status: %d\n\r", status);
+	if (status == XST_DEVICE_IS_STARTED) {
 		xil_printf("Initialization failed");
-		return 1;
+		XSpi_Reset(spiInst);
+		status = XSpi_Initialize(spiInst, spiID);
+		//return 1;
 	}
-	XSpi_SetOptions(SpiInstance, XSP_MASTER_OPTION);
-	XSpi_Start(SpiInstance);
-	XSpi_IntrGlobalDisable(SpiInstance);
-	XSpi_SetSlaveSelect(SpiInstance, 0x01);
+	XSpi_SetOptions(spiInst, XSP_MASTER_OPTION);
+	status = XSpi_Start(spiInst);
+	XSpi_IntrGlobalDisable(spiInst);
+	XSpi_SetSlaveSelect(spiInst, 0x01);
 	while(1){
-		XSpi_Transfer(SpiInstance, WriteBuffer, ReadBuffer, BUFFER_SIZE);
+		XSpi_Transfer(spiInst, &writeBuffer[0], &readBuffer[0], BUFFER_SIZE);
 		for (Count = 0; Count < BUFFER_SIZE; Count++) {
-			xil_printf("%x", ReadBuffer[Count]);
+			xil_printf("%x", readBuffer[Count]);
 		}
 		xil_printf("\n\r");
+//		return 1;
 	}
 	return 0;
 
@@ -67,7 +73,30 @@ int main() {
 
 	xil_printf("sadlfkasd");
 	//while(1)
-	SpiPoll(&SpiInstance, XPAR_XPS_SPI_0_DEVICE_ID);
+	SpiPoll(&SPIINST, XPAR_XPS_SPI_0_DEVICE_ID);
+
+//	XSpi spi1;
+//	int status;
+//	status = XSpi_Initialize(&spi1, XPAR_XPS_SPI_0_DEVICE_ID);
+//	if (status == XST_DEVICE_IS_STARTED) {
+//			xil_printf("Initialization failed");
+//			XSpi_Reset(&spi1);
+//			status = XSpi_Initialize(&spi1, XPAR_XPS_SPI_0_DEVICE_ID);
+//	}
+//	XSpi_SetOptions(&spi1, XSP_MASTER_OPTION);
+//	status = XSpi_Start(&spi1);
+//	XSpi_IntrGlobalDisable(&spi1);
+//	XSpi_SetSlaveSelect(&spi1, 0x01);
+//
+//	XSpi_Transfer(&spi1, &writeBuffer[0], &readBuffer[0], 5);
+//
+//	int yy = readBuffer[2];
+//	yy |= readBuffer[3] << 8;
+//	int xx = readBuffer[0];
+//	xx |= readBuffer[1] << 8;
+//
+//	xil_printf("X is %d, and Y is %d \n\r", xx, yy);
+
 
 //	u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;
 //	int posX, posY;

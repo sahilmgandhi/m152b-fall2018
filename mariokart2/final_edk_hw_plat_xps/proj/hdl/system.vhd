@@ -4159,6 +4159,7 @@ architecture STRUCTURE of system is
   signal xps_spi_0_SCK_I : std_logic;
   signal xps_spi_0_SCK_O : std_logic;
   signal xps_spi_0_SCK_T : std_logic;
+  signal xps_spi_0_SPISEL : std_logic;
   signal xps_spi_0_SS_I : std_logic_vector(0 to 0);
   signal xps_spi_0_SS_O : std_logic_vector(0 to 0);
   signal xps_spi_0_SS_T : std_logic;
@@ -4219,6 +4220,7 @@ begin
   Cam_Ctrl_1_CAM_LV <= Cam_Ctrl_1_CAM_LV_pin;
   Cam_Ctrl_1_CAM_DATA <= Cam_Ctrl_1_CAM_DATA_pin;
   xps_spi_0_IP2INTC_Irpt_pin <= xps_spi_0_IP2INTC_Irpt;
+  xps_spi_0_SPISEL <= xps_spi_0_SPISEL_pin;
   net_gnd0 <= '0';
   net_gnd1(0 downto 0) <= B"0";
   net_gnd10(0 to 9) <= B"0000000000";
@@ -7977,7 +7979,7 @@ begin
       MOSI_I => xps_spi_0_MOSI_I,
       MOSI_O => xps_spi_0_MOSI_O,
       MOSI_T => xps_spi_0_MOSI_T,
-      SPISEL => net_vcc0,
+      SPISEL => xps_spi_0_SPISEL,
       SS_I => xps_spi_0_SS_I(0 to 0),
       SS_O => xps_spi_0_SS_O(0 to 0),
       SS_T => xps_spi_0_SS_T,
