@@ -79,6 +79,10 @@
 #define INT1_XHIE		0x02
 #define INT1_XLIE		0x01
 
+#define GYRO_SCALE_2000DPS 0b10
+#define GYRO_SCALE_500DPS  0b01
+#define GYRO_SCALE_250DPS  0b00
+
 /* ------------------------------------------------------------ */
 /*				Bit masks Definitions							*/
 /* ------------------------------------------------------------ */
@@ -103,6 +107,7 @@ bool GYRO_Int2Status(PmodGYRO *InstancePtr);
 u16 GYRO_getX(PmodGYRO *InstancePtr);
 u16 GYRO_getY(PmodGYRO *InstancePtr);
 u16 GYRO_getZ(PmodGYRO *InstancePtr);
+u8 GYRO_getTemp(PmodGYRO *InstancePtr);
 u8 GYRO_getInt1Src(PmodGYRO *InstancePtr);
 bool GYRO_enableInt1(PmodGYRO *InstancePtr, u8 mode);
 bool GYRO_disableInt1(PmodGYRO *InstancePtr);
@@ -113,7 +118,8 @@ bool GYRO_setThsYL(PmodGYRO *InstancePtr, u8 ths);
 bool GYRO_setThsYH(PmodGYRO *InstancePtr, u8 ths);
 bool GYRO_setThsZL(PmodGYRO *InstancePtr, u8 ths);
 bool GYRO_setThsZH(PmodGYRO *InstancePtr, u8 ths);
-bool GYRO_begin(PmodGYRO* InstancePtr, u32 SPI_Address);
+
+bool GYRO_begin(PmodGYRO* InstancePtr, u32 SPI_Address, u32 GPIO_Address);
 void GYRO_end(PmodGYRO* InstancePtr);
 int GYRO_SPIInit(XSpi *SpiInstancePtr);
 void GYRO_WriteByte(PmodGYRO* InstancePtr, u8 cmd);

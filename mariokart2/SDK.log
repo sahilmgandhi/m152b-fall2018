@@ -209,3 +209,13 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 15:46:35.906 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 15:46:41.138 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 15:46:58.651 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:51:46.557 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+16:51:46.557 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+13:29:08.603 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+13:38:15.600 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+13:39:26.730 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:40:27.817 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:40:54.832 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 

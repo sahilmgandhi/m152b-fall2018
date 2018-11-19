@@ -7,9 +7,7 @@
 #include "xparameters.h"
 #include "cam_ctrl_header.h"
 #include "vmodcam_header.h"
-#include "gyro.h"
-#include "pmodACL.h"
-
+#include "pmodGYRO.h"
 
 #define blDvmaCR		0x00000000 // Control Reg Offset
 #define blDvmaFWR		0x00000004 // Frame Width Reg Offset
@@ -114,18 +112,57 @@ int readGyroReg(XSpi * gyro, u8 reg, int nData){
 
 int main() {
 	init_platform();
-	PmodACL pACL;
-	ACL_begin(&pACL, XPAR_XPS_SPI_0_BASEADDR);
-	u16 x, y, z;
-	int a = 20;
-	while(a > 0){
-		ACL_begin(&pACL, XPAR_XPS_SPI_0_BASEADDR);
-		ReadAccel(&pACL, &x, &y, &z);
-		xil_printf("X: %d, Y: %d, Z: %d \n\r", x, y, z);
-		a--;
-		//GYRO_end(&pGYRO);
-	}
+	PmodGYRO pgyr;
 
+	GYRO_begin(&pgyr, XPAR_XPS_SPI_0_BASEADDR, XPAR_SPI_0_BASEADDR);
+//	GYRO_setThsXH(&pgyr, 0x0F);
+	GYRO_enableInt1(&pgyr, INT1_XHIE);
+	GYRO_enableInt2(&pgyr, REG3_I2_DRDY);
+
+	u8 temp = 0x0F;
+	GYRO_WriteReg(&pgyr, CTRL_REG1, &temp, 1);
+
+	temp = 0x07;
+	GYRO_WriteReg(&pgyr, CTRL_REG3, &temp, 1);
+	temp = 1 << 4;
+	GYRO_WriteReg(&pgyr, CTRL_REG4, &temp, 1);
+	u16 x, y, z;
+	u16 xx, yy, zz;
+	u8 temperature;
+	int a = 20;
+	u8 whoami = 0;
+	GYRO_ReadReg(&pgyr, 0x0F, &whoami, 1);
+	xil_printf("WHOAMI: %x \n\r", whoami);
+//	GYRO_end(&pgyr);
+	while(a > 0){
+		GYRO_begin(&pgyr, XPAR_XPS_SPI_0_BASEADDR, XPAR_SPI_0_BASEADDR);
+		GYRO_ReadReg(&pgyr, OUT_X_H, &temp, 1);
+		x = temp << 8;
+		GYRO_ReadReg(&pgyr, OUT_X_L, &temp, 1);
+		x |= temp;
+
+		GYRO_ReadReg(&pgyr, OUT_Y_H, &temp, 1);
+		y = temp << 8;
+		GYRO_ReadReg(&pgyr, OUT_Y_L, &temp, 1);
+		y |= temp;
+
+		GYRO_ReadReg(&pgyr, OUT_Z_H, &temp, 1);
+		z = temp << 8;
+		GYRO_ReadReg(&pgyr, OUT_Z_L, &temp, 1);
+		z |= temp;
+
+		temperature = GYRO_getTemp(&pgyr);
+
+		xx = GYRO_getX(&pgyr);
+		yy = GYRO_getY(&pgyr);
+		zz = GYRO_getZ(&pgyr);
+
+//		xil_printf("X: %d, Y: %d, Z: %d\n\r", x, y, z);
+		xil_printf("XX: %d, YY: %d, ZZ: %d, Temp: %d\n\r", xx, yy, zz, temperature);		// This just prints out all 0s ... so looks like that library's getX/Y/Z is incorrect
+		a--;
+		GYRO_end(&pgyr);
+	}
+	GYRO_end(&pgyr);
 
 //	//while(1)
 //	spiSetup(&SPIINST, XPAR_XPS_SPI_0_DEVICE_ID);

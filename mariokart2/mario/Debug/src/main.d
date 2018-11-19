@@ -12,8 +12,8 @@ src/main.d: ../src/main.c ../../mario_bsp/microblaze_0/include/xio.h \
  ../../mario_bsp/microblaze_0/include/xil_printf.h \
  ../../mario_bsp/microblaze_0/include/xparameters.h \
  ../src/cam_ctrl_header.h ../src/vmodcam_header.h \
- ../../mario_bsp/microblaze_0/include/xstatus.h ../src/gyro.h \
- ../src/pmodACL.h ../../mario_bsp/microblaze_0/include/xil_types.h
+ ../../mario_bsp/microblaze_0/include/xstatus.h ../src/pmodGYRO.h \
+ ../../mario_bsp/microblaze_0/include/xil_types.h
 
 ../../mario_bsp/microblaze_0/include/xio.h:
 
@@ -51,8 +51,6 @@ src/main.d: ../src/main.c ../../mario_bsp/microblaze_0/include/xio.h \
 
 ../../mario_bsp/microblaze_0/include/xstatus.h:
 
-../src/gyro.h:
-
-../src/pmodACL.h:
+../src/pmodGYRO.h:
 
 ../../mario_bsp/microblaze_0/include/xil_types.h:

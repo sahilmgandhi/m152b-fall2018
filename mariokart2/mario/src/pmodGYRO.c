@@ -124,7 +124,7 @@ u16 GYRO_getX(PmodGYRO *InstancePtr)
 	u8 temp[2] = {0,0};
 	u16 xAxis = 0;
 
-	GYRO_ReadReg(InstancePtr, 0x32, temp, 2);
+	GYRO_ReadReg(InstancePtr, OUT_X_L, temp, 2);
 
 	xAxis = temp[0];
 	xAxis |= (temp[1] << 8);
@@ -154,7 +154,7 @@ u16 GYRO_getY(PmodGYRO *InstancePtr)
 	u8 temp[2] = {0,0};
 	u16 yAxis = 0;
 
-	GYRO_ReadReg(InstancePtr, 0x34, temp, 2);
+	GYRO_ReadReg(InstancePtr, OUT_Y_L, temp, 2);
 
 	yAxis = temp[0];
 	yAxis |= (temp[1] << 8);
@@ -184,12 +184,39 @@ u16 GYRO_getZ(PmodGYRO *InstancePtr)
 	u8 temp[2] = {0,0};
 	u16 zAxis = 0;
 
-	GYRO_ReadReg(InstancePtr, 0x36, temp, 2);
+	GYRO_ReadReg(InstancePtr, OUT_Z_L, temp, 2);
 
 	zAxis = temp[0];
 	zAxis |= (temp[1] << 8);
 
 	return zAxis;
+}
+
+/* ------------------------------------------------------------ */
+/***	GYRO_getTemp
+**
+**	Parameters:
+**		InstancePtr - PmodGYRO object to send to
+**
+**	Return Value:
+**		temp	- the current temperature reading
+**
+**	Errors:
+**		none
+**
+**	Description:
+**		Grabs the current temperature reading in celsius and converts
+**		to farenheit
+*/
+u8 GYRO_getTemp(PmodGYRO *InstancePtr)
+{
+	u8 temp = 0;
+
+	GYRO_ReadReg(InstancePtr, OUT_TEMP, (u8 *) &temp, 1);
+
+	temp = 44 - temp; // celsius
+	temp = 32 + (1.8 * temp); // converts to farenheit
+	return temp;
 }
 
 /* ------------------------------------------------------------ */
@@ -478,11 +505,12 @@ bool GYRO_setThsZL(PmodGYRO *InstancePtr, u8 ths)
 **	Description:
 **		Initialize the PmodGYRO.
 */
-bool GYRO_begin(PmodGYRO* InstancePtr, u32 SPI_Address)
+bool GYRO_begin(PmodGYRO* InstancePtr, u32 SPI_Address, u32 GPIO_Address)
 {
 	u8 temp = 0;
 
 	GYROConfig.BaseAddress=SPI_Address;
+	InstancePtr->GPIO_Base_Addr=GPIO_Address;
 
 	GYRO_SPIInit(&InstancePtr->GYROSpi);
 
