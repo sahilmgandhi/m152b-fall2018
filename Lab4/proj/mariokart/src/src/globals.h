@@ -55,7 +55,9 @@
 // the road
 #define GRAY 0xAAA
 
+// Car is white
 #define CAR_COLOR 0xFFF
+// Road is gray
 #define ROAD 0xAAA
 
 #endif
