@@ -157,20 +157,20 @@ void movePlayer(struct game *game, int16_t newX, int16_t newY)
   game->screen[game->playerXPos][game->playerYPos] = CAR_COLOR;
 }
 
-//void textOnTopLeft(struct game *game, char[] text){
-//  Bitmap *b = bm_create(128,128);
-//
-//  bm_set_color(b, bm_atoi("white"));
-//  bm_puts(b, 30, 60, text);
-//
-//  for(int i = 0; i < 128; i++){
-//	  for (int j = 0; j < 128; j++){
-//		  game->screen[i][j] = bm_get(b, i, j);
-//		  //printf("%d", bm_get(b, 60, 60));
-//	  }
-//  }
-//
-//  bm_free(b);
-//}
+void textOnTopLeft(struct game *game, char[] text){
+  Bitmap *b = bm_create(128,128);
+
+  bm_set_color(b, bm_atoi("white"));
+  bm_puts(b, 30, 60, text);
+  
+  for(int i = 0; i < 128; i++){
+	  for (int j = 0; j < 128; j++){
+		  game->screen[i][j] = bm_get(b, i, j);
+		  //printf("%d", bm_get(b, 60, 60));
+	  }
+  }
+  
+  bm_free(b);
+}
 
 #endif

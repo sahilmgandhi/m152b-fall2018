@@ -247,7 +247,6 @@ int main()
 			XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (posY * 2560 + posX), BLUE);
 
 	drawGameState(&g);
-	clearDisplay();
 
 	return 0;
 }

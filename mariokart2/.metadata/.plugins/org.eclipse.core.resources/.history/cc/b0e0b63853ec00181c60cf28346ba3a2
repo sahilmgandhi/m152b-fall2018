@@ -71,7 +71,7 @@ int CamCtrlInit(u32 lCamCtrlBaseAddress, u32 fOptions, u32 blBaseAddr) {
 			XIo_Out32(lCamCtrlBaseAddress + blCamCtrlCR, 0x00000001); // CamCtrl enable
 			break;
 		case CAM_CFG_800x600:
-			xil_printf("enter cam config 800x600");
+			printf("enter cam config 800x600");
 			XIo_Out32(lCamCtrlBaseAddress + blCamCtrlFWR, 832); // frame width
 			XIo_Out32(lCamCtrlBaseAddress + blCamCtrlFHR, 600); // frame height
 			XIo_Out32(lCamCtrlBaseAddress + blCamCtrlFBAR, XPAR_DDR2_SDRAM_MPMC_BASEADDR + blBaseAddr); // frame base addr

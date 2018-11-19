@@ -205,14 +205,9 @@ void gyroPlayground()
 	//	}
 }
 
-struct game g;
-
 int main()
 {
 	init_platform();
-
-	clearDisplay();
-	initGame(&g, 1);
 
 	u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;
 	int posX, posY;
@@ -237,17 +232,13 @@ int main()
 	XIo_Out32(lDvmaBaseAddress + blDvmaFLSR, 0x00000A00);					 // frame line stride
 	XIo_Out32(lDvmaBaseAddress + blDvmaCR, 0x00000003);						 // dvma enable, dfl enable
 
-//	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
-//	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
-//	CamCtrlInit(XPAR_CAM_CTRL_0_BASEADDR, CAM_CFG_640x480P, 640 * 2);
-//	CamCtrlInit(XPAR_CAM_CTRL_1_BASEADDR, CAM_CFG_640x480P, 0);
-
+	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
+	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
+	CamCtrlInit(XPAR_CAM_CTRL_0_BASEADDR, CAM_CFG_640x480P, 640 * 2);
+	CamCtrlInit(XPAR_CAM_CTRL_1_BASEADDR, CAM_CFG_640x480P, 0);
 	for (posX = 0; posX < 2560; posX++)
 		for (posY = 0; posY < 720; posY++)
 			XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (posY * 2560 + posX), BLUE);
-
-	drawGameState(&g);
-	clearDisplay();
 
 	return 0;
 }
