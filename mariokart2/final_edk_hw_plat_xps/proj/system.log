@@ -4579,3 +4579,52 @@ Xilinx Software Development Kit
 Xilinx EDK 14.6 Build EDK_P.68d
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Done!
+Writing filter settings....
+Done writing filter settings to:
+	C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\etc\system.filters
+Done writing Tab View settings to:
+	C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Assigned Driver gpio 3.01.a for instance xps_gpio_0
+xps_gpio_0 has been added to the project
+ERROR:EDK:4125 - IPNAME: xps_gpio, INSTANCE: xps_gpio_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: xps_gpio, INSTANCE: xps_gpio_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral xps_gpio_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral xps_gpio_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3967 - xps_gpio (xps_gpio_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\system.mhs line 400 
+Address Map for Processor microblaze_0
+  (0000000000-0x0000ffff) dlmb_cntlr	dlmb
+  (0000000000-0x0000ffff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) xps_gpio_0	mb_plb
+  (0x81420000-0x8142ffff) enc_sig_b	mb_plb
+  (0x81440000-0x8144ffff) enc_sig_a	mb_plb
+  (0x81460000-0x8146ffff) Button	mb_plb
+  (0x81600000-0x8160ffff) Cam_Iic_1	mb_plb
+  (0x81620000-0x8162ffff) Cam_Iic_0	mb_plb
+  (0x81800000-0x8180ffff) xps_intc_0	mb_plb
+  (0x83400000-0x8340ffff) xps_spi_0	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
+  (0x84000000-0x8400ffff) RS232_Uart_0	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+  (0x90000000-0x9fffffff) DDR2_SDRAM	mb_plb
+  (0xc7600000-0xc760ffff) dvma_0	mb_plb
+  (0xcf400000-0xcf40ffff) hdmi_0	mb_plb
+  (0xcfa00000-0xcfa0ffff) Cam_Ctrl_1	mb_plb
+  (0xcfa20000-0xcfa2ffff) Cam_Ctrl_0	mb_plb
+Generated Addresses Successfully
+Make instance xps_gpio_0 port GPIO_IO_I external with net as port name
+Instance xps_gpio_0 port GPIO_IO_I connector undefined, using xps_gpio_0_GPIO_IO_I
+Make instance xps_gpio_0 port GPIO_IO_O external with net as port name
+Instance xps_gpio_0 port GPIO_IO_O connector undefined, using xps_gpio_0_GPIO_IO_O
+Make instance xps_gpio_0 port GPIO_IO_T external with net as port name
+Instance xps_gpio_0 port GPIO_IO_T connector undefined, using xps_gpio_0_GPIO_IO_T
+Make instance xps_gpio_0 port GPIO_IO external with net as port name
+Instance xps_gpio_0 port GPIO_IO connector undefined, using xps_gpio_0_GPIO_IO
+Writing filter settings....
+Done writing filter settings to:
+	C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\etc\system.filters
+Done writing Tab View settings to:
+	C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\etc\system.gui

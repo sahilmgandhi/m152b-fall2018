@@ -1,5 +1,5 @@
 elfcheck
-Xilinx EDK 14.6 Build EDK_P.68d
+Xilinx EDK 2013.2 Build EDK_P.68d
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0

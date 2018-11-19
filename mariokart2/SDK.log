@@ -174,3 +174,38 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 16:13:20.668 INFO  - Updating .bit and .bmm files from XPS's export folder. 
 16:14:08.108 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system.bit into \proj_hw_platform\system.bit. 
 16:14:08.108 INFO  - Copied contents of C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\final_edk_hw_plat_xps\proj\SDK\SDK_Export\hw\system_bd.bmm into \proj_hw_platform\system_bd.bmm. 
+16:14:27.159 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+17:16:37.310 WARN  - Terminating existing sessions on processor microblaze_0 
+17:16:42.006 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+17:19:06.110 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:19:16.940 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:21:15.602 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:25:47.984 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:41:04.666 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:41:19.660 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:41:27.650 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:41:34.984 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:44:42.250 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+17:44:42.266 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:24:21.579 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+14:26:47.087 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+15:29:58.601 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:39:13.763 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:43:31.675 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:44:07.749 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:44:34.474 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:44:56.284 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:45:21.597 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:45:45.842 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:46:28.999 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:46:35.906 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:46:41.138 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:46:58.651 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 

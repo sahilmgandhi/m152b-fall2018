@@ -38,6 +38,7 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
@@ -50,7 +51,7 @@
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/mario/src/main.c" title="main.c" tooltip="mario/src/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mario/src/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2807" selectionTopPixel="975"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2574" selectionTopPixel="1181"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="vmodcam_cfg.c" partName="vmodcam_cfg.c" path="C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/mario/src/vmodcam_cfg.c" title="vmodcam_cfg.c" tooltip="mario/src/vmodcam_cfg.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mario/src/vmodcam_cfg.c"/>
@@ -60,9 +61,13 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mario_bsp/microblaze_0/include/xparameters.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="24" selectionOffset="13575" selectionTopPixel="5565"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xspi.c" partName="xspi.c" path="C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/mario_bsp/microblaze_0/libsrc/spi_v3_05_a/src/xspi.c" title="xspi.c" tooltip="mario_bsp/microblaze_0/libsrc/spi_v3_05_a/src/xspi.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mario_bsp/microblaze_0/libsrc/spi_v3_05_a/src/xspi.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="30298" selectionTopPixel="12255"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="gyro.h" partName="gyro.h" path="C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/mario/src/gyro.h" title="gyro.h" tooltip="mario/src/gyro.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mario/src/gyro.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="86" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" partName="platform.c" path="C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/mario/src/platform.c" title="platform.c" tooltip="mario/src/platform.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mario/src/platform.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="82" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -74,6 +79,11 @@
 <view id="org.eclipse.tm.terminal.view.TerminalView" partName="Terminal"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (2 items)"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -203,165 +213,161 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/helloworld.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/vmodcam_cfg.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/helloworld.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario_bsp/microblaze_0/include/xparameters.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/gyro.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/platform.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/vmodcam_header.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario_bsp/microblaze_0/libsrc/spi_v3_05_a/src/xspi.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario_bsp/microblaze_0/include/xparameters.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/vmodcam_cfg.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/mario_bsp/system.mss"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/proj_hw_platform/system.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.lscript.editor" path="/mario/src/lscript.ld"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/vmodcam_cfg.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario_bsp/microblaze_0/include/xstatus.h"/>
 </editors>
-<item historyLabel="helloworld.c" index="1">
-<position info="not_deleted" x="3" y="0"/>
+<item historyLabel="vmodcam_header.h" index="3">
+<position info="not_deleted" x="106" y="0"/>
+</item>
+<item historyLabel="platform.c" index="2">
+<position info="not_deleted" x="82" y="0"/>
+</item>
+<item historyLabel="gyro.h" index="1">
+<position info="not_deleted" x="598" y="0"/>
+</item>
+<item historyLabel="platform.c" index="2">
+<position info="not_deleted" x="82" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="vmodcam_cfg.c" index="2">
-<position info="not_deleted" x="104" y="0"/>
+<position info="not_deleted" x="2896" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2408" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="3">
-<position info="not_deleted" x="3" y="0"/>
+<position/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2234" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="3">
-<position info="not_deleted" x="1354" y="21"/>
+<position/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="57" y="0"/>
+<position info="not_deleted" x="2551" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="3">
-<position info="not_deleted" x="1377" y="22"/>
+<item historyLabel="gyro.h" index="1">
+<position info="not_deleted" x="598" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1058" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="3">
-<position info="not_deleted" x="1417" y="17"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1993" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="3">
-<position info="not_deleted" x="1417" y="17"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1966" y="24"/>
-</item>
-<item historyLabel="xparameters.h" index="4">
-<position info="not_deleted" x="13575" y="24"/>
-</item>
-<item historyLabel="vmodcam_cfg.c" index="2">
-<position info="not_deleted" x="104" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1966" y="24"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1942" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1670" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1489" y="0"/>
-</item>
-<item historyLabel="xparameters.h" index="4">
-<position info="not_deleted" x="13575" y="24"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1489" y="0"/>
-</item>
-<item historyLabel="xparameters.h" index="4">
-<position info="not_deleted" x="13575" y="24"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1620" y="19"/>
-</item>
-<item historyLabel="xspi.c" index="5">
-<position info="not_deleted" x="30146" y="9"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1659" y="0"/>
-</item>
-<item historyLabel="xspi.c" index="5">
-<position info="not_deleted" x="30146" y="9"/>
-</item>
-<item historyLabel="main.c" index="6">
-<position info="not_deleted" x="1659" y="0"/>
-</item>
-<item historyLabel="xspi.c" index="5">
+<item historyLabel="xspi.c" index="4">
 <position info="not_deleted" x="30298" y="0"/>
 </item>
-<item historyLabel="xparameters.h" index="7">
-<position info="not_deleted" x="13575" y="24"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2551" y="0"/>
 </item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="1422" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2679" y="0"/>
 </item>
-<item historyLabel="xparameters.h" index="7">
-<position info="not_deleted" x="13575" y="24"/>
+<item historyLabel="gyro.h" index="1">
+<position info="not_deleted" x="460" y="16"/>
 </item>
-<item historyLabel="vmodcam_cfg.c" index="9">
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2679" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3120" y="0"/>
+</item>
+<item historyLabel="gyro.h" index="1">
+<position info="not_deleted" x="1003" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3120" y="0"/>
+</item>
+<item historyLabel="gyro.h" index="1">
+<position info="not_deleted" x="125" y="18"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3120" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="218" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2426" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2492" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3412" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3610" y="0"/>
+</item>
+<item historyLabel="gyro.h" index="1">
+<position info="not_deleted" x="460" y="16"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3548" y="0"/>
+</item>
+<item historyLabel="gyro.h" index="1">
+<position info="not_deleted" x="460" y="16"/>
+</item>
+<item historyLabel="vmodcam_cfg.c" index="5">
 <position info="not_deleted" x="104" y="0"/>
 </item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="1422" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3548" y="0"/>
 </item>
-<item historyLabel="system.mss" index="10"/>
-<item historyLabel="system.xml" index="11"/>
-<item historyLabel="xparameters.h" index="7">
-<position info="not_deleted" x="13575" y="24"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3556" y="0"/>
 </item>
-<item historyLabel="main.c" index="12">
-<position info="not_deleted" x="1455" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3856" y="0"/>
 </item>
-<item historyLabel="lscript.ld" index="13"/>
-<item historyLabel="main.c" index="12">
-<position info="not_deleted" x="1455" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3866" y="0"/>
 </item>
-<item historyLabel="main.c" index="12">
-<position info="not_deleted" x="1756" y="0"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="main.c" index="12">
-<position info="not_deleted" x="1772" y="0"/>
+<item historyLabel="gyro.h" index="1">
+<position info="not_deleted" x="86" y="17"/>
 </item>
-<item historyLabel="main.c" index="12">
-<position info="not_deleted" x="1589" y="0"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="vmodcam_cfg.c" index="14">
-<position info="not_deleted" x="104" y="0"/>
+<item historyLabel="gyro.h" index="1">
+<position info="not_deleted" x="86" y="17"/>
 </item>
-<item historyLabel="main.c" index="12">
-<position info="not_deleted" x="1489" y="0"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="main.c" index="12">
-<position info="not_deleted" x="1564" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2458" y="0"/>
 </item>
-<item historyLabel="xstatus.h" index="15">
-<position info="not_deleted" x="2110" y="21"/>
+<item historyLabel="gyro.h" index="1">
+<position info="not_deleted" x="86" y="17"/>
 </item>
-<item historyLabel="main.c" index="12">
-<position info="not_deleted" x="1564" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2458" y="0"/>
 </item>
-<item historyLabel="main.c" index="12">
-<position info="not_deleted" x="2675" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2729" y="0"/>
 </item>
-<item active="true" historyLabel="main.c" index="12">
-<position info="not_deleted" x="2805" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2755" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2771" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2786" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2800" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2893" y="0"/>
+</item>
+<item historyLabel="gyro.h" index="1">
+<position info="not_deleted" x="86" y="17"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2893" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2869" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="0">
+<position info="not_deleted" x="2891" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -380,6 +386,18 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="vmodcam_header.h" tooltip="mario/src/vmodcam_header.h">
+<persistable path="/mario/src/vmodcam_header.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.h" tooltip="mario/src/platform.h">
+<persistable path="/mario/src/platform.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" tooltip="mario/src/platform.c">
+<persistable path="/mario/src/platform.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="gyro.h" tooltip="mario/src/gyro.h">
+<persistable path="/mario/src/gyro.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xstatus.h" tooltip="mario_bsp/microblaze_0/include/xstatus.h">
 <persistable path="/mario_bsp/microblaze_0/include/xstatus.h"/>
 </file>

@@ -7,6 +7,8 @@
 #include "xparameters.h"
 #include "cam_ctrl_header.h"
 #include "vmodcam_header.h"
+#include "gyro.h"
+#include "pmodACL.h"
 
 
 #define blDvmaCR		0x00000000 // Control Reg Offset
@@ -30,7 +32,7 @@ Xuint8 writeBuffer[BUFFER_SIZE] = {0,0,0,0,0};
 
 void print(char *str);
 
-int SpiPoll(XSpi *spiInst, u16 spiID){
+int spiSetup(XSpi *spiInst, u16 spiID){
 //	writeBuffer[4] = 0b10000000;
 	int status;
 	u32 Count;
@@ -42,60 +44,115 @@ int SpiPoll(XSpi *spiInst, u16 spiID){
 		xil_printf("Device not found");
 		return 1;
 	}
-//	status = XSpi_CfgInitialize(spiInst, ConfigPtr, ConfigPtr->BaseAddress);
-
-	status = XSpi_Initialize(spiInst, spiID);
+	status = XSpi_CfgInitialize(spiInst, ConfigPtr, ConfigPtr->BaseAddress);
+//	status = XSpi_Initialize(spiInst, spiID);
 	xil_printf("Status: %d\n\r", status);
-	if (status == XST_DEVICE_IS_STARTED) {
+	if (status != XST_SUCCESS) {
 		xil_printf("Initialization failed");
-		XSpi_Reset(spiInst);
-		status = XSpi_Initialize(spiInst, spiID);
+		//XSpi_Reset(spiInst);
+		//status = XSpi_Initialize(spiInst, spiID);
 		//return 1;
 	}
-	XSpi_SetOptions(spiInst, XSP_MASTER_OPTION);
-	status = XSpi_Start(spiInst);
-	XSpi_IntrGlobalDisable(spiInst);
-	XSpi_SetSlaveSelect(spiInst, 0x01);
-	while(1){
-		XSpi_Transfer(spiInst, &writeBuffer[0], &readBuffer[0], BUFFER_SIZE);
-		for (Count = 0; Count < BUFFER_SIZE; Count++) {
-			xil_printf("%x", readBuffer[Count]);
-		}
-		xil_printf("\n\r");
-//		return 1;
+	status = XSpi_SetOptions(spiInst,(XSP_MASTER_OPTION | XSP_CLK_ACTIVE_LOW_OPTION | XSP_CLK_PHASE_1_OPTION) | XSP_MANUAL_SSELECT_OPTION);
+	if (status != XST_SUCCESS) {
+		xil_printf("SetOptions failed");
+		return 1;
 	}
+	status = XSpi_SetSlaveSelect(spiInst, 0x01);
+	if (status != XST_SUCCESS) {
+		xil_printf("SlaveSelect failed");
+		return 1;
+	}
+	XSpi_Start(spiInst);
+	XSpi_IntrGlobalDisable(spiInst);
+
+//	while(1){
+//		XSpi_Transfer(spiInst, &writeBuffer[0], &readBuffer[0], BUFFER_SIZE);
+//		for (Count = 0; Count < BUFFER_SIZE; Count++) {
+//			xil_printf("%x", readBuffer[Count]);
+//		}
+	//	int yy = readBuffer[2];
+	//	yy |= readBuffer[3] << 8;
+	//	int xx = readBuffer[0];
+	//	xx |= readBuffer[1] << 8;
+	//
+	//	xil_printf("X is %d, and Y is %d \n\r", xx, yy);
+//		xil_printf("\n\r");
+////		return 1;
+//	}
 	return 0;
 
 }
 
+int readGyroRegister(XSpi *gyro, u8 address){
+
+	address &= 0x80;
+	Xuint8 gyroRecv[1] = {0};
+
+	XSpi_Transfer(gyro, &address, NULL, sizeof(address));
+	XSpi_Transfer(gyro, gyroRecv, gyroRecv, 1);
+	return gyroRecv[0];
+}
+
+int writeGyroRegister(XSpi *gyro, u8 address, u8 data){
+
+//	address &= 0x7F;
+
+	XSpi_Transfer(gyro, &address, NULL, sizeof(address));
+	XSpi_Transfer(gyro, &data, NULL, 1);
+	return 1;
+}
+
+int readGyroReg(XSpi * gyro, u8 reg, int nData){
+	u8 byteArray[nData + 1];
+
+	byteArray[0] = ((nData > 1) ? 0xC0: 0x80) | (reg & 0x3F);
+	XSpi_Transfer(&gyro, byteArray, byteArray, nData+1);
+	return byteArray[1];
+}
+
+
 int main() {
 	init_platform();
+	PmodACL pACL;
+	ACL_begin(&pACL, XPAR_XPS_SPI_0_BASEADDR);
+	u16 x, y, z;
+	int a = 20;
+	while(a > 0){
+		ACL_begin(&pACL, XPAR_XPS_SPI_0_BASEADDR);
+		ReadAccel(&pACL, &x, &y, &z);
+		xil_printf("X: %d, Y: %d, Z: %d \n\r", x, y, z);
+		a--;
+		//GYRO_end(&pGYRO);
+	}
 
-	xil_printf("sadlfkasd");
-	//while(1)
-	SpiPoll(&SPIINST, XPAR_XPS_SPI_0_DEVICE_ID);
 
-//	XSpi spi1;
-//	int status;
-//	status = XSpi_Initialize(&spi1, XPAR_XPS_SPI_0_DEVICE_ID);
-//	if (status == XST_DEVICE_IS_STARTED) {
-//			xil_printf("Initialization failed");
-//			XSpi_Reset(&spi1);
-//			status = XSpi_Initialize(&spi1, XPAR_XPS_SPI_0_DEVICE_ID);
+//	//while(1)
+//	spiSetup(&SPIINST, XPAR_XPS_SPI_0_DEVICE_ID);
+//
+//
+//	// Gyro seems to send and receive one byte at a time
+//	u8 data = 0b00001111;
+//	writeGyroRegister(&SPIINST,GYRO_REG_CTRL_REG1, data);
+//
+//	xil_printf("WHO_AM_I: %x", readGyroRegister(&SPIINST, GYRO_REG_WHO_AM_I)); // If read register is working, this should print out 0xD3
+//	xil_printf("WHO_AM_I: %x", readGyroReg(&SPIINST, GYRO_REG_WHO_AM_I, 1)); // If read register is working, this should print out 0xD3
+//
+//	return 1;
+//	while(1){
+//		int x, y, z;
+//
+//		x = (readGyroRegister(&SPIINST, GYRO_REG_OUT_X_H) & 0xFF) << 8;
+//		x |= (readGyroRegister(&SPIINST, GYRO_REG_OUT_X_L) & 0xFF);
+//
+//		y = (readGyroRegister(&SPIINST, GYRO_REG_OUT_Y_H) & 0xFF) << 8;
+//		y |= (readGyroRegister(&SPIINST, GYRO_REG_OUT_Y_L) & 0xFF);
+//
+//		z = (readGyroRegister(&SPIINST, GYRO_REG_OUT_Z_H) & 0xFF) << 8;
+//		z |= (readGyroRegister(&SPIINST, GYRO_REG_OUT_Z_L) & 0xFF);
+//
+//		xil_printf("X: %d, Y: %d, Z: %d \n\r", x, y, z);
 //	}
-//	XSpi_SetOptions(&spi1, XSP_MASTER_OPTION);
-//	status = XSpi_Start(&spi1);
-//	XSpi_IntrGlobalDisable(&spi1);
-//	XSpi_SetSlaveSelect(&spi1, 0x01);
-//
-//	XSpi_Transfer(&spi1, &writeBuffer[0], &readBuffer[0], 5);
-//
-//	int yy = readBuffer[2];
-//	yy |= readBuffer[3] << 8;
-//	int xx = readBuffer[0];
-//	xx |= readBuffer[1] << 8;
-//
-//	xil_printf("X is %d, and Y is %d \n\r", xx, yy);
 
 
 //	u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;
