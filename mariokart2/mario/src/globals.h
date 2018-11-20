@@ -53,9 +53,9 @@
 #define BLACK 0x000
 
 // the road
-#define GRAY 0xAAA
+#define GRAY 0x888
 
 #define CAR_COLOR 0xFFF
-#define ROAD 0xAAA
+#define ROAD 0x888
 
 #endif

@@ -219,3 +219,46 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 13:39:26.730 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 13:40:27.817 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 13:40:54.832 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:30:47.698 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:15:37.448 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:17:55.481 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:18:32.953 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:19:10.148 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:24:12.498 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:25:30.149 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:26:35.955 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:28:08.855 WARN  - Terminating existing sessions on processor microblaze_0 
+16:28:13.434 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:33:20.011 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:34:23.146 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:35:50.731 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:36:22.211 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:38:23.459 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:39:00.146 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:42:18.237 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:44:18.761 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:45:54.297 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:47:33.871 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+17:22:13.653 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+17:27:26.048 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:33:19.410 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:33:21.204 INFO  - System reset is completed. 
+17:40:09.573 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:40:20.035 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:40:56.693 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:42:25.962 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:43:42.847 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:45:19.720 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:53:34.146 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:58:07.126 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:58:51.340 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:59:16.351 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:00:30.835 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+18:00:30.870 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+18:00:30.886 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 

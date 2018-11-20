@@ -2,6 +2,7 @@
 
 #include "globals.h"
 #include "game_board.h"
+#include "xil_printf.h"
 
 #ifndef GAME_CONTROLLER_H
 #define GAME_CONTROLLER_H
@@ -24,12 +25,12 @@ struct game
   int8_t level;
 
   // TODO: Keep track of the player y pos as well, but make it static for now
-  int16_t playerXPos;
-  int16_t playerYPos;
+  int16_t xLeft;
+  int16_t yTop;
 
   // Use this and player_pos to keep track of the movement
-  int16_t playerXLastPos;
-  int16_t playerYLastPos;
+  int16_t xLeftOld;
+  int16_t yTopOld;
 
   // holds the color at each screen block
   uint32_t screen[GAME_X][GAME_Y];
@@ -48,24 +49,52 @@ void initGame(struct game *g, uint8_t level)
   g->initialized = 1;
   g->level = level;
   g->gameOver = 0;
-  g->playerXPos = 0;
-  g->playerYPos = 0;
-  g->playerXLastPos = -1;
-  g->playerYLastPos = -1;
+  g->xLeftOld = -1;
+  g->yTopOld = -1;
+  g->xLeft = 24;
+  g->yTop = GAME_Y-2;
 
   fillScreen(g, ROAD);
 
-  g->screen[g->playerXPos][g->playerYPos] = CAR_COLOR;
+//  g->screen[g->playerXPos][g->playerYPos] = CAR_COLOR;
+
+  placeCarOnScreen(g);
+  g->screen[25][10] = RED;
+}
+
+void placeCarOnScreen(struct game *g){
+	g->screen[g->xLeft][g->yTop +1] = CAR_COLOR;
+	g->screen[g->xLeft+1][g->yTop + 1] = CAR_COLOR;
+	g->screen[g->xLeft+2][g->yTop + 1] = CAR_COLOR;
+	g->screen[g->xLeft+1][g->yTop] = CAR_COLOR;
+}
+
+int detectCollision(struct game * g){
+	if (g->screen[g->xLeft][g->yTop+1] != ROAD && g->screen[g->xLeft][g->yTop+1] != CAR_COLOR){
+		return 1;
+	}
+	if (g->screen[g->xLeft+1][g->yTop+1] != ROAD && g->screen[g->xLeft+1][g->yTop+1] != CAR_COLOR){
+		return 2;
+	}
+	if (g->screen[g->xLeft+2][g->yTop+1] != ROAD && g->screen[g->xLeft+2][g->yTop+1] != CAR_COLOR){
+		return 3;
+	}
+	if (g->screen[g->xLeft+1][g->yTop] != ROAD && g->screen[g->xLeft+1][g->yTop] != CAR_COLOR){
+		return 4;
+	}
+
+	return 0;
 }
 
 /**
  * Shift the entire game down INCLUDING the bottom most row
+ * It's weird to think that X is actually referring to columns and y to rows
  * 
  * @param game   struct game    The game object
  * 
  * @return int    0 if the player is dead, 1 else
  */
-int propagateGame(struct game *game)
+int propagateGame(struct game *g)
 {
   int i;
   int j;
@@ -73,7 +102,7 @@ int propagateGame(struct game *game)
   {
     for (j = 0; j < GAME_Y; j++)
     {
-      game->screen[i][j] = game->screen[i - 1][j];
+      g->screen[j][i] = g->screen[j][i-1];
     }
   }
 
@@ -81,18 +110,18 @@ int propagateGame(struct game *game)
   // spaces, or some kind of blocks????????
   // black for now
   // TODO: Generate some random top most row here:
-  for (j = 0; j < GAME_Y; j++)
+  for (j = 0; j < GAME_X; j++)
   {
-    game->screen[0][j] = ROAD;
+    g->screen[j][0] = ROAD;
   }
 
-  // TODO: In this function, after moving everything down, you should check if the player has died
-
-  if (game->screen[game->playerXPos][game->playerYPos] != ROAD)
+  if (detectCollision(g))
   {
-    playerDead(game);
+    playerDead(g);
     return 0;
   }
+
+  placeCarOnScreen(g);
 
   return 1;
 }
@@ -102,10 +131,10 @@ int propagateGame(struct game *game)
  * 
  * @param game    Game      The game struct
  */
-void finishGame(struct game *game)
+void finishGame(struct game *g)
 {
-  game->gameOver = 1;
-  fillScreen(game, GREEN);
+  g->gameOver = 1;
+  fillScreen(g, GREEN);
 }
 
 /**
@@ -113,10 +142,10 @@ void finishGame(struct game *game)
  * 
  * @param game    Game      The game struct
  */
-void playerDead(struct game *game)
+void playerDead(struct game *g)
 {
-  game->gameOver = 1;
-  fillScreen(game, RED);
+  g->gameOver = 1;
+  fillScreen(g, RED);
 }
 
 /**
@@ -125,7 +154,7 @@ void playerDead(struct game *game)
  * @param game    Game    The game struct
  * @param color   int     The color for the screen
  */
-void fillScreen(struct game *game, uint32_t color)
+void fillScreen(struct game *g, uint32_t color)
 {
   int i;
   int j;
@@ -134,7 +163,7 @@ void fillScreen(struct game *game, uint32_t color)
     for (j = 0; j < GAME_Y; j++)
     {
       // Basically filling out column at a time
-      game->screen[i][j] = color;
+      g->screen[i][j] = color;
     }
   }
 }
@@ -146,15 +175,20 @@ void fillScreen(struct game *game, uint32_t color)
  * @param newX    int16_t   New X position 
  * @param newY    int16_t   New Y position 
  */
-void movePlayer(struct game *game, int16_t newX, int16_t newY)
+void movePlayer(struct game *g, int16_t newX, int16_t newY)
 {
-  game->playerXLastPos = game->playerXPos;
-  game->playerYLastPos = game->playerYPos;
 
-  game->playerXPos = newX;
-  game->playerYPos = newY;
+  if (newX >= 0 && newX < GAME_X-2){
+	  g->xLeftOld = g->xLeft;
+	  g->xLeft = newX;
+  }
 
-  game->screen[game->playerXPos][game->playerYPos] = CAR_COLOR;
+  // If newY < 0, dont move it
+  if (newY > 0 && newY < GAME_Y-1){
+	  g->yTopOld = g->yTop;
+	  g->yTop = newY;
+  }
+  placeCarOnScreen(g);
 }
 
 //void textOnTopLeft(struct game *game, char[] text){

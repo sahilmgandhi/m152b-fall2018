@@ -31,13 +31,13 @@
  * Clear the screen with an all white screen.
  *
  */
-void clearDisplay()
+void clearDisplay(int color)
 {
   uint32_t posX, posY;
 
   for (posX = 0; posX < 2560; posX++)
     for (posY = 0; posY < 720; posY++)
-      XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (posY * 2560 + posX), WHITE);
+      XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (posY * 2560 + posX), color);
 
   u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;
 
@@ -75,15 +75,18 @@ int drawGameState(struct game *g)
   // TODO: We need to fix this to work with the game: It needs to loop through the game's array and show the screen
   uint32_t posX, posY;
   uint32_t newPosX, newPosY;
+
+  uint32_t xPadding = 375;
+  uint32_t yPadding = 100;
   for (posX = 0; posX < GAME_X; posX++)
   {
     for (posY = 0; posY < GAME_Y; posY++)
     {
       for (newPosX = posX * 10; newPosX < (posX + 1) * 10; newPosX++)
       {
-        for (newPosY = posY * 10; newPosY < (posY + 1) * 10; newPosY++)
+        for (newPosY = posY * 10 + yPadding; newPosY < (posY + 1) * 10 + yPadding; newPosY++)
         {
-          XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (newPosY * 2560 + newPosX), g->screen[posX][posY]);
+          XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (newPosY * 2560 + newPosX + xPadding), g->screen[posX][posY]);
         }
       }
     }
