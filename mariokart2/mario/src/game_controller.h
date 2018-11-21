@@ -172,7 +172,7 @@ void fillScreen(struct game *g, uint32_t color)
  * Moves the player and records the previous position
  * 
  * @param game    Game      The game struct
- * @param newX    int16_t   New X position 
+ * @param newX    int16_t   New X position (range from [0-47])
  * @param newY    int16_t   New Y position 
  */
 void movePlayer(struct game *g, int16_t newX, int16_t newY)
