@@ -143,12 +143,13 @@ int16_t gyroPlayground()
 	temp = 1 << 4;
 	GYRO_WriteReg(&pgyr, CTRL_REG4, &temp, 1);
 	int16_t x, y, z;
+	int32_t xx, yy, zz;
 	u8 temperature;
+	int a = 32;
 	u8 whoami = 0;
 	GYRO_ReadReg(&pgyr, 0x0F, &whoami, 1);
 	xil_printf("WHOAMI: %x \n\r", whoami);
 	//	GYRO_end(&pgyr);
-//	int32_t xx, yy, zz;
 //	while (a > 0)
 //	{
 //		GYRO_begin(&pgyr, XPAR_XPS_SPI_0_BASEADDR, XPAR_SPI_0_BASEADDR);
@@ -182,12 +183,37 @@ int16_t gyroPlayground()
 	x = temp << 8;
 	GYRO_ReadReg(&pgyr, OUT_X_L, &temp, 1);
 	x |= temp;
-	GYRO_end(&pgyr);
+	//GYRO_end(&pgyr);
 
 	//xil_printf("XX: %d, YY: %d, ZZ: %d, Temp: %d\n\r", xx >> 5 , yy >> 5, zz >> 5, temperature); // This just prints out all 0s ... so looks like that library's getX/Y/Z is incorrect
 	return x; //(int16_t)(xx >> 5);
 
-
+	//	//while(1)
+	//	spiSetup(&SPIINST, XPAR_XPS_SPI_0_DEVICE_ID);
+	//
+	//
+	//	// Gyro seems to send and receive one byte at a time
+	//	u8 data = 0b00001111;
+	//	writeGyroRegister(&SPIINST,GYRO_REG_CTRL_REG1, data);
+	//
+	//	xil_printf("WHO_AM_I: %x", readGyroRegister(&SPIINST, GYRO_REG_WHO_AM_I)); // If read register is working, this should print out 0xD3
+	//	xil_printf("WHO_AM_I: %x", readGyroReg(&SPIINST, GYRO_REG_WHO_AM_I, 1)); // If read register is working, this should print out 0xD3
+	//
+	//	return 1;
+	//	while(1){
+	//		int x, y, z;
+	//
+	//		x = (readGyroRegister(&SPIINST, GYRO_REG_OUT_X_H) & 0xFF) << 8;
+	//		x |= (readGyroRegister(&SPIINST, GYRO_REG_OUT_X_L) & 0xFF);
+	//
+	//		y = (readGyroRegister(&SPIINST, GYRO_REG_OUT_Y_H) & 0xFF) << 8;
+	//		y |= (readGyroRegister(&SPIINST, GYRO_REG_OUT_Y_L) & 0xFF);
+	//
+	//		z = (readGyroRegister(&SPIINST, GYRO_REG_OUT_Z_H) & 0xFF) << 8;
+	//		z |= (readGyroRegister(&SPIINST, GYRO_REG_OUT_Z_L) & 0xFF);
+	//
+	//		xil_printf("X: %d, Y: %d, Z: %d \n\r", x, y, z);
+	//	}
 }
 
 struct game g;
@@ -229,7 +255,7 @@ int main()
 		int xposnew = gyroPlayground();
 		//xpos -= calibrate;
 		xil_printf("Xposnew: %d\n\r", xpos);
-		xposnew /= 1024;
+		xposnew /= 64;
 		xil_printf("Xposnew: %d\n\r", xpos);
 //		xpos = xpos >> 10;
 		xpos += xposnew;

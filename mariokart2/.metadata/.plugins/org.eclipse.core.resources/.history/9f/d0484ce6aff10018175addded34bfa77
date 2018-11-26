@@ -229,7 +229,7 @@ int main()
 		int xposnew = gyroPlayground();
 		//xpos -= calibrate;
 		xil_printf("Xposnew: %d\n\r", xpos);
-		xposnew /= 1024;
+		xposnew /= 256;
 		xil_printf("Xposnew: %d\n\r", xpos);
 //		xpos = xpos >> 10;
 		xpos += xposnew;

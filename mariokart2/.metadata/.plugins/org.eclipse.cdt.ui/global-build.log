@@ -21006,3 +21006,1137 @@ Finished building libraries
 11:52:36 **** Incremental Build of configuration Debug for project mario ****
 make all 
 make: Nothing to be done for `all'.
+10:23:25 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:23:56 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:24:20 **** Auto Build of project mario_bsp ****
+make -k all 
+Finished building libraries
+10:24:28 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:25:23 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:32:09 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: In function 'main':
+../src/main.c:242:3: warning: statement with no effect [-Wunused-value]
+../src/main.c:244:3: warning: implicit declaration of function 'min' [-Wimplicit-function-declaration]
+../src/main.c:245:3: warning: implicit declaration of function 'max' [-Wimplicit-function-declaration]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\mario\Debug/../src/main.c:244: undefined reference to `min'
+C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\mario\Debug/../src/main.c:245: undefined reference to `max'
+collect2: ld returned 1 exit status
+make: *** [mario.elf] Error 1
+10:32:56 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: In function 'main':
+../src/main.c:250:3: warning: statement with no effect [-Wunused-value]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21516	    356	  12136	  34008	   84d8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+10:33:00 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:33:18 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21528	    356	  12132	  34016	   84e0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+10:33:27 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:33:47 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:34:03 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:35:01 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21516	    356	  12136	  34008	   84d8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+10:35:47 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21528	    356	  12132	  34016	   84e0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+10:35:58 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:36:57 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21564	    356	  12136	  34056	   8508	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+10:37:20 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:37:24 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:37:47 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:38:01 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:38:20 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:43:14 **** Auto Build of project mario_bsp ****
+make -k all 
+Finished building libraries
+10:43:18 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:43:47 **** Auto Build of project mario_bsp ****
+make -k all 
+Finished building libraries
+10:44:15 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:45:03 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21588	    356	  12136	  34080	   8520	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+10:45:17 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:45:37 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:46:58 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21576	    356	  12132	  34064	   8510	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+10:47:12 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:52:09 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21596	    356	  12136	  34088	   8528	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+10:52:23 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:53:02 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+10:53:27 **** Auto Build of project mario_bsp ****
+make -k all 
+Finished building libraries
+10:53:29 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+11:03:09 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21152	    356	  12132	  33640	   8368	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:04:26 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21276	    356	  12136	  33768	   83e8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:04:35 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+11:04:55 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+11:11:27 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: In function 'gyroPlayground':
+../src/main.c:148:6: warning: unused variable 'a' [-Wunused-variable]
+../src/main.c:147:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:146:18: warning: unused variable 'zz' [-Wunused-variable]
+../src/main.c:146:14: warning: unused variable 'yy' [-Wunused-variable]
+../src/main.c:146:10: warning: unused variable 'xx' [-Wunused-variable]
+../src/main.c:145:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:145:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: In function 'main':
+../src/main.c:255:3: error: 'xposnew' undeclared (first use in this function)
+../src/main.c:255:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+11:11:43 **** Incremental Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: In function 'gyroPlayground':
+../src/main.c:148:6: warning: unused variable 'a' [-Wunused-variable]
+../src/main.c:147:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:146:18: warning: unused variable 'zz' [-Wunused-variable]
+../src/main.c:146:14: warning: unused variable 'yy' [-Wunused-variable]
+../src/main.c:146:10: warning: unused variable 'xx' [-Wunused-variable]
+../src/main.c:145:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:145:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: In function 'main':
+../src/main.c:255:3: error: 'xposnew' undeclared (first use in this function)
+../src/main.c:255:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+11:12:06 **** Auto Build of project mario_bsp ****
+make -k all 
+Finished building libraries
+11:12:12 **** Incremental Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: In function 'gyroPlayground':
+../src/main.c:148:6: warning: unused variable 'a' [-Wunused-variable]
+../src/main.c:147:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:146:18: warning: unused variable 'zz' [-Wunused-variable]
+../src/main.c:146:14: warning: unused variable 'yy' [-Wunused-variable]
+../src/main.c:146:10: warning: unused variable 'xx' [-Wunused-variable]
+../src/main.c:145:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:145:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: In function 'main':
+../src/main.c:255:3: error: 'xposnew' undeclared (first use in this function)
+../src/main.c:255:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+11:13:08 **** Incremental Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: In function 'gyroPlayground':
+../src/main.c:148:6: warning: unused variable 'a' [-Wunused-variable]
+../src/main.c:147:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:146:18: warning: unused variable 'zz' [-Wunused-variable]
+../src/main.c:146:14: warning: unused variable 'yy' [-Wunused-variable]
+../src/main.c:146:10: warning: unused variable 'xx' [-Wunused-variable]
+../src/main.c:145:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:145:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: In function 'main':
+../src/main.c:255:3: error: 'xposnew' undeclared (first use in this function)
+../src/main.c:255:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+11:13:28 **** Auto Build of project mario_bsp ****
+make -k all 
+Finished building libraries
+11:13:33 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: In function 'gyroPlayground':
+../src/main.c:148:6: warning: unused variable 'a' [-Wunused-variable]
+../src/main.c:147:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:146:18: warning: unused variable 'zz' [-Wunused-variable]
+../src/main.c:146:14: warning: unused variable 'yy' [-Wunused-variable]
+../src/main.c:146:10: warning: unused variable 'xx' [-Wunused-variable]
+../src/main.c:145:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:145:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15092	    356	  12136	  27584	   6bc0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:13:36 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+11:14:02 **** Auto Build of project mario_bsp ****
+make -k all 
+Finished building libraries
+11:14:05 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+11:14:36 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: In function 'gyroPlayground':
+../src/main.c:148:6: warning: unused variable 'a' [-Wunused-variable]
+../src/main.c:147:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:146:18: warning: unused variable 'zz' [-Wunused-variable]
+../src/main.c:146:14: warning: unused variable 'yy' [-Wunused-variable]
+../src/main.c:146:10: warning: unused variable 'xx' [-Wunused-variable]
+../src/main.c:145:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:145:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15388	    356	  12136	  27880	   6ce8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:14:48 **** Auto Build of project mario_bsp ****
+make -k all 
+Finished building libraries
+11:14:52 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+11:15:28 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: In function 'gyroPlayground':
+../src/main.c:148:6: warning: unused variable 'a' [-Wunused-variable]
+../src/main.c:147:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:146:18: warning: unused variable 'zz' [-Wunused-variable]
+../src/main.c:146:14: warning: unused variable 'yy' [-Wunused-variable]
+../src/main.c:146:10: warning: unused variable 'xx' [-Wunused-variable]
+../src/main.c:145:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:145:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15388	    356	  12136	  27880	   6ce8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:15:32 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+11:17:11 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: In function 'gyroPlayground':
+../src/main.c:146:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:145:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:145:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15380	    356	  12136	  27872	   6ce0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:17:22 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: In function 'gyroPlayground':
+../src/main.c:146:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:145:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:145:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15380	    356	  12136	  27872	   6ce0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:17:26 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+11:18:23 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/game_controller.h: In function 'propagateGame':
+../src/game_controller.h:120:5: warning: implicit declaration of function 'playerDead' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:145:6: warning: conflicting types for 'playerDead' [enabled by default]
+../src/game_controller.h:120:5: note: previous implicit declaration of 'playerDead' was here
+../src/main.c: In function 'spiSetup':
+../src/main.c:47:5: warning: unused variable 'Test' [-Wunused-variable]
+../src/main.c:46:6: warning: unused variable 'Count' [-Wunused-variable]
+../src/main.c: In function 'readGyroReg':
+../src/main.c:124:2: warning: passing argument 1 of 'XSpi_Transfer' from incompatible pointer type [enabled by default]
+../../mario_bsp/microblaze_0/include/xspi.h:809:5: note: expected 'struct XSpi *' but argument is of type 'struct XSpi **'
+../src/main.c: In function 'gyroPlayground':
+../src/main.c:146:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:145:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:145:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15380	    356	  12136	  27872	   6ce0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:18:28 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.

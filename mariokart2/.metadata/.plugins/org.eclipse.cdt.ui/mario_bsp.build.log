@@ -1,6 +1,6 @@
-11:52:33 **** Auto Build of project mario_bsp ****
+11:14:48 **** Auto Build of project mario_bsp ****
 make -k all 
 Finished building libraries
 
-11:52:34 Build Finished (took 109ms)
+11:14:48 Build Finished (took 109ms)
 
