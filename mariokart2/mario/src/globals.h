@@ -1,4 +1,4 @@
-//#include "xparameters.h"
+#include "xparameters.h"
 
 #ifndef GLOBALS_H
 #define GLOBALS_H
@@ -17,7 +17,7 @@
 #define SCREEN_LEFT_EDGE 320
 #define SCREEN_RIGHT_EDGE 960
 
-#define SCREEN_REFRESH_RATE_HZ 50UL
+#define SCREEN_REFRESH_RATE_HZ 60UL
 #define SCREEN_REFRESH_PERIOD XPAR_TMRCTR_0_CLOCK_FREQ_HZ / SCREEN_REFRESH_RATE_HZ
 
 // Radius of the player
@@ -43,6 +43,11 @@
 
 // the car
 #define WHITE 0xFFF
+#define LANE 0xDDD
+
+// Shell
+#define SHELL 0xFDA
+#define SHELLWHITE 0xFFE
 
 // bananas
 #define YELLOW 0xFF0

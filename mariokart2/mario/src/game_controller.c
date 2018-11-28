@@ -34,19 +34,19 @@ void placeCarOnScreen(struct game *g)
 
 int detectCollision(struct game *g)
 {
-    if (g->screen[g->xLeft][g->yTop + 1] != ROAD && g->screen[g->xLeft][g->yTop + 1] != CAR_COLOR)
+    if (g->screen[g->xLeft][g->yTop + 1] != ROAD && g->screen[g->xLeft][g->yTop + 1] != CAR_COLOR && g->screen[g->xLeft][g->yTop + 1] != LANE)
     {
         return 1;
     }
-    if (g->screen[g->xLeft + 1][g->yTop + 1] != ROAD && g->screen[g->xLeft + 1][g->yTop + 1] != CAR_COLOR)
+    if (g->screen[g->xLeft + 1][g->yTop + 1] != ROAD && g->screen[g->xLeft + 1][g->yTop + 1] != CAR_COLOR  && g->screen[g->xLeft + 1][g->yTop + 1] != LANE)
     {
         return 2;
     }
-    if (g->screen[g->xLeft + 2][g->yTop + 1] != ROAD && g->screen[g->xLeft + 2][g->yTop + 1] != CAR_COLOR)
+    if (g->screen[g->xLeft + 2][g->yTop + 1] != ROAD && g->screen[g->xLeft + 2][g->yTop + 1] != CAR_COLOR && g->screen[g->xLeft + 2][g->yTop + 1] != LANE)
     {
         return 3;
     }
-    if (g->screen[g->xLeft + 1][g->yTop] != ROAD && g->screen[g->xLeft + 1][g->yTop] != CAR_COLOR)
+    if (g->screen[g->xLeft + 1][g->yTop] != ROAD && g->screen[g->xLeft + 1][g->yTop] != CAR_COLOR && g->screen[g->xLeft + 1][g->yTop] != LANE)
     {
         return 4;
     }
@@ -82,6 +82,16 @@ int propagateGame(struct game *g)
     {
         g->screen[j][0] = ROAD;
     }
+    // Lane dividers:
+	g->screen[10][0] = LANE;
+	g->screen[20][0] = LANE;
+	g->screen[30][0] = LANE;
+	g->screen[40][0] = LANE;
+    g->propagationCount = g->propagationCount + 1;
+    if (g ->propagationCount == 10){
+    	generateObject(g);
+    	g->propagationCount = 0;
+    }
 
     //  if (detectCollision(g))
     //  {
@@ -92,6 +102,89 @@ int propagateGame(struct game *g)
     //placeCarOnScreen(g);
 
     return 1;
+}
+
+/**
+ * Generates the shell against the player
+ *
+ * @param game		struct game		The game object
+ * @param color		int				The color of the shell
+ * @param size		int				The size of the shell
+ * @param offset 	int				The offset from the left
+ */
+void createShell(struct game *g, int color, int size, int offset){
+
+	int i, j;
+	for (i = 0; i < size-2; i++){
+		for (j = 0 + offset; j < size + offset; j++)
+		{
+			if ((j + i) % 4 == 0)
+				g->screen[j][i] = SHELLWHITE;
+			else
+				g->screen[j][i] = color;
+		}
+	}
+	for (i = size-2; i < size; i++){
+		for (j = 0 + offset; j < size + offset; j++)
+		{
+			g->screen[j][i] = SHELL;
+		}
+	}
+}
+
+/**
+ * Generates the shell against the player
+ *
+ * @param game		struct game		The game object
+ * @param offset 	int				The offset from the left
+ */
+void createBanana(struct game *g, int offset)
+{
+    g->screen[offset][3 + 1] = YELLOW;
+    g->screen[offset + 1][3 + 1] = YELLOW;
+    g->screen[offset + 2][3 + 1] = YELLOW;
+    g->screen[offset + 1][3] = YELLOW;
+}
+
+
+/**
+ * Generates the enemy objects for the player
+ *
+ * @param game	struct game		The game object
+ */
+void generateObject(struct game *g){
+
+	int r = rand() % 20;
+	int offset;
+	if (r >= 0 && r <= 5){
+		// 3 green shells
+		offset = rand() % 10;
+		createShell(g, GREEN, 5, offset);
+		offset = rand() % 20 + 10;
+		createShell(g, GREEN, 5, offset);
+		offset = rand() % 20 + 22;
+		createShell(g, GREEN, 5, offset);
+	}
+	else if (r > 5 && r < 11){
+		// 2 red shells
+		offset = rand() % 20;
+		createShell(g, RED, 7, offset);
+		offset = rand() % 23 + 20;
+		createShell(g, RED, 7, offset);
+	}
+	else if (r > 11 && r < 14){
+		// Bananas
+		offset = rand() % 40;
+		createBanana(g, offset);
+	}
+	else if (r > 14 && r < 19){
+		// Empty Space (give player time to move around)
+	}
+	else{
+		offset = rand() % 40;
+		createShell(g, BLUE, 10, offset);
+		// 1 BLUE SHELL
+	}
 }
 
 /**
@@ -146,7 +239,6 @@ void fillScreen(struct game *g, uint32_t color)
 void movePlayer(struct game *g, int16_t newX, int16_t newY)
 {
     propagateGame(g);
-    //  propagateGame(g);
 
     if (newX >= 0 && newX < GAME_X - 2)
     {
@@ -163,18 +255,3 @@ void movePlayer(struct game *g, int16_t newX, int16_t newY)
     placeCarOnScreen(g);
 }
 
-//void textOnTopLeft(struct game *game, char[] text){
-//  Bitmap *b = bm_create(128,128);
-//
-//  bm_set_color(b, bm_atoi("white"));
-//  bm_puts(b, 30, 60, text);
-//
-//  for(int i = 0; i < 128; i++){
-//	  for (int j = 0; j < 128; j++){
-//		  game->screen[i][j] = bm_get(b, i, j);
-//		  //printf("%d", bm_get(b, 60, 60));
-//	  }
-//  }
-//
-//  bm_free(b);
-//}

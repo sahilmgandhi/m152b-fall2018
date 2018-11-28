@@ -444,3 +444,53 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 11:50:50.749 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 11:51:34.399 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 11:55:45.874 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:57:01.177 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:01:41.273 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+12:01:41.288 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+13:48:54.105 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+14:07:39.150 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:12:01.403 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:13:22.727 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:13:39.279 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:24:16.999 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:28:24.496 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:29:14.901 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:31:16.831 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:39:47.140 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:55:43.477 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:56:30.762 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:57:17.828 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:06:38.195 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:07:12.578 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:07:24.263 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:07:45.339 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:08:11.985 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:14:18.353 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:17:00.001 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:18:07.707 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:22:47.162 ERROR - Unexpected error while launching program. java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(Unknown Source)
+
+15:33:17.263 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:33:19.120 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+15:33:26.670 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+15:33:27.871 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+15:33:49.930 WARN  - Terminating existing sessions on processor microblaze_0 
+15:34:07.381 WARN  - Terminating existing sessions on processor microblaze_0 
+15:34:11.142 WARN  - Terminating existing sessions on processor microblaze_0 
+15:34:31.568 WARN  - Terminating existing sessions on processor microblaze_0 
+15:34:35.366 WARN  - Terminating existing sessions on processor microblaze_0 
+15:34:48.423 WARN  - Terminating existing sessions on processor microblaze_0 
+15:35:10.935 WARN  - Terminating existing sessions on processor microblaze_0 

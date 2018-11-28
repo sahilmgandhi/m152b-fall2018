@@ -52,7 +52,7 @@ int drawGameState(struct game *g)
     uint32_t yPadding = 100;
     for (posX = 0; posX < GAME_X; posX++)
     {
-        for (posY = 0; posY < GAME_Y; posY++)
+        for (posY = 10; posY < GAME_Y; posY++)
         {
             for (newPosX = posX * 10; newPosX < (posX + 1) * 10; newPosX++)
             {

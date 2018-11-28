@@ -127,8 +127,7 @@ void main()
 		propagateGame(&g);
 		movePlayer(&g, xpos, -1);
 		drawGameState(&g);
-		while (XTmrCtr_GetValue(&timer, 0) < SCREEN_REFRESH_PERIOD)
-			;
+		while (XTmrCtr_GetValue(&timer, 0) < SCREEN_REFRESH_PERIOD);
 		int pixel = 0;
 		int i, j;
 		for (i = 0; i < 50; i++)

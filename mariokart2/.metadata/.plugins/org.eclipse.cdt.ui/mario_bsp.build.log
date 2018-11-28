@@ -1,4 +1,4 @@
-11:22:02 **** Build of project mario_bsp ****
+14:23:59 **** Build of project mario_bsp ****
 make -k all 
 libgen -hw ../proj_hw_platform/system.xml\
 	       \
@@ -41,5 +41,5 @@ Compiling cpu
 Running execs_generate.
 Finished building libraries
 
-11:22:15 Build Finished (took 12s.964ms)
+14:24:11 Build Finished (took 12s.636ms)
 

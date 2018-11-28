@@ -4,10 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/bmp.c \
 ../src/cam_ctrl.c \
+../src/display.c \
+../src/game_controller.c \
 ../src/main.c \
 ../src/platform.c \
-../src/pmodACL.c \
 ../src/pmodGYRO.c \
 ../src/vmodcam_cfg.c 
 
@@ -15,18 +17,22 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 OBJS += \
+./src/bmp.o \
 ./src/cam_ctrl.o \
+./src/display.o \
+./src/game_controller.o \
 ./src/main.o \
 ./src/platform.o \
-./src/pmodACL.o \
 ./src/pmodGYRO.o \
 ./src/vmodcam_cfg.o 
 
 C_DEPS += \
+./src/bmp.d \
 ./src/cam_ctrl.d \
+./src/display.d \
+./src/game_controller.d \
 ./src/main.d \
 ./src/platform.d \
-./src/pmodACL.d \
 ./src/pmodGYRO.d \
 ./src/vmodcam_cfg.d 
 

@@ -1,6 +1,7 @@
 
 #include <xio.h>
 #include "globals.h"
+#include "game_controller.h"
 
 #ifndef DISPLAY_H
 #define DISPLAY_H

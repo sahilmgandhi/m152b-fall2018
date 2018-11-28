@@ -25998,3 +25998,2733 @@ Finished building: mario.elf.elfcheck
 11:57:00 **** Incremental Build of configuration Debug for project mario ****
 make all 
 make: Nothing to be done for `all'.
+13:43:08 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'readGyro':
+../src/main.c:59:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:58:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:58:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:152:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:35:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\mario\Debug/../src/main.c:105: undefined reference to `clearDisplay'
+C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\mario\Debug/../src/main.c:106: undefined reference to `initGame'
+C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\mario\Debug/../src/main.c:127: undefined reference to `propagateGame'
+C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\mario\Debug/../src/main.c:128: undefined reference to `movePlayer'
+C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\mario\Debug/../src/main.c:129: undefined reference to `drawGameState'
+C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\mario\Debug/../src/main.c:145: undefined reference to `drawGameState'
+collect2: ld returned 1 exit status
+make: *** [mario.elf] Error 1
+13:44:12 **** Clean-only build of configuration Debug for project mario ****
+make clean 
+rm -rf  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o  ./src/cam_ctrl.d ./src/main.d ./src/platform.d ./src/pmodACL.d ./src/pmodGYRO.d ./src/vmodcam_cfg.d  mario.elf.size  mario.elf.elfcheck  mario.elf
+ 
+13:44:12 **** Clean-only build of project mario_bsp ****
+make -k clean 
+rm -rf microblaze_0
+13:44:14 **** Build of project mario_bsp ****
+make -k all 
+libgen -hw ../proj_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../proj_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling lldma
+Compiling standalone
+Compiling gpio
+Compiling iic
+Compiling mpmc
+Compiling bram
+Compiling uartlite
+Compiling intc
+Compiling spi
+Compiling tmrctr
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+13:44:30 **** Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+../src/cam_ctrl.c: In function 'CamStatus':
+../src/cam_ctrl.c:126:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/cam_ctrl.c
+ 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+In file included from ../src/display.c:1:0:
+../src/display.h:35:26: warning: 'struct game' declared inside parameter list [enabled by default]
+../src/display.h:35:26: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+../src/display.c: In function 'clearDisplay':
+../src/display.c:9:5: error: unknown type name 'uint32_t'
+../src/display.c:13:13: error: 'XPAR_DDR2_SDRAM_MPMC_BASEADDR' undeclared (first use in this function)
+../src/display.c:13:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/display.c:15:28: error: 'XPAR_DVMA_0_BASEADDR' undeclared (first use in this function)
+../src/display.c: At top level:
+../src/display.c:41:26: warning: 'struct game' declared inside parameter list [enabled by default]
+../src/display.c:41:5: error: conflicting types for 'drawGameState'
+../src/display.h:35:5: note: previous declaration of 'drawGameState' was here
+../src/display.c: In function 'drawGameState':
+../src/display.c:48:5: error: unknown type name 'uint32_t'
+../src/display.c:49:5: error: unknown type name 'uint32_t'
+../src/display.c:51:5: error: unknown type name 'uint32_t'
+../src/display.c:52:5: error: unknown type name 'uint32_t'
+../src/display.c:61:21: error: 'XPAR_DDR2_SDRAM_MPMC_BASEADDR' undeclared (first use in this function)
+../src/display.c:61:21: error: dereferencing pointer to incomplete type
+../src/display.c:67:28: error: 'XPAR_DVMA_0_BASEADDR' undeclared (first use in this function)
+make: *** [src/display.o] Error 1
+13:45:23 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+../src/display.c: In function 'clearDisplay':
+../src/display.c:13:13: error: 'XPAR_DDR2_SDRAM_MPMC_BASEADDR' undeclared (first use in this function)
+../src/display.c:13:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/display.c:15:28: error: 'XPAR_DVMA_0_BASEADDR' undeclared (first use in this function)
+../src/display.c: In function 'drawGameState':
+../src/display.c:61:21: error: 'XPAR_DDR2_SDRAM_MPMC_BASEADDR' undeclared (first use in this function)
+../src/display.c:67:28: error: 'XPAR_DVMA_0_BASEADDR' undeclared (first use in this function)
+make: *** [src/display.o] Error 1
+13:45:28 **** Incremental Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+../src/display.c: In function 'clearDisplay':
+../src/display.c:13:13: error: 'XPAR_DDR2_SDRAM_MPMC_BASEADDR' undeclared (first use in this function)
+../src/display.c:13:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/display.c:15:28: error: 'XPAR_DVMA_0_BASEADDR' undeclared (first use in this function)
+../src/display.c: In function 'drawGameState':
+../src/display.c:61:21: error: 'XPAR_DDR2_SDRAM_MPMC_BASEADDR' undeclared (first use in this function)
+../src/display.c:67:28: error: 'XPAR_DVMA_0_BASEADDR' undeclared (first use in this function)
+make: *** [src/display.o] Error 1
+13:45:43 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+Finished building: ../src/display.c
+ 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'readGyro':
+../src/main.c:59:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:58:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:58:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:152:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:35:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building file: ../src/pmodGYRO.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pmodGYRO.d" -MT"src/pmodGYRO.d" -o "src/pmodGYRO.o" "../src/pmodGYRO.c"
+../src/pmodGYRO.c:57:1: warning: excess elements in struct initializer [enabled by default]
+../src/pmodGYRO.c:57:1: warning: (near initialization for 'GYROConfig') [enabled by default]
+../src/pmodGYRO.c: In function 'GYRO_begin':
+../src/pmodGYRO.c:530:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/pmodGYRO.c
+ 
+Building file: ../src/vmodcam_cfg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/vmodcam_cfg.d" -MT"src/vmodcam_cfg.d" -o "src/vmodcam_cfg.o" "../src/vmodcam_cfg.c"
+../src/vmodcam_cfg.c: In function 'CamIicCfg':
+../src/vmodcam_cfg.c:102:2: warning: implicit declaration of function 'CamIicSetupPLL' [-Wimplicit-function-declaration]
+../src/vmodcam_cfg.c: In function 'CamIicSingleRead':
+../src/vmodcam_cfg.c:334:6: warning: unused variable 'lCamIicReadHeader' [-Wunused-variable]
+../src/vmodcam_cfg.c: In function 'CamIicSingleWrite':
+../src/vmodcam_cfg.c:392:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+../src/vmodcam_cfg.c:388:6: warning: unused variable 'cWriteBytes' [-Wunused-variable]
+../src/vmodcam_cfg.c:387:6: warning: unused variable 'lCamIicRegData' [-Wunused-variable]
+../src/vmodcam_cfg.c: In function 'ClearScreen':
+../src/vmodcam_cfg.c:475:2: warning: 'return' with a value, in function returning void [enabled by default]
+../src/vmodcam_cfg.c: In function 'CamIicInit':
+../src/vmodcam_cfg.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/vmodcam_cfg.c: In function 'CamIicPowerUp':
+../src/vmodcam_cfg.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/vmodcam_cfg.c: In function 'CamIicSetupPLL':
+../src/vmodcam_cfg.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/vmodcam_cfg.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15752	    356	  12132	  28240	   6e50	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+13:45:50 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+13:45:55 **** Clean-only build of configuration Debug for project mario ****
+make clean 
+rm -rf  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o  ./src/cam_ctrl.d ./src/display.d ./src/game_controller.d ./src/main.d ./src/platform.d ./src/pmodGYRO.d ./src/vmodcam_cfg.d  mario.elf.size  mario.elf.elfcheck  mario.elf
+ 
+13:45:55 **** Clean-only build of project mario_bsp ****
+make -k clean 
+rm -rf microblaze_0
+13:45:56 **** Build of project mario_bsp ****
+make -k all 
+libgen -hw ../proj_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../proj_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling lldma
+Compiling standalone
+Compiling gpio
+Compiling iic
+Compiling mpmc
+Compiling bram
+Compiling uartlite
+Compiling intc
+Compiling spi
+Compiling tmrctr
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+13:46:09 **** Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+../src/cam_ctrl.c: In function 'CamStatus':
+../src/cam_ctrl.c:126:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/cam_ctrl.c
+ 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+Finished building: ../src/display.c
+ 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'readGyro':
+../src/main.c:59:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:58:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:58:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:152:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:35:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building file: ../src/pmodGYRO.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pmodGYRO.d" -MT"src/pmodGYRO.d" -o "src/pmodGYRO.o" "../src/pmodGYRO.c"
+../src/pmodGYRO.c:57:1: warning: excess elements in struct initializer [enabled by default]
+../src/pmodGYRO.c:57:1: warning: (near initialization for 'GYROConfig') [enabled by default]
+../src/pmodGYRO.c: In function 'GYRO_begin':
+../src/pmodGYRO.c:530:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/pmodGYRO.c
+ 
+Building file: ../src/vmodcam_cfg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/vmodcam_cfg.d" -MT"src/vmodcam_cfg.d" -o "src/vmodcam_cfg.o" "../src/vmodcam_cfg.c"
+../src/vmodcam_cfg.c: In function 'CamIicCfg':
+../src/vmodcam_cfg.c:102:2: warning: implicit declaration of function 'CamIicSetupPLL' [-Wimplicit-function-declaration]
+../src/vmodcam_cfg.c: In function 'CamIicSingleRead':
+../src/vmodcam_cfg.c:334:6: warning: unused variable 'lCamIicReadHeader' [-Wunused-variable]
+../src/vmodcam_cfg.c: In function 'CamIicSingleWrite':
+../src/vmodcam_cfg.c:392:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+../src/vmodcam_cfg.c:388:6: warning: unused variable 'cWriteBytes' [-Wunused-variable]
+../src/vmodcam_cfg.c:387:6: warning: unused variable 'lCamIicRegData' [-Wunused-variable]
+../src/vmodcam_cfg.c: In function 'ClearScreen':
+../src/vmodcam_cfg.c:475:2: warning: 'return' with a value, in function returning void [enabled by default]
+../src/vmodcam_cfg.c: In function 'CamIicInit':
+../src/vmodcam_cfg.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/vmodcam_cfg.c: In function 'CamIicPowerUp':
+../src/vmodcam_cfg.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/vmodcam_cfg.c: In function 'CamIicSetupPLL':
+../src/vmodcam_cfg.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/vmodcam_cfg.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15752	    356	  12132	  28240	   6e50	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+13:48:55 **** Auto Build of project mario_bsp ****
+make -k all 
+Finished building libraries
+13:49:05 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:07:38 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:11:58 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+Finished building: ../src/display.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15756	    356	  12136	  28248	   6e58	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:12:00 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:12:46 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15756	    356	  12136	  28248	   6e58	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:12:57 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:13:03 **** Clean-only build of configuration Debug for project mario ****
+make clean 
+rm -rf  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o  ./src/cam_ctrl.d ./src/display.d ./src/game_controller.d ./src/main.d ./src/platform.d ./src/pmodGYRO.d ./src/vmodcam_cfg.d  mario.elf.size  mario.elf.elfcheck  mario.elf
+ 
+14:13:03 **** Clean-only build of project mario_bsp ****
+make -k clean 
+rm -rf microblaze_0
+14:13:04 **** Build of project mario_bsp ****
+make -k all 
+libgen -hw ../proj_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../proj_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling lldma
+Compiling standalone
+Compiling gpio
+Compiling iic
+Compiling mpmc
+Compiling bram
+Compiling uartlite
+Compiling intc
+Compiling spi
+Compiling tmrctr
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+14:13:16 **** Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+../src/cam_ctrl.c: In function 'CamStatus':
+../src/cam_ctrl.c:126:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/cam_ctrl.c
+ 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+Finished building: ../src/display.c
+ 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'readGyro':
+../src/main.c:59:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:58:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:58:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:152:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:35:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building file: ../src/pmodGYRO.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pmodGYRO.d" -MT"src/pmodGYRO.d" -o "src/pmodGYRO.o" "../src/pmodGYRO.c"
+../src/pmodGYRO.c:57:1: warning: excess elements in struct initializer [enabled by default]
+../src/pmodGYRO.c:57:1: warning: (near initialization for 'GYROConfig') [enabled by default]
+../src/pmodGYRO.c: In function 'GYRO_begin':
+../src/pmodGYRO.c:530:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/pmodGYRO.c
+ 
+Building file: ../src/vmodcam_cfg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/vmodcam_cfg.d" -MT"src/vmodcam_cfg.d" -o "src/vmodcam_cfg.o" "../src/vmodcam_cfg.c"
+../src/vmodcam_cfg.c: In function 'CamIicCfg':
+../src/vmodcam_cfg.c:102:2: warning: implicit declaration of function 'CamIicSetupPLL' [-Wimplicit-function-declaration]
+../src/vmodcam_cfg.c: In function 'CamIicSingleRead':
+../src/vmodcam_cfg.c:334:6: warning: unused variable 'lCamIicReadHeader' [-Wunused-variable]
+../src/vmodcam_cfg.c: In function 'CamIicSingleWrite':
+../src/vmodcam_cfg.c:392:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+../src/vmodcam_cfg.c:388:6: warning: unused variable 'cWriteBytes' [-Wunused-variable]
+../src/vmodcam_cfg.c:387:6: warning: unused variable 'lCamIicRegData' [-Wunused-variable]
+../src/vmodcam_cfg.c: In function 'ClearScreen':
+../src/vmodcam_cfg.c:475:2: warning: 'return' with a value, in function returning void [enabled by default]
+../src/vmodcam_cfg.c: In function 'CamIicInit':
+../src/vmodcam_cfg.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/vmodcam_cfg.c: In function 'CamIicPowerUp':
+../src/vmodcam_cfg.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/vmodcam_cfg.c: In function 'CamIicSetupPLL':
+../src/vmodcam_cfg.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/vmodcam_cfg.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15756	    356	  12136	  28248	   6e58	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:13:22 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:13:38 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:15:55 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:16:46 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:19:14 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:19:59 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:20:12 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15756	    356	  12136	  28248	   6e58	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:20:39 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15756	    356	  12136	  28248	   6e58	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:21:59 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15780	    356	  12136	  28272	   6e70	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:22:38 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15864	    356	  12132	  28352	   6ec0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:23:01 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15864	    356	  12132	  28352	   6ec0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:23:53 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15876	    356	  12136	  28368	   6ed0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:23:58 **** Clean-only build of configuration Debug for project mario ****
+make clean 
+rm -rf  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o  ./src/cam_ctrl.d ./src/display.d ./src/game_controller.d ./src/main.d ./src/platform.d ./src/pmodGYRO.d ./src/vmodcam_cfg.d  mario.elf.size  mario.elf.elfcheck  mario.elf
+ 
+14:23:58 **** Clean-only build of project mario_bsp ****
+make -k clean 
+rm -rf microblaze_0
+14:23:59 **** Build of project mario_bsp ****
+make -k all 
+libgen -hw ../proj_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../proj_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling lldma
+Compiling standalone
+Compiling gpio
+Compiling iic
+Compiling mpmc
+Compiling bram
+Compiling uartlite
+Compiling intc
+Compiling spi
+Compiling tmrctr
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+14:24:11 **** Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/cam_ctrl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/cam_ctrl.d" -MT"src/cam_ctrl.d" -o "src/cam_ctrl.o" "../src/cam_ctrl.c"
+../src/cam_ctrl.c: In function 'CamStatus':
+../src/cam_ctrl.c:126:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/cam_ctrl.c
+ 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+Finished building: ../src/display.c
+ 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'readGyro':
+../src/main.c:59:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:58:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:58:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:152:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:35:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building file: ../src/pmodGYRO.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pmodGYRO.d" -MT"src/pmodGYRO.d" -o "src/pmodGYRO.o" "../src/pmodGYRO.c"
+../src/pmodGYRO.c:57:1: warning: excess elements in struct initializer [enabled by default]
+../src/pmodGYRO.c:57:1: warning: (near initialization for 'GYROConfig') [enabled by default]
+../src/pmodGYRO.c: In function 'GYRO_begin':
+../src/pmodGYRO.c:530:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/pmodGYRO.c
+ 
+Building file: ../src/vmodcam_cfg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/vmodcam_cfg.d" -MT"src/vmodcam_cfg.d" -o "src/vmodcam_cfg.o" "../src/vmodcam_cfg.c"
+../src/vmodcam_cfg.c: In function 'CamIicCfg':
+../src/vmodcam_cfg.c:102:2: warning: implicit declaration of function 'CamIicSetupPLL' [-Wimplicit-function-declaration]
+../src/vmodcam_cfg.c: In function 'CamIicSingleRead':
+../src/vmodcam_cfg.c:334:6: warning: unused variable 'lCamIicReadHeader' [-Wunused-variable]
+../src/vmodcam_cfg.c: In function 'CamIicSingleWrite':
+../src/vmodcam_cfg.c:392:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+../src/vmodcam_cfg.c:388:6: warning: unused variable 'cWriteBytes' [-Wunused-variable]
+../src/vmodcam_cfg.c:387:6: warning: unused variable 'lCamIicRegData' [-Wunused-variable]
+../src/vmodcam_cfg.c: In function 'ClearScreen':
+../src/vmodcam_cfg.c:475:2: warning: 'return' with a value, in function returning void [enabled by default]
+../src/vmodcam_cfg.c: In function 'CamIicInit':
+../src/vmodcam_cfg.c:306:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/vmodcam_cfg.c: In function 'CamIicPowerUp':
+../src/vmodcam_cfg.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/vmodcam_cfg.c: In function 'CamIicSetupPLL':
+../src/vmodcam_cfg.c:140:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/vmodcam_cfg.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15876	    356	  12144	  28376	   6ed8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:24:16 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:27:15 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:28:20 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15984	    356	  12140	  28480	   6f40	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:28:23 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:29:11 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15924	    356	  12144	  28424	   6f08	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:29:14 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:30:47 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15924	    356	  12144	  28424	   6f08	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:30:52 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15924	    356	  12144	  28424	   6f08	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:31:04 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:31:12 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'propagateGame':
+../src/game_controller.c:89:16: error: expected expression before ']' token
+make: *** [src/game_controller.o] Error 1
+14:31:13 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15924	    356	  12144	  28424	   6f08	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:31:16 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:35:04 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15924	    356	  12144	  28424	   6f08	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:35:29 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15924	    356	  12144	  28424	   6f08	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:39:00 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:39:43 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20316	   1396	  12200	  33912	   8478	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:39:46 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:46:54 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20316	   1396	  12200	  33912	   8478	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:51:04 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20316	   1396	  12200	  33912	   8478	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:52:14 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20408	   1396	  12196	  34000	   84d0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:52:33 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20560	   1396	  12196	  34152	   8568	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:53:50 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:54:48 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20660	   1396	  12200	  34256	   85d0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:55:02 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20660	   1396	  12200	  34256	   85d0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:55:20 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20676	   1396	  12200	  34272	   85e0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:55:37 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20796	   1396	  12200	  34392	   8658	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:55:40 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20796	   1396	  12200	  34392	   8658	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:55:42 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:56:27 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20780	   1396	  12200	  34376	   8648	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:56:30 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:56:54 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20796	   1396	  12200	  34392	   8658	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:57:10 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:57:13 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'movePlayer':
+../src/game_controller.c:213:5: error: expected ';' before 'if'
+make: *** [src/game_controller.o] Error 1
+14:57:14 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20796	   1396	  12200	  34392	   8658	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:57:17 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:05:08 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:06:26 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'createShell':
+../src/game_controller.c:120:4: error: expected ';' before 'else'
+make: *** [src/game_controller.o] Error 1
+15:06:33 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20888	   1396	  12196	  34480	   86b0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:06:37 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:07:09 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20880	   1396	  12196	  34472	   86a8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:07:12 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:07:19 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20860	   1396	  12200	  34456	   8698	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:07:23 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:07:41 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20884	   1396	  12200	  34480	   86b0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:07:44 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:07:52 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:08:05 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:08:08 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20860	   1396	  12200	  34456	   8698	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:08:11 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:12:08 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'generateObject':
+../src/game_controller.c:143:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+../src/game_controller.c:147:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+../src/game_controller.c:157:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+make: *** [src/game_controller.o] Error 1
+15:12:10 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'generateObject':
+../src/game_controller.c:143:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+../src/game_controller.c:147:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+../src/game_controller.c:157:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+make: *** [src/game_controller.o] Error 1
+15:12:30 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'generateObject':
+../src/game_controller.c:143:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+../src/game_controller.c:147:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+../src/game_controller.c:157:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+make: *** [src/game_controller.o] Error 1
+15:13:13 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'generateObject':
+../src/game_controller.c:150:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+../src/game_controller.c:160:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+make: *** [src/game_controller.o] Error 1
+15:13:19 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'generateObject':
+../src/game_controller.c:152:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+../src/game_controller.c:162:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+make: *** [src/game_controller.o] Error 1
+15:13:21 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'generateObject':
+../src/game_controller.c:143:3: error: 'offset' undeclared (first use in this function)
+../src/game_controller.c:143:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/game_controller.c:152:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+../src/game_controller.c:162:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+make: *** [src/game_controller.o] Error 1
+15:13:24 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'generateObject':
+../src/game_controller.c:152:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+../src/game_controller.c:162:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+make: *** [src/game_controller.o] Error 1
+15:13:55 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'generateObject':
+../src/game_controller.c:165:3: error: too few arguments to function 'createShell'
+../src/game_controller.c:112:6: note: declared here
+make: *** [src/game_controller.o] Error 1
+15:14:12 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21212	   1396	  12200	  34808	   87f8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:14:17 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:16:03 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21212	   1396	  12200	  34808	   87f8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:16:14 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21212	   1396	  12200	  34808	   87f8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:16:19 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21212	   1396	  12200	  34808	   87f8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:16:22 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21212	   1396	  12200	  34808	   87f8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:16:41 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21188	   1396	  12200	  34784	   87e0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:16:57 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21188	   1396	  12200	  34784	   87e0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:16:59 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:18:04 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21188	   1396	  12200	  34784	   87e0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:18:07 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:20:24 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c:239:46: error: expected ';', ',' or ')' before 'text'
+make: *** [src/game_controller.o] Error 1
+15:20:42 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c:239:46: error: expected ';', ',' or ')' before 'text'
+make: *** [src/game_controller.o] Error 1
+15:20:54 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c:239:43: error: expected ';', ',' or ')' before 'text'
+make: *** [src/game_controller.o] Error 1
+15:21:02 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'textOnTopLeft':
+../src/game_controller.c:245:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/game_controller.c:245:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/game_controller.c:246:4: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/game_controller.c:247:5: error: 'game' undeclared (first use in this function)
+../src/game_controller.c:247:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/game_controller.o] Error 1
+15:21:12 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'textOnTopLeft':
+../src/game_controller.c:246:11: error: redeclaration of 'i' with no linkage
+../src/game_controller.c:244:7: note: previous declaration of 'i' was here
+../src/game_controller.c:246:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/game_controller.c:246:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/game_controller.c:247:4: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/game_controller.c:248:5: error: 'game' undeclared (first use in this function)
+../src/game_controller.c:248:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/game_controller.c:244:10: warning: unused variable 'j' [-Wunused-variable]
+make: *** [src/game_controller.o] Error 1
+15:21:18 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+../src/game_controller.c: In function 'textOnTopLeft':
+../src/game_controller.c:248:5: error: 'game' undeclared (first use in this function)
+../src/game_controller.c:248:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/game_controller.o] Error 1
+15:21:24 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building file: ../src/bmp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bmp.d" -MT"src/bmp.d" -o "src/bmp.o" "../src/bmp.c"
+../src/bmp.c: In function 'bm_save':
+../src/bmp.c:647:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'bm_from_Xpm':
+../src/bmp.c:3059:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'bm_atoi':
+../src/bmp.c:3996:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:3999:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:3999:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:3999:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4012:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4038:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4050:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4050:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4050:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4064:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4084:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4097:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4111:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4111:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4116:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4116:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4132:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4144:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4148:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4148:5: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4149:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4149:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4149:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4150:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4160:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4161:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4171:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:4172:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'bm_load_palette':
+../src/bmp.c:5052:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:5063:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'bm_text_width':
+../src/bmp.c:5117:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c: In function 'sf_puts':
+../src/bmp.c:5299:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/bmp.c:5300:21: warning: array subscript has type 'char' [-Wchar-subscripts]
+Finished building: ../src/bmp.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21284	   1396	  12200	  34880	   8840	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:22:38 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21284	   1396	  12200	  34880	   8840	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:22:42 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'readGyro':
+../src/main.c:59:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:58:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:58:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:130:3: warning: implicit declaration of function 'textOnTopLeft' [-Wimplicit-function-declaration]
+../src/main.c:131:3: error: expected ';' before 'while'
+../src/main.c: In function 'displayCamera':
+../src/main.c:153:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:35:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+15:22:44 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'readGyro':
+../src/main.c:59:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:58:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:58:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:130:3: warning: implicit declaration of function 'textOnTopLeft' [-Wimplicit-function-declaration]
+../src/main.c: In function 'displayCamera':
+../src/main.c:153:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:35:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mario.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 38112 bytes
+collect2: ld returned 1 exit status
+make: *** [mario.elf] Error 1
+15:22:46 **** Incremental Build of configuration Debug for project mario ****
+make all 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mario.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 38112 bytes
+collect2: ld returned 1 exit status
+make: *** [mario.elf] Error 1
+15:22:56 **** Incremental Build of configuration Debug for project mario ****
+make all 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: mario.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/sdk/2013.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 38112 bytes
+collect2: ld returned 1 exit status
+make: *** [mario.elf] Error 1
+15:23:16 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\Users\CS152B\Documents\m152b_fall2018\mariokart2\mario\Debug/../src/main.c:130: undefined reference to `textOnTopLeft'
+collect2: ld returned 1 exit status
+make: *** [mario.elf] Error 1
+15:23:26 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'readGyro':
+../src/main.c:59:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:58:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:58:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:152:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:35:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21284	   1396	  12200	  34880	   8840	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:23:29 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'readGyro':
+../src/main.c:59:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:58:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:58:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:151:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:35:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21284	   1396	  12200	  34880	   8840	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:23:38 **** Auto Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:25:33 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21324	   1396	  12200	  34920	   8868	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:25:49 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21324	   1396	  12200	  34920	   8868	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:25:56 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21324	   1396	  12200	  34920	   8868	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:31:32 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21324	   1396	  12200	  34920	   8868	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:31:52 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21324	   1396	  12200	  34920	   8868	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:32:41 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21324	   1396	  12200	  34920	   8868	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:33:11 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21508	   1396	  12200	  35104	   8920	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+15:33:13 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:33:24 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:34:55 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+15:36:28 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/game_controller.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/game_controller.d" -MT"src/game_controller.d" -o "src/game_controller.o" "../src/game_controller.c"
+Finished building: ../src/game_controller.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21508	   1396	  12200	  35104	   8920	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
