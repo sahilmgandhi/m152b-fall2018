@@ -10,7 +10,6 @@
 #include "pmodGYRO.h"
 #include <stdint.h>
 
-#include "game_board.h"
 #include "game_controller.h"
 #include "display.h"
 #include "globals.h"
@@ -71,22 +70,23 @@ int16_t readGyro()
 
 	//xil_printf("XX: %d, YY: %d, ZZ: %d, Temp: %d\n\r", xx >> 5 , yy >> 5, zz >> 5, temperature); // This just prints out all 0s ... so looks like that library's getX/Y/Z is incorrect
 	return x; //(int16_t)(xx >> 5);
-
-
 }
 
 struct game g;
 XTmrCtr timer;
 
-int myabs(int x){
+int myabs(int x)
+{
 	return x < 0 ? -x : x;
 }
 
-int mymin(int x, int y){
+int mymin(int x, int y)
+{
 	return x < y ? x : y;
 }
 
-int mymax(int x, int y){
+int mymax(int x, int y)
+{
 	return x > y ? x : y;
 }
 
@@ -115,61 +115,63 @@ void main()
 		XTmrCtr_Start(&timer, 0);
 		int xposnew = readGyro();
 
-//		xil_printf("Xposnew: %d\n\r", xpos);
+		//		xil_printf("Xposnew: %d\n\r", xpos);
 		xposnew /= 1024;
-//		xil_printf("Xposnew: %d\n\r", xpos);
+		//		xil_printf("Xposnew: %d\n\r", xpos);
 
 		xpos += xposnew;
 		xpos = mymax(xpos, 0);
 		xpos = mymin(xpos, 47);
-//		xil_printf("Xpos: %d\n\r", xpos);
-//		xil_printf("%d\n", xpos); // doruk
+		//		xil_printf("Xpos: %d\n\r", xpos);
+		//		xil_printf("%d\n", xpos); // doruk
 		propagateGame(&g);
 		movePlayer(&g, xpos, -1);
 		drawGameState(&g);
-		while (XTmrCtr_GetValue(&timer, 0) < SCREEN_REFRESH_PERIOD);
+		while (XTmrCtr_GetValue(&timer, 0) < SCREEN_REFRESH_PERIOD)
+			;
 		int pixel = 0;
 		int i, j;
-		for(i = 0; i <50; i++){
-			for(j = 0; j < 50; j++){
-				pixel += XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR+1280+1280 + i + j*1280);
+		for (i = 0; i < 50; i++)
+		{
+			for (j = 0; j < 50; j++)
+			{
+				pixel += XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 1280 + 1280 + i + j * 1280);
 			}
 		}
-		xil_printf("Pixel Average: %d\n", pixel/2500);
+		xil_printf("Pixel Average: %d\n", pixel / 2500);
 		a++;
 	}
 
 	drawGameState(&g);
-
 }
 
-void displayCamera(){
+void displayCamera()
+{
 	u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;
 	int posX, posY;
 	int color;
 
-	for(posX = 0; posX<2560; posX++)
-		for(posY = 0; posY<720; posY++)
-			XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2*(posY*2560+posX), (posX/40)<<4);
+	for (posX = 0; posX < 2560; posX++)
+		for (posY = 0; posY < 720; posY++)
+			XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (posY * 2560 + posX), (posX / 40) << 4);
 
-	XIo_Out32(lDvmaBaseAddress + blDvmaHSR, 40); // hsync
-	XIo_Out32(lDvmaBaseAddress + blDvmaHBPR, 260); // hbpr
+	XIo_Out32(lDvmaBaseAddress + blDvmaHSR, 40);	// hsync
+	XIo_Out32(lDvmaBaseAddress + blDvmaHBPR, 260);  // hbpr
 	XIo_Out32(lDvmaBaseAddress + blDvmaHFPR, 1540); // hfpr
-	XIo_Out32(lDvmaBaseAddress + blDvmaHTR, 1650); // htr
-	XIo_Out32(lDvmaBaseAddress + blDvmaVSR, 5); // vsync
-	XIo_Out32(lDvmaBaseAddress + blDvmaVBPR, 25); // vbpr
-	XIo_Out32(lDvmaBaseAddress + blDvmaVFPR, 745); // vfpr
-	XIo_Out32(lDvmaBaseAddress + blDvmaVTR, 750); // vtr
+	XIo_Out32(lDvmaBaseAddress + blDvmaHTR, 1650);  // htr
+	XIo_Out32(lDvmaBaseAddress + blDvmaVSR, 5);		// vsync
+	XIo_Out32(lDvmaBaseAddress + blDvmaVBPR, 25);   // vbpr
+	XIo_Out32(lDvmaBaseAddress + blDvmaVFPR, 745);  // vfpr
+	XIo_Out32(lDvmaBaseAddress + blDvmaVTR, 750);   // vtr
 
-	XIo_Out32(lDvmaBaseAddress + blDvmaFWR, 0x00000500); // frame width
-	XIo_Out32(lDvmaBaseAddress + blDvmaFHR, 0x000002D0); // frame height
+	XIo_Out32(lDvmaBaseAddress + blDvmaFWR, 0x00000500);					 // frame width
+	XIo_Out32(lDvmaBaseAddress + blDvmaFHR, 0x000002D0);					 // frame height
 	XIo_Out32(lDvmaBaseAddress + blDvmaFBAR, XPAR_DDR2_SDRAM_MPMC_BASEADDR); // frame base addr
-	XIo_Out32(lDvmaBaseAddress + blDvmaFLSR, 0x00000A00); // frame line stride
-	XIo_Out32(lDvmaBaseAddress + blDvmaCR, 0x00000003); // dvma enable, dfl enable
+	XIo_Out32(lDvmaBaseAddress + blDvmaFLSR, 0x00000A00);					 // frame line stride
+	XIo_Out32(lDvmaBaseAddress + blDvmaCR, 0x00000003);						 // dvma enable, dfl enable
 
-//	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
-//	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
-	CamCtrlInit(XPAR_CAM_CTRL_0_BASEADDR, CAM_CFG_640x480P, 640*2);
+	//	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
+	//	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
+	CamCtrlInit(XPAR_CAM_CTRL_0_BASEADDR, CAM_CFG_640x480P, 640 * 2);
 	CamCtrlInit(XPAR_CAM_CTRL_1_BASEADDR, CAM_CFG_640x480P, 0);
-
 }
