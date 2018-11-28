@@ -128,14 +128,14 @@ void main()
 		movePlayer(&g, xpos, -1);
 		drawGameState(&g);
 		while (XTmrCtr_GetValue(&timer, 0) < SCREEN_REFRESH_PERIOD);
-		int pixel = 0;
+		int pixel;
 		int i, j;
-		for(i = 0; i <50; i++){
+		for(i = 0; i < 50; i++){
 			for(j = 0; j < 50; j++){
-				pixel += XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR+1280+1280 + i + j*1280);
+				pixel += XIo_In32(XPAR_DDR2_SDRAM_MPMC_BASEADDR+1280+1280 + i + j*1280)/2500;
 			}
 		}
-		xil_printf("Pixel Average: %d\n", pixel/2500);
+		xil_printf("%d\n", xpos); // doruk
 		a++;
 	}
 

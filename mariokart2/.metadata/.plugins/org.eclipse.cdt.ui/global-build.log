@@ -25037,3 +25037,964 @@ ELF file	: mario.elf
 elfcheck passed.
 Finished building: mario.elf.elfcheck
  
+11:32:49 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:131:94: error: macro "XIo_In32" passed 2 arguments, but takes just 1
+../src/main.c:131:3: error: 'XIo_In32' undeclared (first use in this function)
+../src/main.c:131:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'displayCamera':
+../src/main.c:142:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+11:38:21 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:131:3: error: 'blBaseAddr' undeclared (first use in this function)
+../src/main.c:131:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'displayCamera':
+../src/main.c:142:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+11:38:41 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:131:13: error: 'blBaseAddr' undeclared (first use in this function)
+../src/main.c:131:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:131:7: warning: unused variable 'pixel' [-Wunused-variable]
+../src/main.c: In function 'displayCamera':
+../src/main.c:142:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+11:39:39 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:133:3: error: 'blBaseAddr' undeclared (first use in this function)
+../src/main.c:133:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:132:10: warning: unused variable 'j' [-Wunused-variable]
+../src/main.c:132:7: warning: unused variable 'i' [-Wunused-variable]
+../src/main.c:131:7: warning: unused variable 'pixel' [-Wunused-variable]
+../src/main.c: In function 'displayCamera':
+../src/main.c:144:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+11:41:38 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:138:3: error: 'blBaseAddr' undeclared (first use in this function)
+../src/main.c:138:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:131:7: warning: unused variable 'pixel' [-Wunused-variable]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+11:42:05 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:131:7: warning: unused variable 'pixel' [-Wunused-variable]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15644	    356	  12136	  28136	   6de8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:42:47 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:131:7: warning: variable 'pixel' set but not used [-Wunused-but-set-variable]
+../src/main.c: In function 'displayCamera':
+../src/main.c:148:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15668	    356	  12136	  28160	   6e00	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:43:40 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:148:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15700	    356	  12136	  28192	   6e20	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:43:51 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15728	    356	  12132	  28216	   6e38	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:43:56 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15728	    356	  12132	  28216	   6e38	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:44:04 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15732	    356	  12136	  28224	   6e40	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:44:21 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15748	    356	  12136	  28240	   6e50	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:44:34 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+11:48:00 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15748	    356	  12136	  28240	   6e50	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:48:53 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15748	    356	  12136	  28240	   6e50	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:48:57 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15724	    356	  12136	  28216	   6e38	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:49:00 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15748	    356	  12136	  28240	   6e50	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:49:04 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15748	    356	  12136	  28240	   6e50	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:49:14 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+11:50:44 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+../src/main.c: In function 'main':
+../src/main.c:135:14: warning: 'j' may be used uninitialized in this function [-Wuninitialized]
+../src/main.c:135:14: warning: 'i' may be used uninitialized in this function [-Wuninitialized]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15676	    356	  12136	  28168	   6e08	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:50:48 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+../src/main.c: In function 'main':
+../src/main.c:135:14: warning: 'j' may be used uninitialized in this function [-Wuninitialized]
+../src/main.c:135:14: warning: 'i' may be used uninitialized in this function [-Wuninitialized]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15652	    356	  12136	  28144	   6df0	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:50:50 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+11:51:30 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+../src/main.c: In function 'main':
+../src/main.c:135:14: warning: 'j' may be used uninitialized in this function [-Wuninitialized]
+../src/main.c:135:14: warning: 'i' may be used uninitialized in this function [-Wuninitialized]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15660	    356	  12136	  28152	   6df8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:51:33 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+11:55:38 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15732	    356	  12136	  28224	   6e40	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:55:45 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+11:56:57 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:149:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15756	    356	  12136	  28248	   6e58	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+11:57:00 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
