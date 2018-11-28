@@ -115,13 +115,13 @@ int propagateGame(struct game *g)
     g->screen[j][0] = ROAD;
   }
 
-  if (detectCollision(g))
-  {
-    playerDead(g);
-    return 0;
-  }
+//  if (detectCollision(g))
+//  {
+//    playerDead(g);
+//    return 0;
+//  }
 
-  placeCarOnScreen(g);
+  //placeCarOnScreen(g);
 
   return 1;
 }
@@ -177,6 +177,8 @@ void fillScreen(struct game *g, uint32_t color)
  */
 void movePlayer(struct game *g, int16_t newX, int16_t newY)
 {
+  propagateGame(g);
+//  propagateGame(g);
 
   if (newX >= 0 && newX < GAME_X-2){
 	  g->xLeftOld = g->xLeft;

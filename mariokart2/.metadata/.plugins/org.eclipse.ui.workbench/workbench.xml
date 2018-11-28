@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="20" version="2.0">
+<workbench progressCount="19" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="250" y="250">
+<window height="768" maximized="true" width="1024" x="765" y="-25">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -40,21 +40,21 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/mario/src/main.c" title="main.c" tooltip="mario/src/main.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/mario/src/main.c" title="main.c" tooltip="mario/src/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mario/src/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6642" selectionTopPixel="3146"/>
+<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="6730" selectionTopPixel="3191"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="globals.h" partName="globals.h" path="C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/mario/src/globals.h" title="globals.h" tooltip="mario/src/globals.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mario/src/globals.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="231" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="display.h" partName="display.h" path="C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/mario/src/display.h" title="display.h" tooltip="mario/src/display.h" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="display.h" partName="display.h" path="C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/mario/src/display.h" title="display.h" tooltip="mario/src/display.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mario/src/display.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="2471" selectionTopPixel="765"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2684" selectionTopPixel="761"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="game_controller.h" partName="game_controller.h" path="C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/mario/src/game_controller.h" title="game_controller.h" tooltip="mario/src/game_controller.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mario/src/game_controller.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3981" selectionTopPixel="2445"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="510" selectionTopPixel="2471"/>
 </editor>
 </editors>
 <views>
@@ -68,6 +68,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
+<category IMemento.internal.id="Infos (1 item)"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
@@ -310,46 +311,9 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/game_controller.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/globals.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/pmodGYRO.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/game_controller.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/mario/src/display.h"/>
 </editors>
-<item historyLabel="globals.h" index="1">
-<position info="not_deleted" x="257" y="2"/>
-</item>
-<item historyLabel="game_controller.h" index="3">
-<position info="not_deleted" x="3019" y="0"/>
-</item>
-<item historyLabel="game_controller.h" index="3">
-<position info="not_deleted" x="4240" y="0"/>
-</item>
-<item historyLabel="game_controller.h" index="3">
-<position info="not_deleted" x="4293" y="0"/>
-</item>
-<item historyLabel="game_controller.h" index="3">
-<position info="not_deleted" x="4020" y="0"/>
-</item>
-<item historyLabel="game_controller.h" index="3">
-<position info="not_deleted" x="4171" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="6431" y="0"/>
-</item>
-<item historyLabel="game_controller.h" index="3">
-<position info="not_deleted" x="4020" y="10"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="6431" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="6054" y="0"/>
-</item>
-<item historyLabel="game_controller.h" index="3">
-<position info="not_deleted" x="2848" y="0"/>
-</item>
-<item historyLabel="globals.h" index="1">
-<position info="not_deleted" x="257" y="2"/>
-</item>
-<item historyLabel="display.h" index="2">
-<position info="not_deleted" x="2845" y="0"/>
-</item>
 <item historyLabel="globals.h" index="1">
 <position info="not_deleted" x="994" y="0"/>
 </item>
@@ -458,8 +422,47 @@
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="6602" y="0"/>
 </item>
-<item active="true" historyLabel="main.c" index="0">
+<item historyLabel="main.c" index="0">
 <position info="not_deleted" x="3528" y="14"/>
+</item>
+<item historyLabel="game_controller.h" index="8">
+<position info="not_deleted" x="3993" y="0"/>
+</item>
+<item historyLabel="game_controller.h" index="8">
+<position info="not_deleted" x="2608" y="6"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="5929" y="24"/>
+</item>
+<item historyLabel="game_controller.h" index="8">
+<position info="not_deleted" x="2608" y="6"/>
+</item>
+<item historyLabel="game_controller.h" index="8">
+<position info="not_deleted" x="2776" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="6324" y="0"/>
+</item>
+<item historyLabel="game_controller.h" index="8">
+<position info="not_deleted" x="1311" y="10"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="6376" y="0"/>
+</item>
+<item historyLabel="game_controller.h" index="8">
+<position info="not_deleted" x="1311" y="10"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="6730" y="13"/>
+</item>
+<item historyLabel="game_controller.h" index="8">
+<position info="not_deleted" x="510" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="6730" y="13"/>
+</item>
+<item active="true" historyLabel="display.h" index="9">
+<position info="not_deleted" x="2471" y="13"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

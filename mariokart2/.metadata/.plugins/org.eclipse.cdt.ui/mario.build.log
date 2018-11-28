@@ -1,6 +1,50 @@
-11:18:28 **** Incremental Build of configuration Debug for project mario ****
+11:22:56 **** Auto Build of configuration Debug for project mario ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+../src/game_controller.h: In function 'initGame':
+../src/game_controller.h:61:3: warning: implicit declaration of function 'placeCarOnScreen' [-Wimplicit-function-declaration]
+../src/game_controller.h: At top level:
+../src/game_controller.h:65:6: warning: conflicting types for 'placeCarOnScreen' [enabled by default]
+../src/game_controller.h:61:3: note: previous implicit declaration of 'placeCarOnScreen' was here
+../src/main.c: In function 'readGyro':
+../src/main.c:60:5: warning: unused variable 'temperature' [-Wunused-variable]
+../src/main.c:59:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:59:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:95:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'displayCamera':
+../src/main.c:143:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:36:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/cam_ctrl.o ./src/main.o ./src/platform.o ./src/pmodACL.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15560	    356	  12132	  28048	   6d90	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-11:18:28 Build Finished (took 171ms)
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+
+11:22:57 Build Finished (took 1s.732ms)
 

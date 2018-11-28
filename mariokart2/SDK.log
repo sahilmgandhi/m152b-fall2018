@@ -406,3 +406,35 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 11:14:47.100 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
 11:15:33.456 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 11:17:27.506 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:18:28.840 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:34:16.293 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:34:36.093 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:34:51.962 WARN  - Terminating existing sessions on processor microblaze_0 
+11:34:56.784 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+11:36:31.786 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:37:36.583 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:39:11.177 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:39:39.606 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:41:04.388 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:41:26.373 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:41:48.029 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:42:09.905 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:58:47.735 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:08:19.874 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+10:10:12.307 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:11:16.644 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:12:27.532 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:12:53.741 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:26:41.245 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:28:15.080 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:29:18.090 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:40:48.253 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:42:26.424 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:46:17.149 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:59:22.456 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:17:34.289 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:17:52.027 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:18:17.285 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:19:14.988 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:19:31.089 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:21:25.312 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 

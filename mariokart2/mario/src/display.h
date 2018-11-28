@@ -72,11 +72,10 @@ int drawGameState(struct game *g)
 	 * drawn. (leave the other pixels as being blank) 
 	 */
 
-  // TODO: We need to fix this to work with the game: It needs to loop through the game's array and show the screen
   uint32_t posX, posY;
   uint32_t newPosX, newPosY;
 
-  uint32_t xPadding = 375;
+  uint32_t xPadding = 70;
   uint32_t yPadding = 100;
   for (posX = 0; posX < GAME_X; posX++)
   {
