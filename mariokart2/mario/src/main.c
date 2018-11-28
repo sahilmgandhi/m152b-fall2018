@@ -90,6 +90,48 @@ int mymax(int x, int y)
 	return x > y ? x : y;
 }
 
+#define HIGH_THRESHOLD 9
+#define LOW_THRESHOLD 6
+int seeBlue_alternate(u16 pixel)
+{
+	u8 red = (pixel >> 8) & 0xF;
+	u8 green = (pixel >> 4) & 0xF;
+	u8 blue = (pixel >> 0) & 0xF;
+	if (blue > 11 && red < 5 && green < 5)
+	{
+		//xil_printf("this is blue\n\r");
+		return 1;
+	}
+	else
+		return 0;
+}
+int seeGreen_alternate(u16 pixel)
+{
+	u8 red = (pixel >> 8) & 0xF;
+	u8 green = (pixel >> 4) & 0xF;
+	u8 blue = (pixel >> 0) & 0xF;
+	if (green > HIGH_THRESHOLD && red < LOW_THRESHOLD && blue < LOW_THRESHOLD)
+	{
+		//xil_printf("this is green\n\r");
+		return 1;
+	}
+	else
+		return 0;
+}
+int seeRed_alternate(u16 pixel)
+{
+	u8 red = (pixel >> 8) & 0xF;
+	u8 green = (pixel >> 4) & 0xF;
+	u8 blue = (pixel >> 0) & 0xF;
+	if (red > HIGH_THRESHOLD && green < LOW_THRESHOLD && blue < LOW_THRESHOLD)
+	{
+		//xil_printf("this is red\n\r");
+		return 1;
+	}
+	else
+		return 0;
+}
+
 void displayCamera();
 
 void main()
@@ -121,19 +163,22 @@ void main()
 
 		xpos += xposnew;
 		xpos = mymax(xpos, 0);
-		xpos = mymin(xpos, 47);
+		xpos = mymin(xpos, GAME_X - 3);
 		//		xil_printf("Xpos: %d\n\r", xpos);
 		//		xil_printf("%d\n", xpos); // doruk
 		propagateGame(&g);
 		movePlayer(&g, xpos, -1);
 		drawGameState(&g);
-		while (XTmrCtr_GetValue(&timer, 0) < SCREEN_REFRESH_PERIOD);
+		while (XTmrCtr_GetValue(&timer, 0) < SCREEN_REFRESH_PERIOD)
+			;
 		int pixel = 0;
 		int i, j;
 		for (i = 0; i < 50; i++)
 		{
 			for (j = 0; j < 50; j++)
 			{
+				// Maybe try printing out to this position to see exactly which square you are grabbing??
+				// XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 1280 + 1280 + i + j * 1280, BLUE);
 				pixel += XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 1280 + 1280 + i + j * 1280);
 			}
 		}
