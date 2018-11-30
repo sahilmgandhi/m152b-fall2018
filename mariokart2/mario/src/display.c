@@ -1,5 +1,45 @@
 #include "display.h"
 
+const short digits[3][10][10] = 
+{
+{
+    {0,0,1,1,1,1,1,1,0,0},
+    {0,1,1,1,1,1,1,1,1,0},
+    {0,1,1,0,0,0,0,1,1,0},
+    {0,1,1,0,0,0,0,1,1,0},
+    {0,1,1,0,0,0,0,1,1,0},
+    {0,1,1,0,0,0,0,1,1,0},
+    {0,1,1,0,0,0,0,1,1,0},
+    {0,1,1,0,0,0,0,1,1,0},
+    {0,1,1,1,1,1,1,1,1,0},
+    {0,0,1,1,1,1,1,1,0,0}
+},{
+    {0,0,0,0,1,1,0,0,0,0},
+    {0,0,0,1,1,1,0,0,0,0},
+    {0,0,1,0,1,1,0,0,0,0},
+    {0,0,0,0,1,1,0,0,0,0},
+    {0,0,0,0,1,1,0,0,0,0},
+    {0,0,0,0,1,1,0,0,0,0},
+    {0,0,0,0,1,1,0,0,0,0},
+    {0,0,0,0,1,1,0,0,0,0},
+    {0,0,1,1,1,1,1,1,0,0},
+    {0,0,1,1,1,1,1,1,0,0}
+},{
+    {0,0,0,1,1,1,1,0,0,0},
+    {0,0,1,1,1,1,1,1,0,0},
+    {0,1,1,0,0,0,0,1,1,0},
+    {0,1,0,0,0,0,0,1,1,0},
+    {0,0,0,0,1,1,1,1,0,0},
+    {0,0,0,1,1,1,1,0,0,0},
+    {0,0,1,1,0,0,0,0,0,0},
+    {0,1,1,0,0,0,0,0,0,0},
+    {0,1,1,1,1,1,1,1,1,0},
+    {0,1,1,1,1,1,1,1,1,0}
+}
+};
+
+int drawGameScore(int score);
+
 /**
  * Clear the screen with an all white screen.
  *
@@ -64,6 +104,8 @@ int drawGameState(struct game *g)
         }
     }
 
+    drawGameScore(1);
+
     u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;
 
     XIo_Out32(lDvmaBaseAddress + blDvmaHSR, 40);    // hsync
@@ -83,4 +125,40 @@ int drawGameState(struct game *g)
     XIo_Out32(lDvmaBaseAddress + blDvmaCR, 0x00000003);                      // dvma enable, dfl enable
 
     return 1;
+}
+
+/**
+ * Draw the current game score onto the monitor.
+ *
+ * @param score The game score to draw onto the monitor.
+ *
+ * @return true if successfully drawn, false otherwise.
+ */
+int drawGameScore(int score){
+    uint16_t xPadding = 70;
+    uint16_t yPadding = 10;
+    uint8_t digits[3] = {score % 10, (score % 100) / 10, (score % 1000) / 100};
+    int i, posX, posY, newPosX, newPosY;
+    for(i = 0; i < 3; i++){
+        short digit[10][10] = digits[i];
+        for (posX = 0; posX < 10; posX++)
+        {
+            for (posY = 0; posY < 10; posY++)
+            {
+                uint32_t color;
+                if(digit[posY][posX] == 0)
+                    color = BLACK;
+                else
+                    color = WHITE;
+                for (newPosX = posX * 3 + i * 30; newPosX < (posX + 1) * 3; newPosX++)
+                {
+                    for (newPosY = posY * 3 + yPadding; newPosY < (posY + 1) * 3 + yPadding; newPosY++)
+                    {
+                        XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (newPosY * 2560 + newPosX + xPadding), color);
+                    }
+                }
+            }
+        }
+    }
+
 }
