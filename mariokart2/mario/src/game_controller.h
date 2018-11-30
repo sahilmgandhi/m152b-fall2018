@@ -36,6 +36,9 @@ struct game
   uint32_t screen[GAME_X][GAME_Y];
 
   uint8_t propagationCount;
+  uint8_t bananaCollisions;
+
+  uint32_t score;
 };
 
 /**
