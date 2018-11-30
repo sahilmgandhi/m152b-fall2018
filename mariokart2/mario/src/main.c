@@ -15,20 +15,6 @@
 #include "globals.h"
 #include "xtmrctr.h"
 
-#define blDvmaCR 0x00000000   // Control Reg Offset
-#define blDvmaFWR 0x00000004  // Frame Width Reg Offset
-#define blDvmaFHR 0x00000008  // Frame Height Reg Offset
-#define blDvmaFBAR 0x0000000c // Frame Base Addr Reg Offset
-#define blDvmaFLSR 0x00000010 // Frame Line Stride Reg Offeset
-#define blDvmaHSR 0x00000014  // H Sync Reg Offset
-#define blDvmaHBPR 0x00000018 // H Back Porch Reg Offset
-#define blDvmaHFPR 0x0000001c // H Front Porch Reg Offset
-#define blDvmaHTR 0x00000020  // H Total Reg Offset
-#define blDvmaVSR 0x00000024  // V Sync Reg Offset
-#define blDvmaVBPR 0x00000028 // V Back Porch Reg Offset
-#define blDvmaVFPR 0x0000002c // V Front Porch Reg Offset
-#define blDvmaVTR 0x00000030  // V Total Reg Offset
-
 #define SCALE 10;
 
 #define BUFFER_SIZE 5
@@ -44,22 +30,12 @@ int16_t readGyro()
 	PmodGYRO pgyr;
 
 	GYRO_begin(&pgyr, XPAR_XPS_SPI_0_BASEADDR, XPAR_SPI_0_BASEADDR);
-	//	GYRO_setThsXH(&pgyr, 0x0F);
 	GYRO_enableInt1(&pgyr, INT1_XHIE);
 	GYRO_enableInt2(&pgyr, REG3_I2_DRDY);
 
 	u8 temp = 0x0F;
-	GYRO_WriteReg(&pgyr, CTRL_REG1, &temp, 1);
 
-	temp = 0x07;
-	GYRO_WriteReg(&pgyr, CTRL_REG3, &temp, 1);
-	temp = 1 << 4;
-	GYRO_WriteReg(&pgyr, CTRL_REG4, &temp, 1);
 	int16_t x, y, z;
-	u8 temperature;
-	u8 whoami = 0;
-	GYRO_ReadReg(&pgyr, 0x0F, &whoami, 1);
-	xil_printf("WHOAMI: %x \n\r", whoami);
 
 	GYRO_begin(&pgyr, XPAR_XPS_SPI_0_BASEADDR, XPAR_SPI_0_BASEADDR);
 	GYRO_ReadReg(&pgyr, OUT_X_H, &temp, 1);
@@ -68,8 +44,7 @@ int16_t readGyro()
 	x |= temp;
 	GYRO_end(&pgyr);
 
-	//xil_printf("XX: %d, YY: %d, ZZ: %d, Temp: %d\n\r", xx >> 5 , yy >> 5, zz >> 5, temperature); // This just prints out all 0s ... so looks like that library's getX/Y/Z is incorrect
-	return x; //(int16_t)(xx >> 5);
+	return x;
 }
 
 struct game g;
@@ -156,16 +131,12 @@ void main()
 		XTmrCtr_Reset(&timer, 0);
 		XTmrCtr_Start(&timer, 0);
 		int xposnew = readGyro();
-
-		//		xil_printf("Xposnew: %d\n\r", xpos);
 		xposnew /= 1024;
-		//		xil_printf("Xposnew: %d\n\r", xpos);
 
 		xpos += xposnew;
 		xpos = mymax(xpos, 0);
 		xpos = mymin(xpos, GAME_X - 3);
-		//		xil_printf("Xpos: %d\n\r", xpos);
-		//		xil_printf("%d\n", xpos); // doruk
+
 		propagateGame(&g);
 		movePlayer(&g, xpos, -1);
 		drawGameState(&g);
@@ -177,12 +148,12 @@ void main()
 		{
 			for (j = 0; j < 200; j++)
 			{
-				// Maybe try printing out to this position to see exactly which square you are grabbing??
 				 //XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560, BLUE);
 				pixel += XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560);
 			}
 		}
-		xil_printf("Pixel Average: %d\n", pixel / 40000);
+		xil_printf("Pixel Average: %d\n\r", pixel / 40000);
+		xil_printf("Game score: %d \n\r", g.score);
 		a++;
 	}
 
@@ -214,6 +185,7 @@ void displayCamera()
 	XIo_Out32(lDvmaBaseAddress + blDvmaFLSR, 0x00000A00);					 // frame line stride
 	XIo_Out32(lDvmaBaseAddress + blDvmaCR, 0x00000003);						 // dvma enable, dfl enable
 
+	// Uncomment these lines to init the camera, and then comment them out afterwards
 //	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
 //	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
 	CamCtrlInit(XPAR_CAM_CTRL_0_BASEADDR, CAM_CFG_640x480P, 640 * 2);

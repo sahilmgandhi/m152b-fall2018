@@ -1,4 +1,4 @@
-13:01:55 **** Auto Build of configuration Debug for project mario ****
+13:57:38 **** Auto Build of configuration Debug for project mario ****
 make all 
 Building file: ../src/game_controller.c
 Invoking: MicroBlaze gcc compiler
@@ -13,7 +13,7 @@ Finished building target: mario.elf
 Invoking: MicroBlaze Print Size
 mb-size mario.elf  |tee "mario.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  22568	   1396	  12196	  36160	   8d40	mario.elf
+  22996	   1396	  12208	  36600	   8ef8	mario.elf
 Finished building: mario.elf.size
  
 Invoking: Xilinx ELF Check
@@ -30,5 +30,5 @@ elfcheck passed.
 Finished building: mario.elf.elfcheck
  
 
-13:01:56 Build Finished (took 1s.591ms)
+13:57:40 Build Finished (took 1s.654ms)
 
