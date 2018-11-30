@@ -30847,3 +30847,150 @@ ELF file	: mario.elf
 elfcheck passed.
 Finished building: mario.elf.elfcheck
  
+14:00:33 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+../src/display.c: In function 'drawGameScore':
+../src/display.c:143:9: error: invalid initializer
+../src/display.c:164:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/display.o] Error 1
+14:01:12 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+../src/display.c: In function 'drawGameScore':
+../src/display.c:148:29: error: subscripted value is neither array nor pointer nor vector
+../src/display.c:140:13: warning: variable 'digits' set but not used [-Wunused-but-set-variable]
+../src/display.c:163:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/display.o] Error 1
+14:01:57 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+../src/display.c: In function 'drawGameScore':
+../src/display.c:148:29: error: subscripted value is neither array nor pointer nor vector
+../src/display.c:140:13: warning: variable 'digits' set but not used [-Wunused-but-set-variable]
+../src/display.c:163:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/display.o] Error 1
+14:03:00 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+../src/display.c: In function 'drawGameScore':
+../src/display.c:149:29: error: subscripted value is neither array nor pointer nor vector
+../src/display.c:143:12: warning: unused variable 'num' [-Wunused-variable]
+../src/display.c:164:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/display.o] Error 1
+14:03:15 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+../src/display.c: In function 'drawGameScore':
+../src/display.c:164:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/display.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24200	   1396	  12204	  37800	   93a8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:03:32 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:03:59 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+../src/display.c: In function 'drawGameScore':
+../src/display.c:164:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/display.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24200	   1396	  12204	  37800	   93a8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:04:02 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.
+14:05:12 **** Auto Build of configuration Debug for project mario ****
+make all 
+Building file: ../src/display.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/display.d" -MT"src/display.d" -o "src/display.o" "../src/display.c"
+../src/display.c: In function 'drawGameScore':
+../src/display.c:164:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/display.c
+ 
+Building target: mario.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mario_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mario.elf"  ./src/bmp.o ./src/cam_ctrl.o ./src/display.o ./src/game_controller.o ./src/main.o ./src/platform.o ./src/pmodGYRO.o ./src/vmodcam_cfg.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mario.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mario.elf  |tee "mario.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24212	   1396	  12208	  37816	   93b8	mario.elf
+Finished building: mario.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck mario.elf -hw ../../proj_hw_platform/system.xml -pe microblaze_0  |tee "mario.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proj_hw_platform/system.xml -pe microblaze_0
+mario.elf 
+
+ELF file	: mario.elf
+elfcheck passed.
+Finished building: mario.elf.elfcheck
+ 
+14:05:15 **** Incremental Build of configuration Debug for project mario ****
+make all 
+make: Nothing to be done for `all'.

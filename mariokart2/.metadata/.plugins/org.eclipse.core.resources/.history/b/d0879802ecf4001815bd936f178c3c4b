@@ -150,7 +150,7 @@ int drawGameScore(int score){
                     color = BLACK;
                 else
                     color = WHITE;
-                for (newPosX = posX * 3 + i * 30; newPosX < (posX + 1) * 3 + i * 30; newPosX++)
+                for (newPosX = posX * 3 + i * 30; newPosX < (posX + 1) * 3; newPosX++)
                 {
                     for (newPosY = posY * 3 + yPadding; newPosY < (posY + 1) * 3 + yPadding; newPosY++)
                     {
