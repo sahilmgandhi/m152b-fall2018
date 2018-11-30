@@ -88,7 +88,7 @@ int propagateGame(struct game *g)
 	g->screen[30][0] = LANE;
 	g->screen[40][0] = LANE;
     g->propagationCount = g->propagationCount + 1;
-    if (g ->propagationCount == 12){
+    if (g ->propagationCount == 15){
     	generateObject(g);
     	g->propagationCount = 0;
     }
@@ -174,9 +174,7 @@ void generateObject(struct game *g){
 	}
 	else if (r > 15 && r < 30){
 		// Bananas
-		offset = rand() % 20;
-		createBanana(g, offset);
-		offset = rand() % 20 + 20;
+		offset = rand() % 40;
 		createBanana(g, offset);
 	}
 	else if (r > 29 && r < 38){

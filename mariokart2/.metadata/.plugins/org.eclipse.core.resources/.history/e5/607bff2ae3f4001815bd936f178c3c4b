@@ -174,9 +174,7 @@ void generateObject(struct game *g){
 	}
 	else if (r > 15 && r < 30){
 		// Bananas
-		offset = rand() % 20;
-		createBanana(g, offset);
-		offset = rand() % 20 + 20;
+		offset = rand() % 40;
 		createBanana(g, offset);
 	}
 	else if (r > 29 && r < 38){

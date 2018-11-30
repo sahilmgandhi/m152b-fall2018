@@ -173,16 +173,16 @@ void main()
 			;
 		int pixel = 0;
 		int i, j;
-		for (i = 0; i < 200; i++)
+		for (i = 0; i < 50; i++)
 		{
-			for (j = 0; j < 200; j++)
+			for (j = 0; j < 50; j++)
 			{
 				// Maybe try printing out to this position to see exactly which square you are grabbing??
-				 //XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560, BLUE);
-				pixel += XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560);
+				// XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 1280 + 1280 + i + j * 1280, BLUE);
+				pixel += XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 1280 + 1280 + i + j * 1280);
 			}
 		}
-		xil_printf("Pixel Average: %d\n", pixel / 40000);
+		xil_printf("Pixel Average: %d\n", pixel / 2500);
 		a++;
 	}
 
@@ -214,8 +214,8 @@ void displayCamera()
 	XIo_Out32(lDvmaBaseAddress + blDvmaFLSR, 0x00000A00);					 // frame line stride
 	XIo_Out32(lDvmaBaseAddress + blDvmaCR, 0x00000003);						 // dvma enable, dfl enable
 
-//	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
-//	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
+	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
+	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
 	CamCtrlInit(XPAR_CAM_CTRL_0_BASEADDR, CAM_CFG_640x480P, 640 * 2);
 	CamCtrlInit(XPAR_CAM_CTRL_1_BASEADDR, CAM_CFG_640x480P, 0);
 }

@@ -88,7 +88,7 @@ int propagateGame(struct game *g)
 	g->screen[30][0] = LANE;
 	g->screen[40][0] = LANE;
     g->propagationCount = g->propagationCount + 1;
-    if (g ->propagationCount == 12){
+    if (g ->propagationCount == 10){
     	generateObject(g);
     	g->propagationCount = 0;
     }
@@ -154,9 +154,9 @@ void createBanana(struct game *g, int offset)
  */
 void generateObject(struct game *g){
 
-	int r = rand() % 40;
+	int r = rand() % 20;
 	int offset;
-	if (r >= 0 && r < 9){
+	if (r >= 0 && r <= 5){
 		// 3 green shells
 		offset = rand() % 10;
 		createShell(g, GREEN, 5, offset);
@@ -165,21 +165,19 @@ void generateObject(struct game *g){
 		offset = rand() % 20 + 22;
 		createShell(g, GREEN, 5, offset);
 	}
-	else if (r > 8 && r < 15){
+	else if (r > 5 && r < 11){
 		// 2 red shells
 		offset = rand() % 20;
 		createShell(g, RED, 7, offset);
 		offset = rand() % 23 + 20;
 		createShell(g, RED, 7, offset);
 	}
-	else if (r > 15 && r < 30){
+	else if (r > 11 && r < 14){
 		// Bananas
-		offset = rand() % 20;
-		createBanana(g, offset);
-		offset = rand() % 20 + 20;
+		offset = rand() % 40;
 		createBanana(g, offset);
 	}
-	else if (r > 29 && r < 38){
+	else if (r > 14 && r < 19){
 		// Empty Space (give player time to move around)
 	}
 	else{

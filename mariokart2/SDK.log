@@ -494,3 +494,17 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 15:34:35.366 WARN  - Terminating existing sessions on processor microblaze_0 
 15:34:48.423 WARN  - Terminating existing sessions on processor microblaze_0 
 15:35:10.935 WARN  - Terminating existing sessions on processor microblaze_0 
+15:36:34.256 WARN  - Terminating existing sessions on processor microblaze_0 
+15:38:50.972 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+12:18:56.333 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+12:33:57.658 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:40:14.449 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:41:08.395 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:41:29.799 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:42:25.601 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:43:32.327 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:44:12.077 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:44:32.390 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:44:53.950 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:45:20.159 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:47:02.699 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 

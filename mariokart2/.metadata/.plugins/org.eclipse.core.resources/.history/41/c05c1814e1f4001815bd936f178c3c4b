@@ -182,7 +182,7 @@ void main()
 				pixel += XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560);
 			}
 		}
-		xil_printf("Pixel Average: %d\n", pixel / 40000);
+		xil_printf("Pixel Average: %d\n", pixel / 2500);
 		a++;
 	}
 
