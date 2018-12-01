@@ -181,7 +181,7 @@ int drawGameState(struct game *g)
         }
     }
 
-    drawGameScore(g->score);
+    drawGameScore(1);
 
     u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;
 
@@ -212,8 +212,8 @@ int drawGameState(struct game *g)
  * @return true if successfully drawn, false otherwise.
  */
 int drawGameScore(int score){
-    uint16_t xPadding = 230;
-    uint16_t yPadding = 620;
+    uint16_t xPadding = 100;
+    uint16_t yPadding = 500;
     uint8_t digits[NUM_DIGITS] = {(score % 100000) / 10000,(score % 10000) / 1000,(score % 1000) / 100, (score % 100) / 10, score % 10};
     int i, posX, posY, newPosX, newPosY;
     for(i = 0; i < NUM_DIGITS; i++){

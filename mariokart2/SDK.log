@@ -516,3 +516,26 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 13:37:45.861 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 13:49:08.594 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 13:53:31.658 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:07:17.427 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:19:41.752 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+15:20:15.356 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+15:20:21.035 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:20:44.578 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+15:21:11.354 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+15:42:19.447 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+16:03:25.567 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

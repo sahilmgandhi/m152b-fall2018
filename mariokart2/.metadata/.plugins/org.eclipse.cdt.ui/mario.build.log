@@ -1,6 +1,6 @@
-14:05:15 **** Incremental Build of configuration Debug for project mario ****
+15:42:29 **** Incremental Build of configuration Debug for project mario ****
 make all 
 make: Nothing to be done for `all'.
 
-14:05:15 Build Finished (took 171ms)
+15:42:29 Build Finished (took 156ms)
 
