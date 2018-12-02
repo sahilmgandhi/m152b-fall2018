@@ -20,6 +20,8 @@
   You should have received a copy of the GNU Lesser General Public
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+  https://github.com/sbobrowicz/Petalinux-Arty-Z7-20/blob/master/Arty-Z7-20/components/plnx_workspace/device-tree-generation/drivers/PmodGYRO_v1_0/src/PmodGYRO.c
 */
 /************************************************************************/
 /*  File Description:													*/
@@ -42,19 +44,18 @@
 
 /************************** Function Definitions ***************************/
 XSpi_Config GYROConfig =
-{
-	0,
-	0,
-	1,
-	0,
-	1,
-	8,
-	0,
-	0,
-	0,
-	0,
-	0
-};
+	{
+		0,
+		0,
+		1,
+		0,
+		1,
+		8,
+		0,
+		0,
+		0,
+		0,
+		0};
 
 /* ------------------------------------------------------------ */
 /***	GYRO_Int1Status
@@ -99,7 +100,7 @@ bool GYRO_Int2Status(PmodGYRO *InstancePtr)
 {
 	//int 2 is bit 1
 	int status = Xil_In32(InstancePtr->GPIO_Base_Addr);
-	return (u8)((status) & 0x02);
+	return (u8)((status)&0x02);
 }
 
 /* ------------------------------------------------------------ */
@@ -121,7 +122,7 @@ bool GYRO_Int2Status(PmodGYRO *InstancePtr)
 */
 u16 GYRO_getX(PmodGYRO *InstancePtr)
 {
-	u8 temp[2] = {0,0};
+	u8 temp[2] = {0, 0};
 	u16 xAxis = 0;
 
 	GYRO_ReadReg(InstancePtr, OUT_X_L, temp, 2);
@@ -151,7 +152,7 @@ u16 GYRO_getX(PmodGYRO *InstancePtr)
 */
 u16 GYRO_getY(PmodGYRO *InstancePtr)
 {
-	u8 temp[2] = {0,0};
+	u8 temp[2] = {0, 0};
 	u16 yAxis = 0;
 
 	GYRO_ReadReg(InstancePtr, OUT_Y_L, temp, 2);
@@ -181,7 +182,7 @@ u16 GYRO_getY(PmodGYRO *InstancePtr)
 */
 u16 GYRO_getZ(PmodGYRO *InstancePtr)
 {
-	u8 temp[2] = {0,0};
+	u8 temp[2] = {0, 0};
 	u16 zAxis = 0;
 
 	GYRO_ReadReg(InstancePtr, OUT_Z_L, temp, 2);
@@ -212,9 +213,9 @@ u8 GYRO_getTemp(PmodGYRO *InstancePtr)
 {
 	u8 temp = 0;
 
-	GYRO_ReadReg(InstancePtr, OUT_TEMP, (u8 *) &temp, 1);
+	GYRO_ReadReg(InstancePtr, OUT_TEMP, (u8 *)&temp, 1);
 
-	temp = 44 - temp; // celsius
+	temp = 44 - temp;		  // celsius
 	temp = 32 + (1.8 * temp); // converts to farenheit
 	return temp;
 }
@@ -265,10 +266,10 @@ bool GYRO_enableInt1(PmodGYRO *InstancePtr, u8 mode)
 	GYRO_ReadReg(InstancePtr, CTRL_REG3, &temp, 1);
 
 	temp |= REG3_I1_INT1;
-	if(!GYRO_WriteReg(InstancePtr, CTRL_REG3, &temp, 1))
+	if (!GYRO_WriteReg(InstancePtr, CTRL_REG3, &temp, 1))
 		return 0;
 
-	if(!GYRO_WriteReg(InstancePtr, INT1_CFG, &mode, 1))
+	if (!GYRO_WriteReg(InstancePtr, INT1_CFG, &mode, 1))
 		return 0;
 
 	return 1;
@@ -297,7 +298,7 @@ bool GYRO_disableInt1(PmodGYRO *InstancePtr)
 
 	temp &= ~REG3_I1_INT1;
 
-	if(!GYRO_WriteReg(InstancePtr, CTRL_REG3, &temp, 1))
+	if (!GYRO_WriteReg(InstancePtr, CTRL_REG3, &temp, 1))
 		return 0;
 
 	return 1;
@@ -327,7 +328,7 @@ bool GYRO_enableInt2(PmodGYRO *InstancePtr, u8 mode)
 
 	temp |= mode;
 
-	if(!GYRO_WriteReg(InstancePtr, CTRL_REG3, &temp, 1))
+	if (!GYRO_WriteReg(InstancePtr, CTRL_REG3, &temp, 1))
 		return 0;
 
 	return 1;
@@ -356,7 +357,7 @@ bool GYRO_disableInt2(PmodGYRO *InstancePtr)
 
 	temp &= 0xF0;
 
-	if(!GYRO_WriteReg(InstancePtr, CTRL_REG3, &temp, 1))
+	if (!GYRO_WriteReg(InstancePtr, CTRL_REG3, &temp, 1))
 		return 0;
 
 	return 1;
@@ -505,28 +506,29 @@ bool GYRO_setThsZL(PmodGYRO *InstancePtr, u8 ths)
 **	Description:
 **		Initialize the PmodGYRO.
 */
-bool GYRO_begin(PmodGYRO* InstancePtr, u32 SPI_Address, u32 GPIO_Address)
+bool GYRO_begin(PmodGYRO *InstancePtr, u32 SPI_Address, u32 GPIO_Address)
 {
 	u8 temp = 0;
 
-	GYROConfig.BaseAddress=SPI_Address;
-	InstancePtr->GPIO_Base_Addr=GPIO_Address;
+	GYROConfig.BaseAddress = SPI_Address;
+	InstancePtr->GPIO_Base_Addr = GPIO_Address;
 
 	GYRO_SPIInit(&InstancePtr->GYROSpi);
 
-	if(!GYRO_WriteReg(InstancePtr, CTRL_REG3, &temp, 1))
+	if (!GYRO_WriteReg(InstancePtr, CTRL_REG3, &temp, 1))
 	{
 		xil_printf("Control Reg not set.\n\r");
 		return false;
 	}
 
 	temp = REG1_PD | REG1_ZEN | REG1_YEN | REG1_XEN;
-	if(!GYRO_WriteReg(InstancePtr, CTRL_REG1, &temp, 1)){
+	if (!GYRO_WriteReg(InstancePtr, CTRL_REG1, &temp, 1))
+	{
 		xil_printf("More issues.\n\r");
 		return false;
 	}
 	// tell gpio tri-state to set int1 and int2 as inputs
-	Xil_Out32(InstancePtr->GPIO_Base_Addr+4, 0x03);
+	Xil_Out32(InstancePtr->GPIO_Base_Addr + 4, 0x03);
 }
 
 /* ------------------------------------------------------------ */
@@ -544,7 +546,8 @@ bool GYRO_begin(PmodGYRO* InstancePtr, u32 SPI_Address, u32 GPIO_Address)
 **	Description:
 **		Stops the device
 */
-void GYRO_end(PmodGYRO* InstancePtr){
+void GYRO_end(PmodGYRO *InstancePtr)
+{
 	XSpi_Stop(&InstancePtr->GYROSpi);
 }
 
@@ -563,23 +566,25 @@ void GYRO_end(PmodGYRO* InstancePtr){
 **	Description:
 **		Initializes the PmodGYRO SPI.
 */
-int GYRO_SPIInit(XSpi *SpiInstancePtr){
+int GYRO_SPIInit(XSpi *SpiInstancePtr)
+{
 	int Status;
 
 	Status = XSpi_CfgInitialize(SpiInstancePtr, &GYROConfig, GYROConfig.BaseAddress);
-	if (Status != XST_SUCCESS) {
+	if (Status != XST_SUCCESS)
+	{
 		return XST_FAILURE;
 	}
 
-
-
 	Status = XSpi_SetOptions(SpiInstancePtr, (XSP_MASTER_OPTION | XSP_CLK_ACTIVE_LOW_OPTION | XSP_CLK_PHASE_1_OPTION) | XSP_MANUAL_SSELECT_OPTION);
-	if (Status != XST_SUCCESS) {
+	if (Status != XST_SUCCESS)
+	{
 		return XST_FAILURE;
 	}
 
 	Status = XSpi_SetSlaveSelect(SpiInstancePtr, 1);
-	if (Status != XST_SUCCESS) {
+	if (Status != XST_SUCCESS)
+	{
 		return XST_FAILURE;
 	}
 
@@ -594,7 +599,6 @@ int GYRO_SPIInit(XSpi *SpiInstancePtr){
 	XSpi_IntrGlobalDisable(SpiInstancePtr);
 
 	return XST_SUCCESS;
-
 }
 
 /* ------------------------------------------------------------ */
@@ -615,7 +619,8 @@ int GYRO_SPIInit(XSpi *SpiInstancePtr){
 **	Description:
 **		Reads SPI
 */
-u8 GYRO_ReadByte(PmodGYRO* InstancePtr){
+u8 GYRO_ReadByte(PmodGYRO *InstancePtr)
+{
 	u8 byte;
 	XSpi_Transfer(&InstancePtr->GYROSpi, &byte, &byte, 1);
 	return byte;
@@ -639,7 +644,7 @@ u8 GYRO_ReadByte(PmodGYRO* InstancePtr){
 **
 **
 */
-void GYRO_WriteByte(PmodGYRO* InstancePtr, u8 cmd)
+void GYRO_WriteByte(PmodGYRO *InstancePtr, u8 cmd)
 {
 	XSpi_Transfer(&InstancePtr->GYROSpi, &cmd, NULL, 1);
 }
@@ -665,18 +670,18 @@ void GYRO_WriteByte(PmodGYRO* InstancePtr, u8 cmd)
 **	Description:
 **		Writes the byte array to the chip via SPI. It will write the first byte into the specified register, then the next into the following register until all of the data has been sent.
 */
-int GYRO_WriteReg(PmodGYRO* InstancePtr, u8 reg, u8 *wData, int nData)// ndata  = 1
+int GYRO_WriteReg(PmodGYRO *InstancePtr, u8 reg, u8 *wData, int nData) // ndata  = 1
 {
 	// As requested by documentation, first byte contains:
 	//	bit 7 = 0 because is a write operation
 	//	bit 6 = 1 if more than one bytes is written, 0 if a single byte is written
 	// 	bits 5-0 - the address
-//	xil_printf("gets to transfer, data: %d\n\r", *wData);
-	u8 bytearray[nData+1];
-	bytearray[0] = ((nData>1) ? 0x40: 0) | (reg&0x3F);
+	//	xil_printf("gets to transfer, data: %d\n\r", *wData);
+	u8 bytearray[nData + 1];
+	bytearray[0] = ((nData > 1) ? 0x40 : 0) | (reg & 0x3F);
 	//memcpy(&(bytearray[1]),wData, nData);//Copy write commands over to bytearray
 	bytearray[1] = *wData;
-	XSpi_Transfer(&InstancePtr->GYROSpi, bytearray, bytearray, nData+1);
+	XSpi_Transfer(&InstancePtr->GYROSpi, bytearray, bytearray, nData + 1);
 
 	return 1;
 }
@@ -702,17 +707,17 @@ int GYRO_WriteReg(PmodGYRO* InstancePtr, u8 reg, u8 *wData, int nData)// ndata  
 **	Description:
 **		Reads data in through SPI. It will read the first byte from the starting register, then the next from the following register. Data is stored into rData.
 */
-void GYRO_ReadReg(PmodGYRO* InstancePtr, u8 reg, u8 *rData, int nData)
+void GYRO_ReadReg(PmodGYRO *InstancePtr, u8 reg, u8 *rData, int nData)
 {
 	// As requested by documentation, first byte contains:
 	//	bit 7 = 1 because is a read operation
 	//	bit 6 = 1 if more than one bytes is written, 0 if a single byte is written
 	// 	bits 5-0 - the address
-	u8 bytearray[nData+1];
+	u8 bytearray[nData + 1];
 
-	bytearray[0] = ((nData>1) ? 0xC0: 0x80) | (reg&0x3F);
-	XSpi_Transfer(&InstancePtr->GYROSpi, bytearray, bytearray, nData+1);
-	memcpy(rData,&bytearray[1], nData);
+	bytearray[0] = ((nData > 1) ? 0xC0 : 0x80) | (reg & 0x3F);
+	XSpi_Transfer(&InstancePtr->GYROSpi, bytearray, bytearray, nData + 1);
+	memcpy(rData, &bytearray[1], nData);
 }
 
 /* ------------------------------------------------------------ */
@@ -738,11 +743,14 @@ void GYRO_ReadReg(PmodGYRO* InstancePtr, u8 reg, u8 *rData, int nData)
 **		the bMask) of a register (indicated by bRegisterAddress) to
 **		1 or 0 (indicated by fValue).
 */
-void GYRO_SetRegisterBits(PmodGYRO* InstancePtr, u8 reg, u8 mask, bool fValue){
+void GYRO_SetRegisterBits(PmodGYRO *InstancePtr, u8 reg, u8 mask, bool fValue)
+{
 	u8 regval;
 	GYRO_ReadReg(InstancePtr, reg, &regval, 1);
-	if (fValue)regval |= mask;
-	else regval &= ~mask;
+	if (fValue)
+		regval |= mask;
+	else
+		regval &= ~mask;
 	GYRO_WriteReg(InstancePtr, reg, &regval, 1);
 }
 
@@ -767,7 +775,7 @@ void GYRO_SetRegisterBits(PmodGYRO* InstancePtr, u8 reg, u8 mask, bool fValue){
 **		Returns a byte containing only the bits from a register
 **		(indicated by bRegisterAddress), correspoding to the bMask mask.
 */
-u8 GYRO_GetRegisterBits(PmodGYRO* InstancePtr, u8 bRegisterAddress, u8 bMask)
+u8 GYRO_GetRegisterBits(PmodGYRO *InstancePtr, u8 bRegisterAddress, u8 bMask)
 {
 	u8 bRegValue;
 	GYRO_ReadReg(InstancePtr, bRegisterAddress, &bRegValue, 1);

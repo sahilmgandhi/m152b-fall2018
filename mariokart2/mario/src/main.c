@@ -15,98 +15,27 @@
 #include "globals.h"
 #include "xtmrctr.h"
 
-#define SCALE 10;
+#define HIGH_THRESHOLD 9
+#define LOW_THRESHOLD 6
 
 #define BUFFER_SIZE 5
 static XSpi SPIINST;
 Xuint8 readBuffer[BUFFER_SIZE] = {0, 0, 0, 0, 0};
 Xuint8 writeBuffer[BUFFER_SIZE] = {0, 0, 0, 0, 0};
-
-void print(char *str);
-
-// Do whatever you want in here to play around with the Gyro
-int16_t readGyro()
-{
-	PmodGYRO pgyr;
-
-	GYRO_begin(&pgyr, XPAR_XPS_SPI_0_BASEADDR, XPAR_SPI_0_BASEADDR);
-	GYRO_enableInt1(&pgyr, INT1_XHIE);
-	GYRO_enableInt2(&pgyr, REG3_I2_DRDY);
-
-	u8 temp = 0x0F;
-
-	int16_t x, y, z;
-
-	GYRO_begin(&pgyr, XPAR_XPS_SPI_0_BASEADDR, XPAR_SPI_0_BASEADDR);
-	GYRO_ReadReg(&pgyr, OUT_X_H, &temp, 1);
-	x = temp << 8;
-	GYRO_ReadReg(&pgyr, OUT_X_L, &temp, 1);
-	x |= temp;
-	GYRO_end(&pgyr);
-
-	return x;
-}
-
 struct game g;
 XTmrCtr timer;
 
-int myabs(int x)
-{
-	return x < 0 ? -x : x;
-}
+void print(char *str);
 
-int mymin(int x, int y)
-{
-	return x < y ? x : y;
-}
+int16_t readGyro();
 
-int mymax(int x, int y)
-{
-	return x > y ? x : y;
-}
+int myabs(int x);
+int mymin(int x, int y);
+int mymax(int x, int y);
 
-#define HIGH_THRESHOLD 9
-#define LOW_THRESHOLD 6
-int seeBlue_alternate(u16 pixel)
-{
-	u8 red = (pixel >> 8) & 0xF;
-	u8 green = (pixel >> 4) & 0xF;
-	u8 blue = (pixel >> 0) & 0xF;
-	if (blue > 11 && red < 5 && green < 5)
-	{
-		//xil_printf("this is blue\n\r");
-		return 1;
-	}
-	else
-		return 0;
-}
-int seeGreen_alternate(u16 pixel)
-{
-	u8 red = (pixel >> 8) & 0xF;
-	u8 green = (pixel >> 4) & 0xF;
-	u8 blue = (pixel >> 0) & 0xF;
-	if (green > HIGH_THRESHOLD && red < LOW_THRESHOLD && blue < LOW_THRESHOLD)
-	{
-		//xil_printf("this is green\n\r");
-		return 1;
-	}
-	else
-		return 0;
-}
-int seeRed_alternate(u16 pixel)
-{
-	u8 red = (pixel >> 8) & 0xF;
-	u8 green = (pixel >> 4) & 0xF;
-	u8 blue = (pixel >> 0) & 0xF;
-	if (red > HIGH_THRESHOLD && green < LOW_THRESHOLD && blue < LOW_THRESHOLD)
-	{
-		//xil_printf("this is red\n\r");
-		return 1;
-	}
-	else
-		return 0;
-}
-
+int seeBlue_alternate(u16 pixel);
+int seeGreen_alternate(u16 pixel);
+int seeRed_alternate(u16 pixel);
 void displayCamera();
 
 void main()
@@ -148,8 +77,8 @@ void main()
 		{
 			for (j = 0; j < 200; j++)
 			{
-				 //XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560, BLUE);
-				pixel += XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560);
+				//XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560, BLUE);
+				pixel += XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560 * 400 + i + j * 2560);
 			}
 		}
 		xil_printf("Pixel Average: %d\n\r", pixel / 40000);
@@ -160,6 +89,13 @@ void main()
 	drawGameState(&g);
 }
 
+/* ------------------------------------------------------------ */
+/*					Helper functions							*/
+/* ------------------------------------------------------------ */
+
+/**
+ *	Inits the camera and displays it onto the screen 
+ */
 void displayCamera()
 {
 	u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;
@@ -190,4 +126,103 @@ void displayCamera()
 	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
 	CamCtrlInit(XPAR_CAM_CTRL_0_BASEADDR, CAM_CFG_640x480P, 640 * 2);
 	CamCtrlInit(XPAR_CAM_CTRL_1_BASEADDR, CAM_CFG_640x480P, 0);
+}
+
+/**
+ *	Read the gyro values
+ * 
+ * @return int16_t 		The Gyro value 
+ */
+int16_t readGyro()
+{
+	PmodGYRO pgyr;
+
+	GYRO_begin(&pgyr, XPAR_XPS_SPI_0_BASEADDR, XPAR_SPI_0_BASEADDR);
+	GYRO_enableInt1(&pgyr, INT1_XHIE);
+	GYRO_enableInt2(&pgyr, REG3_I2_DRDY);
+
+	u8 temp = 0x0F;
+
+	int16_t x, y, z;
+
+	GYRO_begin(&pgyr, XPAR_XPS_SPI_0_BASEADDR, XPAR_SPI_0_BASEADDR);
+	GYRO_ReadReg(&pgyr, OUT_X_H, &temp, 1);
+	x = temp << 8;
+	GYRO_ReadReg(&pgyr, OUT_X_L, &temp, 1);
+	x |= temp;
+	GYRO_end(&pgyr);
+
+	return x;
+}
+
+/**
+ * Absolute value function without needing to import anything
+ * @param 	x 	int		The value of interest
+ * @return 		int		The absolute value of x 
+ */
+int myabs(int x)
+{
+	return x < 0 ? -x : x;
+}
+
+/**
+ * Min function without needing to import anything
+ * @param 	x 	int		Value 1
+ * @param 	y 	int		Value 2
+ * @return 		int		Min(x, y)
+ */
+int mymin(int x, int y)
+{
+	return x < y ? x : y;
+}
+
+/**
+ * Max function without needing to import anything
+ * @param 	x 	int		Value 1
+ * @param 	y 	int		Value 2
+ * @return 		int		Max(x, y)
+ */
+int mymax(int x, int y)
+{
+	return x > y ? x : y;
+}
+
+int seeBlue_alternate(u16 pixel)
+{
+	u8 red = (pixel >> 8) & 0xF;
+	u8 green = (pixel >> 4) & 0xF;
+	u8 blue = (pixel >> 0) & 0xF;
+	if (blue > 11 && red < 5 && green < 5)
+	{
+		//xil_printf("this is blue\n\r");
+		return 1;
+	}
+	else
+		return 0;
+}
+int seeGreen_alternate(u16 pixel)
+{
+	u8 red = (pixel >> 8) & 0xF;
+	u8 green = (pixel >> 4) & 0xF;
+	u8 blue = (pixel >> 0) & 0xF;
+	if (green > HIGH_THRESHOLD && red < LOW_THRESHOLD && blue < LOW_THRESHOLD)
+	{
+		//xil_printf("this is green\n\r");
+		return 1;
+	}
+	else
+		return 0;
+}
+int seeRed_alternate(u16 pixel)
+{
+	u8 red = (pixel >> 8) & 0xF;
+	u8 green = (pixel >> 4) & 0xF;
+	u8 blue = (pixel >> 0) & 0xF;
+	if (red > HIGH_THRESHOLD && green < LOW_THRESHOLD && blue < LOW_THRESHOLD)
+	{
+		//xil_printf("this is red\n\r");
+		return 1;
+	}
+	else
+		return 0;
 }

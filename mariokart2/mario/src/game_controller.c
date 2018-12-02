@@ -27,6 +27,11 @@ void initGame(struct game *g, uint8_t level)
     g->screen[25][10] = RED;
 }
 
+/**
+ * Places the car onto the screen
+ * 
+ * @param game    struct game     The game object
+ */
 void placeCarOnScreen(struct game *g)
 {
     g->screen[g->xLeft][g->yTop + 1] = CAR_COLOR;
@@ -35,38 +40,48 @@ void placeCarOnScreen(struct game *g)
     g->screen[g->xLeft + 1][g->yTop] = CAR_COLOR;
 }
 
+/**
+ * Detects if the car has collided with anything. If its a banana, it increments the banana collision counter
+ * 
+ * @param game    struct game     The game object
+ * @return        int             0 if no collision, any other value otherwise
+ */
 int detectCollision(struct game *g)
 {
     if (g->screen[g->xLeft][g->yTop + 1] != ROAD && g->screen[g->xLeft][g->yTop + 1] != CAR_COLOR && g->screen[g->xLeft][g->yTop + 1] != LANE)
     {
-    	if (g->screen[g->xLeft][g->yTop + 1] == YELLOW){
-    		g->bananaCollisions++;
-    		return 0;
-    	}
+        if (g->screen[g->xLeft][g->yTop + 1] == YELLOW)
+        {
+            g->bananaCollisions++;
+            return 0;
+        }
         return 1;
     }
-    if (g->screen[g->xLeft + 1][g->yTop + 1] != ROAD && g->screen[g->xLeft + 1][g->yTop + 1] != CAR_COLOR  && g->screen[g->xLeft + 1][g->yTop + 1] != LANE)
+    if (g->screen[g->xLeft + 1][g->yTop + 1] != ROAD && g->screen[g->xLeft + 1][g->yTop + 1] != CAR_COLOR && g->screen[g->xLeft + 1][g->yTop + 1] != LANE)
     {
-    	if (g->screen[g->xLeft + 1][g->yTop + 1]  == YELLOW){
-			g->bananaCollisions++;
-			return 0;
-		}
+        if (g->screen[g->xLeft + 1][g->yTop + 1] == YELLOW)
+        {
+            g->bananaCollisions++;
+            return 0;
+        }
         return 2;
     }
     if (g->screen[g->xLeft + 2][g->yTop + 1] != ROAD && g->screen[g->xLeft + 2][g->yTop + 1] != CAR_COLOR && g->screen[g->xLeft + 2][g->yTop + 1] != LANE)
     {
-    	if (g->screen[g->xLeft + 2][g->yTop + 1] == YELLOW){
-			g->bananaCollisions++;
-			return 0;
-		}
+        if (g->screen[g->xLeft + 2][g->yTop + 1] == YELLOW)
+        {
+            g->bananaCollisions++;
+            return 0;
+        }
         return 3;
     }
     if (g->screen[g->xLeft + 1][g->yTop] != ROAD && g->screen[g->xLeft + 1][g->yTop] != CAR_COLOR && g->screen[g->xLeft + 1][g->yTop] != LANE)
     {
-    	if (g->screen[g->xLeft + 1][g->yTop] == YELLOW){
-			g->bananaCollisions++;
-			return 0;
-		}
+        if (g->screen[g->xLeft + 1][g->yTop] == YELLOW)
+        {
+            g->bananaCollisions++;
+            return 0;
+        }
         return 4;
     }
 
@@ -98,21 +113,23 @@ int propagateGame(struct game *g)
         g->screen[j][0] = ROAD;
     }
     // Lane dividers:
-	g->screen[10][0] = LANE;
-	g->screen[20][0] = LANE;
-	g->screen[30][0] = LANE;
-	g->screen[40][0] = LANE;
+    g->screen[10][0] = LANE;
+    g->screen[20][0] = LANE;
+    g->screen[30][0] = LANE;
+    g->screen[40][0] = LANE;
     g->propagationCount++;
     g->score++;
-    if (g ->propagationCount == 11){
-    	generateObject(g);
-    	g->propagationCount = 0;
+    if (g->propagationCount == 11)
+    {
+        generateObject(g);
+        g->propagationCount = 0;
     }
 
     int collision = detectCollision(g);
-    if (collision || (!collision && g->bananaCollisions >= 3)){
-    	playerDead(g);
-    	return 0;
+    if (collision || (!collision && g->bananaCollisions >= 3))
+    {
+        playerDead(g);
+        return 0;
     }
 
     return 1;
@@ -126,29 +143,33 @@ int propagateGame(struct game *g)
  * @param width		int				The size of the shell
  * @param offset 	int				The offset from the left
  */
-void createShell(struct game *g, int color, int width, int offset){
+void createShell(struct game *g, int color, int width, int offset)
+{
 
-	int i, j, height;
-	height = width;
-	if (color == BLUE){
-		width = BLUE_WIDTH;
-	}
+    int i, j, height;
+    height = width;
+    if (color == BLUE)
+    {
+        width = BLUE_WIDTH;
+    }
 
-	for (i = 0; i < height-2; i++){
-		for (j = 0 + offset; j < width + offset; j++)
-		{
-			if ((j + i) % 4 == 0)
-				g->screen[j][i] = SHELLWHITE;
-			else
-				g->screen[j][i] = color;
-		}
-	}
-	for (i = height-2; i < height; i++){
-		for (j = 0 + offset; j < width + offset; j++)
-		{
-			g->screen[j][i] = SHELL;
-		}
-	}
+    for (i = 0; i < height - 2; i++)
+    {
+        for (j = 0 + offset; j < width + offset; j++)
+        {
+            if ((j + i) % 4 == 0)
+                g->screen[j][i] = SHELLWHITE;
+            else
+                g->screen[j][i] = color;
+        }
+    }
+    for (i = height - 2; i < height; i++)
+    {
+        for (j = 0 + offset; j < width + offset; j++)
+        {
+            g->screen[j][i] = SHELL;
+        }
+    }
 }
 
 /**
@@ -165,51 +186,56 @@ void createBanana(struct game *g, int offset)
     g->screen[offset + 1][3] = YELLOW;
 }
 
-
 /**
  * Generates the enemy objects for the player
  *
  * @param game	struct game		The game object
  */
-void generateObject(struct game *g){
+void generateObject(struct game *g)
+{
 
-	int r = rand() % 40;
-	int offset;
-	if (r >= 0 && r < 9){
-		// 3 green shells
-		offset = rand() % 10;
-		createShell(g, GREEN, GREEN_HEIGHT, offset);
-		offset = rand() % 20 + 10;
-		createShell(g, GREEN, GREEN_HEIGHT, offset);
-		offset = rand() % 20 + 22;
-		createShell(g, GREEN, GREEN_HEIGHT, offset);
-		g->score = g->score + 15;
-	}
-	else if (r > 8 && r < 15){
-		// 2 red shells
-		offset = rand() % 20;
-		createShell(g, RED, RED_HEIGHT, offset);
-		offset = rand() % 23 + 20;
-		createShell(g, RED, RED_HEIGHT, offset);
-		g->score = g->score + 25;
-	}
-	else if (r > 15 && r < 30){
-		// Bananas
-		offset = rand() % 20;
-		createBanana(g, offset);
-		offset = rand() % 20 + 20;
-		createBanana(g, offset);
-		g->score = g->score + 10;
-	}
-	else if (r > 29 && r < 38){
-		// Empty Space (give player time to move around)
-	}
-	else{
-		offset = rand() % 20;
-		createShell(g, BLUE, BLUE_HEIGHT, offset);
-		g->score = g->score + 50;
-		// 1 BLUE SHELL
-	}
+    int r = rand() % 40;
+    int offset;
+    if (r >= 0 && r < 9)
+    {
+        // 3 green shells
+        offset = rand() % 10;
+        createShell(g, GREEN, GREEN_HEIGHT, offset);
+        offset = rand() % 20 + 10;
+        createShell(g, GREEN, GREEN_HEIGHT, offset);
+        offset = rand() % 20 + 22;
+        createShell(g, GREEN, GREEN_HEIGHT, offset);
+        g->score = g->score + 15;
+    }
+    else if (r > 8 && r < 15)
+    {
+        // 2 red shells
+        offset = rand() % 20;
+        createShell(g, RED, RED_HEIGHT, offset);
+        offset = rand() % 23 + 20;
+        createShell(g, RED, RED_HEIGHT, offset);
+        g->score = g->score + 25;
+    }
+    else if (r > 15 && r < 30)
+    {
+        // Bananas
+        offset = rand() % 20;
+        createBanana(g, offset);
+        offset = rand() % 20 + 20;
+        createBanana(g, offset);
+        g->score = g->score + 10;
+    }
+    else if (r > 29 && r < 38)
+    {
+        // Empty Space (give player time to move around)
+    }
+    else
+    {
+        offset = rand() % 20;
+        createShell(g, BLUE, BLUE_HEIGHT, offset);
+        g->score = g->score + 50;
+        // 1 BLUE SHELL
+    }
 }
 
 /**
@@ -279,4 +305,3 @@ void movePlayer(struct game *g, int16_t newX, int16_t newY)
     }
     placeCarOnScreen(g);
 }
-
