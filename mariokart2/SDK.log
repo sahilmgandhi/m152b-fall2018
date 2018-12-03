@@ -607,3 +607,9 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 11:54:40.711 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 11:54:55.703 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 11:55:38.870 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:58:22.811 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:59:00.407 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:59:02.388 ERROR - Unexpected error while launching program. java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.TM.terminateCurrentLaunch(Unknown Source)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(Unknown Source)
+

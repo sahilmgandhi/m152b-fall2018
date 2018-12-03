@@ -56,7 +56,7 @@ void main()
 
 	int a = 0;
 	int xpos = 23;
-	while (!g.gameOver)
+	while (!g.gameOver())
 	{
 		XTmrCtr_Reset(&timer, 0);
 		XTmrCtr_Start(&timer, 0);
