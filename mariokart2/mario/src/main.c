@@ -49,7 +49,8 @@ void main()
 	XTmrCtr_Initialize(&timer, XPAR_TMRCTR_0_DEVICE_ID);
 
 	clearDisplay(BLACK);
-	initGame(&g, 1);
+
+	initGame(&g, 0);
 
 	XTmrCtr_Start(&timer, 0);
 
@@ -83,6 +84,9 @@ void main()
 		}
 		xil_printf("Pixel Average: %d\n\r", pixel / 40000);
 		xil_printf("Game score: %d \n\r", g.score);
+
+		// once you have detected a color, use this to set it in the game:
+		// setGameObjectColor(&g, color);
 		a++;
 	}
 

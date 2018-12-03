@@ -4,12 +4,12 @@
  * Iniitalizes the entire game
  * 
  * @param game    struct game     The game object
- * @param level   uint8_t         The starting level
+ * @param camera   uint8_t        Whether to use the camera to generate objects
  */
-void initGame(struct game *g, uint8_t level)
+void initGame(struct game *g, uint8_t camera)
 {
     g->initialized = 1;
-    g->level = level;
+    g->level = 1;
     g->gameOver = 0;
     g->xLeftOld = -1;
     g->yTopOld = -1;
@@ -18,12 +18,12 @@ void initGame(struct game *g, uint8_t level)
     g->propagationCount = 0;
     g->score = 0;
     g->bananaCollisions = 0;
+    g->camera = camera;
 
     fillScreen(g, ROAD);
-
-    //  g->screen[g->playerXPos][g->playerYPos] = CAR_COLOR;
-
     placeCarOnScreen(g);
+
+    // Silent initial enemy haha (be careful player!)
     g->screen[25][10] = RED;
 }
 
@@ -121,8 +121,24 @@ int propagateGame(struct game *g)
     g->score++;
     if (g->propagationCount == 11)
     {
-        generateObject(g);
+        if (g->camera)
+        {
+            generateObjectCamera(g, g->cameraColor);
+        }
+        else
+        {
+            generateObject(g);
+        }
         g->propagationCount = 0;
+    }
+
+    if (g->score > 300)
+    {
+        g->level = 2;
+    }
+    if (g->score > 1000)
+    {
+        g->level = 3;
     }
 
     int collision = detectCollision(g);
@@ -173,13 +189,18 @@ void createShell(struct game *g, int color, int width, int offset)
 }
 
 /**
- * Generates the shell against the player
+ * Generates the bananas against the player
  *
  * @param game		struct game		The game object
- * @param offset 	int				The offset from the left
  */
-void createBanana(struct game *g, int offset)
+void createBananas(struct game *g)
 {
+    int offset = rand() % 20;
+    g->screen[offset][3 + 1] = YELLOW;
+    g->screen[offset + 1][3 + 1] = YELLOW;
+    g->screen[offset + 2][3 + 1] = YELLOW;
+    g->screen[offset + 1][3] = YELLOW;
+    offset = rand() % 20 + 20;
     g->screen[offset][3 + 1] = YELLOW;
     g->screen[offset + 1][3 + 1] = YELLOW;
     g->screen[offset + 2][3 + 1] = YELLOW;
@@ -187,7 +208,122 @@ void createBanana(struct game *g, int offset)
 }
 
 /**
+ * Helper function to create green shells as a function of the level
+ *
+ * @param game		struct game		The game object
+ */
+void createGreenShells(struct game *g)
+{
+    int offset;
+    if (g->level == 1)
+    {
+        offset = rand() % 45;
+        createShell(g, GREEN, GREEN_HEIGHT - 2, offset);
+    }
+    else if (g->level == 2)
+    {
+        offset = rand() % 20;
+        createShell(g, GREEN, GREEN_HEIGHT - 1, offset);
+        offset = rand() % 25 + 20;
+        createShell(g, GREEN, GREEN_HEIGHT - 1, offset);
+    }
+    else if (g->level == 3)
+    {
+        offset = rand() % 10;
+        createShell(g, GREEN, GREEN_HEIGHT, offset);
+        offset = rand() % 20 + 10;
+        createShell(g, GREEN, GREEN_HEIGHT, offset);
+        offset = rand() % 20 + 22;
+        createShell(g, GREEN, GREEN_HEIGHT, offset);
+    }
+}
+
+/**
+ * Helper function to create red shells as a function of the level
+ *
+ * @param game		struct game		The game object
+ */
+void createRedShells(struct game *g)
+{
+    int offset;
+    if (g->level == 1)
+    {
+        offset = rand() % 43;
+        createShell(g, RED, RED_HEIGHT - 2, offset);
+    }
+    else if (g->level == 2)
+    {
+        offset = rand() % 43;
+        createShell(g, RED, RED_HEIGHT - 1, offset);
+    }
+    else if (g->level == 3)
+    {
+        offset = rand() % 20;
+        createShell(g, RED, RED_HEIGHT, offset);
+        offset = rand() % 23 + 20;
+        createShell(g, RED, RED_HEIGHT, offset);
+    }
+}
+
+/**
+ * Helper function to create blue shells as a function of the level
+ *
+ * @param game		struct game		The game object
+ */
+void createBlueShells(struct game *g)
+{
+    int offset;
+    if (g->level == 1)
+    {
+        offset = rand() % 20;
+        createShell(g, BLUE, BLUE_HEIGHT - 2, offset);
+    }
+    else if (g->level == 2)
+    {
+        offset = rand() % 20;
+        createShell(g, BLUE, BLUE_HEIGHT - 1, offset);
+    }
+    else if (g->level == 3)
+    {
+        offset = rand() % 20;
+        createShell(g, BLUE, BLUE_HEIGHT, offset);
+    }
+}
+
+/**
  * Generates the enemy objects for the player
+ *
+ * @param game	struct game		The game object
+ * @param color int32_t         The color to generate
+ */
+void generateObjectCamera(struct game *g, int32_t color)
+{
+    int r = rand() % 40;
+    int offset;
+    if (color == GREEN)
+    {
+        createGreenShells(g);
+        g->score = g->score + 15;
+    }
+    else if (color == RED)
+    {
+        createRedShells(g);
+        g->score = g->score + 25;
+    }
+    else if (color == YELLOW)
+    {
+        createBananas(g);
+        g->score = g->score + 10;
+    }
+    else if (color == BLUE)
+    {
+        createBlueShells(g);
+        g->score = g->score + 50;
+    }
+}
+
+/**
+ * Generates the enemy objects for the player based on the Camera input
  *
  * @param game	struct game		The game object
  */
@@ -198,31 +334,17 @@ void generateObject(struct game *g)
     int offset;
     if (r >= 0 && r < 9)
     {
-        // 3 green shells
-        offset = rand() % 10;
-        createShell(g, GREEN, GREEN_HEIGHT, offset);
-        offset = rand() % 20 + 10;
-        createShell(g, GREEN, GREEN_HEIGHT, offset);
-        offset = rand() % 20 + 22;
-        createShell(g, GREEN, GREEN_HEIGHT, offset);
+        createGreenShells(g);
         g->score = g->score + 15;
     }
     else if (r > 8 && r < 15)
     {
-        // 2 red shells
-        offset = rand() % 20;
-        createShell(g, RED, RED_HEIGHT, offset);
-        offset = rand() % 23 + 20;
-        createShell(g, RED, RED_HEIGHT, offset);
+        createRedShells(g);
         g->score = g->score + 25;
     }
     else if (r > 15 && r < 30)
     {
-        // Bananas
-        offset = rand() % 20;
-        createBanana(g, offset);
-        offset = rand() % 20 + 20;
-        createBanana(g, offset);
+        createBananas(g);
         g->score = g->score + 10;
     }
     else if (r > 29 && r < 38)
@@ -231,10 +353,8 @@ void generateObject(struct game *g)
     }
     else
     {
-        offset = rand() % 20;
-        createShell(g, BLUE, BLUE_HEIGHT, offset);
+        createBlueShells(g);
         g->score = g->score + 50;
-        // 1 BLUE SHELL
     }
 }
 
@@ -304,4 +424,15 @@ void movePlayer(struct game *g, int16_t newX, int16_t newY)
         g->yTop = newY;
     }
     placeCarOnScreen(g);
+}
+
+/**
+ * Set the color for the game object
+ * 
+ * @param game    Game      The game struct
+ * @param color   int32_t   The color the camera detected
+ */
+void setGameObjectColor(struct game *g, int32_t color)
+{
+    g->cameraColor = color;
 }

@@ -39,6 +39,8 @@ struct game
   uint8_t bananaCollisions;
 
   uint32_t score;
+  int8_t camera;
+  int32_t cameraColor;
 };
 
 /**
@@ -74,6 +76,13 @@ int detectCollision(struct game *g);
  */
 int propagateGame(struct game *g);
 
+/**
+ * Generates the enemy objects for the player
+ *
+ * @param game	struct game		The game object
+ * @param color int32_t         The color to generate
+ */
+void generateObjectCamera(struct game *g, int32_t color);
 
 /**
  * Generates the enemy objects for the player
@@ -112,5 +121,13 @@ void fillScreen(struct game *g, uint32_t color);
  * @param newY    int16_t   New Y position 
  */
 void movePlayer(struct game *g, int16_t newX, int16_t newY);
+
+/**
+ * Set the color for the game object
+ * 
+ * @param game    Game      The game struct
+ * @param color   int32_t   The color the camera detected
+ */
+void setGameObjectColor(struct game *g, int32_t color);
 
 #endif
