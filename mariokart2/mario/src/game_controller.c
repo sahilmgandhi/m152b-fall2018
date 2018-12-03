@@ -298,8 +298,6 @@ void createBlueShells(struct game *g)
  */
 void generateObjectCamera(struct game *g, int32_t color)
 {
-    int r = rand() % 40;
-    int offset;
     if (color == GREEN)
     {
         createGreenShells(g);
@@ -310,16 +308,16 @@ void generateObjectCamera(struct game *g, int32_t color)
         createRedShells(g);
         g->score = g->score + 25;
     }
-    else if (color == YELLOW)
-    {
-        createBananas(g);
-        g->score = g->score + 10;
-    }
     else if (color == BLUE)
     {
         createBlueShells(g);
         g->score = g->score + 50;
     }
+    else
+   {
+	   createBananas(g);
+	   g->score = g->score + 10;
+   }
 }
 
 /**
@@ -329,9 +327,7 @@ void generateObjectCamera(struct game *g, int32_t color)
  */
 void generateObject(struct game *g)
 {
-
     int r = rand() % 40;
-    int offset;
     if (r >= 0 && r < 9)
     {
         createGreenShells(g);

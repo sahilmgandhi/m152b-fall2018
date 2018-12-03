@@ -50,18 +50,18 @@ void main()
 
 	clearDisplay(BLACK);
 
-	initGame(&g, 0);
+	initGame(&g, 1);
 
 	XTmrCtr_Start(&timer, 0);
 
 	int a = 0;
 	int xpos = 23;
-	while (!g.gameOver)
+	while (1)
 	{
 		XTmrCtr_Reset(&timer, 0);
 		XTmrCtr_Start(&timer, 0);
 		int xposnew = readGyro();
-		xposnew /= 1024;
+		xposnew /= -1024;
 
 		xpos += xposnew;
 		xpos = mymax(xpos, 0);
@@ -72,17 +72,43 @@ void main()
 		drawGameState(&g);
 		while (XTmrCtr_GetValue(&timer, 0) < SCREEN_REFRESH_PERIOD)
 			;
-		int pixel = 0;
+		int pixelRed = 0;
+		int pixelBlue = 0;
+		int pixelGreen = 0;
 		int i, j;
 		for (i = 0; i < 200; i++)
 		{
 			for (j = 0; j < 200; j++)
 			{
-				//XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560, BLUE);
-				pixel += XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560 * 400 + i + j * 2560);
+				if(i == 0 || i == 199 || j == 0 || j == 199)
+					XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560, 0x00);
+				int pixel = XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560 * 400 + i + j * 2560);
+				pixelBlue += (pixel & 0x000f);
+				pixelGreen += (pixel & 0x00f0) >> 4;
+				pixelRed += (pixel & 0x0f00) >> 8;
 			}
 		}
-		xil_printf("Pixel Average: %d\n\r", pixel / 40000);
+		pixelBlue /= 4000;
+		pixelGreen /= 4000;
+		pixelRed /= 4000;
+		if (pixelRed > 2*pixelGreen && pixelRed > 2*pixelBlue){
+			g.cameraColor = RED;
+			xil_printf("RED\n\r");
+		}
+		else if (pixelGreen > 2*pixelRed && pixelGreen > 2*pixelBlue){
+			g.cameraColor = GREEN;
+			xil_printf("GREEN\n\r");
+		}
+		else if (pixelGreen > 2*pixelRed){
+			g.cameraColor = BLUE;
+			xil_printf("BLUE\n\r");
+		} else {
+			g.cameraColor = BLACK;
+			xil_printf("None\n\r");
+		}
+		xil_printf("Pixel Average: %d %d %d\n\r", pixelBlue, pixelGreen, pixelRed);
+
+
 		xil_printf("Game score: %d \n\r", g.score);
 
 		// once you have detected a color, use this to set it in the game:
@@ -126,8 +152,8 @@ void displayCamera()
 	XIo_Out32(lDvmaBaseAddress + blDvmaCR, 0x00000003);						 // dvma enable, dfl enable
 
 	// Uncomment these lines to init the camera, and then comment them out afterwards
-	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
-	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
+//	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
+//	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
 	CamCtrlInit(XPAR_CAM_CTRL_0_BASEADDR, CAM_CFG_640x480P, 640 * 2);
 	CamCtrlInit(XPAR_CAM_CTRL_1_BASEADDR, CAM_CFG_640x480P, 0);
 }

@@ -1,0 +1,438 @@
+#include "game_controller.h"
+
+/**
+ * Iniitalizes the entire game
+ * 
+ * @param game    struct game     The game object
+ * @param camera   uint8_t        Whether to use the camera to generate objects
+ */
+void initGame(struct game *g, uint8_t camera)
+{
+    g->initialized = 1;
+    g->level = 1;
+    g->gameOver = 0;
+    g->xLeftOld = -1;
+    g->yTopOld = -1;
+    g->xLeft = 24;
+    g->yTop = GAME_Y - 2;
+    g->propagationCount = 0;
+    g->score = 0;
+    g->bananaCollisions = 0;
+    g->camera = camera;
+
+    fillScreen(g, ROAD);
+    placeCarOnScreen(g);
+
+    // Silent initial enemy haha (be careful player!)
+    g->screen[25][10] = RED;
+}
+
+/**
+ * Places the car onto the screen
+ * 
+ * @param game    struct game     The game object
+ */
+void placeCarOnScreen(struct game *g)
+{
+    g->screen[g->xLeft][g->yTop + 1] = CAR_COLOR;
+    g->screen[g->xLeft + 1][g->yTop + 1] = CAR_COLOR;
+    g->screen[g->xLeft + 2][g->yTop + 1] = CAR_COLOR;
+    g->screen[g->xLeft + 1][g->yTop] = CAR_COLOR;
+}
+
+/**
+ * Detects if the car has collided with anything. If its a banana, it increments the banana collision counter
+ * 
+ * @param game    struct game     The game object
+ * @return        int             0 if no collision, any other value otherwise
+ */
+int detectCollision(struct game *g)
+{
+    if (g->screen[g->xLeft][g->yTop + 1] != ROAD && g->screen[g->xLeft][g->yTop + 1] != CAR_COLOR && g->screen[g->xLeft][g->yTop + 1] != LANE)
+    {
+        if (g->screen[g->xLeft][g->yTop + 1] == YELLOW)
+        {
+            g->bananaCollisions++;
+            return 0;
+        }
+        return 1;
+    }
+    if (g->screen[g->xLeft + 1][g->yTop + 1] != ROAD && g->screen[g->xLeft + 1][g->yTop + 1] != CAR_COLOR && g->screen[g->xLeft + 1][g->yTop + 1] != LANE)
+    {
+        if (g->screen[g->xLeft + 1][g->yTop + 1] == YELLOW)
+        {
+            g->bananaCollisions++;
+            return 0;
+        }
+        return 2;
+    }
+    if (g->screen[g->xLeft + 2][g->yTop + 1] != ROAD && g->screen[g->xLeft + 2][g->yTop + 1] != CAR_COLOR && g->screen[g->xLeft + 2][g->yTop + 1] != LANE)
+    {
+        if (g->screen[g->xLeft + 2][g->yTop + 1] == YELLOW)
+        {
+            g->bananaCollisions++;
+            return 0;
+        }
+        return 3;
+    }
+    if (g->screen[g->xLeft + 1][g->yTop] != ROAD && g->screen[g->xLeft + 1][g->yTop] != CAR_COLOR && g->screen[g->xLeft + 1][g->yTop] != LANE)
+    {
+        if (g->screen[g->xLeft + 1][g->yTop] == YELLOW)
+        {
+            g->bananaCollisions++;
+            return 0;
+        }
+        return 4;
+    }
+
+    return 0;
+}
+
+/**
+ * Shift the entire game down INCLUDING the bottom most row
+ * It's weird to think that X is actually referring to columns and y to rows
+ * 
+ * @param game   struct game    The game object
+ * 
+ * @return int    0 if the player is dead, 1 else
+ */
+int propagateGame(struct game *g)
+{
+    int i;
+    int j;
+    for (i = GAME_X - 1; i > 0; i--)
+    {
+        for (j = 0; j < GAME_Y; j++)
+        {
+            g->screen[j][i] = g->screen[j][i - 1];
+        }
+    }
+
+    for (j = 0; j < GAME_X; j++)
+    {
+        g->screen[j][0] = ROAD;
+    }
+    // Lane dividers:
+    g->screen[10][0] = LANE;
+    g->screen[20][0] = LANE;
+    g->screen[30][0] = LANE;
+    g->screen[40][0] = LANE;
+    g->propagationCount++;
+    g->score++;
+    if (g->propagationCount == 11)
+    {
+        if (g->camera)
+        {
+            generateObjectCamera(g, g->cameraColor);
+        }
+        else
+        {
+            generateObject(g);
+        }
+        g->propagationCount = 0;
+    }
+
+    if (g->score > 300)
+    {
+        g->level = 2;
+    }
+    if (g->score > 1000)
+    {
+        g->level = 3;
+    }
+
+    int collision = detectCollision(g);
+    if (collision || (!collision && g->bananaCollisions >= 3))
+    {
+        playerDead(g);
+        return 0;
+    }
+
+    return 1;
+}
+
+/**
+ * Generates the shell against the player
+ *
+ * @param game		struct game		The game object
+ * @param color		int				The color of the shell
+ * @param width		int				The size of the shell
+ * @param offset 	int				The offset from the left
+ */
+void createShell(struct game *g, int color, int width, int offset)
+{
+
+    int i, j, height;
+    height = width;
+    if (color == BLUE)
+    {
+        width = BLUE_WIDTH;
+    }
+
+    for (i = 0; i < height - 2; i++)
+    {
+        for (j = 0 + offset; j < width + offset; j++)
+        {
+            if ((j + i) % 4 == 0)
+                g->screen[j][i] = SHELLWHITE;
+            else
+                g->screen[j][i] = color;
+        }
+    }
+    for (i = height - 2; i < height; i++)
+    {
+        for (j = 0 + offset; j < width + offset; j++)
+        {
+            g->screen[j][i] = SHELL;
+        }
+    }
+}
+
+/**
+ * Generates the bananas against the player
+ *
+ * @param game		struct game		The game object
+ */
+void createBananas(struct game *g)
+{
+    int offset = rand() % 20;
+    g->screen[offset][3 + 1] = YELLOW;
+    g->screen[offset + 1][3 + 1] = YELLOW;
+    g->screen[offset + 2][3 + 1] = YELLOW;
+    g->screen[offset + 1][3] = YELLOW;
+    offset = rand() % 20 + 20;
+    g->screen[offset][3 + 1] = YELLOW;
+    g->screen[offset + 1][3 + 1] = YELLOW;
+    g->screen[offset + 2][3 + 1] = YELLOW;
+    g->screen[offset + 1][3] = YELLOW;
+}
+
+/**
+ * Helper function to create green shells as a function of the level
+ *
+ * @param game		struct game		The game object
+ */
+void createGreenShells(struct game *g)
+{
+    int offset;
+    if (g->level == 1)
+    {
+        offset = rand() % 45;
+        createShell(g, GREEN, GREEN_HEIGHT - 2, offset);
+    }
+    else if (g->level == 2)
+    {
+        offset = rand() % 20;
+        createShell(g, GREEN, GREEN_HEIGHT - 1, offset);
+        offset = rand() % 25 + 20;
+        createShell(g, GREEN, GREEN_HEIGHT - 1, offset);
+    }
+    else if (g->level == 3)
+    {
+        offset = rand() % 10;
+        createShell(g, GREEN, GREEN_HEIGHT, offset);
+        offset = rand() % 20 + 10;
+        createShell(g, GREEN, GREEN_HEIGHT, offset);
+        offset = rand() % 20 + 22;
+        createShell(g, GREEN, GREEN_HEIGHT, offset);
+    }
+}
+
+/**
+ * Helper function to create red shells as a function of the level
+ *
+ * @param game		struct game		The game object
+ */
+void createRedShells(struct game *g)
+{
+    int offset;
+    if (g->level == 1)
+    {
+        offset = rand() % 43;
+        createShell(g, RED, RED_HEIGHT - 2, offset);
+    }
+    else if (g->level == 2)
+    {
+        offset = rand() % 43;
+        createShell(g, RED, RED_HEIGHT - 1, offset);
+    }
+    else if (g->level == 3)
+    {
+        offset = rand() % 20;
+        createShell(g, RED, RED_HEIGHT, offset);
+        offset = rand() % 23 + 20;
+        createShell(g, RED, RED_HEIGHT, offset);
+    }
+}
+
+/**
+ * Helper function to create blue shells as a function of the level
+ *
+ * @param game		struct game		The game object
+ */
+void createBlueShells(struct game *g)
+{
+    int offset;
+    if (g->level == 1)
+    {
+        offset = rand() % 20;
+        createShell(g, BLUE, BLUE_HEIGHT - 2, offset);
+    }
+    else if (g->level == 2)
+    {
+        offset = rand() % 20;
+        createShell(g, BLUE, BLUE_HEIGHT - 1, offset);
+    }
+    else if (g->level == 3)
+    {
+        offset = rand() % 20;
+        createShell(g, BLUE, BLUE_HEIGHT, offset);
+    }
+}
+
+/**
+ * Generates the enemy objects for the player
+ *
+ * @param game	struct game		The game object
+ * @param color int32_t         The color to generate
+ */
+void generateObjectCamera(struct game *g, int32_t color)
+{
+    int r = rand() % 40;
+    int offset;
+    if (color == GREEN)
+    {
+        createGreenShells(g);
+        g->score = g->score + 15;
+    }
+    else if (color == RED)
+    {
+        createRedShells(g);
+        g->score = g->score + 25;
+    }
+    else if (color == YELLOW)
+    {
+        createBananas(g);
+        g->score = g->score + 10;
+    }
+    else if (color == BLUE)
+    {
+        createBlueShells(g);
+        g->score = g->score + 50;
+    }
+}
+
+/**
+ * Generates the enemy objects for the player based on the Camera input
+ *
+ * @param game	struct game		The game object
+ */
+void generateObject(struct game *g)
+{
+
+    int r = rand() % 40;
+    int offset;
+    if (r >= 0 && r < 9)
+    {
+        createGreenShells(g);
+        g->score = g->score + 15;
+    }
+    else if (r > 8 && r < 15)
+    {
+        createRedShells(g);
+        g->score = g->score + 25;
+    }
+    else if (r > 15 && r < 30)
+    {
+        createBananas(g);
+        g->score = g->score + 10;
+    }
+    else if (r > 29 && r < 38)
+    {
+        // Empty Space (give player time to move around)
+    }
+    else
+    {
+        createBlueShells(g);
+        g->score = g->score + 50;
+    }
+}
+
+/**
+ * Game is over. 
+ * 
+ * @param game    Game      The game struct
+ */
+void finishGame(struct game *g)
+{
+    g->gameOver = 1;
+    fillScreen(g, GREEN);
+}
+
+/**
+ * Player died, so the entire screen should be red 
+ * 
+ * @param game    Game      The game struct
+ */
+void playerDead(struct game *g)
+{
+    g->gameOver = 1;
+    fillScreen(g, RED);
+}
+
+/**
+ *  Fills the entire screen with a single color
+ * 
+ * @param game    Game    The game struct
+ * @param color   int     The color for the screen
+ */
+void fillScreen(struct game *g, uint32_t color)
+{
+    int i;
+    int j;
+    for (i = 0; i < GAME_X; i++)
+    {
+        for (j = 0; j < GAME_Y; j++)
+        {
+            // Basically filling out column at a time
+            g->screen[i][j] = color;
+        }
+    }
+}
+
+/**
+ * Moves the player and records the previous position
+ * 
+ * @param game    Game      The game struct
+ * @param newX    int16_t   New X position (range from [0-47])
+ * @param newY    int16_t   New Y position 
+ */
+void movePlayer(struct game *g, int16_t newX, int16_t newY)
+{
+    propagateGame(g);
+
+    if (newX >= 0 && newX < GAME_X - 2)
+    {
+        g->xLeftOld = g->xLeft;
+        g->xLeft = newX;
+    }
+
+    // If newY < 0, dont move it
+    if (newY > 0 && newY < GAME_Y - 1)
+    {
+        g->yTopOld = g->yTop;
+        g->yTop = newY;
+    }
+    placeCarOnScreen(g);
+}
+
+/**
+ * Set the color for the game object
+ * 
+ * @param game    Game      The game struct
+ * @param color   int32_t   The color the camera detected
+ */
+void setGameObjectColor(struct game *g, int32_t color)
+{
+    g->cameraColor = color;
+}
