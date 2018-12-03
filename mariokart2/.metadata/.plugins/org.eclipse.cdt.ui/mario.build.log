@@ -1,6 +1,19 @@
-11:52:05 **** Incremental Build of configuration Debug for project mario ****
+11:58:22 **** Incremental Build of configuration Debug for project mario ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mario_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:41:6: warning: return type of 'main' is not 'int' [-Wmain]
+../src/main.c: In function 'main':
+../src/main.c:59:20: error: called object 'g.gameOver' is not a function
+../src/main.c: In function 'displayCamera':
+../src/main.c:133:6: warning: unused variable 'color' [-Wunused-variable]
+../src/main.c: In function 'readGyro':
+../src/main.c:176:16: warning: unused variable 'z' [-Wunused-variable]
+../src/main.c:176:13: warning: unused variable 'y' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:22:13: warning: 'SPIINST' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
 
-11:52:05 Build Finished (took 172ms)
+11:58:22 Build Finished (took 281ms)
 
