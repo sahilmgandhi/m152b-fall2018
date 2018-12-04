@@ -80,8 +80,8 @@ void main()
 		{
 			for (j = 0; j < 200; j++)
 			{
-				if(i == 0 || i == 199 || j == 0 || j == 199)
-					XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560, 0x00);
+				if (i == 0 || i == 199 || j == 0 || j == 199)
+					XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560 * 400 + i + j * 2560, 0x00);
 				int pixel = XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560 * 400 + i + j * 2560);
 				pixelBlue += (pixel & 0x000f);
 				pixelGreen += (pixel & 0x00f0) >> 4;
@@ -91,23 +91,27 @@ void main()
 		pixelBlue /= 4000;
 		pixelGreen /= 4000;
 		pixelRed /= 4000;
-		if (pixelRed > 2*pixelGreen && pixelRed > 2*pixelBlue){
+		if (pixelRed > 2 * pixelGreen && pixelRed > 2 * pixelBlue)
+		{
 			g.cameraColor = RED;
 			xil_printf("RED\n\r");
 		}
-		else if (pixelGreen > 2*pixelRed && pixelGreen > 2*pixelBlue){
+		else if (pixelGreen > 2 * pixelRed && pixelGreen > 2 * pixelBlue)
+		{
 			g.cameraColor = GREEN;
 			xil_printf("GREEN\n\r");
 		}
-		else if (pixelGreen > 2*pixelRed){
+		else if (pixelGreen > 2 * pixelRed)
+		{
 			g.cameraColor = BLUE;
 			xil_printf("BLUE\n\r");
-		} else {
+		}
+		else
+		{
 			g.cameraColor = BLACK;
 			xil_printf("None\n\r");
 		}
 		xil_printf("Pixel Average: %d %d %d\n\r", pixelBlue, pixelGreen, pixelRed);
-
 
 		xil_printf("Game score: %d \n\r", g.score);
 
@@ -152,8 +156,8 @@ void displayCamera()
 	XIo_Out32(lDvmaBaseAddress + blDvmaCR, 0x00000003);						 // dvma enable, dfl enable
 
 	// Uncomment these lines to init the camera, and then comment them out afterwards
-//	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
-//	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
+	//	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
+	//	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
 	CamCtrlInit(XPAR_CAM_CTRL_0_BASEADDR, CAM_CFG_640x480P, 640 * 2);
 	CamCtrlInit(XPAR_CAM_CTRL_1_BASEADDR, CAM_CFG_640x480P, 0);
 }
@@ -215,44 +219,4 @@ int mymin(int x, int y)
 int mymax(int x, int y)
 {
 	return x > y ? x : y;
-}
-
-int seeBlue_alternate(u16 pixel)
-{
-	u8 red = (pixel >> 8) & 0xF;
-	u8 green = (pixel >> 4) & 0xF;
-	u8 blue = (pixel >> 0) & 0xF;
-	if (blue > 11 && red < 5 && green < 5)
-	{
-		//xil_printf("this is blue\n\r");
-		return 1;
-	}
-	else
-		return 0;
-}
-int seeGreen_alternate(u16 pixel)
-{
-	u8 red = (pixel >> 8) & 0xF;
-	u8 green = (pixel >> 4) & 0xF;
-	u8 blue = (pixel >> 0) & 0xF;
-	if (green > HIGH_THRESHOLD && red < LOW_THRESHOLD && blue < LOW_THRESHOLD)
-	{
-		//xil_printf("this is green\n\r");
-		return 1;
-	}
-	else
-		return 0;
-}
-int seeRed_alternate(u16 pixel)
-{
-	u8 red = (pixel >> 8) & 0xF;
-	u8 green = (pixel >> 4) & 0xF;
-	u8 blue = (pixel >> 0) & 0xF;
-	if (red > HIGH_THRESHOLD && green < LOW_THRESHOLD && blue < LOW_THRESHOLD)
-	{
-		//xil_printf("this is red\n\r");
-		return 1;
-	}
-	else
-		return 0;
 }
