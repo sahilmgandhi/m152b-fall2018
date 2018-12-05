@@ -83,7 +83,7 @@ void main()
 
 			xpos += xposnew;
 			xpos = mymax(xpos, 0);
-			xpos = mymin(xpos, GAME_X - 4);
+			xpos = mymin(xpos, GAME_X - 3);
 
 			propagateGame(&g);
 			movePlayer(&g, xpos, -1);

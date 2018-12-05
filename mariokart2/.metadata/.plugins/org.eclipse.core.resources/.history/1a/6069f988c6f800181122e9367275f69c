@@ -82,7 +82,7 @@ void main()
 			xposnew /= -1024;
 
 			xpos += xposnew;
-			xpos = mymax(xpos, 0);
+			xpos = mymax(xpos, 1);
 			xpos = mymin(xpos, GAME_X - 4);
 
 			propagateGame(&g);

@@ -73,7 +73,6 @@ void main()
 			initGame(&g, 0);
 			xil_printf("Entering \"AI\"-generated obstacle mode.\r\n");
 		}
-		srand(XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + 100 + 100 * 2560, 0x00));
 		while (!g.gameOver)
 		{
 			XTmrCtr_Reset(&timer, 0);
@@ -83,7 +82,7 @@ void main()
 
 			xpos += xposnew;
 			xpos = mymax(xpos, 0);
-			xpos = mymin(xpos, GAME_X - 4);
+			xpos = mymin(xpos, GAME_X - 3);
 
 			propagateGame(&g);
 			movePlayer(&g, xpos, -1);
