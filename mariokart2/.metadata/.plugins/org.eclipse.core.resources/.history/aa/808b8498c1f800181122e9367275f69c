@@ -61,18 +61,19 @@ void main()
 	getchar(); // get rid of nullbyte
 	xil_printf("\r\n");
 
+	if(mode == '1'){
+		initGame(&g, 1);
+		xil_printf("Entering camera-generated obstacle mode. Please expose the camera to red, green or blue as you drive.\r\n");
+	}
+	else{
+		initGame(&g, 0);
+		xil_printf("Entering \"AI\"-generated obstacle mode.\r\n");
+	}
+
 	XTmrCtr_Start(&timer, 0);
 
 	int xpos = 23;
 	while (1){
-		if(mode == '1'){
-			initGame(&g, 1);
-			xil_printf("Entering camera-generated obstacle mode. Please expose the camera to red, green or blue as you drive.\r\n");
-		}
-		else{
-			initGame(&g, 0);
-			xil_printf("Entering \"AI\"-generated obstacle mode.\r\n");
-		}
 		while (!g.gameOver)
 		{
 			XTmrCtr_Reset(&timer, 0);
@@ -128,8 +129,6 @@ void main()
 
 	//		xil_printf("Game score: %d \n\r", g.score);
 		}
-
-		while(!XGpio_DiscreteRead(&Button, 1)){}
 	}
 
 

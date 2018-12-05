@@ -102,9 +102,9 @@ int propagateGame(struct game *g)
     int j;
     int maxProp = 11;
     if (g->level == 1)
-    	maxProp = 14;
+    	maxProp = 16;
     else if (g->level == 2)
-    	maxProp = 13;
+    	maxProp = 14;
     else
     	maxProp = 11;
     for (i = GAME_X - 1; i > 0; i--)
@@ -225,7 +225,7 @@ void createGreenShells(struct game *g)
     if (g->level == 1)
     {
         offset = rand() % 45;
-        createShell(g, GREEN, GREEN_HEIGHT - 1, offset);
+        createShell(g, GREEN, GREEN_HEIGHT - 2, offset);
     }
     else if (g->level == 2)
     {
@@ -240,7 +240,7 @@ void createGreenShells(struct game *g)
         createShell(g, GREEN, GREEN_HEIGHT, offset);
         offset = rand() % 20 + 10;
         createShell(g, GREEN, GREEN_HEIGHT, offset);
-        offset = rand() % 22 + 24;
+        offset = rand() % 20 + 24;
         createShell(g, GREEN, GREEN_HEIGHT, offset);
     }
 }
@@ -335,22 +335,22 @@ void generateObjectCamera(struct game *g, int32_t color)
 void generateObject(struct game *g)
 {
     int r = rand() % 40;
-    if (r >= 0 && r < 12)
+    if (r >= 0 && r < 9)
     {
         createGreenShells(g);
         g->score = g->score + 15;
     }
-    else if (r > 11 && r < 20)
+    else if (r > 8 && r < 15)
     {
         createRedShells(g);
         g->score = g->score + 25;
     }
-    else if (r > 19 && r < 33)
+    else if (r > 15 && r < 30)
     {
         createBananas(g);
         g->score = g->score + 10;
     }
-    else if (r > 32 && r < 35)
+    else if (r > 29 && r < 38)
     {
         // Empty Space (give player time to move around)
     }

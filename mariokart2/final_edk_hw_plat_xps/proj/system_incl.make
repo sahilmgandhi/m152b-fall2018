@@ -85,7 +85,8 @@ implementation/system_button_wrapper.ngc \
 implementation/system_enc_sig_a_wrapper.ngc \
 implementation/system_enc_sig_b_wrapper.ngc \
 implementation/system_xps_timer_0_wrapper.ngc \
-implementation/system_xps_spi_0_wrapper.ngc
+implementation/system_xps_spi_0_wrapper.ngc \
+implementation/system_xps_gpio_0_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

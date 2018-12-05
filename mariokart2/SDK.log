@@ -613,3 +613,20 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 	at com.xilinx.sdk.targetmanager.internal.TM.terminateCurrentLaunch(Unknown Source)
 	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(Unknown Source)
 
+11:59:24.792 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+11:59:58.238 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+11:59:58.238 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+10:01:16.203 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+10:40:19.556 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:47:01.666 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:47:38.577 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:49:37.046 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:12:32.331 WARN  - Terminating existing sessions on processor microblaze_0 

@@ -225,7 +225,7 @@ void createGreenShells(struct game *g)
     if (g->level == 1)
     {
         offset = rand() % 45;
-        createShell(g, GREEN, GREEN_HEIGHT - 1, offset);
+        createShell(g, GREEN, GREEN_HEIGHT - 2, offset);
     }
     else if (g->level == 2)
     {
@@ -240,7 +240,7 @@ void createGreenShells(struct game *g)
         createShell(g, GREEN, GREEN_HEIGHT, offset);
         offset = rand() % 20 + 10;
         createShell(g, GREEN, GREEN_HEIGHT, offset);
-        offset = rand() % 22 + 24;
+        offset = rand() % 20 + 24;
         createShell(g, GREEN, GREEN_HEIGHT, offset);
     }
 }

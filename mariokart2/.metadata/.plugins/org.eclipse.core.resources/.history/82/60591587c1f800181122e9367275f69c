@@ -61,75 +61,74 @@ void main()
 	getchar(); // get rid of nullbyte
 	xil_printf("\r\n");
 
+	if(mode == '1'){
+		initGame(&g, 1);
+		xil_printf("Entering camera-generated obstacle mode. Please expose the camera to red, green or blue as you drive.\r\n");
+	}
+	else{
+		initGame(&g, 0);
+		xil_printf("Entering \"AI\"-generated obstacle mode.\r\n");
+	}
+
 	XTmrCtr_Start(&timer, 0);
 
 	int xpos = 23;
 	while (1){
-		if(mode == '1'){
-			initGame(&g, 1);
-			xil_printf("Entering camera-generated obstacle mode. Please expose the camera to red, green or blue as you drive.\r\n");
-		}
-		else{
-			initGame(&g, 0);
-			xil_printf("Entering \"AI\"-generated obstacle mode.\r\n");
-		}
 		while (!g.gameOver)
-		{
-			XTmrCtr_Reset(&timer, 0);
-			XTmrCtr_Start(&timer, 0);
-			int xposnew = readGyro();
-			xposnew /= -1024;
-
-			xpos += xposnew;
-			xpos = mymax(xpos, 0);
-			xpos = mymin(xpos, GAME_X - 3);
-
-			propagateGame(&g);
-			movePlayer(&g, xpos, -1);
-			drawGameState(&g);
-			while (XTmrCtr_GetValue(&timer, 0) < SCREEN_REFRESH_PERIOD)
-				;
-			int pixelRed = 0;
-			int pixelBlue = 0;
-			int pixelGreen = 0;
-			int i, j;
-			for (i = 0; i < 200; i++)
 			{
-				for (j = 0; j < 200; j++)
+				XTmrCtr_Reset(&timer, 0);
+				XTmrCtr_Start(&timer, 0);
+				int xposnew = readGyro();
+				xposnew /= -1024;
+
+				xpos += xposnew;
+				xpos = mymax(xpos, 0);
+				xpos = mymin(xpos, GAME_X - 3);
+
+				propagateGame(&g);
+				movePlayer(&g, xpos, -1);
+				drawGameState(&g);
+				while (XTmrCtr_GetValue(&timer, 0) < SCREEN_REFRESH_PERIOD)
+					;
+				int pixelRed = 0;
+				int pixelBlue = 0;
+				int pixelGreen = 0;
+				int i, j;
+				for (i = 0; i < 200; i++)
 				{
-					if(i == 0 || i == 199 || j == 0 || j == 199)
-						XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560, 0x00);
-					int pixel = XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560 * 400 + i + j * 2560);
-					pixelBlue += (pixel & 0x000f);
-					pixelGreen += (pixel & 0x00f0) >> 4;
-					pixelRed += (pixel & 0x0f00) >> 8;
+					for (j = 0; j < 200; j++)
+					{
+						if(i == 0 || i == 199 || j == 0 || j == 199)
+							XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560, 0x00);
+						int pixel = XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560 * 400 + i + j * 2560);
+						pixelBlue += (pixel & 0x000f);
+						pixelGreen += (pixel & 0x00f0) >> 4;
+						pixelRed += (pixel & 0x0f00) >> 8;
+					}
 				}
-			}
-			pixelBlue /= 4000;
-			pixelGreen /= 4000;
-			pixelRed /= 4000;
-			if (pixelRed > 2*pixelGreen && pixelRed > 2*pixelBlue){
-				g.cameraColor = RED;
-	//			xil_printf("RED\n\r");
-			}
-			else if (pixelGreen > 2*pixelRed && pixelGreen > 2*pixelBlue){
-				g.cameraColor = GREEN;
-	//			xil_printf("GREEN\n\r");
-			}
-			else if (pixelGreen > 2*pixelRed){
-				g.cameraColor = BLUE;
-	//			xil_printf("BLUE\n\r");
-			} else {
-				g.cameraColor = BLACK;
-	//			xil_printf("None\n\r");
-			}
-	//		xil_printf("Pixel Average: %d %d %d\n\r", pixelBlue, pixelGreen, pixelRed);
+				pixelBlue /= 4000;
+				pixelGreen /= 4000;
+				pixelRed /= 4000;
+				if (pixelRed > 2*pixelGreen && pixelRed > 2*pixelBlue){
+					g.cameraColor = RED;
+		//			xil_printf("RED\n\r");
+				}
+				else if (pixelGreen > 2*pixelRed && pixelGreen > 2*pixelBlue){
+					g.cameraColor = GREEN;
+		//			xil_printf("GREEN\n\r");
+				}
+				else if (pixelGreen > 2*pixelRed){
+					g.cameraColor = BLUE;
+		//			xil_printf("BLUE\n\r");
+				} else {
+					g.cameraColor = BLACK;
+		//			xil_printf("None\n\r");
+				}
+		//		xil_printf("Pixel Average: %d %d %d\n\r", pixelBlue, pixelGreen, pixelRed);
 
 
-	//		xil_printf("Game score: %d \n\r", g.score);
-		}
-
-		while(!XGpio_DiscreteRead(&Button, 1)){}
+		//		xil_printf("Game score: %d \n\r", g.score);
+			}
 	}
 
 
