@@ -16,13 +16,6 @@
 #include "globals.h"
 #include "xtmrctr.h"
 
-#define HIGH_THRESHOLD 9
-#define LOW_THRESHOLD 6
-
-#define BUFFER_SIZE 5
-static XSpi SPIINST;
-Xuint8 readBuffer[BUFFER_SIZE] = {0, 0, 0, 0, 0};
-Xuint8 writeBuffer[BUFFER_SIZE] = {0, 0, 0, 0, 0};
 struct game g;
 XTmrCtr timer;
 XGpio Button;
@@ -35,9 +28,6 @@ int myabs(int x);
 int mymin(int x, int y);
 int mymax(int x, int y);
 
-int seeBlue_alternate(u16 pixel);
-int seeGreen_alternate(u16 pixel);
-int seeRed_alternate(u16 pixel);
 void displayCamera();
 
 void main()
@@ -64,16 +54,19 @@ void main()
 	XTmrCtr_Start(&timer, 0);
 
 	int xpos = 23;
-	while (1){
-		if(mode == '1'){
+	while (1)
+	{
+		if (mode == '1')
+		{
 			initGame(&g, 1);
 			xil_printf("Entering camera-generated obstacle mode. Please expose the camera to red, green or blue as you drive.\r\n");
 		}
-		else{
+		else
+		{
 			initGame(&g, 0);
 			xil_printf("Entering \"AI\"-generated obstacle mode.\r\n");
 		}
-		srand(XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + 100 + 100 * 2560, 0x00));
+		srand(XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560 * 400 + 100 + 100 * 2560, 0x00));
 		while (!g.gameOver)
 		{
 			XTmrCtr_Reset(&timer, 0);
@@ -98,8 +91,8 @@ void main()
 			{
 				for (j = 0; j < 200; j++)
 				{
-					if(i == 0 || i == 199 || j == 0 || j == 199)
-						XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560*400 + i + j * 2560, 0x00);
+					if (i == 0 || i == 199 || j == 0 || j == 199)
+						XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560 * 400 + i + j * 2560, 0x00);
 					int pixel = XIo_In16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 7040 + 2560 * 400 + i + j * 2560);
 					pixelBlue += (pixel & 0x000f);
 					pixelGreen += (pixel & 0x00f0) >> 4;
@@ -109,30 +102,34 @@ void main()
 			pixelBlue /= 4000;
 			pixelGreen /= 4000;
 			pixelRed /= 4000;
-			if (pixelRed > 2*pixelGreen && pixelRed > 2*pixelBlue){
+			if (pixelRed > 2 * pixelGreen && pixelRed > 2 * pixelBlue)
+			{
 				g.cameraColor = RED;
-	//			xil_printf("RED\n\r");
+				//			xil_printf("RED\n\r");
 			}
-			else if (pixelGreen > 2*pixelRed && pixelGreen > 2*pixelBlue){
+			else if (pixelGreen > 2 * pixelRed && pixelGreen > 2 * pixelBlue)
+			{
 				g.cameraColor = GREEN;
-	//			xil_printf("GREEN\n\r");
+				//			xil_printf("GREEN\n\r");
 			}
-			else if (pixelGreen > 2*pixelRed){
+			else if (pixelGreen > 2 * pixelRed)
+			{
 				g.cameraColor = BLUE;
-	//			xil_printf("BLUE\n\r");
-			} else {
-				g.cameraColor = BLACK;
-	//			xil_printf("None\n\r");
+				//			xil_printf("BLUE\n\r");
 			}
-	//		xil_printf("Pixel Average: %d %d %d\n\r", pixelBlue, pixelGreen, pixelRed);
+			else
+			{
+				g.cameraColor = BLACK;
+				//			xil_printf("None\n\r");
+			}
+			//		xil_printf("Pixel Average: %d %d %d\n\r", pixelBlue, pixelGreen, pixelRed);
 
-
-	//		xil_printf("Game score: %d \n\r", g.score);
+			//		xil_printf("Game score: %d \n\r", g.score);
 		}
 
-		while(!XGpio_DiscreteRead(&Button, 1)){}
+		while (!XGpio_DiscreteRead(&Button, 1))
+			;
 	}
-
 
 	drawGameState(&g);
 }
@@ -170,8 +167,8 @@ void displayCamera()
 	XIo_Out32(lDvmaBaseAddress + blDvmaCR, 0x00000003);						 // dvma enable, dfl enable
 
 	// Uncomment these lines to init the camera, and then comment them out afterwards
-//	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
-//	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
+	//	CamIicCfg(XPAR_CAM_IIC_0_BASEADDR, CAM_CFG_640x480P);
+	//	CamIicCfg(XPAR_CAM_IIC_1_BASEADDR, CAM_CFG_640x480P);
 	CamCtrlInit(XPAR_CAM_CTRL_0_BASEADDR, CAM_CFG_640x480P, 640 * 2);
 	CamCtrlInit(XPAR_CAM_CTRL_1_BASEADDR, CAM_CFG_640x480P, 0);
 }

@@ -1,5 +1,47 @@
 #include "display.h"
 #define NUM_DIGITS 5
+
+const short deadMessage[4][10][10] = {
+    {{1, 0, 1, 1, 1, 1, 1, 1, 0, 0},
+     {1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+     {1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+     {1, 1, 1, 1, 1, 1, 1, 1, 0, 0}},
+    {{1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+     {1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+     {1, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+     {1, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+     {1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+     {1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+     {1, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+     {1, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+     {1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+     {1, 1, 1, 1, 1, 1, 1, 1, 0, 0}},
+    {{0, 0, 0, 1, 1, 1, 1, 1, 0, 0},
+     {0, 0, 1, 1, 1, 1, 1, 1, 0, 0},
+     {0, 1, 1, 1, 0, 0, 0, 1, 1, 0},
+     {0, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+     {0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+     {0, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {0, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {0, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {0, 1, 1, 0, 0, 0, 0, 1, 1, 0}},
+    {{1, 0, 1, 1, 1, 1, 1, 1, 0, 0},
+     {1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+     {1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+     {1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+     {1, 1, 1, 1, 1, 1, 1, 1, 0, 0}}};
 const short numbers[10][10][10] =
     {
         {{0, 0, 1, 1, 1, 1, 1, 1, 0, 0},
@@ -170,6 +212,10 @@ int drawGameState(struct game *g)
     }
 
     drawGameScore(g->score);
+    if (g->gameOver)
+    {
+        drawDeadMessage();
+    }
 
     u32 lDvmaBaseAddress = XPAR_DVMA_0_BASEADDR;
 
@@ -202,8 +248,8 @@ int drawGameState(struct game *g)
 int drawGameScore(int score)
 {
     uint16_t xPadding = 230;
-    uint16_t yPadding = 620;
-    uint8_t digits[NUM_DIGITS] = {(score % 100000) / 10000, (score % 10000) / 1000, (score % 1000) / 100, (score % 100) / 10, score % 10};
+    uint16_t yPadding = 400;
+
     int i, posX, posY, newPosX, newPosY;
     for (i = 0; i < NUM_DIGITS; i++)
     {
@@ -214,6 +260,41 @@ int drawGameScore(int score)
             {
                 uint32_t color;
                 if (numbers[num][posY][posX] == 0)
+                    color = BLACK;
+                else
+                    color = WHITE;
+                for (newPosX = posX * 3 + i * 30; newPosX < (posX + 1) * 3 + i * 30; newPosX++)
+                {
+                    for (newPosY = posY * 3 + yPadding; newPosY < (posY + 1) * 3 + yPadding; newPosY++)
+                    {
+                        XIo_Out16(XPAR_DDR2_SDRAM_MPMC_BASEADDR + 2 * (newPosY * 2560 + newPosX + xPadding), color);
+                    }
+                }
+            }
+        }
+    }
+
+    return 1;
+}
+
+/**
+ * Draw the player dead message.
+ *
+ * @return true if successfully drawn, false otherwise.
+ */
+int drawDeadMessage()
+{
+    uint16_t xPadding = 230;
+    uint16_t yPadding = 620;
+    int i, posX, posY, newPosX, newPosY;
+    for (i = 0; i < 4; i++)
+    {
+        for (posX = 0; posX < 10; posX++)
+        {
+            for (posY = 0; posY < 10; posY++)
+            {
+                uint32_t color;
+                if (deadMessage[i][posY][posX] == 0)
                     color = BLACK;
                 else
                     color = WHITE;
