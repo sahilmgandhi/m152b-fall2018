@@ -636,3 +636,18 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 11:32:48.891 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 11:33:14.883 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 11:36:12.711 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:41:52.565 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:48:38.353 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+11:48:38.374 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+11:48:38.384 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+12:21:58.938 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Documents/m152b_fall2018/mariokart2/proj_hw_platform/download.bit" 
+12:22:49.235 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:29:02.337 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:29:38.484 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:30:51.432 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 

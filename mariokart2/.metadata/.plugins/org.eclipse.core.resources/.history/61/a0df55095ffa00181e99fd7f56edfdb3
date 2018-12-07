@@ -260,7 +260,7 @@ int drawGameScore(int score)
             {
                 uint32_t color;
                 if (numbers[num][posY][posX] == 0)
-                    color = BLACK;
+                    color = RED;
                 else
                     color = WHITE;
                 for (newPosX = posX * 3 + i * 30; newPosX < (posX + 1) * 3 + i * 30; newPosX++)
@@ -295,7 +295,7 @@ int drawDeadMessage()
             {
                 uint32_t color;
                 if (deadMessage[i][posY][posX] == 0)
-                    color = RED;
+                    color = BLACK;
                 else
                     color = WHITE;
                 for (newPosX = posX * 3 + i * 30; newPosX < (posX + 1) * 3 + i * 30; newPosX++)
