@@ -61,7 +61,6 @@
 
 // bananas
 #define YELLOW 0xFF0
-
 #define PURPLE 0xF0F
 #define CYAN 0x0FF
 

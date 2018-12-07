@@ -50,7 +50,6 @@ void main()
 	mode = getc(stdin);
 	getchar(); // get rid of nullbyte
 	xil_printf("\r\n");
-	while(getchar()!='\r');
 
 	XTmrCtr_Start(&timer, 0);
 

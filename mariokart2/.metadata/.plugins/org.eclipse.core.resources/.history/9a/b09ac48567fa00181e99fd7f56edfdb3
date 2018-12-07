@@ -360,7 +360,7 @@ int drawGameState(struct game *g)
  */
 int drawGameScore(int score)
 {
-    uint16_t xPadding = 250;
+    uint16_t xPadding = 230;
     uint16_t yPadding = 620;
     int digits[NUM_DIGITS] = {(score % 100000)/10000, (score % 10000)/1000, (score % 1000)/100, (score % 100)/10, (score % 10)};
     int i, posX, posY, newPosX, newPosY;
@@ -397,7 +397,7 @@ int drawGameScore(int score)
  */
 int drawDeadMessage()
 {
-    uint16_t xPadding = 260;
+    uint16_t xPadding = 230;
     uint16_t yPadding = 400;
     int i, posX, posY, newPosX, newPosY;
     for (i = 0; i < 4; i++)
@@ -427,8 +427,8 @@ int drawDeadMessage()
 
 int drawTitleMessage()
 {
-	uint16_t xPadding = 190;
-	uint16_t yPadding = 130;
+	uint16_t xPadding = 230;
+	uint16_t yPadding = 40;
 	int i, posX, posY, newPosX, newPosY;
 	for (i = 0; i < 9; i++)
 	{
@@ -439,8 +439,6 @@ int drawTitleMessage()
 				uint32_t color;
 				if (titleMessage[i][posY][posX] == 0)
 					color = BLACK;
-				else if(i == 5)
-					color = CYAN;
 				else
 					color = WHITE;
 				for (newPosX = posX * 3 + i * 30; newPosX < (posX + 1) * 3 + i * 30; newPosX++)

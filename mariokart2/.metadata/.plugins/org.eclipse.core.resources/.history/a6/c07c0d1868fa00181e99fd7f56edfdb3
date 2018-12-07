@@ -427,7 +427,7 @@ int drawDeadMessage()
 
 int drawTitleMessage()
 {
-	uint16_t xPadding = 190;
+	uint16_t xPadding = 180;
 	uint16_t yPadding = 130;
 	int i, posX, posY, newPosX, newPosY;
 	for (i = 0; i < 9; i++)
